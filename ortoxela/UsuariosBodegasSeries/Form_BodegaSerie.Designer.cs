@@ -33,11 +33,11 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.sbCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.Estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDeDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sbCancelar = new DevExpress.XtraEditors.SimpleButton();
+            this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_serie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_bodega.Properties)).BeginInit();
             this.SuspendLayout();
@@ -51,8 +51,8 @@
             this.dataGridView_serie.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Estado,
             this.ID,
-            this.Serie,
-            this.TipoDeDocumento});
+            this.TipoDeDocumento,
+            this.Serie});
             this.dataGridView_serie.Location = new System.Drawing.Point(334, 40);
             this.dataGridView_serie.Name = "dataGridView_serie";
             this.dataGridView_serie.RowHeadersVisible = false;
@@ -100,6 +100,19 @@
             this.labelControl2.Size = new System.Drawing.Size(0, 16);
             this.labelControl2.TabIndex = 4;
             // 
+            // sbCancelar
+            // 
+            this.sbCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.sbCancelar.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbCancelar.Appearance.Options.UseFont = true;
+            this.sbCancelar.Image = global::ortoxela.Properties.Resources.window_remove_32x32_32;
+            this.sbCancelar.Location = new System.Drawing.Point(793, 455);
+            this.sbCancelar.Name = "sbCancelar";
+            this.sbCancelar.Size = new System.Drawing.Size(155, 43);
+            this.sbCancelar.TabIndex = 13;
+            this.sbCancelar.Text = "Cancelar/Salir";
+            this.sbCancelar.Click += new System.EventHandler(this.sbCancelar_Click);
+            // 
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
@@ -114,34 +127,21 @@
             this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.ID.Width = 24;
             // 
-            // Serie
-            // 
-            this.Serie.DataPropertyName = "serie_documento";
-            this.Serie.HeaderText = "Serie";
-            this.Serie.Name = "Serie";
-            this.Serie.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Serie.Width = 37;
-            // 
             // TipoDeDocumento
             // 
             this.TipoDeDocumento.DataPropertyName = "nombre_documento";
-            this.TipoDeDocumento.HeaderText = "TipoDeDocumento";
+            this.TipoDeDocumento.HeaderText = "Tipo De Documento";
             this.TipoDeDocumento.Name = "TipoDeDocumento";
             this.TipoDeDocumento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.TipoDeDocumento.Width = 103;
+            this.TipoDeDocumento.Width = 98;
             // 
-            // sbCancelar
+            // Serie
             // 
-            this.sbCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.sbCancelar.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbCancelar.Appearance.Options.UseFont = true;
-            this.sbCancelar.Image = global::ortoxela.Properties.Resources.window_remove_32x32_32;
-            this.sbCancelar.Location = new System.Drawing.Point(793, 455);
-            this.sbCancelar.Name = "sbCancelar";
-            this.sbCancelar.Size = new System.Drawing.Size(155, 43);
-            this.sbCancelar.TabIndex = 13;
-            this.sbCancelar.Text = "Cancelar/Salir";
-            this.sbCancelar.Click += new System.EventHandler(this.sbCancelar_Click);
+            this.Serie.DataPropertyName = "serie_documento";
+            this.Serie.HeaderText = "Serie De Documento";
+            this.Serie.Name = "Serie";
+            this.Serie.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Serie.Width = 101;
             // 
             // Form_BodegaSerie
             // 
@@ -171,10 +171,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.SimpleButton sbCancelar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoDeDocumento;
-        private DevExpress.XtraEditors.SimpleButton sbCancelar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
     }
 }

@@ -353,8 +353,6 @@ namespace ortoxela.UsuariosBodegasSeries {
             
             private global::System.Data.DataColumn columnnombre_bodega;
             
-            private global::System.Data.DataColumn columndireccion;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Lista_bodegasDataTable() {
@@ -406,14 +404,6 @@ namespace ortoxela.UsuariosBodegasSeries {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn direccionColumn {
-                get {
-                    return this.columndireccion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,12 +439,11 @@ namespace ortoxela.UsuariosBodegasSeries {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Lista_bodegasRow AddLista_bodegasRow(uint codigo_bodega, string nombre_bodega, string direccion) {
+            public Lista_bodegasRow AddLista_bodegasRow(uint codigo_bodega, string nombre_bodega) {
                 Lista_bodegasRow rowLista_bodegasRow = ((Lista_bodegasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo_bodega,
-                        nombre_bodega,
-                        direccion};
+                        nombre_bodega};
                 rowLista_bodegasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLista_bodegasRow);
                 return rowLista_bodegasRow;
@@ -486,7 +475,6 @@ namespace ortoxela.UsuariosBodegasSeries {
             internal void InitVars() {
                 this.columncodigo_bodega = base.Columns["codigo_bodega"];
                 this.columnnombre_bodega = base.Columns["nombre_bodega"];
-                this.columndireccion = base.Columns["direccion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -496,14 +484,11 @@ namespace ortoxela.UsuariosBodegasSeries {
                 base.Columns.Add(this.columncodigo_bodega);
                 this.columnnombre_bodega = new global::System.Data.DataColumn("nombre_bodega", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_bodega);
-                this.columndireccion = new global::System.Data.DataColumn("direccion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndireccion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigo_bodega}, true));
                 this.columncodigo_bodega.AllowDBNull = false;
                 this.columncodigo_bodega.Unique = true;
                 this.columnnombre_bodega.MaxLength = 200;
-                this.columndireccion.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1254,22 +1239,6 @@ namespace ortoxela.UsuariosBodegasSeries {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string direccion {
-                get {
-                    try {
-                        return ((string)(this[this.tableLista_bodegas.direccionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'direccion\' de la tabla \'Lista_bodegas\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLista_bodegas.direccionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isnombre_bodegaNull() {
                 return this.IsNull(this.tableLista_bodegas.nombre_bodegaColumn);
             }
@@ -1278,18 +1247,6 @@ namespace ortoxela.UsuariosBodegasSeries {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setnombre_bodegaNull() {
                 this[this.tableLista_bodegas.nombre_bodegaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdireccionNull() {
-                return this.IsNull(this.tableLista_bodegas.direccionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdireccionNull() {
-                this[this.tableLista_bodegas.direccionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1681,7 +1638,6 @@ namespace ortoxela.UsuariosBodegasSeries.DataSet_BodegaUsuarioTableAdapters {
             tableMapping.DataSetTable = "Lista_bodegas";
             tableMapping.ColumnMappings.Add("codigo_bodega", "codigo_bodega");
             tableMapping.ColumnMappings.Add("nombre_bodega", "nombre_bodega");
-            tableMapping.ColumnMappings.Add("direccion", "direccion");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1698,8 +1654,7 @@ namespace ortoxela.UsuariosBodegasSeries.DataSet_BodegaUsuarioTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT codigo_bodega,nombre_bodega,direccion FROM bodegas_header WHERE estadoid=1" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT codigo_bodega,nombre_bodega FROM bodegas_header WHERE estadoid=1";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1856,7 +1811,8 @@ namespace ortoxela.UsuariosBodegasSeries.DataSet_BodegaUsuarioTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT userid,nombre,apellido,username \r\nFROM usuarios\r\nWHERE estadoid=1";
+            this._commandCollection[0].CommandText = "SELECT userid,nombre,apellido,username \r\nFROM usuarios\r\nWHERE estadoid=1\r\nAND mos" +
+                "trar_ventas=1";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

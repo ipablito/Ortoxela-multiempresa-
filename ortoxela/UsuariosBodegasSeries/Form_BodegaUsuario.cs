@@ -95,11 +95,16 @@ namespace ortoxela.UsuariosBodegasSeries
                         lg.guardarbodegasdeusuario(idusu, idbod, idusucrea);
                     }
                 }
+
+                clases.ClassMensajes.INSERTO(this);
             }
             catch
-            { }
+            {
+                clases.ClassMensajes.NoINSERTO(this);
+            }
+
             this.Cursor = Cursors.Default;
-            lookUpEdit_usuario.Text = "";
+            //lookUpEdit_usuario.Text = "";
         }
 
         private void sbCancelar_Click(object sender, EventArgs e)

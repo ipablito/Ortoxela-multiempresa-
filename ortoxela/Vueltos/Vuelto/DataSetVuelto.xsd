@@ -12,12 +12,36 @@
               <DbSource ConnectionRef="ortoxelaConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        clientes.nombre_cliente, vueltos.monto_vuelto, vueltos.fecha_pago, vueltos.no_cheque, vueltos.nombre_banco, vueltos.no_vuelto, 
-                         clientes.nombre_paciente, clientes.nit, header_doctos_inv_2.no_documento AS no_factura, series_documentos.serie_documento AS serie_factura
-FROM            clientes INNER JOIN
-                         vueltos ON clientes.codigo_cliente = vueltos.codigo_cliente INNER JOIN
-                         header_doctos_inv header_doctos_inv_2 ON vueltos.id_factura = header_doctos_inv_2.id_documento INNER JOIN
-                         series_documentos ON header_doctos_inv_2.codigo_serie = series_documentos.codigo_serie</CommandText>
+                    <CommandText>SELECT 
+vuelto.`id_vuelto`,
+vuelto.`no_vuelto`,
+vuelto.`fecha_pago`,
+vuelto.`monto_vuelto`,
+vuelto.`no_cheque`,
+vuelto.`nombre_banco`,
+cliente.`nombre_cliente`,
+cliente.`nombre_paciente`,
+en1.`no_documento`,
+recibo.`no_recibo`,
+en2.`no_documento`,
+en3.`no_documento`,
+serie.`serie_documento`
+FROM 
+vueltos AS vuelto,
+clientes AS cliente,
+header_doctos_inv AS en1,
+recibos AS recibo,
+header_doctos_inv AS en2,
+header_doctos_inv AS en3,
+series_documentos AS serie
+
+
+WHERE vuelto.`codigo_cliente`=cliente.`codigo_cliente`
+AND vuelto.`id_vale`=en1.`id_documento`
+AND vuelto.`id_recibo`=recibo.`id_recibos`
+AND vuelto.`id_pedido`=en2.`id_documento`
+AND vuelto.`id_factura`=en3.`id_documento`
+AND en3.`codigo_serie`=serie.`codigo_serie`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -31,9 +55,12 @@ FROM            clientes INNER JOIN
               <Mapping SourceColumn="no_cheque" DataSetColumn="no_cheque" />
               <Mapping SourceColumn="nombre_banco" DataSetColumn="nombre_banco" />
               <Mapping SourceColumn="nombre_paciente" DataSetColumn="nombre_paciente" />
-              <Mapping SourceColumn="nit" DataSetColumn="nit" />
-              <Mapping SourceColumn="no_factura" DataSetColumn="no_factura" />
-              <Mapping SourceColumn="serie_factura" DataSetColumn="serie_factura" />
+              <Mapping SourceColumn="id_vuelto" DataSetColumn="id_vuelto" />
+              <Mapping SourceColumn="no_documento" DataSetColumn="no_documento" />
+              <Mapping SourceColumn="no_recibo" DataSetColumn="no_recibo" />
+              <Mapping SourceColumn="no_documento1" DataSetColumn="no_documento1" />
+              <Mapping SourceColumn="no_documento2" DataSetColumn="no_documento2" />
+              <Mapping SourceColumn="serie_documento" DataSetColumn="serie_documento" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -79,15 +106,12 @@ FROM            clientes INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="nit" msprop:Generator_ColumnVarNameInTable="columnnit" msprop:Generator_ColumnPropNameInRow="nit" msprop:Generator_ColumnPropNameInTable="nitColumn" msprop:Generator_UserColumnName="nit" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="no_factura" msprop:Generator_ColumnVarNameInTable="columnno_factura" msprop:Generator_ColumnPropNameInRow="no_factura" msprop:Generator_ColumnPropNameInTable="no_facturaColumn" msprop:Generator_UserColumnName="no_factura" type="xs:int" />
-              <xs:element name="serie_factura" msprop:Generator_ColumnVarNameInTable="columnserie_factura" msprop:Generator_ColumnPropNameInRow="serie_factura" msprop:Generator_ColumnPropNameInTable="serie_facturaColumn" msprop:Generator_UserColumnName="serie_factura" minOccurs="0">
+              <xs:element name="id_vuelto" msprop:Generator_ColumnVarNameInTable="columnid_vuelto" msprop:Generator_ColumnPropNameInRow="id_vuelto" msprop:Generator_ColumnPropNameInTable="id_vueltoColumn" msprop:Generator_UserColumnName="id_vuelto" type="xs:unsignedInt" />
+              <xs:element name="no_documento" msprop:Generator_ColumnVarNameInTable="columnno_documento" msprop:Generator_ColumnPropNameInRow="no_documento" msprop:Generator_ColumnPropNameInTable="no_documentoColumn" msprop:Generator_UserColumnName="no_documento" type="xs:int" />
+              <xs:element name="no_recibo" msprop:Generator_ColumnVarNameInTable="columnno_recibo" msprop:Generator_ColumnPropNameInRow="no_recibo" msprop:Generator_ColumnPropNameInTable="no_reciboColumn" msprop:Generator_UserColumnName="no_recibo" type="xs:unsignedInt" />
+              <xs:element name="no_documento1" msprop:Generator_ColumnVarNameInTable="columnno_documento1" msprop:Generator_ColumnPropNameInRow="no_documento1" msprop:Generator_ColumnPropNameInTable="no_documento1Column" msprop:Generator_UserColumnName="no_documento1" type="xs:int" />
+              <xs:element name="no_documento2" msprop:Generator_ColumnVarNameInTable="columnno_documento2" msprop:Generator_ColumnPropNameInRow="no_documento2" msprop:Generator_ColumnPropNameInTable="no_documento2Column" msprop:Generator_UserColumnName="no_documento2" type="xs:int" />
+              <xs:element name="serie_documento" msprop:Generator_ColumnVarNameInTable="columnserie_documento" msprop:Generator_ColumnPropNameInRow="serie_documento" msprop:Generator_ColumnPropNameInTable="serie_documentoColumn" msprop:Generator_UserColumnName="serie_documento" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -99,5 +123,9 @@ FROM            clientes INNER JOIN
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Vueltos" />
+      <xs:field xpath="mstns:id_vuelto" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

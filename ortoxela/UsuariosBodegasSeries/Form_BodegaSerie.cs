@@ -95,11 +95,14 @@ namespace ortoxela.UsuariosBodegasSeries
                     }
                 }
 
+                clases.ClassMensajes.INSERTO(this);
             }
             catch
-            { }
+            {
+                clases.ClassMensajes.NoINSERTO(this);
+            }
             this.Cursor = Cursors.Default;
-            lookUpEdit_bodega.Text = "";
+            //lookUpEdit_bodega.Text = "";
         }
 
         private void sbCancelar_Click(object sender, EventArgs e)

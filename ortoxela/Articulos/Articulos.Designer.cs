@@ -266,7 +266,7 @@
             this.checkEditCompu.Location = new System.Drawing.Point(215, 361);
             this.checkEditCompu.Name = "checkEditCompu";
             this.checkEditCompu.Properties.Caption = "";
-            this.checkEditCompu.Size = new System.Drawing.Size(63, 19);
+            this.checkEditCompu.Size = new System.Drawing.Size(63, 18);
             this.checkEditCompu.TabIndex = 15;
             this.checkEditCompu.CheckedChanged += new System.EventHandler(this.checkEditCompu_CheckedChanged);
             // 

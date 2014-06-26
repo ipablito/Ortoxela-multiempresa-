@@ -276,8 +276,8 @@
             // 
             // gridLookBodega
             // 
-            this.gridLookBodega.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridLookBodega.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.gridLookBodega.EditValue = "SELECCIONE BODEGA";
             this.gridLookBodega.Location = new System.Drawing.Point(58, 11);
             this.gridLookBodega.Name = "gridLookBodega";
@@ -546,8 +546,8 @@
             // 
             // textDetalleVale
             // 
-            this.textDetalleVale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textDetalleVale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textDetalleVale.Location = new System.Drawing.Point(68, 13);
             this.textDetalleVale.Name = "textDetalleVale";
             this.textDetalleVale.Size = new System.Drawing.Size(525, 20);
@@ -626,8 +626,8 @@
             // 
             // textNitCliente
             // 
-            this.textNitCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textNitCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textNitCliente.Location = new System.Drawing.Point(523, 30);
             this.textNitCliente.Name = "textNitCliente";
             this.textNitCliente.Size = new System.Drawing.Size(79, 20);
@@ -642,16 +642,16 @@
             this.textNombreCliente.TabIndex = 82;
             conditionValidationRule14.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule14.ErrorText = "CAMPO OBLIGATORIO";
-            this.dxValidationPedido.SetValidationRule(this.textNombreCliente, conditionValidationRule14);
+            this.dxValidationImprimeVale.SetValidationRule(this.textNombreCliente, conditionValidationRule14);
             conditionValidationRule15.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule15.ErrorText = "CAMPO OBLIGATORIO";
-            this.dxValidationImprimeVale.SetValidationRule(this.textNombreCliente, conditionValidationRule15);
+            this.dxValidationPedido.SetValidationRule(this.textNombreCliente, conditionValidationRule15);
             this.textNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdit1_KeyPress);
             // 
             // textTelefonoCliente
             // 
-            this.textTelefonoCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textTelefonoCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textTelefonoCliente.Location = new System.Drawing.Point(523, 56);
             this.textTelefonoCliente.Name = "textTelefonoCliente";
             this.textTelefonoCliente.Size = new System.Drawing.Size(80, 20);
@@ -715,8 +715,8 @@
             // 
             // textNoReciboVale
             // 
-            this.textNoReciboVale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textNoReciboVale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textNoReciboVale.Location = new System.Drawing.Point(522, 108);
             this.textNoReciboVale.Name = "textNoReciboVale";
             this.textNoReciboVale.Size = new System.Drawing.Size(80, 20);
@@ -727,8 +727,8 @@
             // 
             // dateEdit1
             // 
-            this.dateEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dateEdit1.EditValue = null;
             this.dateEdit1.Location = new System.Drawing.Point(523, 82);
             this.dateEdit1.Name = "dateEdit1";
@@ -749,9 +749,9 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage3;
@@ -771,7 +771,7 @@
             this.xtraTabPage3.Controls.Add(this.simpleButton9);
             this.xtraTabPage3.Controls.Add(this.groupControl5);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1271, 478);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1273, 478);
             this.xtraTabPage3.Text = "PEDIDO";
             // 
             // sbSinDeposito
@@ -839,9 +839,9 @@
             // 
             // groupControl5
             // 
-            this.groupControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl5.Controls.Add(this.gridLookDoctores);
             this.groupControl5.Controls.Add(this.simpleButton12);
             this.groupControl5.Controls.Add(this.panelControl2);
@@ -910,8 +910,8 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.panelControl2.Controls.Add(this.simpleButton10);
             this.panelControl2.Controls.Add(this.labelControl36);
@@ -1026,7 +1026,7 @@
             toolTipTitleItem2.Text = "Crear Nuevo Cliente";
             toolTipItem2.LeftIndent = 6;
             toolTipItem2.Text = "Esto permite crear un nuevo cliente, si al buscar por numero de nit o nombre el c" +
-    "liente no existe.";
+                "liente no existe.";
             superToolTip2.Items.Add(toolTipTitleItem2);
             superToolTip2.Items.Add(toolTipItem2);
             this.simpleButton7.SuperTip = superToolTip2;
@@ -1113,9 +1113,9 @@
             // 
             // groupControl4
             // 
-            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl4.Controls.Add(this.gridControl2);
             this.groupControl4.Location = new System.Drawing.Point(36, 177);
             this.groupControl4.Name = "groupControl4";
@@ -1126,6 +1126,7 @@
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl2.EmbeddedNavigator.Validated += new System.EventHandler(this.gridControl2_EmbeddedNavigator_Validated);
             gridLevelNode1.RelationName = "Level1";
             this.gridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
@@ -1137,12 +1138,15 @@
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             this.gridControl2.DoubleClick += new System.EventHandler(this.gridControl2_DoubleClick);
+            this.gridControl2.Validated += new System.EventHandler(this.gridControl2_Validated);
             // 
             // gridView3
             // 
             this.gridView3.GridControl = this.gridControl2;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView3_CellValueChanged);
+            this.gridView3.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView3_ValidatingEditor);
             // 
             // xtraTabPage2
             // 
@@ -1150,7 +1154,7 @@
             this.xtraTabPage2.Controls.Add(this.sbSaveReciboCaja);
             this.xtraTabPage2.Controls.Add(this.groupControl3);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1271, 478);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1273, 478);
             this.xtraTabPage2.Text = "RECIBO DE CAJA";
             // 
             // sbPrintReciboCaja
@@ -1356,7 +1360,7 @@
             this.xtraTabPage1.Controls.Add(this.textTotalPedido);
             this.xtraTabPage1.Controls.Add(this.labelControl11);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1271, 478);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1273, 478);
             this.xtraTabPage1.Text = "ENVIO";
             this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
             // 
@@ -1418,8 +1422,8 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Controls.Add(this.labelControl10);
             this.panelControl1.Controls.Add(this.textVenta);
@@ -1544,9 +1548,9 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.gridControl1);
             this.groupControl2.Location = new System.Drawing.Point(5, 198);
             this.groupControl2.Name = "groupControl2";
@@ -1557,10 +1561,10 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(4, 19);
+            this.gridControl1.Location = new System.Drawing.Point(2, 21);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1246, 161);
+            this.gridControl1.Size = new System.Drawing.Size(1250, 162);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -1578,8 +1582,8 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.Controls.Add(this.simpleButton8);
             this.groupControl1.Controls.Add(this.labelControl41);
             this.groupControl1.Controls.Add(this.dateFechaPedido);

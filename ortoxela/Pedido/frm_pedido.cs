@@ -1614,6 +1614,42 @@ namespace ortoxela.Pedido
             }
         }
 
+        private void gridControl2_Validated(object sender, EventArgs e)
+        {
+            //recalcular el subtotal y total de cada columna
+            int largo = gridView3.DataRowCount;
+            double total = 0;
+
+            int cant = 0;
+            double pu = 0;
+            double subtotal = 0;
+            for (int i = 0; i < largo; i++)
+            {
+                subtotal = 0;
+                cant = Convert.ToInt16(gridView3.GetRowCellValue(i, "CANTIDAD"));
+                pu = Convert.ToDouble(gridView3.GetRowCellValue(i, "PRECIO UNITARIO"));
+                subtotal = subtotal + (cant * pu);
+                gridView3.SetRowCellValue(i, "TOTAL", subtotal);
+                total = total + subtotal;
+            }
+
+            textTotalVale.Text = total.ToString();
+        }
+
+        private void gridView3_ValidatingEditor(object sender, BaseContainerValidateEditorEventArgs e)
+        {
+            
+
+        }
+
+        private void gridView3_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+        }
+
+        private void gridControl2_EmbeddedNavigator_Validated(object sender, EventArgs e)
+        {
+        }
+
 
          
                

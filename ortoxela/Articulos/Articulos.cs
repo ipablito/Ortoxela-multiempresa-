@@ -243,7 +243,7 @@ namespace ortoxela.Articulos
                                 {
 
                                     cadena = "update articulos " +
-                                                "SET codigo_marca = " + codigo_marca + ", codigo_categoria = " + gridLookcategoria.EditValue + ", descripcion = '" + memoEditdescripcion.Text + "', " +
+                                                "SET codigo_marca = " + codigo_marca + ", codigo_categoria = " + gridLooksubcategoria.EditValue + ", descripcion = '" + memoEditdescripcion.Text + "', " +
                                             "costo = " + texteditpcosto.Text + ", precio_venta = " + textEditpventa.Text + ", minimo = " + textEditpmin.Text + ", maximo = " + textEditpmax.Text + ", numero_serie = '" + textEditserie.Text + "', modelo = '" + texteditmodelo.Text + "', comentario = '" + memoEditcomentario.Text + "', " +
                                             "usuario_modifica = " + clases.ClassVariables.id_usuario + ", estadoid = " + gridLookUpEstado.EditValue + ", compuesto = " + checkEditCompu.Checked + ",codigo_padre = " + codigo_padre + " " +
                                             "WHERE articulos.codigo_articulo= '" + clases.ClassVariables.id_busca + "'";
@@ -317,8 +317,6 @@ namespace ortoxela.Articulos
                 {
                     busca_mod_eli();
                 }
-
-
             }
         }
         private void llenacombos()

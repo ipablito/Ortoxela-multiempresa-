@@ -109,7 +109,7 @@ namespace ortoxela.Vueltos.Vuelto
             // xrLabel32
             // 
             this.xrLabel32.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Vueltos.serie_factura")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Vueltos.serie_documento")});
             this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(145.8333F, 172.4167F);
             this.xrLabel32.Name = "xrLabel32";
             this.xrLabel32.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -119,7 +119,7 @@ namespace ortoxela.Vueltos.Vuelto
             // xrLabel21
             // 
             this.xrLabel21.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Vueltos.no_factura")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Vueltos.no_documento2")});
             this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(77.08327F, 172.4167F);
             this.xrLabel21.Name = "xrLabel21";
             this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -230,7 +230,7 @@ namespace ortoxela.Vueltos.Vuelto
             // xrLabel22
             // 
             this.xrLabel22.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Vueltos.NoPedido")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Vueltos.no_documento1")});
             this.xrLabel22.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(537.5F, 149.4167F);
             this.xrLabel22.Name = "xrLabel22";
@@ -242,7 +242,7 @@ namespace ortoxela.Vueltos.Vuelto
             // xrLabel20
             // 
             this.xrLabel20.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Vueltos.id_recibo")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Vueltos.no_recibo")});
             this.xrLabel20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(360.4167F, 149.4167F);
             this.xrLabel20.Name = "xrLabel20";
@@ -351,7 +351,7 @@ namespace ortoxela.Vueltos.Vuelto
             this.xrLabel7.SizeF = new System.Drawing.SizeF(517.7084F, 22.99999F);
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.Text = "por concepto de devolución del anticipo recibido, el cual se pagó con el Cheque N" +
-    "o.";
+                "o.";
             // 
             // xrLabel4
             // 
@@ -374,7 +374,7 @@ namespace ortoxela.Vueltos.Vuelto
             this.xrLabel3.SizeF = new System.Drawing.SizeF(547.9999F, 23F);
             this.xrLabel3.StylePriority.UseFont = false;
             this.xrLabel3.Text = "Por este medio se hace constar que ORTOXELA, S.A., hace entrega de la cantidad de" +
-    "";
+                "";
             // 
             // xrLabel10
             // 
@@ -502,7 +502,7 @@ namespace ortoxela.Vueltos.Vuelto
             this.letras,
             this.banco,
             this.no_vuelto});
-            this.Version = "11.2";
+            this.Version = "12.1";
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVuelto1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

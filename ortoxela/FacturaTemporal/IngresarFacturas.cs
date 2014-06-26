@@ -1148,6 +1148,27 @@ namespace ortoxela.FacturaTemporal
             }
         }
 
+        private void gridControl1_Validated(object sender, EventArgs e)
+        {
+            //recalcular el subtotal y total de cada columna
+            int largo = gridView1.DataRowCount;
+            double total = 0;
+
+            int cant = 0;
+            double pu = 0;
+            double subtotal = 0;
+            for (int i = 0; i < largo; i++)
+            {
+                subtotal = 0;
+                cant = Convert.ToInt16(gridView1.GetRowCellValue(i, "CANTIDAD"));
+                pu = Convert.ToDouble(gridView1.GetRowCellValue(i, "VENTA"));
+                subtotal = subtotal + (cant * pu);
+                gridView1.SetRowCellValue(i, "SUBTOTAL", subtotal);
+                total = total + subtotal;
+            }
+            textPrecioTotal.Text = total.ToString();
+        }
+
     
 
       

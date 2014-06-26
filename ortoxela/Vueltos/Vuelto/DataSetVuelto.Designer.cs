@@ -293,11 +293,17 @@ namespace ortoxela.Vueltos.Vuelto {
             
             private global::System.Data.DataColumn columnnombre_paciente;
             
-            private global::System.Data.DataColumn columnnit;
+            private global::System.Data.DataColumn columnid_vuelto;
             
-            private global::System.Data.DataColumn columnno_factura;
+            private global::System.Data.DataColumn columnno_documento;
             
-            private global::System.Data.DataColumn columnserie_factura;
+            private global::System.Data.DataColumn columnno_recibo;
+            
+            private global::System.Data.DataColumn columnno_documento1;
+            
+            private global::System.Data.DataColumn columnno_documento2;
+            
+            private global::System.Data.DataColumn columnserie_documento;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -390,25 +396,49 @@ namespace ortoxela.Vueltos.Vuelto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nitColumn {
+            public global::System.Data.DataColumn id_vueltoColumn {
                 get {
-                    return this.columnnit;
+                    return this.columnid_vuelto;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn no_facturaColumn {
+            public global::System.Data.DataColumn no_documentoColumn {
                 get {
-                    return this.columnno_factura;
+                    return this.columnno_documento;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn serie_facturaColumn {
+            public global::System.Data.DataColumn no_reciboColumn {
                 get {
-                    return this.columnserie_factura;
+                    return this.columnno_recibo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn no_documento1Column {
+                get {
+                    return this.columnno_documento1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn no_documento2Column {
+                get {
+                    return this.columnno_documento2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn serie_documentoColumn {
+                get {
+                    return this.columnserie_documento;
                 }
             }
             
@@ -449,7 +479,7 @@ namespace ortoxela.Vueltos.Vuelto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VueltosRow AddVueltosRow(string nombre_cliente, decimal monto_vuelto, int no_vuelto, System.DateTime fecha_pago, string no_cheque, string nombre_banco, string nombre_paciente, string nit, int no_factura, string serie_factura) {
+            public VueltosRow AddVueltosRow(string nombre_cliente, decimal monto_vuelto, int no_vuelto, System.DateTime fecha_pago, string no_cheque, string nombre_banco, string nombre_paciente, uint id_vuelto, int no_documento, uint no_recibo, int no_documento1, int no_documento2, string serie_documento) {
                 VueltosRow rowVueltosRow = ((VueltosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nombre_cliente,
@@ -459,12 +489,22 @@ namespace ortoxela.Vueltos.Vuelto {
                         no_cheque,
                         nombre_banco,
                         nombre_paciente,
-                        nit,
-                        no_factura,
-                        serie_factura};
+                        id_vuelto,
+                        no_documento,
+                        no_recibo,
+                        no_documento1,
+                        no_documento2,
+                        serie_documento};
                 rowVueltosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVueltosRow);
                 return rowVueltosRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VueltosRow FindByid_vuelto(uint id_vuelto) {
+                return ((VueltosRow)(this.Rows.Find(new object[] {
+                            id_vuelto})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,9 +531,12 @@ namespace ortoxela.Vueltos.Vuelto {
                 this.columnno_cheque = base.Columns["no_cheque"];
                 this.columnnombre_banco = base.Columns["nombre_banco"];
                 this.columnnombre_paciente = base.Columns["nombre_paciente"];
-                this.columnnit = base.Columns["nit"];
-                this.columnno_factura = base.Columns["no_factura"];
-                this.columnserie_factura = base.Columns["serie_factura"];
+                this.columnid_vuelto = base.Columns["id_vuelto"];
+                this.columnno_documento = base.Columns["no_documento"];
+                this.columnno_recibo = base.Columns["no_recibo"];
+                this.columnno_documento1 = base.Columns["no_documento1"];
+                this.columnno_documento2 = base.Columns["no_documento2"];
+                this.columnserie_documento = base.Columns["serie_documento"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -513,19 +556,31 @@ namespace ortoxela.Vueltos.Vuelto {
                 base.Columns.Add(this.columnnombre_banco);
                 this.columnnombre_paciente = new global::System.Data.DataColumn("nombre_paciente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_paciente);
-                this.columnnit = new global::System.Data.DataColumn("nit", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnit);
-                this.columnno_factura = new global::System.Data.DataColumn("no_factura", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnno_factura);
-                this.columnserie_factura = new global::System.Data.DataColumn("serie_factura", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnserie_factura);
+                this.columnid_vuelto = new global::System.Data.DataColumn("id_vuelto", typeof(uint), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_vuelto);
+                this.columnno_documento = new global::System.Data.DataColumn("no_documento", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnno_documento);
+                this.columnno_recibo = new global::System.Data.DataColumn("no_recibo", typeof(uint), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnno_recibo);
+                this.columnno_documento1 = new global::System.Data.DataColumn("no_documento1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnno_documento1);
+                this.columnno_documento2 = new global::System.Data.DataColumn("no_documento2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnno_documento2);
+                this.columnserie_documento = new global::System.Data.DataColumn("serie_documento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnserie_documento);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_vuelto}, true));
                 this.columnnombre_cliente.MaxLength = 200;
                 this.columnno_cheque.MaxLength = 20;
                 this.columnnombre_banco.MaxLength = 100;
                 this.columnnombre_paciente.MaxLength = 200;
-                this.columnnit.MaxLength = 20;
-                this.columnno_factura.AllowDBNull = false;
-                this.columnserie_factura.MaxLength = 50;
+                this.columnid_vuelto.AllowDBNull = false;
+                this.columnid_vuelto.Unique = true;
+                this.columnno_documento.AllowDBNull = false;
+                this.columnno_recibo.AllowDBNull = false;
+                this.columnno_documento1.AllowDBNull = false;
+                this.columnno_documento2.AllowDBNull = false;
+                this.columnserie_documento.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -780,44 +835,72 @@ namespace ortoxela.Vueltos.Vuelto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nit {
+            public uint id_vuelto {
                 get {
-                    try {
-                        return ((string)(this[this.tableVueltos.nitColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nit\' de la tabla \'Vueltos\' es DBNull.", e);
-                    }
+                    return ((uint)(this[this.tableVueltos.id_vueltoColumn]));
                 }
                 set {
-                    this[this.tableVueltos.nitColumn] = value;
+                    this[this.tableVueltos.id_vueltoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int no_factura {
+            public int no_documento {
                 get {
-                    return ((int)(this[this.tableVueltos.no_facturaColumn]));
+                    return ((int)(this[this.tableVueltos.no_documentoColumn]));
                 }
                 set {
-                    this[this.tableVueltos.no_facturaColumn] = value;
+                    this[this.tableVueltos.no_documentoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string serie_factura {
+            public uint no_recibo {
+                get {
+                    return ((uint)(this[this.tableVueltos.no_reciboColumn]));
+                }
+                set {
+                    this[this.tableVueltos.no_reciboColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int no_documento1 {
+                get {
+                    return ((int)(this[this.tableVueltos.no_documento1Column]));
+                }
+                set {
+                    this[this.tableVueltos.no_documento1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int no_documento2 {
+                get {
+                    return ((int)(this[this.tableVueltos.no_documento2Column]));
+                }
+                set {
+                    this[this.tableVueltos.no_documento2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string serie_documento {
                 get {
                     try {
-                        return ((string)(this[this.tableVueltos.serie_facturaColumn]));
+                        return ((string)(this[this.tableVueltos.serie_documentoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'serie_factura\' de la tabla \'Vueltos\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'serie_documento\' de la tabla \'Vueltos\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVueltos.serie_facturaColumn] = value;
+                    this[this.tableVueltos.serie_documentoColumn] = value;
                 }
             }
             
@@ -907,26 +990,14 @@ namespace ortoxela.Vueltos.Vuelto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnitNull() {
-                return this.IsNull(this.tableVueltos.nitColumn);
+            public bool Isserie_documentoNull() {
+                return this.IsNull(this.tableVueltos.serie_documentoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnitNull() {
-                this[this.tableVueltos.nitColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isserie_facturaNull() {
-                return this.IsNull(this.tableVueltos.serie_facturaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setserie_facturaNull() {
-                this[this.tableVueltos.serie_facturaColumn] = global::System.Convert.DBNull;
+            public void Setserie_documentoNull() {
+                this[this.tableVueltos.serie_documentoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1096,9 +1167,12 @@ namespace ortoxela.Vueltos.Vuelto.DataSetVueltoTableAdapters {
             tableMapping.ColumnMappings.Add("no_cheque", "no_cheque");
             tableMapping.ColumnMappings.Add("nombre_banco", "nombre_banco");
             tableMapping.ColumnMappings.Add("nombre_paciente", "nombre_paciente");
-            tableMapping.ColumnMappings.Add("nit", "nit");
-            tableMapping.ColumnMappings.Add("no_factura", "no_factura");
-            tableMapping.ColumnMappings.Add("serie_factura", "serie_factura");
+            tableMapping.ColumnMappings.Add("id_vuelto", "id_vuelto");
+            tableMapping.ColumnMappings.Add("no_documento", "no_documento");
+            tableMapping.ColumnMappings.Add("no_recibo", "no_recibo");
+            tableMapping.ColumnMappings.Add("no_documento1", "no_documento1");
+            tableMapping.ColumnMappings.Add("no_documento2", "no_documento2");
+            tableMapping.ColumnMappings.Add("serie_documento", "serie_documento");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1115,12 +1189,36 @@ namespace ortoxela.Vueltos.Vuelto.DataSetVueltoTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        clientes.nombre_cliente, vueltos.monto_vuelto, vueltos.fecha_pago, vueltos.no_cheque, vueltos.nombre_banco, vueltos.no_vuelto, 
-                         clientes.nombre_paciente, clientes.nit, header_doctos_inv_2.no_documento AS no_factura, series_documentos.serie_documento AS serie_factura
-FROM            clientes INNER JOIN
-                         vueltos ON clientes.codigo_cliente = vueltos.codigo_cliente INNER JOIN
-                         header_doctos_inv header_doctos_inv_2 ON vueltos.id_factura = header_doctos_inv_2.id_documento INNER JOIN
-                         series_documentos ON header_doctos_inv_2.codigo_serie = series_documentos.codigo_serie";
+            this._commandCollection[0].CommandText = @"SELECT 
+vuelto.`id_vuelto`,
+vuelto.`no_vuelto`,
+vuelto.`fecha_pago`,
+vuelto.`monto_vuelto`,
+vuelto.`no_cheque`,
+vuelto.`nombre_banco`,
+cliente.`nombre_cliente`,
+cliente.`nombre_paciente`,
+en1.`no_documento`,
+recibo.`no_recibo`,
+en2.`no_documento`,
+en3.`no_documento`,
+serie.`serie_documento`
+FROM 
+vueltos AS vuelto,
+clientes AS cliente,
+header_doctos_inv AS en1,
+recibos AS recibo,
+header_doctos_inv AS en2,
+header_doctos_inv AS en3,
+series_documentos AS serie
+
+
+WHERE vuelto.`codigo_cliente`=cliente.`codigo_cliente`
+AND vuelto.`id_vale`=en1.`id_documento`
+AND vuelto.`id_recibo`=recibo.`id_recibos`
+AND vuelto.`id_pedido`=en2.`id_documento`
+AND vuelto.`id_factura`=en3.`id_documento`
+AND en3.`codigo_serie`=serie.`codigo_serie`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

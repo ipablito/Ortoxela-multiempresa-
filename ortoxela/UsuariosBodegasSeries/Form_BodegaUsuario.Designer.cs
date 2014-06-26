@@ -30,14 +30,13 @@
         {
             this.lookUpEdit_usuario = new DevExpress.XtraEditors.LookUpEdit();
             this.dataGridView_bodega = new System.Windows.Forms.DataGridView();
-            this.Estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.simpleButton_guardar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.sbCancelar = new DevExpress.XtraEditors.SimpleButton();
+            this.Estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_usuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_bodega)).BeginInit();
             this.SuspendLayout();
@@ -64,44 +63,12 @@
             this.dataGridView_bodega.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Estado,
             this.ID,
-            this.Nombre,
-            this.Direccion});
+            this.Nombre});
             this.dataGridView_bodega.Location = new System.Drawing.Point(313, 46);
             this.dataGridView_bodega.Name = "dataGridView_bodega";
             this.dataGridView_bodega.RowHeadersVisible = false;
             this.dataGridView_bodega.Size = new System.Drawing.Size(618, 383);
             this.dataGridView_bodega.TabIndex = 1;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.Width = 46;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "codigo_bodega";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ID.Width = 24;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "nombre_bodega";
-            this.Nombre.HeaderText = "Bodega";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 50;
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Direccion.Width = 58;
             // 
             // simpleButton_guardar
             // 
@@ -144,6 +111,29 @@
             this.sbCancelar.Text = "Cancelar/Salir";
             this.sbCancelar.Click += new System.EventHandler(this.sbCancelar_Click);
             // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.Width = 46;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "codigo_bodega";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ID.Width = 24;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nombre_bodega";
+            this.Nombre.HeaderText = "Bodega";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Nombre.Width = 50;
+            // 
             // Form_BodegaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,10 +162,9 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton_guardar;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.SimpleButton sbCancelar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private DevExpress.XtraEditors.SimpleButton sbCancelar;
     }
 }
