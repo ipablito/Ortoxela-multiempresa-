@@ -187,52 +187,56 @@ namespace ortoxela.Articulos
                         else
                             cadena = "SELECT articulos.codigo_articulo FROM articulos where codigo_articulo='" + textEditcodigo.Text + "'";
 
-                        if (logica.ExisteRegistro(cadena) == true)
-                        {
-                            alertControl1.Show(this, "Cuidado", "Este codigo de producto ya existe", Properties.Resources.Advertencia48);
-                            
-                            //aca vamos a ver que hacemos para eliminar los espacios en los codigos
-                            DataSet_articuloTableAdapters.filtrocodigoTableAdapter lg = new DataSet_articuloTableAdapters.filtrocodigoTableAdapter();
-                            DataTable res = new DataTable();
-                            res = lg.GetData_filtrarcodigodearticulo(textEditcodigo.Text);
-                            MessageBox.Show("El codigo " + res.Rows[0][0].ToString() + " ya existe, con la descripcion: " + res.Rows[0][1].ToString()+" y actualmente esta en el estado: " +res.Rows[0][2].ToString(), "Producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            textEditcodigo.Focus();
-                        }
-                        else
-                        {
+                        
+                        
 
                             if (bandera == 1)
                             {
-
-                                if (codigo_padre == "null")
+                                if (logica.ExisteRegistro(cadena) == true)
                                 {
-                                    cadena = "INSERT into articulos " +
-                                            "(codigo_articulo, codigo_marca, codigo_categoria, descripcion, fecha_compra, costo, precio_venta, minimo, maximo, numero_serie, modelo, comentario, usuario_ingresa, estadoid,compuesto, codigo_padre) " +
-                                            "VALUES ('" + textEditcodigo.Text + "', " + codigo_marca + ", " + gridLooksubcategoria.EditValue + ", '" + memoEditdescripcion.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', " + texteditpcosto.Text + ", " + textEditpventa.Text + ", " +
-                                            "" + textEditpmin.Text + ", " + textEditpmax.Text + ", '" + textEditserie.Text + "', '" + texteditmodelo.Text + "', '" + memoEditcomentario.Text + "', " + clases.ClassVariables.id_usuario + "," + gridLookUpEstado.EditValue + "," + checkEditCompu.Checked + ", " + codigo_padre + ")";
+                                    alertControl1.Show(this, "Cuidado", "Este codigo de producto ya existe", Properties.Resources.Advertencia48);
+
+                                    //aca vamos a ver que hacemos para eliminar los espacios en los codigos
+                                    DataSet_articuloTableAdapters.filtrocodigoTableAdapter lg = new DataSet_articuloTableAdapters.filtrocodigoTableAdapter();
+                                    DataTable res = new DataTable();
+                                    res = lg.GetData_filtrarcodigodearticulo(textEditcodigo.Text);
+                                    MessageBox.Show("El codigo " + res.Rows[0][0].ToString() + " ya existe, con la descripcion: " + res.Rows[0][1].ToString() + " y actualmente esta en el estado: " + res.Rows[0][2].ToString(), "Producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    textEditcodigo.Focus();
                                 }
                                 else
                                 {
-                                    cadena = "INSERT into articulos " +
-                                            "(codigo_articulo, codigo_marca, codigo_categoria,descripcion, fecha_compra, costo, precio_venta, minimo, maximo, numero_serie, modelo, comentario, usuario_ingresa, estadoid,compuesto, codigo_padre) " +
-                                            "VALUES ('" + textEditcodigo.Text + "', " + codigo_marca + ", " + gridLooksubcategoria.EditValue + ", '" + (memoEditdescripcion.Text + "[" + codigo_padredesc + "]") + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', " + texteditpcosto.Text + ", " + textEditpventa.Text + ", " +
-                                            "" + textEditpmin.Text + ", " + textEditpmax.Text + ", '" + textEditserie.Text + "', '" + texteditmodelo.Text + "', '" + memoEditcomentario.Text + "', " + clases.ClassVariables.id_usuario + "," + gridLookUpEstado.EditValue + "," + checkEditCompu.Checked + ", " + codigo_padre + ")";
 
-                                }
-                                if (clases.ClassMensajes.INSERTO(this, cadena))
-                                {
-                                    groupControl1.Enabled = false;
-                                    simpleaceptar.Enabled = false;
-                                    id_articulo = textEditcodigo.Text;
-                                    nombre_articulo = memoEditdescripcion.Text;
-                                    precio_costo = texteditpcosto.Text;
-                                    precio_venta = textEditpventa.Text;
-                                    BanderaLlamada = true;
-
-                                    if (llamadentroform == true)
+                                    if (codigo_padre == "null")
                                     {
-                                        llamadentroform = false;
-                                        this.Close();
+
+                                        cadena = "INSERT into articulos " +
+                                                "(codigo_articulo, codigo_marca, codigo_categoria, descripcion, fecha_compra, costo, precio_venta, minimo, maximo, numero_serie, modelo, comentario, usuario_ingresa, estadoid,compuesto, codigo_padre) " +
+                                                "VALUES ('" + textEditcodigo.Text + "', " + codigo_marca + ", " + gridLooksubcategoria.EditValue + ", '" + memoEditdescripcion.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', " + texteditpcosto.Text + ", " + textEditpventa.Text + ", " +
+                                                "" + textEditpmin.Text + ", " + textEditpmax.Text + ", '" + textEditserie.Text + "', '" + texteditmodelo.Text + "', '" + memoEditcomentario.Text + "', " + clases.ClassVariables.id_usuario + "," + gridLookUpEstado.EditValue + "," + checkEditCompu.Checked + ", " + codigo_padre + ")";
+                                    }
+                                    else
+                                    {
+                                        cadena = "INSERT into articulos " +
+                                                "(codigo_articulo, codigo_marca, codigo_categoria,descripcion, fecha_compra, costo, precio_venta, minimo, maximo, numero_serie, modelo, comentario, usuario_ingresa, estadoid,compuesto, codigo_padre) " +
+                                                "VALUES ('" + textEditcodigo.Text + "', " + codigo_marca + ", " + gridLooksubcategoria.EditValue + ", '" + (memoEditdescripcion.Text + "[" + codigo_padredesc + "]") + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', " + texteditpcosto.Text + ", " + textEditpventa.Text + ", " +
+                                                "" + textEditpmin.Text + ", " + textEditpmax.Text + ", '" + textEditserie.Text + "', '" + texteditmodelo.Text + "', '" + memoEditcomentario.Text + "', " + clases.ClassVariables.id_usuario + "," + gridLookUpEstado.EditValue + "," + checkEditCompu.Checked + ", " + codigo_padre + ")";
+
+                                    }
+                                    if (clases.ClassMensajes.INSERTO(this, cadena))
+                                    {
+                                        groupControl1.Enabled = false;
+                                        simpleaceptar.Enabled = false;
+                                        id_articulo = textEditcodigo.Text;
+                                        nombre_articulo = memoEditdescripcion.Text;
+                                        precio_costo = texteditpcosto.Text;
+                                        precio_venta = textEditpventa.Text;
+                                        BanderaLlamada = true;
+
+                                        if (llamadentroform == true)
+                                        {
+                                            llamadentroform = false;
+                                            this.Close();
+                                        }
                                     }
                                 }
                             }
@@ -281,7 +285,7 @@ namespace ortoxela.Articulos
                                         }
                                     }
                                 }
-                            }
+                            
                         }
                     }
                     else

@@ -34,6 +34,7 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.checkBox_detallado1 = new System.Windows.Forms.CheckBox();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
@@ -61,7 +62,6 @@
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.bodegas = new System.Windows.Forms.ComboBox();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
@@ -71,6 +71,7 @@
             this.FechaInicio = new DevExpress.XtraEditors.DateEdit();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
+            this.listBox_bodegas = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -104,6 +105,7 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(831, 56);
             this.panelControl1.TabIndex = 6;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // labelControl23
             // 
@@ -146,6 +148,7 @@
             // 
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.Controls.Add(this.checkBox_detallado1);
             this.panelControl2.Controls.Add(this.labelControl20);
             this.panelControl2.Controls.Add(this.labelControl9);
             this.panelControl2.Controls.Add(this.textEdit3);
@@ -158,6 +161,17 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(831, 56);
             this.panelControl2.TabIndex = 7;
+            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
+            // 
+            // checkBox_detallado1
+            // 
+            this.checkBox_detallado1.AutoSize = true;
+            this.checkBox_detallado1.Location = new System.Drawing.Point(244, 19);
+            this.checkBox_detallado1.Name = "checkBox_detallado1";
+            this.checkBox_detallado1.Size = new System.Drawing.Size(71, 17);
+            this.checkBox_detallado1.TabIndex = 28;
+            this.checkBox_detallado1.Text = "Detallado";
+            this.checkBox_detallado1.UseVisualStyleBackColor = true;
             // 
             // labelControl20
             // 
@@ -317,7 +331,7 @@
             this.labelControl12.Size = new System.Drawing.Size(219, 26);
             this.labelControl12.TabIndex = 12;
             this.labelControl12.Text = "Para ver todos los códigos que contengan \r\nun texto, ingresarlo solo en un campo." +
-    "";
+                "";
             // 
             // labelControl13
             // 
@@ -404,18 +418,10 @@
             this.simpleButton3.Text = "Consultar";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
-            // bodegas
-            // 
-            this.bodegas.FormattingEnabled = true;
-            this.bodegas.Location = new System.Drawing.Point(137, 226);
-            this.bodegas.Name = "bodegas";
-            this.bodegas.Size = new System.Drawing.Size(209, 21);
-            this.bodegas.TabIndex = 15;
-            // 
             // labelControl17
             // 
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl17.Location = new System.Drawing.Point(44, 227);
+            this.labelControl17.Location = new System.Drawing.Point(44, 171);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(60, 20);
             this.labelControl17.TabIndex = 16;
@@ -424,7 +430,7 @@
             // labelControl18
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl18.Location = new System.Drawing.Point(44, 274);
+            this.labelControl18.Location = new System.Drawing.Point(44, 389);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(73, 20);
             this.labelControl18.TabIndex = 19;
@@ -433,7 +439,7 @@
             // comboBoxCategorias
             // 
             this.comboBoxCategorias.FormattingEnabled = true;
-            this.comboBoxCategorias.Location = new System.Drawing.Point(137, 278);
+            this.comboBoxCategorias.Location = new System.Drawing.Point(137, 393);
             this.comboBoxCategorias.Name = "comboBoxCategorias";
             this.comboBoxCategorias.Size = new System.Drawing.Size(209, 21);
             this.comboBoxCategorias.TabIndex = 18;
@@ -460,7 +466,7 @@
             // FechaFin
             // 
             this.FechaFin.EditValue = null;
-            this.FechaFin.Location = new System.Drawing.Point(243, 171);
+            this.FechaFin.Location = new System.Drawing.Point(243, 119);
             this.FechaFin.Name = "FechaFin";
             this.FechaFin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -473,7 +479,7 @@
             // FechaInicio
             // 
             this.FechaInicio.EditValue = null;
-            this.FechaInicio.Location = new System.Drawing.Point(81, 171);
+            this.FechaInicio.Location = new System.Drawing.Point(81, 119);
             this.FechaInicio.Name = "FechaInicio";
             this.FechaInicio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -486,7 +492,7 @@
             // labelControl25
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl25.Location = new System.Drawing.Point(40, 170);
+            this.labelControl25.Location = new System.Drawing.Point(40, 118);
             this.labelControl25.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(29, 23);
@@ -496,23 +502,33 @@
             // labelControl27
             // 
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl27.Location = new System.Drawing.Point(203, 170);
+            this.labelControl27.Location = new System.Drawing.Point(203, 118);
             this.labelControl27.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(20, 23);
             this.labelControl27.TabIndex = 23;
             this.labelControl27.Text = "Al:";
             // 
+            // listBox_bodegas
+            // 
+            this.listBox_bodegas.FormattingEnabled = true;
+            this.listBox_bodegas.Location = new System.Drawing.Point(137, 175);
+            this.listBox_bodegas.Name = "listBox_bodegas";
+            this.listBox_bodegas.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_bodegas.Size = new System.Drawing.Size(209, 160);
+            this.listBox_bodegas.TabIndex = 27;
+            this.listBox_bodegas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_bodegas_MouseUp);
+            // 
             // Frm_RepInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 502);
+            this.Controls.Add(this.listBox_bodegas);
             this.Controls.Add(this.labelControl18);
             this.Controls.Add(this.FechaFin);
             this.Controls.Add(this.comboBoxCategorias);
             this.Controls.Add(this.FechaInicio);
-            this.Controls.Add(this.bodegas);
             this.Controls.Add(this.labelControl17);
             this.Controls.Add(this.labelControl25);
             this.Controls.Add(this.labelControl27);
@@ -587,7 +603,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.LabelControl labelControl17;
-        private System.Windows.Forms.ComboBox bodegas;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private System.Windows.Forms.ComboBox comboBoxCategorias;
         private DevExpress.XtraEditors.LabelControl labelControl22;
@@ -601,5 +616,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.LabelControl labelControl20;
         private DevExpress.XtraEditors.LabelControl labelControl19;
+        private System.Windows.Forms.ListBox listBox_bodegas;
+        private System.Windows.Forms.CheckBox checkBox_detallado1;
     }
 }

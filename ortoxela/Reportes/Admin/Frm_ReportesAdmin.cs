@@ -23,6 +23,24 @@ namespace ortoxela.Reportes.Admin
         {
 
         }
+        
+        string Bodega_origen_int = "0";
+        string Bodega_origen_int_nombre = "";
+        void cargarbodegas()
+        {
+            Bodega_origen_int = "0";
+            Bodega_origen_int_nombre = "";
+            if (listBox_bodegas.SelectedItems.Count > 0)
+            {
+
+                for (int cnt = 0; cnt < listBox_bodegas.SelectedItems.Count; cnt++)
+                {
+                    DataRowView bdgs = listBox_bodegas.SelectedItems[cnt] as DataRowView;
+                    Bodega_origen_int += "," + bdgs["codigo_bodega"].ToString();
+                    Bodega_origen_int_nombre += "," + bdgs["nombre_bodega"].ToString();
+                }
+            }
+        }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
@@ -41,12 +59,11 @@ namespace ortoxela.Reportes.Admin
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            Int32 bodega1 = 0;
-            Int32 bodega2 = 100;
-            string botittle = "Todas";
+            cargarbodegas();
+            
             string consulta = "SELECT codigo_articulo, articulo, Ult_compra, Ult_venta, Ult_precio, nombre_bodega, categoria, codigo_categoria, existencia_articulo, codigo_bodega  " +
                                " FROM v_inventario where 1=1 ";
-            if (bodegas.SelectedValue.ToString() != "0")
+            if (Bodega_origen_int!="0")
             {
                 consulta = "SELECT `a`.`codigo_articulo` AS `codigo_articulo`,REPLACE(a.descripcion,'\"','') AS articulo,SUM(COALESCE(`b`.`existencia_articulo`,0)) AS `existencia_articulo`, " +
                 " DATE_FORMAT((SELECT f_ultima_compra(b.codigo_articulo) FROM DUAL),'%d-%m-%Y') AS Ult_compra, " +
@@ -57,16 +74,14 @@ namespace ortoxela.Reportes.Admin
                 " FROM `bodegas_header` `bh` JOIN `bodegas` `b` ON(`bh`.`codigo_bodega` = `b`.`codigo_bodega` ) " +
                 " JOIN `articulos` `a` ON(`b`.`codigo_articulo` = `a`.`codigo_articulo`) " +
                 " JOIN `sub_categorias` `s` ON (`a`.`codigo_categoria` = `s`.`codigo_subcat`) " +
-                " WHERE bh.codigo_bodega= " + bodegas.SelectedValue.ToString();
+                " WHERE bh.codigo_bodega in (" + Bodega_origen_int + ") ";
                 if (comboBoxCategorias.SelectedValue.ToString() != "0")
                 {
                     consulta = consulta + "  and a.codigo_categoria = " + comboBoxCategorias.SelectedValue;
                 }
                 consulta = consulta + " GROUP BY b.codigo_articulo ORDER BY a.descripcion";
                 // consulta = consulta + " and codigo_bodega =" + bodegas.SelectedValue.ToString();
-                bodega1 = Int32.Parse(bodegas.SelectedValue.ToString());
-                bodega2 = Int32.Parse(bodegas.SelectedValue.ToString());
-                botittle = bodegas.Text;
+                
             }
             else
             {
@@ -84,10 +99,10 @@ namespace ortoxela.Reportes.Admin
             reportei.DataMember = dataseti.Tables["v_inventario"].TableName;
             reportei.Parameters["Fecha_inicio"].Value = dateEdit6.EditValue;
             reportei.Parameters["Fecha_fin"].Value = dateEdit5.EditValue;
-            reportei.Parameters["existencia"].Value = 0;
-            reportei.Parameters["codigo_bodega1"].Value = bodega1;
-            reportei.Parameters["codigo_bodega2"].Value = bodega2;
-            reportei.Parameters["bodega"].Value = botittle;
+            //reportei.Parameters["existencia"].Value = 0;
+            //reportei.Parameters["codigo_bodega1"].Value = bodega1;
+            //reportei.Parameters["codigo_bodega2"].Value = bodega2;
+            reportei.Parameters["bodega"].Value = Bodega_origen_int_nombre;
             reportei.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa; 
             reportei.RequestParameters = false;
             reportei.ShowPreview();
@@ -101,12 +116,16 @@ namespace ortoxela.Reportes.Admin
             this.Text = "Reportes de Administracion - " + clases.ClassVariables.nombreEmpresa; 
             try
             {
-                string ssql = "  Select 0 as codigo_bodega, 'Todas' as nombre_bodega from dual " +
+                /*string ssql = "  Select 0 as codigo_bodega, 'Todas' as nombre_bodega from dual " +
                             " union all  " +
-                            " select codigo_bodega,nombre_bodega from bodegas_header where estadoid=1";
-                bodegas.DataSource = logicaxela.Tabla(ssql);
-                bodegas.DisplayMember = "nombre_bodega";
-                bodegas.ValueMember = "codigo_bodega";
+                            " select codigo_bodega,nombre_bodega from bodegas_header where estadoid=1";*/
+                string ssql ="select codigo_bodega,nombre_bodega from bodegas_header where estadoid=1";
+
+                
+
+                listBox_bodegas.DataSource = logicaxela.Tabla(ssql);
+                listBox_bodegas.DisplayMember = "nombre_bodega";
+                listBox_bodegas.ValueMember = "codigo_bodega";
 
             }
             catch

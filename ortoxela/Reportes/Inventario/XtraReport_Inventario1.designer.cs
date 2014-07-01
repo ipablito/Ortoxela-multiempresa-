@@ -38,6 +38,8 @@ namespace ortoxela.Reportes.Inventario
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.nombreEmpresa = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo5 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -75,8 +77,6 @@ namespace ortoxela.Reportes.Inventario
             this.codigo_bodega1 = new DevExpress.XtraReports.Parameters.Parameter();
             this.codigo_bodega2 = new DevExpress.XtraReports.Parameters.Parameter();
             this.Venta_Total = new DevExpress.XtraReports.UI.CalculatedField();
-            this.nombreEmpresa = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Inventario1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -186,6 +186,27 @@ namespace ortoxela.Reportes.Inventario
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel6
+            // 
+            this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.nombreEmpresa, "Text", "")});
+            this.xrLabel6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(258.2084F, 0F);
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(332.2917F, 23F);
+            this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.StylePriority.UseTextAlignment = false;
+            this.xrLabel6.Text = "xrLabel6";
+            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // nombreEmpresa
+            // 
+            this.nombreEmpresa.Description = "nombreEmpresa";
+            this.nombreEmpresa.Name = "nombreEmpresa";
+            this.nombreEmpresa.Value = "";
+            this.nombreEmpresa.Visible = false;
             // 
             // xrPageInfo1
             // 
@@ -527,27 +548,6 @@ namespace ortoxela.Reportes.Inventario
             this.Venta_Total.Expression = "[Ult_venta]*[existencia_articulo]";
             this.Venta_Total.Name = "Venta_Total";
             // 
-            // nombreEmpresa
-            // 
-            this.nombreEmpresa.Description = "nombreEmpresa";
-            this.nombreEmpresa.Name = "nombreEmpresa";
-            this.nombreEmpresa.Value = "";
-            this.nombreEmpresa.Visible = false;
-            // 
-            // xrLabel6
-            // 
-            this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.nombreEmpresa, "Text", "")});
-            this.xrLabel6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(258.2084F, 0F);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(332.2917F, 23F);
-            this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.StylePriority.UseTextAlignment = false;
-            this.xrLabel6.Text = "xrLabel6";
-            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
             // XtraReport_Inventario1
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -563,8 +563,6 @@ namespace ortoxela.Reportes.Inventario
             this.DataAdapter = this.v_inventarioTableAdapter;
             this.DataMember = "v_inventario";
             this.DataSource = this.dataSet_Inventario1;
-            this.FilterString = "[existencia_articulo] > ?existencia And [codigo_bodega] Between(?codigo_bodega1, " +
-    "?codigo_bodega2)";
             this.Margins = new System.Drawing.Printing.Margins(17, 19, 30, 30);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.Fecha_inicio,
