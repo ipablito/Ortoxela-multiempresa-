@@ -39,10 +39,10 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.textFACTURA = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textBANCO = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.textTotaL = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.comboBox_cuentas = new System.Windows.Forms.ComboBox();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.textCHEQUE = new DevExpress.XtraEditors.TextEdit();
@@ -65,7 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textNombreCliente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textFACTURA.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBANCO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTotaL.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -167,21 +166,11 @@
             // labelControl9
             // 
             this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl9.Location = new System.Drawing.Point(63, 172);
+            this.labelControl9.Location = new System.Drawing.Point(57, 172);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(39, 13);
+            this.labelControl9.Size = new System.Drawing.Size(44, 13);
             this.labelControl9.TabIndex = 62;
-            this.labelControl9.Text = "BANCO:";
-            // 
-            // textBANCO
-            // 
-            this.textBANCO.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBANCO.Location = new System.Drawing.Point(109, 169);
-            this.textBANCO.Name = "textBANCO";
-            this.textBANCO.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.textBANCO.Properties.Appearance.Options.UseForeColor = true;
-            this.textBANCO.Size = new System.Drawing.Size(338, 20);
-            this.textBANCO.TabIndex = 10;
+            this.labelControl9.Text = "CUENTA:";
             // 
             // labelControl12
             // 
@@ -189,7 +178,7 @@
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Location = new System.Drawing.Point(485, 120);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(57, 19);
+            this.labelControl12.Size = new System.Drawing.Size(55, 19);
             this.labelControl12.TabIndex = 66;
             this.labelControl12.Text = "TOTAL:";
             // 
@@ -213,8 +202,9 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.comboBox_cuentas);
             this.groupControl1.Controls.Add(this.dateEdit1);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.textCHEQUE);
@@ -227,7 +217,6 @@
             this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.textTotaL);
             this.groupControl1.Controls.Add(this.labelControl12);
-            this.groupControl1.Controls.Add(this.textBANCO);
             this.groupControl1.Controls.Add(this.labelControl9);
             this.groupControl1.Controls.Add(this.textFACTURA);
             this.groupControl1.Controls.Add(this.labelControl15);
@@ -243,6 +232,14 @@
             this.groupControl1.Size = new System.Drawing.Size(717, 264);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Datos";
+            // 
+            // comboBox_cuentas
+            // 
+            this.comboBox_cuentas.FormattingEnabled = true;
+            this.comboBox_cuentas.Location = new System.Drawing.Point(365, 172);
+            this.comboBox_cuentas.Name = "comboBox_cuentas";
+            this.comboBox_cuentas.Size = new System.Drawing.Size(208, 21);
+            this.comboBox_cuentas.TabIndex = 80;
             // 
             // dateEdit1
             // 
@@ -273,6 +270,8 @@
             this.textCHEQUE.Name = "textCHEQUE";
             this.textCHEQUE.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.textCHEQUE.Properties.Appearance.Options.UseForeColor = true;
+            this.textCHEQUE.Properties.Mask.EditMask = "f0";
+            this.textCHEQUE.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textCHEQUE.Size = new System.Drawing.Size(116, 20);
             this.textCHEQUE.TabIndex = 8;
             // 
@@ -396,9 +395,9 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl1.Location = new System.Drawing.Point(5, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
@@ -446,7 +445,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textNombreCliente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textFACTURA.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBANCO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTotaL.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -477,7 +475,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.TextEdit textFACTURA;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit textBANCO;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.TextEdit textTotaL;
         private DevExpress.XtraEditors.GroupControl groupControl1;
@@ -499,6 +496,7 @@
         private DevExpress.XtraEditors.SimpleButton sbimprimir;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.ComboBox comboBox_cuentas;
 
     }
 }

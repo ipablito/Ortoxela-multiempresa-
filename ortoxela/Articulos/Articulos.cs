@@ -21,6 +21,20 @@ namespace ortoxela.Articulos
         public static string id_articulo,nombre_articulo,precio_costo,precio_venta;
         string cadena; bool llamadentroform;
         string temo_id_articulao;
+
+        bool ConfigurarSistema = false;
+        bool BuscarSistema = false;
+
+        public void Sistema()
+        {
+            this.Text = "Set";
+            this.groupControl1.Text = "Informacion del Set";
+            checkEditCompu.Checked = true;
+            BuscarSistema = true;
+            ConfigurarSistema = true;
+        }
+
+
         private void Proveedor_Load(object sender, EventArgs e)
         {
                llamadentroform = clases.ClassVariables.llamadoDentroForm;
@@ -46,7 +60,12 @@ namespace ortoxela.Articulos
                         simpleaceptar.Image = Properties.Resources.database_process_24x24_32;
                         simpleButton1.Text = "Buscar...";
                         simpleButton1.Image = Properties.Resources._027_folder_search;
-                        busca_mod_eli();
+
+                        if (BuscarSistema == false)
+                            busca_mod_eli();
+                        else
+                            busca_mod_eli_sistema();
+
                         temo_id_articulao = textEditcodigo.Text;
                     }
                     else
@@ -58,16 +77,22 @@ namespace ortoxela.Articulos
                             simpleaceptar.Image = Properties.Resources.database_remove_24x24_32;
                             simpleButton1.Text = "Buscar...";
                             simpleButton1.Image = Properties.Resources._027_folder_search;
-                            busca_mod_eli();
+
+                            if (BuscarSistema == false)
+                                busca_mod_eli();
+                            else
+                                busca_mod_eli_sistema();
 
                         }
                     }
                 }
-                      
+
         }
+
+        string Codigo_Control = "";
         private void busca_mod_eli()
         {
-            clases.ClassVariables.cadenabusca = "SELECT * FROM v_articulos_cat_lbod ";
+            clases.ClassVariables.cadenabusca = "SELECT * FROM v_articulos_cat_lbod WHERE compuesto=0  ";
                                                          
             Form busca = new Buscador.Buscador();
             busca.ShowDialog();
@@ -83,6 +108,9 @@ namespace ortoxela.Articulos
                 {
                                                                  
                         textEditcodigo.Text = fila[0].ToString();
+                        
+                    Codigo_Control = textEditcodigo.Text;
+                        
                         gridLookmarca.EditValue = fila[1].ToString();
                         gridLookcategoria.EditValue = fila[14].ToString();    
                         gridLooksubcategoria.EditValue = fila[2].ToString();
@@ -95,14 +123,8 @@ namespace ortoxela.Articulos
                         texteditmodelo.Text = fila[9].ToString();
                         memoEditcomentario.Text = fila[10].ToString();
                         gridLookUpEstado.EditValue = fila[11].ToString();
-                        checkEditCompu.Checked = Convert.ToBoolean(fila[12].ToString());
-                        gridLookupartpadre.EditValue = fila[13].ToString();
-                        
-                        
-                       
-                 
-
-                    
+                        checkEditCompu.Checked = false;
+                        //gridLookupartpadre.EditValue = fila[13].ToString();
                     }
             }
             else
@@ -111,6 +133,51 @@ namespace ortoxela.Articulos
                 simpleaceptar.Enabled = false;
             }
         }
+
+        private void busca_mod_eli_sistema()
+        {
+            clases.ClassVariables.cadenabusca = "SELECT * FROM v_articulos_cat_lbod WHERE compuesto=1 ";
+
+            Form busca = new Buscador.Buscador();
+            busca.ShowDialog();
+            if (clases.ClassVariables.id_busca != "")
+            {
+                llenacombos();
+                groupControl1.Enabled = true;
+                simpleaceptar.Enabled = true;
+                cadena = "CALL sp_obtener_articulo_categoria('" + clases.ClassVariables.id_busca + "');";
+                DataTable dt = new DataTable();
+                dt = logica.Tabla(cadena);
+                foreach (DataRow fila in dt.Rows)
+                {
+
+                    textEditcodigo.Text = fila[0].ToString();
+
+                    Codigo_Control = textEditcodigo.Text;
+
+                    gridLookmarca.EditValue = fila[1].ToString();
+                    gridLookcategoria.EditValue = fila[14].ToString();
+                    gridLooksubcategoria.EditValue = fila[2].ToString();
+                    memoEditdescripcion.Text = fila[3].ToString();
+                    texteditpcosto.Text = fila[4].ToString();
+                    textEditpventa.Text = fila[5].ToString();
+                    textEditpmin.Text = fila[6].ToString();
+                    textEditpmax.Text = fila[7].ToString();
+                    textEditserie.Text = fila[8].ToString();
+                    texteditmodelo.Text = fila[9].ToString();
+                    memoEditcomentario.Text = fila[10].ToString();
+                    gridLookUpEstado.EditValue = fila[11].ToString();
+                    checkEditCompu.Checked = true;
+                    //gridLookupartpadre.EditValue = fila[13].ToString();
+                }
+            }
+            else
+            {
+                groupControl1.Enabled = false;
+                simpleaceptar.Enabled = false;
+            }
+        }
+
         public void limpiar()
         {
             textEditcodigo.Text = "";
@@ -121,9 +188,9 @@ namespace ortoxela.Articulos
             textEditpmax.Text = "";
             textEditserie.Text = "";
             texteditmodelo.Text = "";
-            gridLookupartpadre.Text = "";
+            //gridLookupartpadre.Text = "";
             memoEditcomentario.Text = "";
-            checkEditCompu.Checked = false;
+            //checkEditCompu.Checked = false;
             textEditcodigo.Focus();
         }
                 
@@ -161,16 +228,16 @@ namespace ortoxela.Articulos
                     if (Convert.ToDouble(textEditpmin.Text)<=Convert.ToDouble(textEditpmax.Text))
                     {
                         string codigo_padre, codigo_padredesc, codigo_marca;
-                        if (gridLookupartpadre.EditValue.ToString() != "")
-                        {
-                            codigo_padre = "'" + gridLookupartpadre.EditValue.ToString() + "'";
-                            codigo_padredesc = gridLookupartpadre.EditValue.ToString();
-                        }
-                        else
-                        {
+                        //if (gridLookupartpadre.EditValue.ToString() != "")
+                        //{
+                        //    codigo_padre = "'" + gridLookupartpadre.EditValue.ToString() + "'";
+                        //    codigo_padredesc = gridLookupartpadre.EditValue.ToString();
+                        //}
+                        //else
+                        //{
                             codigo_padre = "null";
                             codigo_padredesc = "null";
-                        }
+                        //}
 
                         if (gridLookmarca.EditValue.ToString() != "")
                             codigo_marca = gridLookmarca.EditValue.ToString();
@@ -220,12 +287,21 @@ namespace ortoxela.Articulos
                                                 "(codigo_articulo, codigo_marca, codigo_categoria,descripcion, fecha_compra, costo, precio_venta, minimo, maximo, numero_serie, modelo, comentario, usuario_ingresa, estadoid,compuesto, codigo_padre) " +
                                                 "VALUES ('" + textEditcodigo.Text + "', " + codigo_marca + ", " + gridLooksubcategoria.EditValue + ", '" + (memoEditdescripcion.Text + "[" + codigo_padredesc + "]") + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', " + texteditpcosto.Text + ", " + textEditpventa.Text + ", " +
                                                 "" + textEditpmin.Text + ", " + textEditpmax.Text + ", '" + textEditserie.Text + "', '" + texteditmodelo.Text + "', '" + memoEditcomentario.Text + "', " + clases.ClassVariables.id_usuario + "," + gridLookUpEstado.EditValue + "," + checkEditCompu.Checked + ", " + codigo_padre + ")";
-
                                     }
                                     if (clases.ClassMensajes.INSERTO(this, cadena))
                                     {
+                                        if (ConfigurarSistema == true)
+                                        {
+                                            F_configurarSistema nf = new F_configurarSistema(textEditcodigo.Text);
+                                            nf.ShowDialog();
+                                        }
+
+
+
+
                                         groupControl1.Enabled = false;
                                         simpleaceptar.Enabled = false;
+
                                         id_articulo = textEditcodigo.Text;
                                         nombre_articulo = memoEditdescripcion.Text;
                                         precio_costo = texteditpcosto.Text;
@@ -245,17 +321,38 @@ namespace ortoxela.Articulos
 
                                 if (bandera == 2)
                                 {
-
-                                    cadena = "update articulos " +
-                                                "SET codigo_marca = " + codigo_marca + ", codigo_categoria = " + gridLooksubcategoria.EditValue + ", descripcion = '" + memoEditdescripcion.Text + "', " +
-                                            "costo = " + texteditpcosto.Text + ", precio_venta = " + textEditpventa.Text + ", minimo = " + textEditpmin.Text + ", maximo = " + textEditpmax.Text + ", numero_serie = '" + textEditserie.Text + "', modelo = '" + texteditmodelo.Text + "', comentario = '" + memoEditcomentario.Text + "', " +
-                                            "usuario_modifica = " + clases.ClassVariables.id_usuario + ", estadoid = " + gridLookUpEstado.EditValue + ", compuesto = " + checkEditCompu.Checked + ",codigo_padre = " + codigo_padre + " " +
-                                            "WHERE articulos.codigo_articulo= '" + clases.ClassVariables.id_busca + "'";
-
-                                    if (clases.ClassMensajes.MODIFICAR(this, cadena))
+                                    DialogResult res=DialogResult.Yes;
+                                    if (Codigo_Control != textEditcodigo.Text)
                                     {
-                                        groupControl1.Enabled = false;
-                                        simpleaceptar.Enabled = false;
+                                        res = MessageBox.Show("Esta a punto de cambiar el codigo " + Codigo_Control + " por el codigo " + textEditcodigo.Text + ", este cambio afectara a todas las operaciones que haya tenido este articulo.\n\nDesea continuar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                    }
+
+                                    if ((Codigo_Control != textEditcodigo.Text) && (res == DialogResult.Yes))
+                                    {
+                                        cadena = "select * from articulos where codigo_articulo='" + textEditcodigo.Text + "';";
+
+                                        DataTable tt = new DataTable();
+                                        tt = logica.Tabla(cadena);
+                                        if (tt.Rows.Count > 0)
+                                        {
+                                            MessageBox.Show("Este codigo ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            res = DialogResult.No;
+                                        }
+                                    }
+
+                                    if (res == DialogResult.Yes)
+                                    {
+                                            cadena = "update articulos " +
+                                                        "SET codigo_articulo='"+textEditcodigo.Text+"', codigo_marca = " + codigo_marca + ", codigo_categoria = " + gridLooksubcategoria.EditValue + ", descripcion = '" + memoEditdescripcion.Text + "', " +
+                                                    "costo = " + texteditpcosto.Text + ", precio_venta = " + textEditpventa.Text + ", minimo = " + textEditpmin.Text + ", maximo = " + textEditpmax.Text + ", numero_serie = '" + textEditserie.Text + "', modelo = '" + texteditmodelo.Text + "', comentario = '" + memoEditcomentario.Text + "', " +
+                                                    "usuario_modifica = " + clases.ClassVariables.id_usuario + ", estadoid = " + gridLookUpEstado.EditValue + ", compuesto = " + checkEditCompu.Checked + ",codigo_padre = " + codigo_padre + " " +
+                                                    "WHERE articulos.codigo_articulo= '" + Codigo_Control + "'";
+
+                                            if (clases.ClassMensajes.MODIFICAR(this, cadena))
+                                            {
+                                                groupControl1.Enabled = false;
+                                                simpleaceptar.Enabled = false;
+                                            }
                                     }
 
 
@@ -319,7 +416,11 @@ namespace ortoxela.Articulos
             {
                 if (bandera == 2 || bandera == 3)
                 {
-                    busca_mod_eli();
+                    //busca_mod_eli();
+                    if (BuscarSistema == false)
+                        busca_mod_eli();
+                    else
+                        busca_mod_eli_sistema();
                 }
             }
         }
@@ -345,10 +446,10 @@ namespace ortoxela.Articulos
             gridLookmarca.Text = "";
             cadena = "SELECT  articulos.codigo_articulo as CODIGO,descripcion as DESCRIPCION " +
                                                  "FROM articulos WHERE articulos.estadoid<>2 and compuesto=1";
-            gridLookupartpadre.Properties.DataSource = logica.Tabla(cadena);
-            gridLookupartpadre.Properties.ValueMember = "CODIGO";
-            gridLookupartpadre.Properties.DisplayMember = "DESCRIPCION";
-            gridLookupartpadre.Text = "";                                             
+            //gridLookupartpadre.Properties.DataSource = logica.Tabla(cadena);
+            //gridLookupartpadre.Properties.ValueMember = "CODIGO";
+            //gridLookupartpadre.Properties.DisplayMember = "DESCRIPCION";
+            //gridLookupartpadre.Text = "";                                             
             
           }
 
@@ -395,15 +496,15 @@ namespace ortoxela.Articulos
         {
             if (checkEditCompu.Checked == true)
             {
-                labelControl11.Enabled = false;
-                gridLookupartpadre.EditValue = "";
-                gridLookupartpadre.Text = "";
-                gridLookupartpadre.Enabled = false;
+                //labelControl11.Enabled = false;
+                //gridLookupartpadre.EditValue = "";
+                //gridLookupartpadre.Text = "";
+                //gridLookupartpadre.Enabled = false;
             }
             else
             {
-                labelControl11.Enabled = true;
-                gridLookupartpadre.Enabled = true;
+                //labelControl11.Enabled = true;
+                //gridLookupartpadre.Enabled = true;
             }
         }
 

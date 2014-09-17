@@ -39,6 +39,7 @@
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule8 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule9 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.comboBox_seriesComprasINVEX = new System.Windows.Forms.ComboBox();
             this.sb_solicitud_compra = new DevExpress.XtraEditors.SimpleButton();
             this.textNoFacturaCompra = new DevExpress.XtraEditors.TextEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
@@ -138,8 +139,9 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.comboBox_seriesComprasINVEX);
             this.groupControl1.Controls.Add(this.sb_solicitud_compra);
             this.groupControl1.Controls.Add(this.textNoFacturaCompra);
             this.groupControl1.Controls.Add(this.labelControl18);
@@ -171,6 +173,16 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Encabezado";
             // 
+            // comboBox_seriesComprasINVEX
+            // 
+            this.comboBox_seriesComprasINVEX.Enabled = false;
+            this.comboBox_seriesComprasINVEX.FormattingEnabled = true;
+            this.comboBox_seriesComprasINVEX.Location = new System.Drawing.Point(415, 93);
+            this.comboBox_seriesComprasINVEX.Name = "comboBox_seriesComprasINVEX";
+            this.comboBox_seriesComprasINVEX.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_seriesComprasINVEX.TabIndex = 81;
+            this.comboBox_seriesComprasINVEX.Text = "Default";
+            // 
             // sb_solicitud_compra
             // 
             this.sb_solicitud_compra.Enabled = false;
@@ -184,14 +196,18 @@
             // 
             // textNoFacturaCompra
             // 
-            this.textNoFacturaCompra.Location = new System.Drawing.Point(344, 95);
+            this.textNoFacturaCompra.Location = new System.Drawing.Point(542, 95);
             this.textNoFacturaCompra.Name = "textNoFacturaCompra";
+            this.textNoFacturaCompra.Properties.Mask.BeepOnError = true;
+            this.textNoFacturaCompra.Properties.Mask.EditMask = "d";
+            this.textNoFacturaCompra.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textNoFacturaCompra.Properties.Mask.PlaceHolder = ' ';
             this.textNoFacturaCompra.Size = new System.Drawing.Size(104, 20);
             this.textNoFacturaCompra.TabIndex = 78;
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(264, 99);
+            this.labelControl18.Location = new System.Drawing.Point(332, 96);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(71, 13);
             this.labelControl18.TabIndex = 79;
@@ -219,14 +235,14 @@
             // 
             // memoRazonAjuste
             // 
-            this.memoRazonAjuste.Location = new System.Drawing.Point(615, 73);
+            this.memoRazonAjuste.Location = new System.Drawing.Point(723, 73);
             this.memoRazonAjuste.Name = "memoRazonAjuste";
-            this.memoRazonAjuste.Size = new System.Drawing.Size(420, 40);
+            this.memoRazonAjuste.Size = new System.Drawing.Size(312, 40);
             this.memoRazonAjuste.TabIndex = 6;
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(525, 74);
+            this.labelControl17.Location = new System.Drawing.Point(633, 74);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(80, 13);
             this.labelControl17.TabIndex = 75;
@@ -271,7 +287,7 @@
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Location = new System.Drawing.Point(1045, 90);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(154, 19);
+            this.labelControl14.Size = new System.Drawing.Size(151, 19);
             this.labelControl14.TabIndex = 72;
             this.labelControl14.Text = "TOTAL DESCUENTO:";
             // 
@@ -488,7 +504,7 @@
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Location = new System.Drawing.Point(1111, 409);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(120, 19);
+            this.labelControl12.Size = new System.Drawing.Size(118, 19);
             this.labelControl12.TabIndex = 46;
             this.labelControl12.Text = "TOTAL SIN IVA:";
             // 
@@ -498,15 +514,15 @@
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Location = new System.Drawing.Point(1111, 438);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(118, 19);
+            this.labelControl11.Size = new System.Drawing.Size(116, 19);
             this.labelControl11.TabIndex = 45;
             this.labelControl11.Text = "PRECIO TOTAL:";
             // 
             // groupControl2
             // 
-            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.gridControl1);
             this.groupControl2.Location = new System.Drawing.Point(12, 177);
             this.groupControl2.Name = "groupControl2";
@@ -579,8 +595,8 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Controls.Add(this.labelControl10);
             this.panelControl1.Controls.Add(this.labelControl9);
@@ -785,7 +801,7 @@
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl15.Location = new System.Drawing.Point(897, 419);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(89, 19);
+            this.labelControl15.Size = new System.Drawing.Size(87, 19);
             this.labelControl15.TabIndex = 49;
             this.labelControl15.Text = "TOTAL IVA:";
             // 
@@ -916,5 +932,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraBars.Alerter.AlertControl alertControl1;
         private DevExpress.XtraEditors.SimpleButton sb_solicitud_compra;
+        private System.Windows.Forms.ComboBox comboBox_seriesComprasINVEX;
     }
 }

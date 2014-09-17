@@ -516,7 +516,7 @@
             this.listBoxBodegas.Location = new System.Drawing.Point(20, 219);
             this.listBoxBodegas.Name = "listBoxBodegas";
             this.listBoxBodegas.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxBodegas.Size = new System.Drawing.Size(120, 94);
+            this.listBoxBodegas.Size = new System.Drawing.Size(165, 229);
             this.listBoxBodegas.TabIndex = 23;
             this.listBoxBodegas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBoxBodegas_MouseUp);
             // 
@@ -533,10 +533,10 @@
             // 
             this.listBoxSeries.FormattingEnabled = true;
             this.listBoxSeries.ItemHeight = 15;
-            this.listBoxSeries.Location = new System.Drawing.Point(183, 219);
+            this.listBoxSeries.Location = new System.Drawing.Point(213, 219);
             this.listBoxSeries.Name = "listBoxSeries";
             this.listBoxSeries.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxSeries.Size = new System.Drawing.Size(188, 94);
+            this.listBoxSeries.Size = new System.Drawing.Size(188, 229);
             this.listBoxSeries.TabIndex = 28;
             // 
             // Frm_RepVentas

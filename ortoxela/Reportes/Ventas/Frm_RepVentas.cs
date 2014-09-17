@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using MySql.Data.MySqlClient;
 
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.Reportes.Ventas
 {
     public partial class Frm_RepVentas : DevExpress.XtraEditors.XtraForm
@@ -185,14 +187,33 @@ namespace ortoxela.Reportes.Ventas
                     if (ListaSeries == "0")
                         ListaSeries = "";
 
-                    consulta = "CALL sp_estadistica_mes_fechas2('" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00','" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59','" + ListaSeries + "'); ";
+                    //consulta = "CALL sp_estadistica_mes_fechas2('" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00','" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59','" + ListaSeries + "'); ";
+                    consulta = "call sp_estadistica_mes_k1('" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00','" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59','" + ListaSeries + "');";
+                    DataTable dt = new DataTable();
+                    dt = logicaxela.Tabla(consulta);
+                    //dataGridView1.Visible = true;
+                    //dataGridView1.DataSource = dt;
+                    Form_dataGridView nf = new Form_dataGridView();
+                    nf.CargarGrid(dt);
+                    nf.ShowDialog();
+                    
+                    
 
+
+                    /* da error porq el reporte no es dinamico
                     MySqlDataAdapter adaptador1 = new MySqlDataAdapter(consulta, Properties.Settings.Default.ortoxelaConnectionString);
                     DataSet dataset1 = new DataSet();
+                    DataTable dat = new DataTable();
+                    dat = logicaxela.Tabla(consulta);
+                    adaptador1.Fill(dat);
+                    
                     adaptador1.Fill(dataset1, "v_estadistica_mes");
+                    
                     XtraReport_Estadistica_Mes reporteem = new XtraReport_Estadistica_Mes();
                     reporteem.DataSource = dataset1;
+                    
                     reporteem.DataMember = dataset1.Tables["v_estadistica_mes"].TableName;
+                    
                     reporteem.Parameters["Fecha_inicio"].Value = FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00";
                     reporteem.Parameters["Fecha_fin"].Value = FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59";
                     reporteem.Parameters["Bodega"].Value = ListaNombresSeries; //bodegas.Text;
@@ -200,6 +221,7 @@ namespace ortoxela.Reportes.Ventas
 
                     reporteem.RequestParameters = false;
                     reporteem.ShowPreview();
+                     */
                 }
              }
             
@@ -336,10 +358,50 @@ namespace ortoxela.Reportes.Ventas
             if (this.validarFechas())
             {
 
-                string consultax = "SELECT        codigo_articulo, Articulo, nombre_bodega, cantidad_enviada, precio_maximo_sin_iva, precio_maximo_iva, precio_minimo_sin_iva, precio_minimo_iva, " +
-                 " precio_promedio_iva, precio_promedio_sin_iva, total_facturado_iva, Total_facturado_sin_iva, descuentoPct, DescuentoQ, documento, costo_iva, costo_sin_iva, " +
-                 " categoria, fecha, fecha_1era_venta, fecha_ultima_venta,codigo_serie  " +
-                 " FROM    v_ventas_articulo_mas where fecha between '" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00" + "' and '" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59' ";
+                //string consultax = "SELECT        codigo_articulo, Articulo, nombre_bodega, cantidad_enviada, precio_maximo_sin_iva, precio_maximo_iva, precio_minimo_sin_iva, precio_minimo_iva, " +
+                // " precio_promedio_iva, precio_promedio_sin_iva, total_facturado_iva, Total_facturado_sin_iva, descuentoPct, DescuentoQ, documento, costo_iva, costo_sin_iva, " +
+                // " categoria, fecha, fecha_1era_venta, fecha_ultima_venta,codigo_serie  " +
+                // " FROM    v_ventas_articulo_mas where fecha between '" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00" + "' and '" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59' ";
+
+                string consultax = "SELECT "+
+  "d.codigo_articulo     AS codigo_articulo, "+
+  "a.descripcion         AS Articulo, "+
+  "b.nombre_bodega       AS nombre_bodega, "+
+  "h.fecha               AS fecha, "+
+  "MIN(h.fecha)          AS fecha_1era_venta, "+
+  "MAX(h.fecha)          AS fecha_ultima_venta, "+
+  "SUM(d.cantidad_enviada) AS cantidad_enviada, "+
+  "(MAX(d.precio_unitario) / 1.12) AS precio_maximo_sin_iva, "+
+  "MAX(d.precio_unitario) AS precio_maximo_iva, "+
+  "(MIN(d.precio_unitario) / 1.12) AS precio_minimo_sin_iva, "+
+  "MIN(d.precio_unitario) AS precio_minimo_iva, "+
+  "(SUM(d.precio_total) / SUM(d.cantidad_enviada)) AS precio_promedio_iva, "+
+  "(SUM((d.precio_total / 1.12)) / SUM(d.cantidad_enviada)) AS precio_promedio_sin_iva, "+
+  "SUM(d.precio_total)   AS total_facturado_iva, "+
+  "SUM((d.precio_total / 1.12)) AS Total_facturado_sin_iva, "+
+  "(h.descuento / h.monto_neto) AS descuentoPct, "+
+  "h.descuento           AS DescuentoQ, "+
+  "CONCAT(CONVERT(t.nombre_documento USING utf8),'[',CONVERT(t.serie_documento USING utf8),']') AS documento, "+
+  "AVG(a.costo)          AS costo_iva, "+
+  "AVG((a.costo / 1.12)) AS costo_sin_iva, "+
+  "+s.nombre_subcategoria AS categoria, "+
+  "h.codigo_serie        AS codigo_serie "+
+"FROM (((((header_doctos_inv h "+
+       "JOIN detalle_doctos_inv d "+
+         "ON ((h.id_documento = d.id_documento))) "+
+      "JOIN v_tipos_documentos t "+
+        "ON ((h.codigo_serie = t.codigo_serie))) "+
+     "JOIN articulos a "+
+       "ON ((d.codigo_articulo = a.codigo_articulo))) "+
+    "JOIN sub_categorias s "+
+      "ON ((a.codigo_categoria = s.codigo_subcat))) "+
+   "JOIN bodegas_header b "+
+     "ON ((d.codigo_bodega = b.codigo_bodega))) "+
+"WHERE ((t.codigo_tipo = 1) "+
+       "AND (h.estadoid NOT IN(3,6))) "+
+"AND h.fecha between '" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00" + "' and '" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59' "+
+"GROUP BY d.codigo_articulo "+
+"ORDER BY SUM(d.cantidad_enviada) DESC ";
                         
 
                         if (textEdit1.Text.Trim() != "")
@@ -349,9 +411,12 @@ namespace ortoxela.Reportes.Ventas
                         MySqlDataAdapter adaptadorx = new MySqlDataAdapter(consultax, Properties.Settings.Default.ortoxelaConnectionString);
 
                         DataSet datasetx = new DataSet();
+                        //DataTable dss = new DataTable();
                         adaptadorx.Fill(datasetx, "v_ventas_articulo_mas");
+                        //adaptadorx.Fill(dss);
                         XtraReport_ProductosMasVendidos reported = new XtraReport_ProductosMasVendidos();
                         reported.DataSource = datasetx;
+                        //reported.DataSource = dss;
                         reported.DataMember = datasetx.Tables["v_ventas_articulo_mas"].TableName;
                         reported.Parameters["Fecha_inicio"].Value = FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00"; ;
                         reported.Parameters["Fecha_fin"].Value = FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59"; ;
@@ -512,13 +577,26 @@ namespace ortoxela.Reportes.Ventas
                    " codigo_subcat, nombre_subcategoria, codigo_serie FROM            v_ventas_detalle_socio_categoria " +
                    " where fecha_compra between '" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00" + "' and '" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59' " +
                    " and codigo_serie in (" + ListaSeries + ") ";
+//                    string consulta = "SELECT clientes.`nombre_cliente` AS nombre_cliente1,1 AS cantidad_enviada,SUM(ROUND(header_doctos_inv.`monto`,2)) AS precio_iva,SUM(ROUND(header_doctos_inv.`monto`/1.12,2)) AS precio_sin_iva  FROM header_doctos_inv " +
+//"INNER JOIN clientes " +
+//"ON header_doctos_inv.`socio_comercial`=clientes.`codigo_cliente` " +
+//"WHERE header_doctos_inv.`estadoid`=4 " +
+//"AND header_doctos_inv.`fecha` BETWEEN '" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00" + "' and '" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59' " +
+//"AND header_doctos_inv.`codigo_serie` IN (" + ListaSeries + ")" +
+//"GROUP BY clientes.`nombre_cliente`";
+
 
                     MySqlDataAdapter adaptadorx = new MySqlDataAdapter(consulta, Properties.Settings.Default.ortoxelaConnectionString);
                     DataSet datasetx = new DataSet();
-                    adaptadorx.Fill(datasetx, "v_ventas_detalle_cliente_categoria");
+                    adaptadorx.Fill(datasetx, "v_ventas_detalle_socio_categoria");
                     XtraReport_Ventas_por_SocioComercial reported = new XtraReport_Ventas_por_SocioComercial();
                     reported.DataSource = datasetx;
-                    reported.DataMember = datasetx.Tables["v_ventas_detalle_cliente_categoria"].TableName;
+                    reported.DataMember = datasetx.Tables["v_ventas_detalle_socio_categoria"].TableName;
+
+                    //XtraReport_Ventas_por_SocioComercial reported = new XtraReport_Ventas_por_SocioComercial();
+                    //DataTable dt = new DataTable();
+                    //dt = logicaxela.Tabla(consulta);
+                    //reported.DataSource = dt;
 
                     reported.Parameters["Fecha_inicio"].Value = FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00"; ;
                     reported.Parameters["Fecha_fin"].Value = FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59"; ;

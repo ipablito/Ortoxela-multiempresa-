@@ -79,7 +79,7 @@ FROM            detalle_doctos_inv d INNER JOIN
   <xs:element name="DataSetEnvioDetallado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetEnvioDetallado" msprop:Generator_UserDSName="DataSetEnvioDetallado">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Encabezado" msprop:Generator_TableClassName="EncabezadoDataTable" msprop:Generator_TableVarName="tableEncabezado" msprop:Generator_TablePropName="Encabezado" msprop:Generator_RowDeletingName="EncabezadoRowDeleting" msprop:Generator_UserTableName="Encabezado" msprop:Generator_RowChangingName="EncabezadoRowChanging" msprop:Generator_RowEvHandlerName="EncabezadoRowChangeEventHandler" msprop:Generator_RowDeletedName="EncabezadoRowDeleted" msprop:Generator_RowEvArgName="EncabezadoRowChangeEvent" msprop:Generator_RowChangedName="EncabezadoRowChanged" msprop:Generator_RowClassName="EncabezadoRow">
+        <xs:element name="Encabezado" msprop:Generator_TableClassName="EncabezadoDataTable" msprop:Generator_TableVarName="tableEncabezado" msprop:Generator_RowChangedName="EncabezadoRowChanged" msprop:Generator_TablePropName="Encabezado" msprop:Generator_RowDeletingName="EncabezadoRowDeleting" msprop:Generator_RowChangingName="EncabezadoRowChanging" msprop:Generator_RowEvHandlerName="EncabezadoRowChangeEventHandler" msprop:Generator_RowDeletedName="EncabezadoRowDeleted" msprop:Generator_RowClassName="EncabezadoRow" msprop:Generator_UserTableName="Encabezado" msprop:Generator_RowEvArgName="EncabezadoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombre_cliente" msprop:Generator_ColumnVarNameInTable="columnnombre_cliente" msprop:Generator_ColumnPropNameInRow="nombre_cliente" msprop:Generator_ColumnPropNameInTable="nombre_clienteColumn" msprop:Generator_UserColumnName="nombre_cliente" minOccurs="0">
@@ -160,7 +160,7 @@ FROM            detalle_doctos_inv d INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Detalle" msprop:Generator_TableClassName="DetalleDataTable" msprop:Generator_TableVarName="tableDetalle" msprop:Generator_TablePropName="Detalle" msprop:Generator_RowDeletingName="DetalleRowDeleting" msprop:Generator_UserTableName="Detalle" msprop:Generator_RowChangingName="DetalleRowChanging" msprop:Generator_RowEvHandlerName="DetalleRowChangeEventHandler" msprop:Generator_RowDeletedName="DetalleRowDeleted" msprop:Generator_RowEvArgName="DetalleRowChangeEvent" msprop:Generator_RowChangedName="DetalleRowChanged" msprop:Generator_RowClassName="DetalleRow">
+        <xs:element name="Detalle" msprop:Generator_TableClassName="DetalleDataTable" msprop:Generator_TableVarName="tableDetalle" msprop:Generator_RowChangedName="DetalleRowChanged" msprop:Generator_TablePropName="Detalle" msprop:Generator_RowDeletingName="DetalleRowDeleting" msprop:Generator_RowChangingName="DetalleRowChanging" msprop:Generator_RowEvHandlerName="DetalleRowChangeEventHandler" msprop:Generator_RowDeletedName="DetalleRowDeleted" msprop:Generator_RowClassName="DetalleRow" msprop:Generator_UserTableName="Detalle" msprop:Generator_RowEvArgName="DetalleRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" minOccurs="0">
@@ -200,7 +200,7 @@ FROM            detalle_doctos_inv d INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Encabezado_Detalle" msdata:parent="Encabezado" msdata:child="Detalle" msdata:parentkey="id_documento" msdata:childkey="id_documento" msprop:Generator_UserChildTable="Detalle" msprop:Generator_ChildPropName="GetDetalleRows" msprop:Generator_UserParentTable="Encabezado" msprop:Generator_UserRelationName="Encabezado_Detalle" msprop:Generator_RelationVarName="relationEncabezado_Detalle" msprop:Generator_ParentPropName="EncabezadoRow" />
+      <msdata:Relationship name="Encabezado_Detalle" msdata:parent="Encabezado" msdata:child="Detalle" msdata:parentkey="id_documento" msdata:childkey="id_documento" msprop:Generator_UserChildTable="Detalle" msprop:Generator_ChildPropName="GetDetalleRows" msprop:Generator_UserRelationName="Encabezado_Detalle" msprop:Generator_ParentPropName="EncabezadoRow" msprop:Generator_RelationVarName="relationEncabezado_Detalle" msprop:Generator_UserParentTable="Encabezado" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

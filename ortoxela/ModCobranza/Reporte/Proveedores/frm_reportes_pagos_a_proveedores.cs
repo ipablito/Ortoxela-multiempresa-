@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.ModCobranza.Reporte.Proveedores
 {
     public partial class frm_reportes_pagos_a_proveedores : Form

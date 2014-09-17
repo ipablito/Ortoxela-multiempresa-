@@ -7,6 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using MySql.Data.MySqlClient;
+
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.ModCobranza.Recibos
 {
     public partial class frm_recibo : DevExpress.XtraEditors.XtraForm

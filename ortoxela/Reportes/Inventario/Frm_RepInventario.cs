@@ -7,6 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using MySql.Data.MySqlClient;
+
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.Reportes.Inventario
 {
     public partial class Frm_RepInventario : DevExpress.XtraEditors.XtraForm
@@ -173,71 +176,73 @@ namespace ortoxela.Reportes.Inventario
 
             this.Cursor = Cursors.WaitCursor;
 
-            cargarbodegas();
-            Int32 codigo_bodega = 1;
-            string co_bo = "", botittle="" ;
-            Int16 cat1 = 0, cat2 = 10000;
-            string consulta = "SELECT codigo_articulo, Articulo, cantidad, costo_sin_iva, costo_iva, codigo_bodega, nombre_bodega, fecha, Tipo_Pago, nombre_proveedor, nombre_cliente, dias_credito, "+
-                             "signo, tipo_docto, no_documento, refer_documento, bodega_destino, codigo_categoria, categoria "+
-                            "FROM v_kardex  where 1=1 ";
-
-            if (Bodega_origen_int!="0")
+            try
             {
-                co_bo = " and codigo_bodega in(" + Bodega_origen_int + ") ";
-                consulta = consulta + co_bo;
-                //codigo_bodega = Int32.Parse(bodegas.SelectedValue.ToString());
-                //botittle = bodegas.Text;
+                cargarbodegas();
+                Int32 codigo_bodega = 1;
+                string co_bo = "", botittle = "";
+                Int16 cat1 = 0, cat2 = 10000;
+                string consulta = "SELECT codigo_articulo, Articulo, cantidad, costo_sin_iva, costo_iva, codigo_bodega, nombre_bodega, fecha, Tipo_Pago, nombre_proveedor, nombre_cliente, dias_credito, " +
+                                 "signo, tipo_docto, no_documento, refer_documento, bodega_destino, codigo_categoria, categoria " +
+                                "FROM v_kardex  where 1=1 ";
 
-                if (comboBoxCategorias.SelectedValue.ToString() != "0")
+                if (Bodega_origen_int != "0")
                 {
-                    consulta = consulta + "  and codigo_categoria = " + comboBoxCategorias.SelectedValue;
-                    cat1 = Convert.ToInt16(comboBoxCategorias.SelectedValue.ToString());
-                    cat2 = cat1;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar una Bodega para este Reporte.", "Reporte Kardex");
-                return;
-            };
+                    co_bo = " and codigo_bodega in(" + Bodega_origen_int + ") ";
+                    consulta = consulta + co_bo;
+                    //codigo_bodega = Int32.Parse(bodegas.SelectedValue.ToString());
+                    //botittle = bodegas.Text;
 
-            if ((textEdit1.Text.Trim() != "") || (textEdit4.Text.Trim() != ""))
-            {
-                if ((textEdit1.Text.Trim() != "") && (textEdit4.Text.Trim() == ""))
-                {
-                    consulta = consulta + " and codigo_articulo like '%" + textEdit1.Text + "%'";
+                    if (comboBoxCategorias.SelectedValue.ToString() != "0")
+                    {
+                        consulta = consulta + "  and codigo_categoria = " + comboBoxCategorias.SelectedValue;
+                        cat1 = Convert.ToInt16(comboBoxCategorias.SelectedValue.ToString());
+                        cat2 = cat1;
+                    }
                 }
                 else
                 {
-                    if ((textEdit1.Text.Trim() == "") && (textEdit4.Text.Trim() != ""))
+                    MessageBox.Show("Debe seleccionar una Bodega para este Reporte.", "Reporte Kardex");
+                    return;
+                };
+
+                if ((textEdit1.Text.Trim() != "") || (textEdit4.Text.Trim() != ""))
+                {
+                    if ((textEdit1.Text.Trim() != "") && (textEdit4.Text.Trim() == ""))
                     {
-                        consulta = consulta + " and codigo_articulo like '%" + textEdit4.Text + "%'";
+                        consulta = consulta + " and codigo_articulo like '%" + textEdit1.Text + "%'";
                     }
                     else
                     {
-                        consulta = consulta + " and codigo_articulo between '" + textEdit1.Text + "' and '" + textEdit4.Text + "' ";
+                        if ((textEdit1.Text.Trim() == "") && (textEdit4.Text.Trim() != ""))
+                        {
+                            consulta = consulta + " and codigo_articulo like '%" + textEdit4.Text + "%'";
+                        }
+                        else
+                        {
+                            consulta = consulta + " and codigo_articulo between '" + textEdit1.Text + "' and '" + textEdit4.Text + "' ";
+                        }
                     }
+
+                }
+                string fechaInicialx = "2011-12-01";
+
+                if ((FechaInicio.EditValue != null) && (FechaFin.EditValue != null))
+                {
+                    fechaInicialx = FechaInicio.DateTime.ToString("yyyy-MM-dd");
+                    consulta = consulta + " and fecha between '" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00' ";
+                    consulta = consulta + " and '" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59' ";
                 }
 
-            }
-            string fechaInicialx = "2011-12-01";
-            
-            if ((FechaInicio.EditValue != null) && (FechaFin.EditValue != null))
-            {
-                fechaInicialx = FechaInicio.DateTime.ToString("yyyy-MM-dd");
-                consulta = consulta + " and fecha between '" + FechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00' ";
-                consulta = consulta + " and '" + FechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59' ";
-            }
-            
 
-            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, Properties.Settings.Default.ortoxelaConnectionString);
-            DataSet_Inventario dataset = new DataSet_Inventario();
-            adaptador.Fill(dataset, "v_kardex");
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, Properties.Settings.Default.ortoxelaConnectionString);
+                DataSet_Inventario dataset = new DataSet_Inventario();
+                adaptador.Fill(dataset, "v_kardex");
 
-           
+
                 XtraReport_Kardex reporteP = new XtraReport_Kardex();
                 reporteP.DataSource = dataset;
-                reporteP.DataMember = dataset.Tables["v_kardex"].TableName;
+                //reporteP.DataMember = dataset.Tables["v_kardex"].TableName;
                 //reporteP.Parameters["codigo_bodega"].Value = codigo_bodega;
                 reporteP.Parameters["bodega"].Value = Bodega_origen_int_nombre;
                 reporteP.Parameters["Fecha_inicio"].Value = Convert.ToDateTime(fechaInicialx);
@@ -247,10 +252,12 @@ namespace ortoxela.Reportes.Inventario
                 reporteP.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa;
                 reporteP.RequestParameters = false;
                 reporteP.ShowPreviewDialog();
-          
 
-            
-            
+
+
+            }
+            catch
+            { }
                 this.Cursor = Cursors.Default;
         }
 

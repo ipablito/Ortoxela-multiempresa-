@@ -11,6 +11,8 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraEditors.Controls;
 using MySql.Data.MySqlClient;
 using System.Globalization;
+
+using DevExpress.XtraReports.UI;
 namespace ortoxela.ModCobranza
 {
     public partial class frm_Abono_adelantado : DevExpress.XtraEditors.XtraForm

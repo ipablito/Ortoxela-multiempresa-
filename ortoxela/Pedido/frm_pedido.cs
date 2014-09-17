@@ -11,6 +11,13 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
+
+using DevExpress.XtraReports.UI;
+
+using integracion_ii;
+using Sisnova.Invex.BL;
+
+
 namespace ortoxela.Pedido
 {
     public partial class frm_pedido : DevExpress.XtraEditors.XtraForm
@@ -153,6 +160,8 @@ namespace ortoxela.Pedido
         MySqlCommand comando = new MySqlCommand();
         MySqlTransaction transa;
         string id_nuevo_pedido;
+
+        string valorreporte = "";
         private void RegistraPedido()
         {
             try
@@ -176,6 +185,7 @@ namespace ortoxela.Pedido
                 comando = new MySqlCommand(cadena,conexion);
                 comando.Transaction = transa;
                 id_nuevo_pedido = comando.ExecuteScalar().ToString();
+                valorreporte = textNoDocumento.Text;
                 for (int x = 0; x < gridView1.DataRowCount;x++)
                 {
                     cadena = "INSERT into detalle_doctos_inv(id_documento, cantidad_enviada, precio_unitario, precio_total, codigo_articulo, codigo_bodega) "+
@@ -422,12 +432,13 @@ namespace ortoxela.Pedido
                     string compuesto = logicaorto.Tabla(cadena).Rows[0]["compuesto"].ToString();
                     if (Convert.ToBoolean(logicaorto.Tabla(cadena).Rows[0]["compuesto"]))
                     {
-                        
                         /* cadena = "SELECT articulos.codigo_articulo AS CODIGO,articulos.descripcion AS 'NOMBRE ARTICULO',articulos.numero_serie AS 'No SERIE',bodegas.existencia_articulo AS 'EXISTENCIA',articulos.precio_venta,articulos.costo,articulos.minimo FROM articulos INNER JOIN bodegas ON bodegas.codigo_articulo=articulos.codigo_articulo WHERE articulos.estadoid<>2 AND articulos.codigo_padre='" + id_articulo + "' AND bodegas.codigo_bodega=" + gridLookBodega.EditValue; */
-                        cadena = "CALL sp_devuelve_sistema ('" + id_articulo + "'," + gridLookBodega.EditValue + ")";
+                        cadena = "CALL sp_devuelve_sistema_k ('" + id_articulo + "'," + gridLookBodega.EditValue + ")";
                         TempoPadre = logicaorto.Tabla(cadena);
                         int ExistenciaHijo;
                         int ExistenciaFija;
+
+
                         for (int x = 0; x < TempoPadre.Rows.Count; x++)
                         {
                             banderaRepetido = true;
@@ -440,11 +451,24 @@ namespace ortoxela.Pedido
                             if (banderaRepetido)
                             {
                                 ExistenciaHijo = Convert.ToInt32(TempoPadre.Rows[x]["EXISTENCIA"]);
+
+                                if (x == 0)
+                                {
+                                    ExistenciaHijo = Convert.ToInt32(TempoPadre.Rows[x]["EXISTENCIA"]);
+                                    if (ExistenciaHijo == 0)
+                                    {
+                                        clases.ClassMensajes.NoHayExistenciaProd(this);
+                                        return;
+                                    }
+                                }
                                 //if(ExistenciaHijo!=0)
                                 //{
-                                if (Convert.ToInt32(textCantidadArt.Text) <= ExistenciaHijo)
+                                //if (Convert.ToInt32(textCantidadArt.Text) <= ExistenciaHijo)
+
+                                if (Convert.ToInt32(TempoPadre.Rows[x]["cantidad"]) <= ExistenciaHijo)
                                 {
-                                    ExistenciaFija = Convert.ToInt32(textCantidadArt.Text);
+                                    //ExistenciaFija = Convert.ToInt32(textCantidadArt.Text);
+                                    ExistenciaFija = Convert.ToInt32(TempoPadre.Rows[x]["cantidad"]);
                                 }
                                 else
                                 {
@@ -630,15 +654,19 @@ namespace ortoxela.Pedido
 
         private void simplePrinter_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             try
             {
+                //EnvioDetallado.DataSet_EnvioDetallado2TableAdapters.DataTable1TableAdapter nt = new EnvioDetallado.DataSet_EnvioDetallado2TableAdapters.DataTable1TableAdapter();
                 EnvioDetallado.XtraReportEnvioDetallado reporte = new EnvioDetallado.XtraReportEnvioDetallado();
-                reporte.Parameters["ID"].Value = id_nuevo_pedido;
+                reporte.Parameters["ID"].Value = valorreporte;
                 reporte.RequestParameters = false;
                 reporte.ShowPreviewDialog();
             }
             catch
-            { }
+            {
+            }
+            this.Cursor = Cursors.Default;
         }
 
         private void groupControl1_Paint(object sender, PaintEventArgs e)
@@ -1021,6 +1049,14 @@ namespace ortoxela.Pedido
                 transa.Commit();
                 simpleButton9.Enabled = false;
                 groupControl5.Enabled = false;
+
+                if (Class_integracion.logeado == true)
+                {
+                    GuardarValeEnINVEX();
+                }
+
+
+
                 clases.ClassMensajes.INSERTO(this);
                 textValor.Text = totalVale.ToString();
                 simpleButton9.Enabled = true;                
@@ -1034,6 +1070,9 @@ namespace ortoxela.Pedido
                     xtraTabPage1.PageEnabled = true;
                     llenaPedido();
                 }
+
+
+                
             }
             catch
             {
@@ -1424,23 +1463,76 @@ namespace ortoxela.Pedido
             /**/
         }
 
+        private void GuardarValeEnINVEX()
+        {
+            decimal total= Convert.ToDecimal(totalVale);
+            string telefonoClienteB = logicaorto.Tabla("SELECT telefono_casa FROM clientes WHERE codigo_cliente=" + id_cliente).Rows[0][0].ToString();
+
+
+            string fdPago = "";
+                if (radioGroup2.SelectedIndex == 1)
+                {
+                    fdPago = "Credito";
+                }
+                else
+                {
+                    fdPago = gridLookTipoPago.Text;
+                }
+
+                if (fdPago == "Efectivo")
+                {
+                    Class_anticipo.AnticipoEnEfectivo(textNombreCliente.Text, textNitCliente.Text,telefonoClienteB, total);
+                }
+                else if (fdPago == "Cheque")
+                {
+                    f_ValidarPedido nf = new f_ValidarPedido();
+                    nf.Cheque(textNombreCliente.Text, textNitCliente.Text,telefonoClienteB, total);
+                    nf.ShowDialog();
+                }
+                else if (fdPago == "Deposito")
+                {
+                    f_ValidarPedido nf = new f_ValidarPedido();
+                    nf.Deposito(textNombreCliente.Text, textNitCliente.Text,telefonoClienteB, total);
+                    nf.ShowDialog();
+                }
+        }
+
         private void simpleButton11_Click(object sender, EventArgs e)
         {
             /* Guardar Vale */
             if (dxValidationImprimeVale.Validate() & gridView3.DataRowCount > 0)
             {
-                cadena = "SELECT * FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE header_doctos_inv.no_documento=" + textNumeroDocVale.Text + " AND series_documentos.codigo_serie=" + gridLookSerieVale.EditValue;
-                if (logicaorto.ExisteRegistro(cadena) == false)
+
+                string fdPago = "";
+                if (radioGroup2.SelectedIndex == 1)
                 {
-                    insertaVale();
+                    fdPago = "Credito";
                 }
                 else
                 {
-                    if (guardaValeDeposito())
-                        clases.ClassMensajes.INSERTO(this);                        
-                    else
-                        alertControl1.Show(this, "INFORMACION", "EL NUMERO DE DOCUMENTO YA EXISTE", Properties.Resources.Advertencia64);
+                    fdPago = gridLookTipoPago.Text;
                 }
+
+                if (fdPago == "Efectivo" || fdPago == "Cheque" || fdPago == "Deposito")
+                {
+                    cadena = "SELECT * FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE header_doctos_inv.no_documento=" + textNumeroDocVale.Text + " AND series_documentos.codigo_serie=" + gridLookSerieVale.EditValue;
+                    if (logicaorto.ExisteRegistro(cadena) == false)
+                    {
+                        insertaVale();
+                        
+                    }
+                    else
+                    {
+                        if (guardaValeDeposito())
+                            clases.ClassMensajes.INSERTO(this);
+                        else
+                            alertControl1.Show(this, "INFORMACION", "EL NUMERO DE DOCUMENTO YA EXISTE", Properties.Resources.Advertencia64);
+                    }
+                }
+                else
+                    MessageBox.Show("Seleccione una forma de pago valida, estas pueden ser:\nEfectivo\nCheque\nDeposito", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                
             }
             else
                 clases.ClassMensajes.FaltanDatosEnCampos(this);

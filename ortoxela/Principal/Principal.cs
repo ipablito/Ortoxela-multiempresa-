@@ -9,6 +9,10 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Helpers;
 using DevExpress.XtraBars.Localization;
+
+
+using System.IO;
+
 namespace ortoxela.Principal
 {
     public partial class Principal : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -105,8 +109,6 @@ namespace ortoxela.Principal
             {
                 if (id == BarString.SkinCaptions)
                 {
-                    //Default value for BarString.SkinCaptions:
-                    //"|DevExpress Style|Caramel|Money Twins|DevExpress Dark Style|iMaginary|Lilian|Black|Blue|Office 2010 Blue|Office 2010 Black|Office 2010 Silver|Office 2007 Blue|Office 2007 Black|Office 2007 Silver|Office 2007 Green|Office 2007 Pink|Seven|Seven Classic|Darkroom|McSkin|Sharp|Sharp Plus|Foggy|Dark Side|Xmas (Blue)|Springtime|Summer|Pumpkin|Valentine|Stardust|Coffee|Glass Oceans|High Contrast|Liquid Sky|London Liquid Sky|The Asphalt World|Blueprint|"
                     string defaultSkinCaptions = base.GetLocalizedString(id);
                     string newSkinCaptions = defaultSkinCaptions.Replace("|DevExpress Style|", "|My Favorite Skin|");
                     return newSkinCaptions;
@@ -117,30 +119,49 @@ namespace ortoxela.Principal
 
 
         private void Principal_Load(object sender, EventArgs e)
-        {           
-            /* registrando los skins*/
-             DevExpress.Skins.SkinManager.EnableFormSkins();
-             DevExpress.UserSkins.BonusSkins.Register();
-             defaultLookAndFeel2.LookAndFeel.SkinName = "Office 2010 Silver";
-             
+        {
             
-            /* registrando los skins */
+            #region temas de devexpress
+
+            /* registrando los skins*/
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            DevExpress.UserSkins.BonusSkins.Register();
+
+
             BarLocalizer.Active = new MyBarLocalizer();
+
             SkinHelper.InitSkinGallery(ribbonGalleryBarItem2, true);
             SkinHelper.InitSkinPopupMenu(popupMenu1);
-            /* 
-            //ribbonPageCategory1.Color = Color.Coral;
-            //ribbonPageCategory2.Color = Color.Green;
-            //ribbonPageCategory3.Color = Color.Blue;
-            //Ribbon.SelectedPage = FACTURACION.Pages[0];
-             */
+
+
+            string tema = "";
+            StreamReader leer = new StreamReader("tema.txt");
+
+            while (!leer.EndOfStream)
+            {
+                tema = leer.ReadLine().ToString();
+            }
+            
+            leer.Close();
+
+
+
+
+            Properties.Settings.Default.mascara = tema;
+            Properties.Settings.Default.Save();
+            defaultLookAndFeel2.LookAndFeel.SetSkinStyle(tema);
+            #endregion
+
+
             ValidaBotones();
             barStaticItem1.Caption = "USUARIO: "+clases.ClassVariables.NombreComple ;
             //frm_datos_inicio nuevo = new frm_datos_inicio();
             //nuevo.MdiParent = this;
             //nuevo.Show();                   
             // Reportes.Pedidos.DataSet_Pedidos data = new Reportes.Pedidos.DataSet_Pedidos();
-            actualizarDataGrid();            
+            actualizarDataGrid();
+            actualizar_sistemasEnBodega();
+
         }
 
         private void actualizarDataGrid()
@@ -149,28 +170,20 @@ namespace ortoxela.Principal
             {
                 Reportes.Pedidos.ClassPedidos pedidos = new Reportes.Pedidos.ClassPedidos();
                 classortoxela orto = new classortoxela();
-                dataGridView1.DataSource = orto.Tabla("SELECT cast(CONCAT(tipo_documento,' - ',no_documento)as char) AS Pedido, Nombre_Cliente,Socio_Comercial,fecha_compra AS Fecha,SUM(Total_sin_iva) TotalSinIVa,SUM(total_iva) TotalIva FROM v_pedidos GROUP BY tipo_documento,no_documento, Nombre_Cliente,fecha_compra,Socio_Comercial ORDER BY fecha asc");
-                dataGridView1.Columns["Pedido"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.Columns["Nombre_Cliente"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.Columns["Socio_Comercial"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.Columns["Fecha"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.Columns["TotalSinIva"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.Columns["TotalIva"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridView1.DataSource = orto.Tabla("SELECT CAST(CONCAT(tipo_documento,' - ',no_documento)AS CHAR) AS Pedido, "+
+"Nombre_Cliente AS 'Nombre de cliente',"+
+"nombre_paciente AS 'Nombre del paciente',"+
+"Socio_Comercial AS 'Socio Comercial',"+
+"COALESCE((SELECT Articulo FROM v_pedidos e WHERE e.no_documento=p.no_documento AND e.sistema=1 AND e.cantidad_enviada!=0 LIMIT 1),'Sin set') AS 'Set en el envio'," +
+"fecha_compra AS 'Fecha'"+
 
-                dataGridView1.Columns["Pedido"].Width = 150;
-                dataGridView1.Columns["Nombre_Cliente"].Width = 200;
-                dataGridView1.Columns["Socio_Comercial"].Width = 250;
-                dataGridView1.Columns["Fecha"].Width = 200;
-                dataGridView1.Columns["TotalSinIVa"].Width = 150;
-                dataGridView1.Columns["TotalSinIVa"].HeaderText = "Monto Sin Iva";
-                dataGridView1.Columns["TotalIva"].Width = 150;
-                dataGridView1.Columns["TotalIva"].HeaderText = "Monto Con Iva";
-                dataGridView1.Columns["Fecha"].DefaultCellStyle.Format = "D";
-                dataGridView1.Columns["Fecha"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dataGridView1.Columns["TotalSinIVa"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dataGridView1.Columns["TotalSinIVa"].DefaultCellStyle.Format = "C2";
-                dataGridView1.Columns["TotalIva"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dataGridView1.Columns["TotalIva"].DefaultCellStyle.Format = "C2";
+
+"FROM v_pedidos p "+
+"WHERE cantidad_enviada!=0 "+
+
+"GROUP BY tipo_documento,no_documento,Nombre_Cliente "+
+
+"ORDER BY fecha ASC");
 
                 dataGridView1.Refresh();
             }
@@ -1684,6 +1697,10 @@ namespace ortoxela.Principal
             Properties.Settings.Default.mascara = e.Item.Caption;
             Properties.Settings.Default.Save();
             defaultLookAndFeel2.LookAndFeel.SkinName = Properties.Settings.Default.mascara;
+            //MessageBox.Show(Properties.Settings.Default.mascara);
+            StreamWriter escribir = new StreamWriter("tema.txt");
+            escribir.WriteLine(Properties.Settings.Default.mascara);
+            escribir.Close();
         }
 
         private void barButtonItem96_ItemClick(object sender, ItemClickEventArgs e)
@@ -1757,7 +1774,7 @@ namespace ortoxela.Principal
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            actualizarDataGrid();
+            
         }
 
         private void barButtonItem104_ItemClick(object sender, ItemClickEventArgs e)
@@ -2104,7 +2121,147 @@ namespace ortoxela.Principal
             serbod.Show();
         }
 
+        private void barButtonItem144_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int cont = 0;
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is Articulos.Articulos)
+                    cont++;
+            }
+            if (cont == 0)
+            {
+                clases.ClassVariables.bandera = 1;
+                clases.ClassVariables.llamadoDentroForm = false;
+                Articulos.Articulos nuevo = new Articulos.Articulos();
+                nuevo.Sistema();
+                nuevo.MdiParent = this;
+                nuevo.Show();
+            }
+        }
 
+        private void barButtonItem145_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int cont = 0;
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is Articulos.Articulos)
+                    cont++;
+            }
+            if (cont == 0)
+            {
+                clases.ClassVariables.bandera = 2;
+                clases.ClassVariables.llamadoDentroForm = false;
+                Articulos.Articulos nuevo = new Articulos.Articulos();
+                nuevo.Sistema();
+                nuevo.MdiParent = this;
+                nuevo.Show();
+            }
+        }
+
+        private void barButtonItem146_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int cont = 0;
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is Articulos.Articulos)
+                    cont++;
+            }
+            if (cont == 0)
+            {
+                clases.ClassVariables.bandera = 3;
+                clases.ClassVariables.llamadoDentroForm = false;
+                Articulos.Articulos nuevo = new Articulos.Articulos();
+                nuevo.Sistema();
+                nuevo.MdiParent = this;
+                nuevo.Show();
+            }
+        }
+
+        private void barButtonItem147_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            clases.ClassVariables.cadenabusca = "SELECT * FROM v_articulos_cat_lbod WHERE compuesto=1 ";
+
+            Form busca = new Buscador.Buscador();
+            busca.ShowDialog();
+            if (clases.ClassVariables.id_busca != "")
+            {
+                Form nf = new Articulos.F_configurarSistema(clases.ClassVariables.id_busca);
+                nf.MdiParent = this;
+                nf.Show();
+            }
+        }
+
+        bool incrementar = true;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (progressBarControl_PRINCIPAL.EditValue.ToString() == "100")
+            {
+                incrementar = false;
+            }
+            else if (progressBarControl_PRINCIPAL.EditValue.ToString() == "1")
+            {
+                incrementar = true;
+            }
+
+            if (incrementar == true)
+            {
+                progressBarControl_PRINCIPAL.Increment(1);
+            }
+            else
+            {
+                progressBarControl_PRINCIPAL.Decrement(1);
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        void actualizar_sistemasEnBodega()
+        {
+            string cadena="SELECT articulos.`codigo_articulo` AS 'Codigo del set', "+
+"articulos.`descripcion` AS 'Descripcion', "+
+"bodegas.`existencia_articulo` AS 'Existencia', "+
+"bodegas_header.`nombre_bodega` AS 'Bodega' "+
+"FROM articulos "+
+"INNER JOIN bodegas "+
+"ON bodegas.`codigo_articulo`=articulos.`codigo_articulo` "+
+"INNER JOIN bodegas_header "+
+"ON bodegas.`codigo_bodega`=bodegas_header.`codigo_bodega` "+
+"WHERE articulos.`estadoid`=1 AND articulos.`compuesto`=1 "+
+"AND bodegas.`existencia_articulo`!=0";
+            gridControl2.DataSource = logicaorto.Tabla(cadena);
+
+
+
+            cadena = "SELECT articulos.`codigo_articulo` AS 'Codigo del set', " +
+"articulos.`descripcion` AS 'Descripcion', " +
+"bodegas.`existencia_articulo` AS 'Existencia', " +
+"bodegas_header.`nombre_bodega` AS 'Bodega' " +
+"FROM articulos " +
+"INNER JOIN bodegas " +
+"ON bodegas.`codigo_articulo`=articulos.`codigo_articulo` " +
+"INNER JOIN bodegas_header " +
+"ON bodegas.`codigo_bodega`=bodegas_header.`codigo_bodega` " +
+"WHERE articulos.`estadoid`=1 AND articulos.`compuesto`=1 " +
+"AND bodegas.`existencia_articulo`=0";
+            gridControl1.DataSource = logicaorto.Tabla(cadena);
+
+
+        }
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            //progressBarControl_PRINCIPAL.Position=
+            timer1.Stop();
+            actualizarDataGrid();
+            actualizar_sistemasEnBodega();
+            timer1.Start();
+            this.Cursor = Cursors.Default;
+        }
 
         
 

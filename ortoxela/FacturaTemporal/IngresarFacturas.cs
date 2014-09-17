@@ -11,6 +11,10 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraEditors.Controls;
 using System.Globalization;
+
+using integracion_ii;
+using Sisnova.Invex.BL;
+
 namespace ortoxela.FacturaTemporal
 {
     public partial class IngresarFacturas : DevExpress.XtraEditors.XtraForm
@@ -182,7 +186,14 @@ namespace ortoxela.FacturaTemporal
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-                if (gridView1.DataRowCount < 12)
+                int p = gridView1.DataRowCount;
+                DialogResult a=DialogResult.Yes;
+                if (p == 12)
+                {
+                    a = MessageBox.Show("Si usted agrega mas de 12 campos a la factura es posible que la impresion sea defectuosa. \n Desea continuar?", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                }
+
+                if (a == DialogResult.Yes) 
                 {
 
                     if (dxValidationProvider1.Validate())
@@ -318,8 +329,9 @@ namespace ortoxela.FacturaTemporal
                     else
                         clases.ClassMensajes.FaltanDatosEnCampos(this);
                 }
-                else
-                    MessageBox.Show("No se pueden agregar mas de 12 campos a la factura", "", MessageBoxButtons.OK);
+                //else
+                //    //MessageBox.Show("No se pueden agregar mas de 12 campos a la factura", "", MessageBoxButtons.OK);
+                //    MessageBox.Show("Si usted agrega mas de 12 campos es posible que la impresion salga corrida", "ALERTA", MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             catch
             { 
@@ -330,8 +342,70 @@ namespace ortoxela.FacturaTemporal
 
         private void groupControl1_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        void registarEnInvex()
+        {
+            
+			Venta encabezadodeventa = null;
+            string serie=gridLookTipoDocumento.Text;
+            serie=serie.Replace("Factura [","");
+            serie=serie.Replace("]","");
+            string fdPago = "";
+
+            if (radioGroup2.SelectedIndex == 1)
+            {
+                fdPago = "Credito";
+            }
+            else
+            {
+                fdPago = gridLookTipoPago.Text;
+            }
+            
+            string telefonoClienteB = logicaorto.Tabla("SELECT telefono_casa FROM clientes WHERE codigo_cliente=" + id_cliente).Rows[0][0].ToString();
+                        encabezadodeventa = integracion_ii.Class_venta.EncabezadoVenta(textNombreCliente.Text, textNitCliente.Text,telefonoClienteB, dateEdit1.DateTime, fdPago, Convert.ToInt16(textNoDocumento.Text),serie);
+
+
+                        for (int x = 0; x < gridView1.DataRowCount; x++)
+                        {
+                            DataTable dt = new DataTable();
+                            string cns = "SELECT categorias.`codigo_categoria`,categorias.`nombre_categoria`,articulos.`costo` FROM categorias INNER JOIN sub_categorias ON sub_categorias.`codigo_categoria`=categorias.`codigo_categoria` INNER JOIN articulos ON articulos.`codigo_categoria`=sub_categorias.`codigo_subcat` WHERE articulos.codigo_articulo='" + gridView1.GetRowCellValue(x, "CODIGO") + "'";
+                            dt = logicaorto.Tabla(cns);
+                            string codigoA = dt.Rows[0][0].ToString();
+                            string nombreA = dt.Rows[0][1].ToString();
+                            decimal costoA = 0;
+                            try
+                            {
+                                costoA = Convert.ToDecimal(dt.Rows[0][2].ToString());
+                            }
+                            catch { }
+                            int cantidadA = Convert.ToInt16(gridView1.GetRowCellValue(x, "CANTIDAD"));
+                            decimal precioA = Convert.ToDecimal(gridView1.GetRowCellValue(x, "VENTA"));
+                            integracion_ii.Class_venta.DetalleVenta(encabezadodeventa, cantidadA, precioA, codigoA, nombreA,costoA);
+                        }
+
+
+                        if (fdPago=="Credito")
+                        {
+                            integracion_ii.Class_venta.ValidarEnCretido(encabezadodeventa);
+                        }
+                        else if (fdPago == "Efectivo")
+                        {
+                            integracion_ii.Class_venta.validarenEfectivo(encabezadodeventa);
+                        }
+                        else if (fdPago == "Deposito")
+                        {
+                            Form validar = new f_validarFactura(2, encabezadodeventa);
+                            validar.ShowDialog();
+                        }
+                        else if (fdPago == "Cheque")
+                        {
+                            Form validar = new f_validarFactura(1, encabezadodeventa);
+                            validar.ShowDialog();
+                        }
 
         }
+
         int cant_existencia;
         private void textNombreArti_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -365,8 +439,8 @@ namespace ortoxela.FacturaTemporal
         private void registraIngreso()
         {
             
-            try
-            {
+            //try
+            //{
                 cadena = "SELECT header_doctos_inv.id_documento FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE series_documentos.codigo_serie='" + gridLookTipoDocumento.EditValue+ "' and header_doctos_inv.no_documento=" + textNoDocumento.Text;
                 if (logicaorto.ExisteRegistro(cadena) == false)
                 {
@@ -449,6 +523,15 @@ namespace ortoxela.FacturaTemporal
                     int iddvendedor=Convert.ToInt16(gridLookUpEdit1.EditValue);
                 ssql = "INSERT into header_doctos_inv(codigo_serie,tipo_pago,no_documento,codigo_cliente, fecha, monto, descuento, monto_neto, usuario_creador, usuario_descuento,socio_comercial,estadoid,contado_credito,refer_documento,vendedor) " +
                         "VALUES ("+gridLookTipoDocumento.EditValue+","+gridLookTipoPago.EditValue+",'"+textNoDocumento.Text+"',"+id_cliente+" ,'"+dateEdit1.DateTime.ToString("yyyy-MM-dd")+"', "+TotalIngresoCosto+", "+TotalDescuento+", "+TotalIngresoVenta+", "+clases.ClassVariables.id_usuario+", "+id_usuario_descuento+","+gridLookSocioComercial.EditValue+",4,"+radioGroup2.SelectedIndex+",'"+textDeposito.Text+"'"+","+iddvendedor.ToString()+");SELECT LAST_INSERT_ID();";
+
+                
+                    
+                    
+                    
+
+
+
+
                 comando = new MySqlCommand(ssql, conexion);
                 comando.Transaction=transac;                
                 id_nuevoIngreso=comando.ExecuteScalar().ToString();
@@ -462,9 +545,15 @@ namespace ortoxela.FacturaTemporal
                         ssql = "update bodegas SET  existencia_articulo = existencia_articulo -" + gridView1.GetRowCellValue(x, "CANTIDAD") + " WHERE codigo_bodega=" + gridView1.GetRowCellValue(x, "IDBODEGA") + " and codigo_articulo='" + gridView1.GetRowCellValue(x, "CODIGO") + "'";
                         comando = new MySqlCommand(ssql, conexion);
                         comando.Transaction = transac;
-                        comando.ExecuteNonQuery();                                                                
+                        comando.ExecuteNonQuery();
+
                 }
-                //**********************************************************************INGRESO DE PARTIDAS CONTABILIDAD**************************************************************
+
+                if (Class_integracion.logeado == true)
+                {
+                    registarEnInvex();
+                }
+                        //**********************************************************************INGRESO DE PARTIDAS CONTABILIDAD**************************************************************
                 cadena = "SELECT * FROM catalogo_partidas WHERE activo=1 AND id_cond in(SELECT idcondiciones_contabilidad FROM condiciones_contabilidad WHERE codigo_serie=" + gridLookTipoDocumento.EditValue + " AND tipo_pago=" + radioGroup2.SelectedIndex + " AND tipo_cliente=" + tipo_cliente_conta + " AND activo=1)";
                 DataTable partidas = new DataTable();
                 double MontoPartida = 0;
@@ -508,23 +597,35 @@ namespace ortoxela.FacturaTemporal
                 {
                     alertControl1.Show(this, "INFORMACION", "EL NUMERO DE DOCUMENTO YA EXISTE", Properties.Resources.Advertencia64);
                 }
-            }
-            catch
-            {
-                transac.Rollback();
-                clases.ClassMensajes.NoINSERTO(this);
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            //}
+            //catch
+            //{
+            //    transac.Rollback();
+            //    clases.ClassMensajes.NoINSERTO(this);
+            //}
+            //finally
+            //{
+            //    conexion.Close();
+            //}
         }
         private void sbAceptar_Click(object sender, EventArgs e)
         {
             if(dxValidationProvider2.Validate() & gridView1.DataRowCount>0 & gridLookTipoDocumento.EditValue != "")
             {
-                
-                    registraIngreso(); 
+                string fdPago = "";
+                if (radioGroup2.SelectedIndex == 1)
+                {
+                    fdPago = "Credito";
+                }
+                else
+                {
+                    fdPago = gridLookTipoPago.Text;
+                }
+
+                if (fdPago == "Credito" || fdPago == "Efectivo" || fdPago == "Cheque" || fdPago == "Deposito")
+                    registraIngreso();
+                else
+                    MessageBox.Show("Seleccione una forma de pago valida, estas pueden ser:\nCredito\nEfectivo\nCheque\nDeposito","Error",  MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             clases.ClassMensajes.FaltanDatosEnCampos(this);
@@ -583,67 +684,81 @@ namespace ortoxela.FacturaTemporal
 
         private void simplePrinter_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             try
             {
-                //Pedido.Factura.XtraReportFactura reporte = new Pedido.Factura.XtraReportFactura();
-                //reporte.Parameters["ID"].Value = id_nuevoIngreso;
-                //reporte.Parameters["LETRAS"].Value = logicaorto.enletras(double.Parse(textPrecioTotal.Text.ToString(), NumberStyles.Currency).ToString());
-                //reporte.Parameters["Vende"].Value = gridLookUpEdit1.Text;
-                //reporte.Parameters["SM_PC_FO"].Value = "Paciente: " + textNombreCliente.Text + " - Socio Comercial: " + gridLookSocioComercial.Text + " - Operado: " + dateEdit1.Text;
-                //reporte.RequestParameters = false;
-                //reporte.ShowPreviewDialog();
-
-
-                string letras=logicaorto.enletras(double.Parse(textPrecioTotal.Text.ToString(), NumberStyles.Currency).ToString());                   
-                
-                Pedido.Factura.F_impresion nf = new Pedido.Factura.F_impresion();
-
-                string con,cre;
-
-                //ver si es credito o contado
-                if (radioGroup2.SelectedIndex == 0)
+                int p = gridView1.DataRowCount;
+                DialogResult a=DialogResult.Yes;
+                if (p >= 12)
                 {
-                    con = "X";
-                    cre = " ";
-                }
-                else
-                {
-                    con = " ";
-                    cre = "X";
+                    a = MessageBox.Show("Esta factura tiene mas de 12 campos, es posible que la impresion sea defectuosa. \n Desea continuar?", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 }
 
+                if (a == DialogResult.Yes)
+                {
+                    //Pedido.Factura.XtraReportFactura reporte = new Pedido.Factura.XtraReportFactura();
+                    //reporte.Parameters["ID"].Value = id_nuevoIngreso;
+                    //reporte.Parameters["LETRAS"].Value = logicaorto.enletras(double.Parse(textPrecioTotal.Text.ToString(), NumberStyles.Currency).ToString());
+                    //reporte.Parameters["Vende"].Value = gridLookUpEdit1.Text;
+                    //reporte.Parameters["SM_PC_FO"].Value = "Paciente: " + textNombreCliente.Text + " - Socio Comercial: " + gridLookSocioComercial.Text + " - Operado: " + dateEdit1.Text;
+                    //reporte.RequestParameters = false;
+                    //reporte.ShowPreviewDialog();
 
-                
+
+
+                    string letras = logicaorto.enletras(double.Parse(textPrecioTotal.Text.ToString(), NumberStyles.Currency).ToString());
+
+                    Pedido.Factura.F_impresion nf = new Pedido.Factura.F_impresion();
+
+                    string con, cre;
+
+                    //ver si es credito o contado
+                    if (radioGroup2.SelectedIndex == 0)
+                    {
+                        con = "X";
+                        cre = " ";
+                    }
+                    else
+                    {
+                        con = " ";
+                        cre = "X";
+                    }
+
+
+
                     //nf.facturaOtroTipo(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue));
-                if (gridLookTipoDocumento.Text == "Factura [A]")
-                {
-                    nf.facturaA(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
-                }
-                else if (gridLookTipoDocumento.Text == "Factura [B]")
-                {
-                    nf.facturaB(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
-                }
-                else if (gridLookTipoDocumento.Text == "Factura [C]")
-                {
-                    nf.facturaC(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
-                }
-                else if (gridLookTipoDocumento.Text == "Factura [D]")
-                {
-                    nf.facturaD(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
-                }
-                else if (gridLookTipoDocumento.Text == "Factura [E]")
-                {
-                    nf.facturaE(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
-                }
+                    if (gridLookTipoDocumento.Text == "Factura [A]")
+                    {
+                        nf.facturaA(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
+                    }
+                    else if (gridLookTipoDocumento.Text == "Factura [B]")
+                    {
+                        nf.facturaB(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
+                    }
+                    else if (gridLookTipoDocumento.Text == "Factura [C]")
+                    {
+                        nf.facturaC(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
+                    }
+                    else if (gridLookTipoDocumento.Text == "Factura [D]")
+                    {
+                        nf.facturaD(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
+                    }
+                    else if (gridLookTipoDocumento.Text == "Factura [E]")
+                    {
+                        nf.facturaE(Convert.ToInt16(id_nuevoIngreso), letras, con, cre, Convert.ToInt16(gridLookTipoDocumento.EditValue), gridLookSocioComercial.EditValue.ToString());
+                    }
 
 
-                nf.ShowDialog();
+                    nf.ShowDialog();
+                }
 
             }
             catch
             {
             
             }
+
+            Cursor = Cursors.Default;
         }
 
         private void simpleButtonEstado_Click(object sender, EventArgs e)

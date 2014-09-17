@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using MySql.Data.MySqlClient;
+
+using DevExpress.XtraReports.UI;
 namespace ortoxela.ReciboCredito
 {
     public partial class frm_reciboCredito : DevExpress.XtraEditors.XtraForm

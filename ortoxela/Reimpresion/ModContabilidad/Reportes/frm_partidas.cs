@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.ModContabilidad.Reportes
 {
     public partial class frm_partidas : Form

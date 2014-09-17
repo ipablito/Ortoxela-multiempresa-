@@ -10,6 +10,11 @@ using MySql.Data.MySqlClient;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraEditors.Controls;
+
+using integracion_ii;
+using Sisnova.Invex.BL;
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.Compra
 {
     public partial class frm_compras : DevExpress.XtraEditors.XtraForm
@@ -470,11 +475,16 @@ namespace ortoxela.Compra
                     conexion.Open();
                     transac = conexion.BeginTransaction();
                     comando.Transaction = transac;
-                ssql = "INSERT into header_doctos_inv(codigo_serie,no_documento,codigo_proveedor, fecha, monto, descuento, monto_neto, usuario_creador, usuario_descuento, razon_ajuste, descripcion, estadoid,contado_credito,refer_documento) " +
+
+                    
+
+                    ssql = "INSERT into header_doctos_inv(codigo_serie,no_documento,codigo_proveedor, fecha, monto, descuento, monto_neto, usuario_creador, usuario_descuento, razon_ajuste, descripcion, estadoid,contado_credito,refer_documento) " +
                         "VALUES ("+gridLookTipoDocumento.EditValue+", '"+textNoDocumento.Text+"', "+id_proveedor+", '"+dateEdit1.DateTime.ToString("yyyy-MM-dd")+"', "+TotalIngresoCosto+", "+TotalDescuento+", "+TotalIngresoVenta+", "+clases.ClassVariables.id_usuario+", "+id_usuario_descuento+", '"+memoRazonAjuste.Text+"', '"+memoDescripcion.Text+"', 4,"+radioGroup2.SelectedIndex+",'"+textNoFacturaCompra.Text+"');SELECT LAST_INSERT_ID();";
+                
                 comando = new MySqlCommand(ssql, conexion);
                 comando.Transaction=transac;                
                 id_nuevoIngreso=comando.ExecuteScalar().ToString();
+
                 for (int x = 0; x < gridView1.DataRowCount; x++)
                 {
                     ssql = "INSERT into detalle_doctos_inv(id_documento, cantidad_enviada, precio_unitario, precio_total,codigo_articulo, codigo_bodega, precio_venta) "+
@@ -522,6 +532,15 @@ namespace ortoxela.Compra
                 groupControl1.Enabled = false;
                 groupControl2.Enabled = false;
                 panelControl1.Enabled = false;
+
+                int v = Convert.ToInt16(gridLookTipoDocumento.EditValue);
+
+                if (Class_integracion.logeado == true)
+                {
+                    agregaraInvex(v);
+                }
+
+
                 clases.ClassMensajes.INSERTO(this);
             }
             catch
@@ -664,6 +683,48 @@ namespace ortoxela.Compra
             { }
         }
 
+        public void agregaraInvex(int iddoc)
+        {
+            DataTable dt = new DataTable();
+            string cns = "SELECT codigo_tipo FROM series_documentos WHERE series_documentos.codigo_serie=" + iddoc.ToString();
+            dt = logicaxela.Tabla(cns);
+            cns = dt.Rows[0][0].ToString();
+            string formapago = "";
+            if (cns == "6")
+            { 
+                cns ="SELECT nit,nombre_proveedor FROM proveedores WHERE codigo_proveedor="+gridLookProveedor.EditValue;
+                dt=logicaxela.Tabla(cns);
+                string nitp=dt.Rows[0][0].ToString();
+                string nombrep=dt.Rows[0][1].ToString();
+                string fp ="";
+                int nodoc = Convert.ToInt32(textNoFacturaCompra.Text);
+                string sf = comboBox_seriesComprasINVEX.Text;
+                
+                if(radioGroup2.SelectedIndex==0)
+                    fp="Contado";
+                else
+                    fp="Crédito";
+
+                //formapago = fp;
+                formapago = "Crédito";
+
+                Sisnova.Invex.BL.Compra encabezadodecompra = integracion_ii.Class_compra.EncabezadoCompra(nombrep, nitp, dateEdit1.DateTime,formapago, nodoc,sf);
+
+                for (int x = 0; x < gridView1.DataRowCount; x++)
+                {
+                    cns = "SELECT categorias.`codigo_categoria`,categorias.`nombre_categoria` FROM categorias INNER JOIN sub_categorias ON sub_categorias.`codigo_categoria`=categorias.`codigo_categoria` INNER JOIN articulos ON articulos.`codigo_categoria`=sub_categorias.`codigo_subcat` WHERE articulos.codigo_articulo='" + gridView1.GetRowCellValue(x, "CODIGO") + "'";
+                    dt = logicaxela.Tabla(cns);
+                    string codigoA = dt.Rows[0][0].ToString();
+                    string nombreA = dt.Rows[0][1].ToString();
+                    int cantidadA = Convert.ToInt16(gridView1.GetRowCellValue(x, "CANTIDAD"));
+                    decimal precioA = Convert.ToDecimal(gridView1.GetRowCellValue(x, "PRECIO"));
+                    integracion_ii.Class_compra.DetalleCompra(encabezadodecompra, cantidadA, precioA, codigoA, nombreA);
+                }
+
+                integracion_ii.Class_compra.ValidarCompra(encabezadodecompra,formapago);
+            }
+        }
+
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             clases.ClassVariables.bandera = 1;
@@ -803,6 +864,22 @@ namespace ortoxela.Compra
             textTotalSinIva.Text = TotalIngresoVenta.ToString("C");
             textPrecioTotal.Text = TotalIngresoVenta.ToString("C");
 
+            if (Class_integracion.logeado == true)
+            {
+                if (gridLookTipoDocumento.EditValue.ToString() == "7")
+                {
+                    comboBox_seriesComprasINVEX.Enabled = true;
+                    comboBox_seriesComprasINVEX.DataSource = integracion_ii.Class_SeriesDocumentos.ListaSeriesFacturasEnCompras();
+                    comboBox_seriesComprasINVEX.DisplayMember = "Serie";
+                    comboBox_seriesComprasINVEX.ValueMember = "Serie";
+                }
+                else
+                {
+                    comboBox_seriesComprasINVEX.Text = "";
+                    comboBox_seriesComprasINVEX.Enabled = false;
+                }
+            }
+
 
             try
             {
@@ -825,6 +902,8 @@ namespace ortoxela.Compra
                 sb_solicitud_compra.Enabled = false;
             }
             CargaBodega(int.Parse(gridLookTipoDocumento.EditValue.ToString()));
+
+            
         }
 
         private void gridLookProveedor_EditValueChanged(object sender, EventArgs e)

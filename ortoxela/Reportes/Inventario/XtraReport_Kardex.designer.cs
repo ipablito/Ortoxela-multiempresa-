@@ -208,7 +208,6 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.nombreEmpresa.Description = "nombreEmpresa";
             this.nombreEmpresa.Name = "nombreEmpresa";
-            this.nombreEmpresa.Value = "";
             this.nombreEmpresa.Visible = false;
             // 
             // xrPageInfo2
@@ -441,8 +440,8 @@ namespace ortoxela.Reportes.Inventario
             // 
             // xrLabel16
             // 
-            this.xrLabel16.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel16.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel16.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(175F, 0F);
             this.xrLabel16.Name = "xrLabel16";
@@ -456,9 +455,9 @@ namespace ortoxela.Reportes.Inventario
             // 
             // xrLabel11
             // 
-            this.xrLabel11.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel11.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "v_kardex.cantidad")});
             this.xrLabel11.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -487,13 +486,12 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.codigo_bodega.Name = "codigo_bodega";
             this.codigo_bodega.Type = typeof(int);
-            this.codigo_bodega.Value = 0;
+            this.codigo_bodega.ValueInfo = "0";
             this.codigo_bodega.Visible = false;
             // 
             // bodega
             // 
             this.bodega.Name = "bodega";
-            this.bodega.Value = "";
             this.bodega.Visible = false;
             // 
             // xrLabel9
@@ -563,6 +561,7 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.Fecha_inicio.Name = "Fecha_inicio";
             this.Fecha_inicio.Type = typeof(System.DateTime);
+            this.Fecha_inicio.ValueInfo = "09/05/2014 10:56:09";
             this.Fecha_inicio.Visible = false;
             // 
             // xrLabel20
@@ -583,7 +582,7 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.Fecha_fin.Name = "Fecha_fin";
             this.Fecha_fin.Type = typeof(System.DateTime);
-            this.Fecha_fin.Value = new System.DateTime(2012, 5, 28, 12, 8, 39, 581);
+            this.Fecha_fin.ValueInfo = "05/28/2012 12:08:39";
             this.Fecha_fin.Visible = false;
             // 
             // xrLabel13
@@ -617,14 +616,14 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.categoria1.Name = "categoria1";
             this.categoria1.Type = typeof(short);
-            this.categoria1.Value = 0;
+            this.categoria1.ValueInfo = "0";
             this.categoria1.Visible = false;
             // 
             // categoria2
             // 
             this.categoria2.Name = "categoria2";
             this.categoria2.Type = typeof(short);
-            this.categoria2.Value = 0;
+            this.categoria2.ValueInfo = "0";
             this.categoria2.Visible = false;
             // 
             // XtraReport_Kardex
@@ -640,8 +639,6 @@ namespace ortoxela.Reportes.Inventario
             this.DataAdapter = this.v_kardexTableAdapter;
             this.DataMember = "v_kardex";
             this.DataSource = this.dataSet_Kardex1;
-            this.FilterString = "[fecha] Between(?Fecha_inicio, ?Fecha_fin) And [codigo_categoria] Between(?catego" +
-                "ria1, ?categoria2)";
             this.Margins = new System.Drawing.Printing.Margins(39, 36, 28, 50);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.codigo_bodega,
@@ -651,7 +648,7 @@ namespace ortoxela.Reportes.Inventario
             this.categoria1,
             this.categoria2,
             this.nombreEmpresa});
-            this.Version = "12.1";
+            this.Version = "12.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Kardex1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

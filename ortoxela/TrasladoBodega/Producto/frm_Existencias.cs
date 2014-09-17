@@ -21,7 +21,8 @@ namespace ortoxela.Reportes.Producto
         {
             /* ssql = "SELECT codigo_bodega as CODIGO, nombre_bodega AS NOMBRE FROM bodegas_header where bodegas_header.estadoid=1"; */
             /* jramirez 2013.07.24 */
-            ssql = "SELECT distinct codigo_bodega AS CODIGO, nombre_bodega AS NOMBRE FROM v_bodegas_series_usuarios  WHERE estadoid_bodega=1 AND userid=" + clases.ClassVariables.id_usuario;
+            //ssql = "SELECT distinct codigo_bodega AS CODIGO, nombre_bodega AS NOMBRE FROM v_bodegas_series_usuarios  WHERE estadoid_bodega=1 AND userid=" + clases.ClassVariables.id_usuario;
+            ssql = "SELECT distinct codigo_bodega AS CODIGO, nombre_bodega AS NOMBRE FROM v_bodegas_series_usuarios  WHERE estadoid_bodega=1";
             gridLookBodega.Properties.DataSource = logicaxela.Tabla(ssql);
             gridLookBodega.Properties.DisplayMember = "NOMBRE";
             gridLookBodega.Properties.ValueMember = "CODIGO";

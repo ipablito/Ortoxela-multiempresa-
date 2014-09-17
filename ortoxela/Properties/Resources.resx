@@ -139,8 +139,14 @@
   <data name="BODEGAV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BODEGAV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="whtarrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whtarrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="error 16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error 16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tipodoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tipodoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="anadir-carrito-de-compras-de-comercio-electronico-icono-7472-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anadir-carrito-de-compras-de-comercio-electronico-icono-7472-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +154,8 @@
   <data name="icontexto-webdev-file-032x032" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icontexto-webdev-file-032x032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usurol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usurol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="balin_info_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balin_info_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="money_transportation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\money_transportation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -168,9 +174,6 @@
   </data>
   <data name="printer 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="application-edit_32x32-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application-edit_32x32-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="asignacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\asignacion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,9 +202,6 @@
   <data name="editores-de-paquetes-icono-8178-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editores-de-paquetes-icono-8178-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="direcciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\direcciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="venteas3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\venteas3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,11 +223,8 @@
   <data name="Advertencia24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Advertencia24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="liberar-icono-7141-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\liberar-icono-7141-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="database-process_24x24-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\database-process_24x24-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="advertencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\advertencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,23 +256,14 @@
   <data name="listas-de-las-poblaciones-de-cartas-icono-5802-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\listas-de-las-poblaciones-de-cartas-icono-5802-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="monedas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monedas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="printer 48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer 48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="proveedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proveedor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="entrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\entrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="balin_info_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\balin_info_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Advertencia48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Advertencia48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OK24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OK24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trasladar48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trasladar48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -288,6 +276,9 @@
   </data>
   <data name="dinero" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dinero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_32x32-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_32x32-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Nuevo24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nuevo24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,20 +310,23 @@
   <data name="Nuevo42" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nuevo42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="database-add_24x24-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database-add_24x24-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo final1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo final1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="application-edit_32x32-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application-edit_32x32-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="balin_info_green1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balin_info_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="whtarrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\whtarrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="direcciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\direcciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="paises" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paises.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -342,9 +336,6 @@
   </data>
   <data name="icontexto-webdev-ok-032x032" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icontexto-webdev-ok-032x032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="permisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\permisos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add_32x32-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_32x32-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,11 +349,20 @@
   <data name="icontexto-webdev-info-032x032" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icontexto-webdev-info-032x032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="usurol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usurol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="marca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ingreso42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ingreso42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="archivo-icono-4678-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\archivo-icono-4678-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="excel_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\excel_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="error48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -370,8 +370,14 @@
   <data name="pregunta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pregunta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="salir-de-gnome-icono-5366-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salir-de-gnome-icono-5366-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="salir-de-gnome-icono-8179-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salir-de-gnome-icono-8179-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icontexto-webdev-emoticon-smile-032x032" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icontexto-webdev-emoticon-smile-032x032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icontexto-webdev-cancel-032x032" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icontexto-webdev-cancel-032x032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -382,29 +388,29 @@
   <data name="027-folder_search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\027-folder_search1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Seleccionar_C" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Seleccionar_C.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ajustes_y_reqi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ajustes_y_reqi.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="balin_info_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\balin_info_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="balin_info_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balin_info_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="486" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\486.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="database-process_24x24-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database-process_24x24-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="muni" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\muni.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="proveedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\proveedor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OK24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OK24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Windows_Log_Off_Icon_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Windows_Log_Off_Icon_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -430,11 +436,14 @@
   <data name="user-remove_32x32-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-remove_32x32-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user_32x32-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_32x32-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="liberar-icono-7141-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\liberar-icono-7141-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="permisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\permisos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="486" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\486.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wallet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wallet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -448,38 +457,38 @@
   <data name="Nuevo32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nuevo32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tipodoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tipodoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="receipt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\receipt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icontexto-webdev-add-032x032" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icontexto-webdev-add-032x032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Seleccionar_C" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Seleccionar_C.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icontexto-webdev-emoticon-smile-032x032" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icontexto-webdev-emoticon-smile-032x032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="monedas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monedas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="articulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\articulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icontexto-webdev-add-032x032" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icontexto-webdev-add-032x032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sociocomercial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sociocomercial.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="balin_info_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balin_info_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer 48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer 48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icontexto-webdev-money-032x032" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icontexto-webdev-money-032x032.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="salir-de-gnome-icono-5366-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\salir-de-gnome-icono-5366-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="receipt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\receipt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ingreso42" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ingreso42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="database-process_16x16-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database-process_16x16-32.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -487,7 +496,7 @@
   <data name="bank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sociocomercial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sociocomercial.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pdf_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pdf_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

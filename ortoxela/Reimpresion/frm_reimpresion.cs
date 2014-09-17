@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.Reimpresion
 {
     public partial class frm_reimpresion : DevExpress.XtraEditors.XtraForm
@@ -166,7 +168,8 @@ namespace ortoxela.Reimpresion
                             if (Convert.ToInt32(gridLookSerieVale.EditValue) == 5)
                             {
                                 Pedido.EnvioDetallado.XtraReportEnvioDetallado reporte = new Pedido.EnvioDetallado.XtraReportEnvioDetallado();
-                                reporte.Parameters["ID"].Value = gridView1.GetFocusedRowCellValue("id_documento");
+                                //reporte.Parameters["ID"].Value = gridView1.GetFocusedRowCellValue("id_documento");
+                                reporte.Parameters["ID"].Value = gridView1.GetFocusedRowCellValue("NO DOCUMENTO");
                                 reporte.RequestParameters = false;
                                 reporte.ShowPreviewDialog();
                             }

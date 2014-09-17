@@ -171,7 +171,7 @@ namespace ortoxela.Vueltos.Vuelto
             this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.banco, "Text", "")});
             this.xrLabel11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(77.08327F, 68.99995F);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(160.4166F, 68.99995F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel11.SizeF = new System.Drawing.SizeF(335.4167F, 23F);
@@ -181,7 +181,6 @@ namespace ortoxela.Vueltos.Vuelto
             // banco
             // 
             this.banco.Name = "banco";
-            this.banco.Value = "";
             // 
             // xrLabel27
             // 
@@ -328,7 +327,6 @@ namespace ortoxela.Vueltos.Vuelto
             // letras
             // 
             this.letras.Name = "letras";
-            this.letras.Value = "";
             // 
             // xrLabel8
             // 
@@ -382,9 +380,9 @@ namespace ortoxela.Vueltos.Vuelto
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(0F, 68.99995F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(77.08327F, 22.99999F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(160.4166F, 22.99999F);
             this.xrLabel10.StylePriority.UseFont = false;
-            this.xrLabel10.Text = "del Banco:";
+            this.xrLabel10.Text = "de la cuenta bancaria:";
             // 
             // xrLabel16
             // 
@@ -484,7 +482,7 @@ namespace ortoxela.Vueltos.Vuelto
             // 
             this.id.Name = "id";
             this.id.Type = typeof(int);
-            this.id.Value = 0;
+            this.id.ValueInfo = "0";
             // 
             // XtraReportVueltos
             // 
@@ -502,7 +500,7 @@ namespace ortoxela.Vueltos.Vuelto
             this.letras,
             this.banco,
             this.no_vuelto});
-            this.Version = "12.1";
+            this.Version = "12.2";
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVuelto1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

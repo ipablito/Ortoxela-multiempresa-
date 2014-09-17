@@ -7,6 +7,10 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using MySql.Data.MySqlClient;
+
+
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.ModCobranza.Reporte
 {
     public partial class frm_reportes : DevExpress.XtraEditors.XtraForm

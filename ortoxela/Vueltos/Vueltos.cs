@@ -10,6 +10,13 @@ using MySql.Data.MySqlClient;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraEditors.Controls;
+
+using DevExpress.XtraReports.UI;
+
+
+using integracion_ii;
+using Sisnova.Invex.BL;
+
 namespace ortoxela.Vueltos
 {
     public partial class Vueltos : DevExpress.XtraEditors.XtraForm
@@ -28,6 +35,10 @@ namespace ortoxela.Vueltos
                 gridLookTipoPago.Properties.ValueMember = "CODIGO";
                 gridLookTipoPago.Text = "";
                 gridLookTipoPago.EditValue = 2;
+
+                comboBox_cuentas.DataSource = integracion_ii.Class_cuentaBancaria.listaCuentasBancarias();
+                comboBox_cuentas.DisplayMember = "Nombre";
+                comboBox_cuentas.ValueMember = "Nombre";
             }
             catch
             { }       
@@ -49,7 +60,7 @@ namespace ortoxela.Vueltos
         }
         public void limpiar()
         {
-            textBANCO.Text = "";
+            //textBANCO.Text = "";
             textCHEQUE.Text = "";
             memoDescripcion.Text = "";
         }
@@ -109,25 +120,47 @@ namespace ortoxela.Vueltos
         }
         string monto = ""; string banco = "";
         string no_vuelto;
+
+        private void GuardarEnINVEX()
+        {
+            DataTable dt = new DataTable();
+            string cns = "SELECT nit,nombre_cliente,telefono_casa FROM clientes INNER JOIN vueltos ON clientes.`codigo_cliente`=vueltos.`codigo_cliente` WHERE vueltos.`id_vuelto`=" + id_vuelto.ToString();
+            dt = logicaorto.Tabla(cns);
+            int noCheque = Convert.ToInt32(textCHEQUE.Text);
+            string nombreCuenta = comboBox_cuentas.Text;
+            string nitCliente = dt.Rows[0][0].ToString();
+            string nombreCliente = dt.Rows[0][1].ToString();
+            string telefonoB = dt.Rows[0][2].ToString();
+            decimal monto = Convert.ToDecimal(textTotaL.Text);
+            integracion_ii.Class_devolucion.ChequeDeDevolucion(noCheque, nombreCuenta, nitCliente, nombreCliente,telefonoB, monto);
+        }
         private void sbAceptar_Click(object sender, EventArgs e)
         {
             cadena = "SELECT coalesce(max(vueltos.no_vuelto),0)+1 as no_vlto from vueltos";
             no_vuelto = logicaorto.Tabla(cadena).Rows[0][0].ToString();
-            if (dxValidationAceptaDev.Validate())
+            if (dxValidationAceptaDev.Validate()&&(textCHEQUE.Text!=""))
             {
                 if (MessageBox.Show("¿ESTA SEGURO DE CONTINUAR, AL HACER ESTO NO HAY VUELTA ATRAS?", "INFORMACION", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cadena = "update vueltos "+
-                            "SET fecha_pago = '"+dateEdit1.DateTime.ToString("yyyy-MM-dd HH:mm:ss")+"', tipo_pago = "+gridLookTipoPago.EditValue+", no_cheque = '"+textCHEQUE.Text+"', nombre_banco = '"+textBANCO.Text+"', decripcion = '"+memoDescripcion.Text+"', estadoid = 5 ,no_vuelto="+no_vuelto+
+                            "SET fecha_pago = '"+dateEdit1.DateTime.ToString("yyyy-MM-dd HH:mm:ss")+"', tipo_pago = "+gridLookTipoPago.EditValue+", no_cheque = '"+textCHEQUE.Text+"', nombre_banco = '"+ comboBox_cuentas.Text +"', decripcion = '"+memoDescripcion.Text+"', estadoid = 5 ,no_vuelto="+no_vuelto+
                             " WHERE vueltos.id_vuelto="+id_vuelto;
+                    
+                    
+
                     if (logicaorto.variosservios(cadena) == 1)
                     {
+                        if (Class_integracion.logeado == true)
+                        {
+                            GuardarEnINVEX();
+                        }
+
                         clases.ClassMensajes.INSERTO(this);
                         sbimprimir.Enabled = true;
                         sbAceptar.Enabled = false;
                         groupControl1.Enabled = false;
                         monto = textTotaL.Text;
-                        banco = textBANCO.Text;
+                        banco = comboBox_cuentas.Text;
                     }
                     else
                         clases.ClassMensajes.NoINSERTO(this);

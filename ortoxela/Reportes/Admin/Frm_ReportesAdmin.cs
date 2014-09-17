@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using MySql.Data.MySqlClient;
 
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.Reportes.Admin
 {
     public partial class Frm_ReportesAdmin : Form

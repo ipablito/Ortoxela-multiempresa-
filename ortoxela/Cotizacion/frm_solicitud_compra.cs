@@ -10,6 +10,8 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraEditors.Controls;
 using MySql.Data.MySqlClient;
+
+using DevExpress.XtraReports.UI;
 namespace ortoxela.Cotizacion
 {
     public partial class frm_solicitud_compra : DevExpress.XtraEditors.XtraForm

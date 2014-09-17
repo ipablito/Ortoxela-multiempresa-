@@ -11,6 +11,11 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraEditors.Controls;
 using System.Globalization;
+
+using DevExpress.XtraReports.UI;
+using Sisnova.Invex.BL;
+using integracion_ii;
+
 namespace ortoxela.Pedido
 {
     public partial class frm_regreso : DevExpress.XtraEditors.XtraForm
@@ -196,7 +201,11 @@ namespace ortoxela.Pedido
                     textNoDocumento.Text = tempLlena.Rows[0]["no_documento"].ToString();
                     textDeposito.Text = tempLlena.Rows[0]["refer_documento"].ToString();
                     try
-                    { id_socio_comercial = tempLlena.Rows[0]["socio_comercial"].ToString(); }
+                    { id_socio_comercial = tempLlena.Rows[0]["socio_comercial"].ToString();
+                    
+                        if (id_socio_comercial == "")
+                        id_socio_comercial = "1";
+                    }
                     catch { }
                     memoDescripcion.Text = tempLlena.Rows[0]["descripcion"].ToString();
                     memoRazonAjuste.Text = tempLlena.Rows[0]["razon_ajuste"].ToString();
@@ -474,12 +483,69 @@ namespace ortoxela.Pedido
             }
         }
 
+        void registarenInvex()
+        {
+                #region integracion con INVEX, encabezado de venta
+                Venta encabezadodeventa = null;
+            string serie = gridLookDocFactura.Text;
+            serie = serie.Replace("Factura - ","");
+            string telefonoClienteB = logicaorto.Tabla("SELECT telefono_casa FROM clientes WHERE codigo_cliente=" + id_cliente).Rows[0][0].ToString();
+            encabezadodeventa = integracion_ii.Class_venta.EncabezadoVenta(textClienteFactura.Text, textNitFactura.Text,telefonoClienteB, dateEdit1.DateTime, "Crédito", Convert.ToInt16(textNoDocumento.Text), serie);
+                #endregion
+
+
+                for (int x = 0; x < gridView4.DataRowCount; x++)
+                {
+
+                        #region integracion con INVEX, detalle de venta
+                        DataTable dt = new DataTable();
+                        string cns = "SELECT categorias.`codigo_categoria`,categorias.`nombre_categoria`,articulos.`costo` FROM categorias INNER JOIN sub_categorias ON sub_categorias.`codigo_categoria`=categorias.`codigo_categoria` INNER JOIN articulos ON articulos.`codigo_categoria`=sub_categorias.`codigo_subcat` WHERE articulos.codigo_articulo='" + gridView4.GetRowCellValue(x, "CODIGO") + "'";
+                        dt = logicaorto.Tabla(cns);
+                        string codigoA = dt.Rows[0][0].ToString();
+                        string nombreA = dt.Rows[0][1].ToString();
+                        decimal costoA = 0;
+                        try
+                        {
+                            costoA = Convert.ToDecimal(dt.Rows[0][2].ToString());
+                        }
+                        catch { }
+                        int cantidadA = Convert.ToInt16(gridView4.GetRowCellValue(x, "CANTIDAD"));
+                        decimal precioA = Convert.ToDecimal(gridView4.GetRowCellValue(x, "UNITARIO"));
+                        integracion_ii.Class_venta.DetalleVenta(encabezadodeventa, cantidadA, precioA, codigoA, nombreA,costoA);
+                        #endregion
+                }
+
+                    #region validar venta con o sin deposito
+                    //if (gridLookTipoPago.Text == "Cheque")
+                    //{
+                    //    integracion_ii.Class_venta.ValidarVentaConDeposito(encabezadodeventa, "cuenta", Convert.ToInt32(textDeposito.Text));
+                    //}
+                    //else
+                    //{
+                    //    integracion_ii.Class_venta.ValidarVentaSinDeposito(encabezadodeventa);
+                    //}
+                integracion_ii.Class_venta.ValidarEnCretido(encabezadodeventa);
+                    #endregion
+
+            }
+
+
         string id_nuevo_factura;
         private void simpleButton9_Click(object sender, EventArgs e)
         {
+            //try
+            //{
+            Cursor = Cursors.WaitCursor;
             try
             {
-                if (gridView1.DataRowCount < 12)
+                int p = gridView4.DataRowCount;
+                DialogResult a=DialogResult.Yes;
+                if (p >= 12)
+                {
+                    a = MessageBox.Show("Esta factura tiene mas de 12 campos, es posible que la impresion sea defectuosa. \n Desea continuar?", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                }
+
+                if (a == DialogResult.Yes)
                 {
                     cadena = "SELECT header_doctos_inv.id_documento FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE series_documentos.codigo_serie='" + gridLookDocFactura.EditValue + "' and header_doctos_inv.no_documento=" + textNumeroDocFactura.Text;
                     if (logicaorto.ExisteRegistro(cadena) == false)
@@ -490,6 +556,9 @@ namespace ortoxela.Pedido
                         string tempoTotalFactura = textTotalFactura.Text.Replace(",", "");
                         cadena = "INSERT into header_doctos_inv(codigo_serie,tipo_pago,no_documento, codigo_cliente, fecha, monto,descuento , monto_neto, usuario_creador,socio_comercial, estadoid,contado_credito,refer_documento,vendedor) " +
                                 "VALUES (" + gridLookDocFactura.EditValue + "," + gridLookTipoPago.EditValue + ", '" + textNumeroDocFactura.Text + "', " + id_cliente + ", '" + dateEdit1.DateTime.ToString("yyyy-MM-dd HH:mm:ss") + "', " + double.Parse(tempoTotalFactura.ToString(), NumberStyles.Currency) + ",0," + double.Parse(tempoTotalFactura.ToString(), NumberStyles.Currency) + ", " + clases.ClassVariables.id_usuario + "," + id_socio_comercial + ",4," + radioGroup1.SelectedIndex + ",'" + textDeposito.Text + "'," + gridLookUpEdit1.EditValue + ");select last_insert_id();";
+
+                        
+                        
                         comando = new MySqlCommand(cadena, conexion);
                         comando.Transaction = transa;
                         id_nuevo_factura = comando.ExecuteScalar().ToString();
@@ -501,6 +570,16 @@ namespace ortoxela.Pedido
                             comando.Transaction = transa;
                             comando.ExecuteNonQuery();
                         }
+
+                        if (Class_integracion.logeado == true)
+                        {
+                            registarenInvex();
+                        }
+                        
+
+
+                       
+
                         cadena = "INSERT into relacion_venta(codigo_cliente, id_vale, id_documento, fecha_creacion, usuario_creador, estadoid) " +
                                     "VALUES (" + id_cliente + ", " + id_vale + "," + id_nuevo_factura + ",'" + DateTime.Now.ToString("yyyy-MM-dd") + "', " + clases.ClassVariables.id_usuario + ",4)";
                         comando = new MySqlCommand(cadena, conexion);
@@ -516,6 +595,9 @@ namespace ortoxela.Pedido
                         comando.Transaction = transa;
                         comando.ExecuteNonQuery();
                         transa.Commit();
+
+                        
+
                         clases.ClassMensajes.INSERTO(this);
                         if (radioGroup1.SelectedIndex == 1)
                         {
@@ -599,10 +681,6 @@ namespace ortoxela.Pedido
                         alertControl1.Show(this, "INFORMACION", "EL NUMERO DE DOCUMENTO YA EXISTE", Properties.Resources.Advertencia64);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No se pueden agregar mas de 12 campos a la factura", "", MessageBoxButtons.OK);
-                }
             }
             catch
             {
@@ -613,6 +691,7 @@ namespace ortoxela.Pedido
             {
                 conexion.Close();
             }
+            Cursor = Cursors.Default;
         }
 
         private void xtraTabPage2_Paint(object sender, PaintEventArgs e)

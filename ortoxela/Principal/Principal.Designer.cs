@@ -30,71 +30,32 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            DevExpress.XtraCharts.TextAnnotation textAnnotation3 = new DevExpress.XtraCharts.TextAnnotation();
-            DevExpress.XtraCharts.ChartAnchorPoint chartAnchorPoint3 = new DevExpress.XtraCharts.ChartAnchorPoint();
-            DevExpress.XtraCharts.FreePosition freePosition3 = new DevExpress.XtraCharts.FreePosition();
-            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel7 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SeriesPoint seriesPoint13 = new DevExpress.XtraCharts.SeriesPoint("uno", new object[] {
+            DevExpress.XtraCharts.TextAnnotation textAnnotation1 = new DevExpress.XtraCharts.TextAnnotation();
+            DevExpress.XtraCharts.ChartAnchorPoint chartAnchorPoint1 = new DevExpress.XtraCharts.ChartAnchorPoint();
+            DevExpress.XtraCharts.FreePosition freePosition1 = new DevExpress.XtraCharts.FreePosition();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SeriesPoint seriesPoint1 = new DevExpress.XtraCharts.SeriesPoint("uno", new object[] {
             ((object)(1D))});
-            DevExpress.XtraCharts.SeriesPoint seriesPoint14 = new DevExpress.XtraCharts.SeriesPoint("dos", new object[] {
+            DevExpress.XtraCharts.SeriesPoint seriesPoint2 = new DevExpress.XtraCharts.SeriesPoint("dos", new object[] {
             ((object)(2D))});
-            DevExpress.XtraCharts.SeriesPoint seriesPoint15 = new DevExpress.XtraCharts.SeriesPoint("tres", new object[] {
+            DevExpress.XtraCharts.SeriesPoint seriesPoint3 = new DevExpress.XtraCharts.SeriesPoint("tres", new object[] {
             ((object)(40D))});
-            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel8 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SeriesPoint seriesPoint16 = new DevExpress.XtraCharts.SeriesPoint("suno", new object[] {
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel2 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SeriesPoint seriesPoint4 = new DevExpress.XtraCharts.SeriesPoint("suno", new object[] {
             ((object)(4D))});
-            DevExpress.XtraCharts.SeriesPoint seriesPoint17 = new DevExpress.XtraCharts.SeriesPoint("sdos", new object[] {
+            DevExpress.XtraCharts.SeriesPoint seriesPoint5 = new DevExpress.XtraCharts.SeriesPoint("sdos", new object[] {
             ((object)(6D))});
-            DevExpress.XtraCharts.SeriesPoint seriesPoint18 = new DevExpress.XtraCharts.SeriesPoint("stres", new object[] {
+            DevExpress.XtraCharts.SeriesPoint seriesPoint6 = new DevExpress.XtraCharts.SeriesPoint("stres", new object[] {
             ((object)(78D))});
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel9 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.ChartTitle chartTitle3 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel3 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             this.splitContainerDatos = new DevExpress.XtraEditors.SplitContainerControl();
-            this.buttonActualizar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.COBRANZA = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem31 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem138 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem139 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem140 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barSubItem10 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem93 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem94 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem95 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem23 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem89 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem90 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem92 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem91 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem97 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem98 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup19 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem103 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem127 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem128 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem112 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem113 = new DevExpress.XtraBars.BarButtonItem();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.barButtonItem114 = new DevExpress.XtraBars.BarButtonItem();
@@ -102,6 +63,9 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
@@ -111,6 +75,11 @@
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
@@ -201,13 +170,25 @@
             this.barButtonItem86 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem87 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem88 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem91 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem10 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem93 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem94 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem95 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem83 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem23 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem89 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem90 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem92 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonGalleryBarItem2 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.barButtonItem96 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem97 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem98 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem99 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem100 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem101 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem102 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem103 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem104 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem105 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem106 = new DevExpress.XtraBars.BarButtonItem();
@@ -217,6 +198,8 @@
             this.barButtonItem110 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem24 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem111 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem112 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem113 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem117 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem118 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem116 = new DevExpress.XtraBars.BarButtonItem();
@@ -231,6 +214,8 @@
             this.barButtonItem124 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem125 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem126 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem127 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem128 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem28 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem129 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem130 = new DevExpress.XtraBars.BarButtonItem();
@@ -242,7 +227,18 @@
             this.barButtonItem135 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem136 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem137 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem31 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem138 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem139 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem140 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem141 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem142 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem143 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem32 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem144 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem145 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem146 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem147 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.FACTURACION = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -266,6 +262,15 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.COBRANZA = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup19 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.PROVEEDORES = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage12 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -287,25 +292,27 @@
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.repositoryItemPopupContainerEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.progressBarControl_PRINCIPAL = new DevExpress.XtraEditors.ProgressBarControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.ribbonPage11 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.defaultLookAndFeel2 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSubItem30 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem142 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem143 = new DevExpress.XtraBars.BarButtonItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ortoxela.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerDatos)).BeginInit();
             this.splitContainerDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(textAnnotation3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
@@ -313,6 +320,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl_PRINCIPAL.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(textAnnotation1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
@@ -321,7 +341,12 @@
             // 
             resources.ApplyResources(this.splitContainerDatos, "splitContainerDatos");
             this.splitContainerDatos.Name = "splitContainerDatos";
-            this.splitContainerDatos.Panel1.Controls.Add(this.buttonActualizar);
+            this.splitContainerDatos.Panel1.Controls.Add(this.labelControl1);
+            this.splitContainerDatos.Panel1.Controls.Add(this.gridControl1);
+            this.splitContainerDatos.Panel1.Controls.Add(this.simpleButton1);
+            this.splitContainerDatos.Panel1.Controls.Add(this.progressBarControl_PRINCIPAL);
+            this.splitContainerDatos.Panel1.Controls.Add(this.labelControl2);
+            this.splitContainerDatos.Panel1.Controls.Add(this.gridControl2);
             this.splitContainerDatos.Panel1.Controls.Add(this.label1);
             this.splitContainerDatos.Panel1.Controls.Add(this.dataGridView1);
             resources.ApplyResources(this.splitContainerDatos.Panel1, "splitContainerDatos.Panel1");
@@ -330,419 +355,36 @@
             this.splitContainerDatos.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1;
             this.splitContainerDatos.SplitterPosition = 1228;
             // 
-            // buttonActualizar
-            // 
-            resources.ApplyResources(this.buttonActualizar, "buttonActualizar");
-            this.buttonActualizar.Name = "buttonActualizar";
-            this.buttonActualizar.UseVisualStyleBackColor = true;
-            this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Name = "label1";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            // 
-            // chartControl1
-            // 
-            resources.ApplyResources(this.chartControl1, "chartControl1");
-            chartAnchorPoint3.X = 6;
-            chartAnchorPoint3.Y = 43;
-            textAnnotation3.AnchorPoint = chartAnchorPoint3;
-            resources.ApplyResources(textAnnotation3, "textAnnotation3");
-            freePosition3.InnerIndents.Left = 0;
-            freePosition3.InnerIndents.Top = 0;
-            textAnnotation3.ShapePosition = freePosition3;
-            this.chartControl1.AnnotationRepository.AddRange(new DevExpress.XtraCharts.Annotation[] {
-            textAnnotation3});
-            this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            xyDiagram3.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram3.AxisX.Range.SideMarginsEnabled = true;
-            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram3.AxisY.Range.SideMarginsEnabled = true;
-            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram3;
-            this.chartControl1.Name = "chartControl1";
-            this.chartControl1.PaletteName = "Module";
-            sideBySideBarSeriesLabel7.LineVisible = true;
-            series5.Label = sideBySideBarSeriesLabel7;
-            resources.ApplyResources(series5, "series5");
-            series5.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
-            seriesPoint13,
-            seriesPoint14,
-            seriesPoint15});
-            sideBySideBarSeriesLabel8.LineVisible = true;
-            series6.Label = sideBySideBarSeriesLabel8;
-            resources.ApplyResources(series6, "series6");
-            series6.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
-            seriesPoint16,
-            seriesPoint17,
-            seriesPoint18});
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series5,
-        series6};
-            sideBySideBarSeriesLabel9.LineVisible = true;
-            this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel9;
-            resources.ApplyResources(chartTitle3, "chartTitle3");
-            this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle3});
-            // 
-            // COBRANZA
-            // 
-            resources.ApplyResources(this.COBRANZA, "COBRANZA");
-            this.COBRANZA.Name = "COBRANZA";
-            this.COBRANZA.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage5,
-            this.ribbonPage6,
-            this.ribbonPage7});
-            this.COBRANZA.Tag = "";
-            // 
-            // ribbonPage5
-            // 
-            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup13});
-            this.ribbonPage5.Name = "ribbonPage5";
-            resources.ApplyResources(this.ribbonPage5, "ribbonPage5");
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barSubItem1);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barSubItem2);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barSubItem31);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            resources.ApplyResources(this.ribbonPageGroup2, "ribbonPageGroup2");
-            // 
-            // barSubItem1
-            // 
-            resources.ApplyResources(this.barSubItem1, "barSubItem1");
-            this.barSubItem1.Id = 16;
-            this.barSubItem1.LargeGlyph = global::ortoxela.Properties.Resources.user_32x32_32;
-            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6)});
-            this.barSubItem1.Name = "barSubItem1";
-            // 
-            // barButtonItem4
-            // 
-            resources.ApplyResources(this.barButtonItem4, "barButtonItem4");
-            this.barButtonItem4.Enabled = false;
-            this.barButtonItem4.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
-            this.barButtonItem4.Id = 4;
-            this.barButtonItem4.LargeGlyph = global::ortoxela.Properties.Resources.user_32x32_32;
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
-            // 
-            // barButtonItem5
-            // 
-            resources.ApplyResources(this.barButtonItem5, "barButtonItem5");
-            this.barButtonItem5.Enabled = false;
-            this.barButtonItem5.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
-            this.barButtonItem5.Id = 5;
-            this.barButtonItem5.LargeGlyph = global::ortoxela.Properties.Resources.application_edit_32x32_32;
-            this.barButtonItem5.Name = "barButtonItem5";
-            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
-            // 
-            // barButtonItem6
-            // 
-            resources.ApplyResources(this.barButtonItem6, "barButtonItem6");
-            this.barButtonItem6.Enabled = false;
-            this.barButtonItem6.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
-            this.barButtonItem6.Id = 6;
-            this.barButtonItem6.LargeGlyph = global::ortoxela.Properties.Resources.user_remove_32x32_32;
-            this.barButtonItem6.Name = "barButtonItem6";
-            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
-            // 
-            // barSubItem2
-            // 
-            resources.ApplyResources(this.barSubItem2, "barSubItem2");
-            this.barSubItem2.Id = 17;
-            this.barSubItem2.LargeGlyph = global::ortoxela.Properties.Resources._075;
-            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem16),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem17),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem18)});
-            this.barSubItem2.Name = "barSubItem2";
-            // 
-            // barButtonItem16
-            // 
-            resources.ApplyResources(this.barButtonItem16, "barButtonItem16");
-            this.barButtonItem16.Enabled = false;
-            this.barButtonItem16.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
-            this.barButtonItem16.Id = 19;
-            this.barButtonItem16.Name = "barButtonItem16";
-            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
-            // 
-            // barButtonItem17
-            // 
-            resources.ApplyResources(this.barButtonItem17, "barButtonItem17");
-            this.barButtonItem17.Enabled = false;
-            this.barButtonItem17.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
-            this.barButtonItem17.Id = 20;
-            this.barButtonItem17.Name = "barButtonItem17";
-            this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
-            // 
-            // barButtonItem18
-            // 
-            resources.ApplyResources(this.barButtonItem18, "barButtonItem18");
-            this.barButtonItem18.Enabled = false;
-            this.barButtonItem18.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
-            this.barButtonItem18.Id = 21;
-            this.barButtonItem18.Name = "barButtonItem18";
-            this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
-            // 
-            // barSubItem31
-            // 
-            resources.ApplyResources(this.barSubItem31, "barSubItem31");
-            this.barSubItem31.Id = 212;
-            this.barSubItem31.LargeGlyph = global::ortoxela.Properties.Resources.sociocomercial;
-            this.barSubItem31.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem138),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem139),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem140)});
-            this.barSubItem31.Name = "barSubItem31";
-            // 
-            // barButtonItem138
-            // 
-            resources.ApplyResources(this.barButtonItem138, "barButtonItem138");
-            this.barButtonItem138.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
-            this.barButtonItem138.Id = 213;
-            this.barButtonItem138.Name = "barButtonItem138";
-            this.barButtonItem138.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem138_ItemClick);
-            // 
-            // barButtonItem139
-            // 
-            resources.ApplyResources(this.barButtonItem139, "barButtonItem139");
-            this.barButtonItem139.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
-            this.barButtonItem139.Id = 214;
-            this.barButtonItem139.Name = "barButtonItem139";
-            this.barButtonItem139.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem139_ItemClick);
-            // 
-            // barButtonItem140
-            // 
-            resources.ApplyResources(this.barButtonItem140, "barButtonItem140");
-            this.barButtonItem140.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
-            this.barButtonItem140.Id = 215;
-            this.barButtonItem140.Name = "barButtonItem140";
-            this.barButtonItem140.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem140_ItemClick);
-            // 
-            // ribbonPageGroup13
-            // 
-            this.ribbonPageGroup13.ItemLinks.Add(this.barSubItem10);
-            this.ribbonPageGroup13.ItemLinks.Add(this.barSubItem23);
-            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-            resources.ApplyResources(this.ribbonPageGroup13, "ribbonPageGroup13");
-            // 
-            // barSubItem10
-            // 
-            resources.ApplyResources(this.barSubItem10, "barSubItem10");
-            this.barSubItem10.Id = 129;
-            this.barSubItem10.LargeGlyph = global::ortoxela.Properties.Resources.tipodoc;
-            this.barSubItem10.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem93),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem94),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem95)});
-            this.barSubItem10.Name = "barSubItem10";
-            // 
-            // barButtonItem93
-            // 
-            resources.ApplyResources(this.barButtonItem93, "barButtonItem93");
-            this.barButtonItem93.Enabled = false;
-            this.barButtonItem93.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
-            this.barButtonItem93.Id = 131;
-            this.barButtonItem93.Name = "barButtonItem93";
-            this.barButtonItem93.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem93_ItemClick);
-            // 
-            // barButtonItem94
-            // 
-            resources.ApplyResources(this.barButtonItem94, "barButtonItem94");
-            this.barButtonItem94.Enabled = false;
-            this.barButtonItem94.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
-            this.barButtonItem94.Id = 132;
-            this.barButtonItem94.Name = "barButtonItem94";
-            this.barButtonItem94.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem94_ItemClick);
-            // 
-            // barButtonItem95
-            // 
-            resources.ApplyResources(this.barButtonItem95, "barButtonItem95");
-            this.barButtonItem95.Enabled = false;
-            this.barButtonItem95.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
-            this.barButtonItem95.Id = 133;
-            this.barButtonItem95.Name = "barButtonItem95";
-            this.barButtonItem95.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem95_ItemClick);
-            // 
-            // barSubItem23
-            // 
-            resources.ApplyResources(this.barSubItem23, "barSubItem23");
-            this.barSubItem23.Id = 136;
-            this.barSubItem23.LargeGlyph = global::ortoxela.Properties.Resources.bank;
-            this.barSubItem23.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem89),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem90),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem92)});
-            this.barSubItem23.Name = "barSubItem23";
-            // 
-            // barButtonItem89
-            // 
-            resources.ApplyResources(this.barButtonItem89, "barButtonItem89");
-            this.barButtonItem89.Enabled = false;
-            this.barButtonItem89.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
-            this.barButtonItem89.Id = 137;
-            this.barButtonItem89.Name = "barButtonItem89";
-            this.barButtonItem89.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem89_ItemClick);
-            // 
-            // barButtonItem90
-            // 
-            resources.ApplyResources(this.barButtonItem90, "barButtonItem90");
-            this.barButtonItem90.Enabled = false;
-            this.barButtonItem90.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
-            this.barButtonItem90.Id = 138;
-            this.barButtonItem90.Name = "barButtonItem90";
-            this.barButtonItem90.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem90_ItemClick_1);
-            // 
-            // barButtonItem92
-            // 
-            resources.ApplyResources(this.barButtonItem92, "barButtonItem92");
-            this.barButtonItem92.Enabled = false;
-            this.barButtonItem92.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
-            this.barButtonItem92.Id = 139;
-            this.barButtonItem92.Name = "barButtonItem92";
-            this.barButtonItem92.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem92_ItemClick);
-            // 
-            // ribbonPage6
-            // 
-            this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup14,
-            this.ribbonPageGroup17});
-            this.ribbonPage6.Name = "ribbonPage6";
-            resources.ApplyResources(this.ribbonPage6, "ribbonPage6");
-            // 
-            // ribbonPageGroup14
-            // 
-            this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem91);
-            this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem97);
-            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-            resources.ApplyResources(this.ribbonPageGroup14, "ribbonPageGroup14");
-            // 
-            // barButtonItem91
-            // 
-            resources.ApplyResources(this.barButtonItem91, "barButtonItem91");
-            this.barButtonItem91.Enabled = false;
-            this.barButtonItem91.Id = 127;
-            this.barButtonItem91.LargeGlyph = global::ortoxela.Properties.Resources.vuelto;
-            this.barButtonItem91.Name = "barButtonItem91";
-            this.barButtonItem91.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem91_ItemClick);
-            // 
-            // barButtonItem97
-            // 
-            resources.ApplyResources(this.barButtonItem97, "barButtonItem97");
-            this.barButtonItem97.Enabled = false;
-            this.barButtonItem97.Id = 142;
-            this.barButtonItem97.LargeGlyph = global::ortoxela.Properties.Resources.dinero;
-            this.barButtonItem97.Name = "barButtonItem97";
-            this.barButtonItem97.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem97_ItemClick);
-            // 
-            // ribbonPageGroup17
-            // 
-            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem98);
-            this.ribbonPageGroup17.Name = "ribbonPageGroup17";
-            resources.ApplyResources(this.ribbonPageGroup17, "ribbonPageGroup17");
-            // 
-            // barButtonItem98
-            // 
-            resources.ApplyResources(this.barButtonItem98, "barButtonItem98");
-            this.barButtonItem98.Enabled = false;
-            this.barButtonItem98.Id = 143;
-            this.barButtonItem98.LargeGlyph = global::ortoxela.Properties.Resources.receipt;
-            this.barButtonItem98.Name = "barButtonItem98";
-            this.barButtonItem98.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem98_ItemClick);
-            // 
-            // ribbonPage7
-            // 
-            this.ribbonPage7.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup19});
-            this.ribbonPage7.Name = "ribbonPage7";
-            resources.ApplyResources(this.ribbonPage7, "ribbonPage7");
-            // 
-            // ribbonPageGroup19
-            // 
-            this.ribbonPageGroup19.AllowTextClipping = false;
-            this.ribbonPageGroup19.ItemLinks.Add(this.barButtonItem103);
-            this.ribbonPageGroup19.ItemLinks.Add(this.barButtonItem127);
-            this.ribbonPageGroup19.ItemLinks.Add(this.barButtonItem128);
-            this.ribbonPageGroup19.Name = "ribbonPageGroup19";
-            resources.ApplyResources(this.ribbonPageGroup19, "ribbonPageGroup19");
-            // 
-            // barButtonItem103
-            // 
-            resources.ApplyResources(this.barButtonItem103, "barButtonItem103");
-            this.barButtonItem103.Enabled = false;
-            this.barButtonItem103.Id = 148;
-            this.barButtonItem103.LargeGlyph = global::ortoxela.Properties.Resources.editores_de_paquetes_icono_8178_48;
-            this.barButtonItem103.Name = "barButtonItem103";
-            this.barButtonItem103.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem103_ItemClick);
-            // 
-            // barButtonItem127
-            // 
-            resources.ApplyResources(this.barButtonItem127, "barButtonItem127");
-            this.barButtonItem127.Enabled = false;
-            this.barButtonItem127.Id = 187;
-            this.barButtonItem127.LargeGlyph = global::ortoxela.Properties.Resources.tipodoc;
-            this.barButtonItem127.Name = "barButtonItem127";
-            this.barButtonItem127.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem127_ItemClick);
-            // 
-            // barButtonItem128
-            // 
-            resources.ApplyResources(this.barButtonItem128, "barButtonItem128");
-            this.barButtonItem128.Enabled = false;
-            this.barButtonItem128.Id = 188;
-            this.barButtonItem128.LargeGlyph = global::ortoxela.Properties.Resources.archivo_icono_4678_48;
-            this.barButtonItem128.Name = "barButtonItem128";
-            this.barButtonItem128.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem128_ItemClick);
-            // 
-            // barButtonItem112
-            // 
-            resources.ApplyResources(this.barButtonItem112, "barButtonItem112");
-            this.barButtonItem112.Enabled = false;
-            this.barButtonItem112.Id = 158;
-            this.barButtonItem112.LargeGlyph = global::ortoxela.Properties.Resources.wallet;
-            this.barButtonItem112.Name = "barButtonItem112";
-            this.barButtonItem112.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem112_ItemClick);
-            // 
-            // barButtonItem113
-            // 
-            resources.ApplyResources(this.barButtonItem113, "barButtonItem113");
-            this.barButtonItem113.Enabled = false;
-            this.barButtonItem113.Id = 159;
-            this.barButtonItem113.LargeGlyph = global::ortoxela.Properties.Resources.tipodoc;
-            this.barButtonItem113.Name = "barButtonItem113";
-            this.barButtonItem113.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem113_ItemClick);
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl1.Appearance.Font")));
+            this.labelControl1.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl1.Appearance.ForeColor")));
+            resources.ApplyResources(this.labelControl1, "labelControl1");
+            this.labelControl1.Name = "labelControl1";
+            // 
+            // gridControl1
+            // 
+            resources.ApplyResources(this.gridControl1, "gridControl1");
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MenuManager = this.ribbon;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // ribbon
             // 
             this.ribbon.ApplicationButtonDropDownControl = this.applicationMenu1;
             resources.ApplyResources(this.ribbon, "ribbon");
+            this.ribbon.ApplicationIcon = global::ortoxela.Properties.Resources.ox;
             this.ribbon.BackColor = System.Drawing.Color.White;
             this.ribbon.ExpandCollapseItem.Id = 0;
-            this.ribbon.ExpandCollapseItem.Name = "";
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.barButtonItem1,
@@ -920,8 +562,13 @@
             this.barButtonItem140,
             this.barButtonItem141,
             this.barButtonItem142,
-            this.barButtonItem143});
-            this.ribbon.MaxItemId = 220;
+            this.barButtonItem143,
+            this.barSubItem32,
+            this.barButtonItem144,
+            this.barButtonItem145,
+            this.barButtonItem146,
+            this.barButtonItem147});
+            this.ribbon.MaxItemId = 226;
             this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar1);
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -939,8 +586,8 @@
             this.repositoryItemTextEdit1,
             this.repositoryItemButtonEdit1,
             this.repositoryItemButtonEdit2,
-            this.repositoryItemComboBox1});
-            this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
+            this.repositoryItemComboBox1,
+            this.repositoryItemPopupContainerEdit1});
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
@@ -986,6 +633,36 @@
             resources.ApplyResources(this.barButtonItem3, "barButtonItem3");
             this.barButtonItem3.Id = 3;
             this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // barButtonItem4
+            // 
+            resources.ApplyResources(this.barButtonItem4, "barButtonItem4");
+            this.barButtonItem4.Enabled = false;
+            this.barButtonItem4.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
+            this.barButtonItem4.Id = 4;
+            this.barButtonItem4.LargeGlyph = global::ortoxela.Properties.Resources.user_32x32_32;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
+            // barButtonItem5
+            // 
+            resources.ApplyResources(this.barButtonItem5, "barButtonItem5");
+            this.barButtonItem5.Enabled = false;
+            this.barButtonItem5.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
+            this.barButtonItem5.Id = 5;
+            this.barButtonItem5.LargeGlyph = global::ortoxela.Properties.Resources.application_edit_32x32_32;
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            // 
+            // barButtonItem6
+            // 
+            resources.ApplyResources(this.barButtonItem6, "barButtonItem6");
+            this.barButtonItem6.Enabled = false;
+            this.barButtonItem6.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
+            this.barButtonItem6.Id = 6;
+            this.barButtonItem6.LargeGlyph = global::ortoxela.Properties.Resources.user_remove_32x32_32;
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // barButtonItem7
             // 
@@ -1069,6 +746,55 @@
             this.barButtonItem15.Name = "barButtonItem15";
             this.barButtonItem15.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
+            // 
+            // barSubItem1
+            // 
+            resources.ApplyResources(this.barSubItem1, "barSubItem1");
+            this.barSubItem1.Id = 16;
+            this.barSubItem1.LargeGlyph = global::ortoxela.Properties.Resources.user_32x32_32;
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // barSubItem2
+            // 
+            resources.ApplyResources(this.barSubItem2, "barSubItem2");
+            this.barSubItem2.Id = 17;
+            this.barSubItem2.LargeGlyph = global::ortoxela.Properties.Resources._075;
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem16),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem17),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem18)});
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // barButtonItem16
+            // 
+            resources.ApplyResources(this.barButtonItem16, "barButtonItem16");
+            this.barButtonItem16.Enabled = false;
+            this.barButtonItem16.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
+            this.barButtonItem16.Id = 19;
+            this.barButtonItem16.Name = "barButtonItem16";
+            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
+            // 
+            // barButtonItem17
+            // 
+            resources.ApplyResources(this.barButtonItem17, "barButtonItem17");
+            this.barButtonItem17.Enabled = false;
+            this.barButtonItem17.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
+            this.barButtonItem17.Id = 20;
+            this.barButtonItem17.Name = "barButtonItem17";
+            this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
+            // 
+            // barButtonItem18
+            // 
+            resources.ApplyResources(this.barButtonItem18, "barButtonItem18");
+            this.barButtonItem18.Enabled = false;
+            this.barButtonItem18.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
+            this.barButtonItem18.Id = 21;
+            this.barButtonItem18.Name = "barButtonItem18";
+            this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
             // 
             // barSubItem3
             // 
@@ -1904,6 +1630,53 @@
             this.barButtonItem88.Name = "barButtonItem88";
             this.barButtonItem88.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem88_ItemClick);
             // 
+            // barButtonItem91
+            // 
+            resources.ApplyResources(this.barButtonItem91, "barButtonItem91");
+            this.barButtonItem91.Enabled = false;
+            this.barButtonItem91.Id = 127;
+            this.barButtonItem91.LargeGlyph = global::ortoxela.Properties.Resources.vuelto;
+            this.barButtonItem91.Name = "barButtonItem91";
+            this.barButtonItem91.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem91_ItemClick);
+            // 
+            // barSubItem10
+            // 
+            resources.ApplyResources(this.barSubItem10, "barSubItem10");
+            this.barSubItem10.Id = 129;
+            this.barSubItem10.LargeGlyph = global::ortoxela.Properties.Resources.tipodoc;
+            this.barSubItem10.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem93),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem94),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem95)});
+            this.barSubItem10.Name = "barSubItem10";
+            // 
+            // barButtonItem93
+            // 
+            resources.ApplyResources(this.barButtonItem93, "barButtonItem93");
+            this.barButtonItem93.Enabled = false;
+            this.barButtonItem93.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
+            this.barButtonItem93.Id = 131;
+            this.barButtonItem93.Name = "barButtonItem93";
+            this.barButtonItem93.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem93_ItemClick);
+            // 
+            // barButtonItem94
+            // 
+            resources.ApplyResources(this.barButtonItem94, "barButtonItem94");
+            this.barButtonItem94.Enabled = false;
+            this.barButtonItem94.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
+            this.barButtonItem94.Id = 132;
+            this.barButtonItem94.Name = "barButtonItem94";
+            this.barButtonItem94.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem94_ItemClick);
+            // 
+            // barButtonItem95
+            // 
+            resources.ApplyResources(this.barButtonItem95, "barButtonItem95");
+            this.barButtonItem95.Enabled = false;
+            this.barButtonItem95.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
+            this.barButtonItem95.Id = 133;
+            this.barButtonItem95.Name = "barButtonItem95";
+            this.barButtonItem95.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem95_ItemClick);
+            // 
             // barButtonItem83
             // 
             resources.ApplyResources(this.barButtonItem83, "barButtonItem83");
@@ -1912,6 +1685,44 @@
             this.barButtonItem83.LargeGlyph = global::ortoxela.Properties.Resources.wallet;
             this.barButtonItem83.Name = "barButtonItem83";
             this.barButtonItem83.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem83_ItemClick_1);
+            // 
+            // barSubItem23
+            // 
+            resources.ApplyResources(this.barSubItem23, "barSubItem23");
+            this.barSubItem23.Id = 136;
+            this.barSubItem23.LargeGlyph = global::ortoxela.Properties.Resources.bank;
+            this.barSubItem23.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem89),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem90),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem92)});
+            this.barSubItem23.Name = "barSubItem23";
+            // 
+            // barButtonItem89
+            // 
+            resources.ApplyResources(this.barButtonItem89, "barButtonItem89");
+            this.barButtonItem89.Enabled = false;
+            this.barButtonItem89.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
+            this.barButtonItem89.Id = 137;
+            this.barButtonItem89.Name = "barButtonItem89";
+            this.barButtonItem89.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem89_ItemClick);
+            // 
+            // barButtonItem90
+            // 
+            resources.ApplyResources(this.barButtonItem90, "barButtonItem90");
+            this.barButtonItem90.Enabled = false;
+            this.barButtonItem90.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
+            this.barButtonItem90.Id = 138;
+            this.barButtonItem90.Name = "barButtonItem90";
+            this.barButtonItem90.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem90_ItemClick_1);
+            // 
+            // barButtonItem92
+            // 
+            resources.ApplyResources(this.barButtonItem92, "barButtonItem92");
+            this.barButtonItem92.Enabled = false;
+            this.barButtonItem92.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
+            this.barButtonItem92.Id = 139;
+            this.barButtonItem92.Name = "barButtonItem92";
+            this.barButtonItem92.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem92_ItemClick);
             // 
             // ribbonGalleryBarItem2
             // 
@@ -1928,6 +1739,24 @@
             this.barButtonItem96.LargeGlyph = global::ortoxela.Properties.Resources.cajaregistra;
             this.barButtonItem96.Name = "barButtonItem96";
             this.barButtonItem96.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem96_ItemClick);
+            // 
+            // barButtonItem97
+            // 
+            resources.ApplyResources(this.barButtonItem97, "barButtonItem97");
+            this.barButtonItem97.Enabled = false;
+            this.barButtonItem97.Id = 142;
+            this.barButtonItem97.LargeGlyph = global::ortoxela.Properties.Resources.dinero;
+            this.barButtonItem97.Name = "barButtonItem97";
+            this.barButtonItem97.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem97_ItemClick);
+            // 
+            // barButtonItem98
+            // 
+            resources.ApplyResources(this.barButtonItem98, "barButtonItem98");
+            this.barButtonItem98.Enabled = false;
+            this.barButtonItem98.Id = 143;
+            this.barButtonItem98.LargeGlyph = global::ortoxela.Properties.Resources.receipt;
+            this.barButtonItem98.Name = "barButtonItem98";
+            this.barButtonItem98.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem98_ItemClick);
             // 
             // barButtonItem99
             // 
@@ -1964,6 +1793,15 @@
             this.barButtonItem102.LargeGlyph = global::ortoxela.Properties.Resources.clients_1_;
             this.barButtonItem102.Name = "barButtonItem102";
             this.barButtonItem102.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem102_ItemClick);
+            // 
+            // barButtonItem103
+            // 
+            resources.ApplyResources(this.barButtonItem103, "barButtonItem103");
+            this.barButtonItem103.Enabled = false;
+            this.barButtonItem103.Id = 148;
+            this.barButtonItem103.LargeGlyph = global::ortoxela.Properties.Resources.editores_de_paquetes_icono_8178_48;
+            this.barButtonItem103.Name = "barButtonItem103";
+            this.barButtonItem103.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem103_ItemClick);
             // 
             // barButtonItem104
             // 
@@ -2043,6 +1881,24 @@
             this.barButtonItem111.Id = 157;
             this.barButtonItem111.Name = "barButtonItem111";
             this.barButtonItem111.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem111_ItemClick);
+            // 
+            // barButtonItem112
+            // 
+            resources.ApplyResources(this.barButtonItem112, "barButtonItem112");
+            this.barButtonItem112.Enabled = false;
+            this.barButtonItem112.Id = 158;
+            this.barButtonItem112.LargeGlyph = global::ortoxela.Properties.Resources.wallet;
+            this.barButtonItem112.Name = "barButtonItem112";
+            this.barButtonItem112.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem112_ItemClick);
+            // 
+            // barButtonItem113
+            // 
+            resources.ApplyResources(this.barButtonItem113, "barButtonItem113");
+            this.barButtonItem113.Enabled = false;
+            this.barButtonItem113.Id = 159;
+            this.barButtonItem113.LargeGlyph = global::ortoxela.Properties.Resources.tipodoc;
+            this.barButtonItem113.Name = "barButtonItem113";
+            this.barButtonItem113.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem113_ItemClick);
             // 
             // barButtonItem117
             // 
@@ -2150,6 +2006,24 @@
             this.barButtonItem126.Name = "barButtonItem126";
             this.barButtonItem126.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem126_ItemClick);
             // 
+            // barButtonItem127
+            // 
+            resources.ApplyResources(this.barButtonItem127, "barButtonItem127");
+            this.barButtonItem127.Enabled = false;
+            this.barButtonItem127.Id = 187;
+            this.barButtonItem127.LargeGlyph = global::ortoxela.Properties.Resources.tipodoc;
+            this.barButtonItem127.Name = "barButtonItem127";
+            this.barButtonItem127.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem127_ItemClick);
+            // 
+            // barButtonItem128
+            // 
+            resources.ApplyResources(this.barButtonItem128, "barButtonItem128");
+            this.barButtonItem128.Enabled = false;
+            this.barButtonItem128.Id = 188;
+            this.barButtonItem128.LargeGlyph = global::ortoxela.Properties.Resources.archivo_icono_4678_48;
+            this.barButtonItem128.Name = "barButtonItem128";
+            this.barButtonItem128.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem128_ItemClick);
+            // 
             // barSubItem28
             // 
             resources.ApplyResources(this.barSubItem28, "barSubItem28");
@@ -2242,6 +2116,41 @@
             this.barButtonItem137.Name = "barButtonItem137";
             this.barButtonItem137.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem137_ItemClick);
             // 
+            // barSubItem31
+            // 
+            resources.ApplyResources(this.barSubItem31, "barSubItem31");
+            this.barSubItem31.Id = 212;
+            this.barSubItem31.LargeGlyph = global::ortoxela.Properties.Resources.sociocomercial;
+            this.barSubItem31.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem138),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem139),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem140)});
+            this.barSubItem31.Name = "barSubItem31";
+            // 
+            // barButtonItem138
+            // 
+            resources.ApplyResources(this.barButtonItem138, "barButtonItem138");
+            this.barButtonItem138.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
+            this.barButtonItem138.Id = 213;
+            this.barButtonItem138.Name = "barButtonItem138";
+            this.barButtonItem138.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem138_ItemClick);
+            // 
+            // barButtonItem139
+            // 
+            resources.ApplyResources(this.barButtonItem139, "barButtonItem139");
+            this.barButtonItem139.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
+            this.barButtonItem139.Id = 214;
+            this.barButtonItem139.Name = "barButtonItem139";
+            this.barButtonItem139.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem139_ItemClick);
+            // 
+            // barButtonItem140
+            // 
+            resources.ApplyResources(this.barButtonItem140, "barButtonItem140");
+            this.barButtonItem140.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
+            this.barButtonItem140.Id = 215;
+            this.barButtonItem140.Name = "barButtonItem140";
+            this.barButtonItem140.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem140_ItemClick);
+            // 
             // barButtonItem141
             // 
             resources.ApplyResources(this.barButtonItem141, "barButtonItem141");
@@ -2249,6 +2158,72 @@
             this.barButtonItem141.LargeGlyph = global::ortoxela.Properties.Resources.trasladar48;
             this.barButtonItem141.Name = "barButtonItem141";
             this.barButtonItem141.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem141_ItemClick);
+            // 
+            // barButtonItem142
+            // 
+            resources.ApplyResources(this.barButtonItem142, "barButtonItem142");
+            this.barButtonItem142.Enabled = false;
+            this.barButtonItem142.Id = 218;
+            this.barButtonItem142.LargeGlyph = global::ortoxela.Properties.Resources.community_users_48x48_32;
+            this.barButtonItem142.Name = "barButtonItem142";
+            this.barButtonItem142.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem142_ItemClick);
+            // 
+            // barButtonItem143
+            // 
+            resources.ApplyResources(this.barButtonItem143, "barButtonItem143");
+            this.barButtonItem143.Enabled = false;
+            this.barButtonItem143.Id = 219;
+            this.barButtonItem143.LargeGlyph = global::ortoxela.Properties.Resources.archivo_icono_4678_48;
+            this.barButtonItem143.Name = "barButtonItem143";
+            this.barButtonItem143.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem143_ItemClick);
+            // 
+            // barSubItem32
+            // 
+            resources.ApplyResources(this.barSubItem32, "barSubItem32");
+            this.barSubItem32.Id = 221;
+            this.barSubItem32.LargeGlyph = global::ortoxela.Properties.Resources.enter;
+            this.barSubItem32.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem144),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem145),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem146),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem147)});
+            this.barSubItem32.Name = "barSubItem32";
+            // 
+            // barButtonItem144
+            // 
+            resources.ApplyResources(this.barButtonItem144, "barButtonItem144");
+            this.barButtonItem144.Enabled = false;
+            this.barButtonItem144.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
+            this.barButtonItem144.Id = 222;
+            this.barButtonItem144.Name = "barButtonItem144";
+            this.barButtonItem144.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem144_ItemClick);
+            // 
+            // barButtonItem145
+            // 
+            resources.ApplyResources(this.barButtonItem145, "barButtonItem145");
+            this.barButtonItem145.Enabled = false;
+            this.barButtonItem145.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
+            this.barButtonItem145.Id = 223;
+            this.barButtonItem145.Name = "barButtonItem145";
+            this.barButtonItem145.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem145_ItemClick);
+            // 
+            // barButtonItem146
+            // 
+            resources.ApplyResources(this.barButtonItem146, "barButtonItem146");
+            this.barButtonItem146.Enabled = false;
+            this.barButtonItem146.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
+            this.barButtonItem146.Id = 224;
+            this.barButtonItem146.Name = "barButtonItem146";
+            this.barButtonItem146.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem146_ItemClick);
+            // 
+            // barButtonItem147
+            // 
+            resources.ApplyResources(this.barButtonItem147, "barButtonItem147");
+            this.barButtonItem147.Enabled = false;
+            this.barButtonItem147.Glyph = global::ortoxela.Properties.Resources.Seleccionar_C;
+            this.barButtonItem147.Id = 225;
+            this.barButtonItem147.Name = "barButtonItem147";
+            this.barButtonItem147.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem147_ItemClick);
             // 
             // FACTURACION
             // 
@@ -2271,6 +2246,7 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem24, true);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem100);
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem12);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem32);
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem13);
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem8);
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem14);
@@ -2430,6 +2406,76 @@
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             resources.ApplyResources(this.ribbonPageGroup11, "ribbonPageGroup11");
             // 
+            // COBRANZA
+            // 
+            resources.ApplyResources(this.COBRANZA, "COBRANZA");
+            this.COBRANZA.Name = "COBRANZA";
+            this.COBRANZA.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage5,
+            this.ribbonPage6,
+            this.ribbonPage7});
+            this.COBRANZA.Tag = "";
+            // 
+            // ribbonPage5
+            // 
+            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup13});
+            this.ribbonPage5.Name = "ribbonPage5";
+            resources.ApplyResources(this.ribbonPage5, "ribbonPage5");
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barSubItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barSubItem2);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barSubItem31);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            resources.ApplyResources(this.ribbonPageGroup2, "ribbonPageGroup2");
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ItemLinks.Add(this.barSubItem10);
+            this.ribbonPageGroup13.ItemLinks.Add(this.barSubItem23);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            resources.ApplyResources(this.ribbonPageGroup13, "ribbonPageGroup13");
+            // 
+            // ribbonPage6
+            // 
+            this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup14,
+            this.ribbonPageGroup17});
+            this.ribbonPage6.Name = "ribbonPage6";
+            resources.ApplyResources(this.ribbonPage6, "ribbonPage6");
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem91);
+            this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem97);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            resources.ApplyResources(this.ribbonPageGroup14, "ribbonPageGroup14");
+            // 
+            // ribbonPageGroup17
+            // 
+            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem98);
+            this.ribbonPageGroup17.Name = "ribbonPageGroup17";
+            resources.ApplyResources(this.ribbonPageGroup17, "ribbonPageGroup17");
+            // 
+            // ribbonPage7
+            // 
+            this.ribbonPage7.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup19});
+            this.ribbonPage7.Name = "ribbonPage7";
+            resources.ApplyResources(this.ribbonPage7, "ribbonPage7");
+            // 
+            // ribbonPageGroup19
+            // 
+            this.ribbonPageGroup19.AllowTextClipping = false;
+            this.ribbonPageGroup19.ItemLinks.Add(this.barButtonItem103);
+            this.ribbonPageGroup19.ItemLinks.Add(this.barButtonItem127);
+            this.ribbonPageGroup19.ItemLinks.Add(this.barButtonItem128);
+            this.ribbonPageGroup19.Name = "ribbonPageGroup19";
+            resources.ApplyResources(this.ribbonPageGroup19, "ribbonPageGroup19");
+            // 
             // PROVEEDORES
             // 
             resources.ApplyResources(this.PROVEEDORES, "PROVEEDORES");
@@ -2580,11 +2626,116 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemComboBox1.Buttons"))))});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             // 
+            // repositoryItemPopupContainerEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemPopupContainerEdit1, "repositoryItemPopupContainerEdit1");
+            this.repositoryItemPopupContainerEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemPopupContainerEdit1.Buttons"))))});
+            this.repositoryItemPopupContainerEdit1.Name = "repositoryItemPopupContainerEdit1";
+            // 
             // ribbonStatusBar
             // 
             resources.ApplyResources(this.ribbonStatusBar, "ribbonStatusBar");
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Image = global::ortoxela.Properties.Resources.find;
+            resources.ApplyResources(this.simpleButton1, "simpleButton1");
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
+            // 
+            // progressBarControl_PRINCIPAL
+            // 
+            resources.ApplyResources(this.progressBarControl_PRINCIPAL, "progressBarControl_PRINCIPAL");
+            this.progressBarControl_PRINCIPAL.MenuManager = this.ribbon;
+            this.progressBarControl_PRINCIPAL.Name = "progressBarControl_PRINCIPAL";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl2.Appearance.Font")));
+            this.labelControl2.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl2.Appearance.ForeColor")));
+            resources.ApplyResources(this.labelControl2, "labelControl2");
+            this.labelControl2.Name = "labelControl2";
+            // 
+            // gridControl2
+            // 
+            resources.ApplyResources(this.gridControl2, "gridControl2");
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.MenuManager = this.ribbon;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsView.ShowAutoFilterRow = true;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Name = "label1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            // 
+            // chartControl1
+            // 
+            resources.ApplyResources(this.chartControl1, "chartControl1");
+            chartAnchorPoint1.X = 6;
+            chartAnchorPoint1.Y = 43;
+            textAnnotation1.AnchorPoint = chartAnchorPoint1;
+            resources.ApplyResources(textAnnotation1, "textAnnotation1");
+            freePosition1.InnerIndents.Left = 0;
+            freePosition1.InnerIndents.Top = 0;
+            textAnnotation1.ShapePosition = freePosition1;
+            this.chartControl1.AnnotationRepository.AddRange(new DevExpress.XtraCharts.Annotation[] {
+            textAnnotation1});
+            this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            xyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram1.AxisX.Range.SideMarginsEnabled = true;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram1.AxisY.Range.SideMarginsEnabled = true;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.PaletteName = "Module";
+            sideBySideBarSeriesLabel1.LineVisible = true;
+            series1.Label = sideBySideBarSeriesLabel1;
+            resources.ApplyResources(series1, "series1");
+            series1.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
+            seriesPoint1,
+            seriesPoint2,
+            seriesPoint3});
+            sideBySideBarSeriesLabel2.LineVisible = true;
+            series2.Label = sideBySideBarSeriesLabel2;
+            resources.ApplyResources(series2, "series2");
+            series2.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
+            seriesPoint4,
+            seriesPoint5,
+            seriesPoint6});
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1,
+        series2};
+            sideBySideBarSeriesLabel3.LineVisible = true;
+            this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel3;
+            resources.ApplyResources(chartTitle1, "chartTitle1");
+            this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle1});
             // 
             // xtraTabbedMdiManager1
             // 
@@ -2602,32 +2753,17 @@
             this.ribbonPage11.Name = "ribbonPage11";
             resources.ApplyResources(this.ribbonPage11, "ribbonPage11");
             // 
-            // defaultLookAndFeel2
-            // 
-            this.defaultLookAndFeel2.LookAndFeel.SkinName = "Blue";
-            this.defaultLookAndFeel2.LookAndFeel.UseWindowsXPTheme = true;
-            // 
             // barSubItem30
             // 
             resources.ApplyResources(this.barSubItem30, "barSubItem30");
             this.barSubItem30.Id = 200;
             this.barSubItem30.Name = "barSubItem30";
             // 
-            // barButtonItem142
+            // timer1
             // 
-            resources.ApplyResources(this.barButtonItem142, "barButtonItem142");
-            this.barButtonItem142.Id = 218;
-            this.barButtonItem142.LargeGlyph = global::ortoxela.Properties.Resources.community_users_48x48_32;
-            this.barButtonItem142.Name = "barButtonItem142";
-            this.barButtonItem142.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem142_ItemClick);
-            // 
-            // barButtonItem143
-            // 
-            resources.ApplyResources(this.barButtonItem143, "barButtonItem143");
-            this.barButtonItem143.Id = 219;
-            this.barButtonItem143.LargeGlyph = global::ortoxela.Properties.Resources.archivo_icono_4678_48;
-            this.barButtonItem143.Name = "barButtonItem143";
-            this.barButtonItem143.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem143_ItemClick);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 30;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Principal
             // 
@@ -2646,15 +2782,8 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerDatos)).EndInit();
             this.splitContainerDatos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(textAnnotation3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
@@ -2662,6 +2791,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl_PRINCIPAL.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(textAnnotation1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
@@ -2835,7 +2977,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraCharts.ChartControl chartControl1;
-        private System.Windows.Forms.Button buttonActualizar;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory FACTURACION;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory CONTABILIDAD;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
@@ -2912,5 +3053,21 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup29;
         private DevExpress.XtraBars.BarButtonItem barButtonItem142;
         private DevExpress.XtraBars.BarButtonItem barButtonItem143;
+        private DevExpress.XtraBars.BarSubItem barSubItem32;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem144;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem145;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem146;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit repositoryItemPopupContainerEdit1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem147;
+        private System.Windows.Forms.Timer timer1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.ProgressBarControl progressBarControl_PRINCIPAL;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

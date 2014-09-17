@@ -222,6 +222,15 @@
             this.barButtonItem126 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem113 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem136 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem32 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem144 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem145 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem146 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem147 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem137 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem141 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem142 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem143 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory3 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -229,6 +238,8 @@
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup24 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup25 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup29 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageCategory5 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -264,6 +275,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.ribbonPageGroup28 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerDatos)).BeginInit();
             this.splitContainerDatos.SuspendLayout();
@@ -1145,14 +1157,14 @@
             // splitContainerDatos
             // 
             this.splitContainerDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerDatos.Location = new System.Drawing.Point(0, 147);
+            this.splitContainerDatos.Location = new System.Drawing.Point(0, 144);
             this.splitContainerDatos.Name = "splitContainerDatos";
             this.splitContainerDatos.Panel1.Controls.Add(this.panelControl1);
             this.splitContainerDatos.Panel1.Text = "Panel1";
             this.splitContainerDatos.Panel2.Controls.Add(this.chartControl1);
             this.splitContainerDatos.Panel2.Text = "Panel2";
             this.splitContainerDatos.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1;
-            this.splitContainerDatos.Size = new System.Drawing.Size(1260, 380);
+            this.splitContainerDatos.Size = new System.Drawing.Size(1264, 375);
             this.splitContainerDatos.SplitterPosition = 1228;
             this.splitContainerDatos.TabIndex = 6;
             this.splitContainerDatos.Text = "splitContainerControl1";
@@ -1170,7 +1182,7 @@
             this.panelControl1.Controls.Add(this.gridControl1);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.simpleButton1);
-            this.panelControl1.Location = new System.Drawing.Point(-19, -16);
+            this.panelControl1.Location = new System.Drawing.Point(-25, -27);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1258, 326);
             this.panelControl1.TabIndex = 6;
@@ -1197,7 +1209,7 @@
             this.checkEdit2.MenuManager = this.ribbon;
             this.checkEdit2.Name = "checkEdit2";
             this.checkEdit2.Properties.Caption = "ADMINISTRACION";
-            this.checkEdit2.Size = new System.Drawing.Size(122, 18);
+            this.checkEdit2.Size = new System.Drawing.Size(122, 19);
             this.checkEdit2.TabIndex = 28;
             // 
             // ribbon
@@ -1206,7 +1218,6 @@
             this.ribbon.BackColor = System.Drawing.Color.White;
             this.ribbon.Enabled = false;
             this.ribbon.ExpandCollapseItem.Id = 0;
-            this.ribbon.ExpandCollapseItem.Name = "";
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.barButtonItem1,
@@ -1354,9 +1365,18 @@
             this.barButtonItem128,
             this.barButtonItem113,
             this.barButtonItem127,
-            this.barButtonItem136});
+            this.barButtonItem136,
+            this.barSubItem32,
+            this.barButtonItem144,
+            this.barButtonItem145,
+            this.barButtonItem146,
+            this.barButtonItem147,
+            this.barButtonItem137,
+            this.barButtonItem141,
+            this.barButtonItem142,
+            this.barButtonItem143});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 167;
+            this.ribbon.MaxItemId = 177;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory3,
@@ -1370,7 +1390,7 @@
             this.repositoryItemFontEdit1,
             this.repositoryItemTextEdit1});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbon.Size = new System.Drawing.Size(1260, 147);
+            this.ribbon.Size = new System.Drawing.Size(1264, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -2007,6 +2027,88 @@
             this.barButtonItem136.Name = "barButtonItem136";
             this.barButtonItem136.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
             // 
+            // barSubItem32
+            // 
+            this.barSubItem32.Caption = "SETS";
+            this.barSubItem32.Id = 167;
+            this.barSubItem32.LargeGlyph = global::ortoxela.Properties.Resources.enter;
+            this.barSubItem32.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem144),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem145),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem146),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem147)});
+            this.barSubItem32.Name = "barSubItem32";
+            // 
+            // barButtonItem144
+            // 
+            this.barButtonItem144.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem144.Caption = "NUEVO";
+            this.barButtonItem144.Glyph = global::ortoxela.Properties.Resources.database_add_24x24_32;
+            this.barButtonItem144.Id = 168;
+            this.barButtonItem144.Name = "barButtonItem144";
+            this.barButtonItem144.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
+            // 
+            // barButtonItem145
+            // 
+            this.barButtonItem145.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem145.Caption = "MODIFICAR";
+            this.barButtonItem145.Glyph = global::ortoxela.Properties.Resources.database_process_24x24_32;
+            this.barButtonItem145.Id = 169;
+            this.barButtonItem145.Name = "barButtonItem145";
+            this.barButtonItem145.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
+            // 
+            // barButtonItem146
+            // 
+            this.barButtonItem146.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem146.Caption = "ELIMINAR";
+            this.barButtonItem146.Glyph = global::ortoxela.Properties.Resources.database_remove_24x24_32;
+            this.barButtonItem146.Id = 170;
+            this.barButtonItem146.Name = "barButtonItem146";
+            this.barButtonItem146.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
+            // 
+            // barButtonItem147
+            // 
+            this.barButtonItem147.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem147.Caption = "RECONFIGURAR SET";
+            this.barButtonItem147.Glyph = global::ortoxela.Properties.Resources.Seleccionar_C;
+            this.barButtonItem147.Id = 171;
+            this.barButtonItem147.Name = "barButtonItem147";
+            this.barButtonItem147.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
+            // 
+            // barButtonItem137
+            // 
+            this.barButtonItem137.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem137.Caption = "Reportes de requisiciones y ajustes";
+            this.barButtonItem137.Id = 173;
+            this.barButtonItem137.LargeGlyph = global::ortoxela.Properties.Resources.ajustes_y_reqi;
+            this.barButtonItem137.Name = "barButtonItem137";
+            // 
+            // barButtonItem141
+            // 
+            this.barButtonItem141.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem141.Caption = "Reimpresiones de traslados";
+            this.barButtonItem141.Id = 174;
+            this.barButtonItem141.LargeGlyph = global::ortoxela.Properties.Resources.trasladar48;
+            this.barButtonItem141.Name = "barButtonItem141";
+            // 
+            // barButtonItem142
+            // 
+            this.barButtonItem142.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem142.Caption = "ASIGNAR BODEGAS A USUARIOS";
+            this.barButtonItem142.Id = 175;
+            this.barButtonItem142.LargeGlyph = global::ortoxela.Properties.Resources.community_users_32x32_32;
+            this.barButtonItem142.Name = "barButtonItem142";
+            this.barButtonItem142.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
+            // 
+            // barButtonItem143
+            // 
+            this.barButtonItem143.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem143.Caption = "ASIGNAR SERIES A BODEGAS";
+            this.barButtonItem143.Id = 176;
+            this.barButtonItem143.LargeGlyph = global::ortoxela.Properties.Resources.archivo_icono_4678_48;
+            this.barButtonItem143.Name = "barButtonItem143";
+            this.barButtonItem143.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
+            // 
             // ribbonPageCategory3
             // 
             this.ribbonPageCategory3.Name = "ribbonPageCategory3";
@@ -2028,6 +2130,7 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem24, true);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem100);
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem12);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem32);
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem13);
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem8);
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem14);
@@ -2057,7 +2160,9 @@
             this.ribbonPageGroup12,
             this.ribbonPageGroup16,
             this.ribbonPageGroup18,
-            this.ribbonPageGroup24});
+            this.ribbonPageGroup24,
+            this.ribbonPageGroup25,
+            this.ribbonPageGroup29});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "REPORTES";
             // 
@@ -2072,6 +2177,18 @@
             this.ribbonPageGroup24.ItemLinks.Add(this.barButtonItem136);
             this.ribbonPageGroup24.Name = "ribbonPageGroup24";
             this.ribbonPageGroup24.Text = "ADMIN";
+            // 
+            // ribbonPageGroup25
+            // 
+            this.ribbonPageGroup25.ItemLinks.Add(this.barButtonItem137);
+            this.ribbonPageGroup25.Name = "ribbonPageGroup25";
+            this.ribbonPageGroup25.Text = "REQUISICIONES Y AJUSTES";
+            // 
+            // ribbonPageGroup29
+            // 
+            this.ribbonPageGroup29.ItemLinks.Add(this.barButtonItem141);
+            this.ribbonPageGroup29.Name = "ribbonPageGroup29";
+            this.ribbonPageGroup29.Text = "TRASLADOS DE BODEGA";
             // 
             // ribbonPageCategory5
             // 
@@ -2145,6 +2262,8 @@
             // 
             this.ribbonPageGroup11.AllowTextClipping = false;
             this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem72);
+            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem142);
+            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem143);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "PERMISOS";
             // 
@@ -2206,10 +2325,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 527);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 519);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1260, 23);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1264, 31);
             // 
             // checkEdit1
             // 
@@ -2217,7 +2336,7 @@
             this.checkEdit1.MenuManager = this.ribbon;
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "FACTURACION";
-            this.checkEdit1.Size = new System.Drawing.Size(102, 18);
+            this.checkEdit1.Size = new System.Drawing.Size(102, 19);
             this.checkEdit1.TabIndex = 27;
             // 
             // simpleButton4
@@ -2236,7 +2355,7 @@
             this.checkEdit5.MenuManager = this.ribbon;
             this.checkEdit5.Name = "checkEdit5";
             this.checkEdit5.Properties.Caption = "CONTABILIDAD";
-            this.checkEdit5.Size = new System.Drawing.Size(99, 18);
+            this.checkEdit5.Size = new System.Drawing.Size(99, 19);
             this.checkEdit5.TabIndex = 22;
             // 
             // checkEdit4
@@ -2245,7 +2364,7 @@
             this.checkEdit4.MenuManager = this.ribbon;
             this.checkEdit4.Name = "checkEdit4";
             this.checkEdit4.Properties.Caption = "PROVEEDORES";
-            this.checkEdit4.Size = new System.Drawing.Size(101, 18);
+            this.checkEdit4.Size = new System.Drawing.Size(101, 19);
             this.checkEdit4.TabIndex = 21;
             // 
             // checkEdit3
@@ -2254,7 +2373,7 @@
             this.checkEdit3.MenuManager = this.ribbon;
             this.checkEdit3.Name = "checkEdit3";
             this.checkEdit3.Properties.Caption = "COBRANZA";
-            this.checkEdit3.Size = new System.Drawing.Size(75, 18);
+            this.checkEdit3.Size = new System.Drawing.Size(75, 19);
             this.checkEdit3.TabIndex = 20;
             // 
             // simpleButton3
@@ -2365,9 +2484,9 @@
             // 
             // chartControl1
             // 
-            this.chartControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             chartAnchorPoint1.X = 6;
             chartAnchorPoint1.Y = 43;
             textAnnotation1.AnchorPoint = chartAnchorPoint1;
@@ -2413,11 +2532,16 @@
             this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
             // 
+            // ribbonPageGroup28
+            // 
+            this.ribbonPageGroup28.Name = "ribbonPageGroup28";
+            this.ribbonPageGroup28.Text = "REQUISICIONES Y AJUSTES";
+            // 
             // Selector_Permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 550);
+            this.ClientSize = new System.Drawing.Size(1264, 550);
             this.Controls.Add(this.splitContainerDatos);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -2675,5 +2799,17 @@
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup24;
         private DevExpress.XtraBars.BarButtonItem barButtonItem136;
+        private DevExpress.XtraBars.BarSubItem barSubItem32;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem144;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem145;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem146;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem147;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup25;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup28;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem137;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup29;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem141;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem142;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem143;
     }
 }

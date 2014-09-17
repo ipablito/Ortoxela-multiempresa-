@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.Reportes.Pedidos
 {
     public partial class frm_ReportePedidos : DevExpress.XtraEditors.XtraForm

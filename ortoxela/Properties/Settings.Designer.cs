@@ -38,8 +38,8 @@ namespace ortoxela.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root; Password=ipablito; Persist Security Info=True;data" +
-            "base=ortoxela;connectiontimeout = 240000;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=192.168.1.8;User Id=root; Password=ortox3l4; Persist Security Info=True;da" +
+            "tabase=ortoxela;connectiontimeout = 240000;")]
         public string ortoxelaConnectionString {
             get {
                 return ((string)(this["ortoxelaConnectionString"]));

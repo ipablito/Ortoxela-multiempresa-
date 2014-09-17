@@ -960,7 +960,7 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "IngresarFacturas";
-            this.Text = "FACTURA DIRECTA";
+            this.Text = " Factura Directa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_compras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.Reportes.Requisiciones_Ajustes
 {
     public partial class F_reportesrequisicionyajuste : Form

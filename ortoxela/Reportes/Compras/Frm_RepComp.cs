@@ -9,6 +9,8 @@ using DevExpress.XtraEditors;
 using MySql;
 using MySql.Data.MySqlClient;
 
+using DevExpress.XtraReports.UI;
+
 namespace ortoxela.Reportes.Compras
 {
     public partial class Frm_RepComp : DevExpress.XtraEditors.XtraForm

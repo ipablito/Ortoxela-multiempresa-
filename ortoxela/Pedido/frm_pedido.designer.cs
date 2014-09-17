@@ -771,7 +771,7 @@
             this.xtraTabPage3.Controls.Add(this.simpleButton9);
             this.xtraTabPage3.Controls.Add(this.groupControl5);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1273, 478);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1271, 478);
             this.xtraTabPage3.Text = "PEDIDO";
             // 
             // sbSinDeposito
@@ -1130,10 +1130,10 @@
             gridLevelNode1.RelationName = "Level1";
             this.gridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl2.Location = new System.Drawing.Point(2, 21);
+            this.gridControl2.Location = new System.Drawing.Point(4, 19);
             this.gridControl2.MainView = this.gridView3;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(965, 228);
+            this.gridControl2.Size = new System.Drawing.Size(961, 227);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -1154,7 +1154,7 @@
             this.xtraTabPage2.Controls.Add(this.sbSaveReciboCaja);
             this.xtraTabPage2.Controls.Add(this.groupControl3);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1273, 478);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1271, 478);
             this.xtraTabPage2.Text = "RECIBO DE CAJA";
             // 
             // sbPrintReciboCaja
@@ -1360,7 +1360,7 @@
             this.xtraTabPage1.Controls.Add(this.textTotalPedido);
             this.xtraTabPage1.Controls.Add(this.labelControl11);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1273, 478);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1271, 478);
             this.xtraTabPage1.Text = "ENVIO";
             this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
             // 
@@ -1561,10 +1561,10 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 21);
+            this.gridControl1.Location = new System.Drawing.Point(4, 19);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1250, 162);
+            this.gridControl1.Size = new System.Drawing.Size(1246, 161);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

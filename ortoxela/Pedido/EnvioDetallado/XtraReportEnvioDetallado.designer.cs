@@ -82,7 +82,6 @@ namespace ortoxela.Pedido.EnvioDetallado
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.envio_detalladoTableAdapter = new ortoxela.Pedido.EnvioDetallado.DataSet_EnvioDetallado2TableAdapters.envio_detalladoTableAdapter();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
@@ -91,6 +90,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.dataTable1TableAdapter = new ortoxela.Pedido.EnvioDetallado.DataSet_EnvioDetallado2TableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -108,9 +108,9 @@ namespace ortoxela.Pedido.EnvioDetallado
             // 
             // xrTable3
             // 
-            this.xrTable3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable3.Font = new System.Drawing.Font("Arial Narrow", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0.0001033147F, 0F);
             this.xrTable3.Name = "xrTable3";
@@ -137,7 +137,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // xrTableCell24
             // 
             this.xrTableCell24.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.nombre_bodega")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.nombre_bodega")});
             this.xrTableCell24.Name = "xrTableCell24";
             this.xrTableCell24.StylePriority.UseTextAlignment = false;
             this.xrTableCell24.Text = "xrTableCell24";
@@ -147,7 +147,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // xrTableCell25
             // 
             this.xrTableCell25.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.codigo_articulo")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.codigo_articulo")});
             this.xrTableCell25.Name = "xrTableCell25";
             this.xrTableCell25.StylePriority.UseTextAlignment = false;
             this.xrTableCell25.Text = "xrTableCell25";
@@ -157,7 +157,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // xrTableCell26
             // 
             this.xrTableCell26.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.descripcion1")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.descripcion1")});
             this.xrTableCell26.Name = "xrTableCell26";
             this.xrTableCell26.StylePriority.UseTextAlignment = false;
             this.xrTableCell26.Text = "xrTableCell26";
@@ -167,7 +167,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // xrTableCell27
             // 
             this.xrTableCell27.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.cantidad_enviada", "{0:.}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.cantidad_enviada", "{0:.}")});
             this.xrTableCell27.Name = "xrTableCell27";
             this.xrTableCell27.StylePriority.UseTextAlignment = false;
             this.xrTableCell27.Text = "xrTableCell27";
@@ -190,9 +190,9 @@ namespace ortoxela.Pedido.EnvioDetallado
             // 
             // xrTable2
             // 
-            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0.0001033147F, 0F);
             this.xrTable2.Name = "xrTable2";
@@ -254,9 +254,9 @@ namespace ortoxela.Pedido.EnvioDetallado
             // 
             // xrTable1
             // 
-            this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(6.357829E-05F, 0F);
             this.xrTable1.Name = "xrTable1";
@@ -295,7 +295,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // 
             this.xrTableCell1.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.socio")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.socio")});
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.StylePriority.UseBorders = false;
             this.xrTableCell1.StylePriority.UseTextAlignment = false;
@@ -316,7 +316,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // xrTableCell3
             // 
             this.xrTableCell3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.contacto")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.contacto")});
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StylePriority.UseTextAlignment = false;
             this.xrTableCell3.Text = "xrTableCell3";
@@ -347,7 +347,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // 
             this.xrTableCell5.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.nombre_paciente")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.nombre_paciente")});
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.StylePriority.UseBorders = false;
             this.xrTableCell5.StylePriority.UseTextAlignment = false;
@@ -369,7 +369,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // 
             this.xrTableCell8.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.fecha", "{0:dd/MM/yyyy}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.fecha", "{0:dd/MM/yyyy}")});
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.StylePriority.UseBorders = false;
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
@@ -404,7 +404,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // xrLabel1
             // 
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Encabezado.no_documento")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.no_documento")});
             this.xrLabel1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel1.ForeColor = System.Drawing.Color.Red;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(598.9583F, 69.87502F);
@@ -445,13 +445,14 @@ namespace ortoxela.Pedido.EnvioDetallado
             // dataSet_EnvioDetallado21
             // 
             this.dataSet_EnvioDetallado21.DataSetName = "DataSet_EnvioDetallado2";
+            this.dataSet_EnvioDetallado21.EnforceConstraints = false;
             this.dataSet_EnvioDetallado21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ID
             // 
             this.ID.Name = "ID";
             this.ID.Type = typeof(int);
-            this.ID.Value = 0;
+            this.ID.ValueInfo = "0";
             // 
             // xrLabel17
             // 
@@ -651,17 +652,13 @@ namespace ortoxela.Pedido.EnvioDetallado
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
             // 
-            // envio_detalladoTableAdapter
-            // 
-            this.envio_detalladoTableAdapter.ClearBeforeFill = true;
-            // 
             // xrLabel19
             // 
-            this.xrLabel19.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel19.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel19.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.cantidad_enviada")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.cantidad_enviada")});
             this.xrLabel19.Font = new System.Drawing.Font("Arial Narrow", 9F);
             this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(477.0833F, 0F);
             this.xrLabel19.Name = "xrLabel19";
@@ -677,8 +674,8 @@ namespace ortoxela.Pedido.EnvioDetallado
             // 
             // xrLabel20
             // 
-            this.xrLabel20.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel20.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel20.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(93.75009F, 0F);
             this.xrLabel20.Name = "xrLabel20";
@@ -692,7 +689,7 @@ namespace ortoxela.Pedido.EnvioDetallado
             // 
             this.xrLabel21.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel21.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.padre")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.padre")});
             this.xrLabel21.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(193.7501F, 0F);
             this.xrLabel21.Name = "xrLabel21";
@@ -701,13 +698,13 @@ namespace ortoxela.Pedido.EnvioDetallado
             this.xrLabel21.StylePriority.UseBorders = false;
             this.xrLabel21.StylePriority.UseFont = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
-            this.xrLabel21.Text = "xrLabel18";
+            this.xrLabel21.Text = "xrLabel21";
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel18
             // 
             this.xrLabel18.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "envio_detallado.padre")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.padre")});
             this.xrLabel18.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(0.0001033147F, 0F);
             this.xrLabel18.Name = "xrLabel18";
@@ -748,6 +745,10 @@ namespace ortoxela.Pedido.EnvioDetallado
             this.GroupFooter1.HeightF = 48F;
             this.GroupFooter1.Name = "GroupFooter1";
             // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
             // XtraReportEnvioDetallado
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -759,14 +760,14 @@ namespace ortoxela.Pedido.EnvioDetallado
             this.PageHeader,
             this.GroupHeader1,
             this.GroupFooter1});
-            this.DataAdapter = this.envio_detalladoTableAdapter;
-            this.DataMember = "envio_detallado";
+            this.DataAdapter = this.dataTable1TableAdapter;
+            this.DataMember = "DataTable1";
             this.DataSource = this.dataSet_EnvioDetallado21;
-            this.FilterString = "[id_documento] = ?ID";
+            this.FilterString = "[no_documento] = ?ID";
             this.Margins = new System.Drawing.Printing.Margins(53, 42, 93, 35);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.ID});
-            this.Version = "12.1";
+            this.Version = "12.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
@@ -821,7 +822,6 @@ namespace ortoxela.Pedido.EnvioDetallado
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
         private DataSet_EnvioDetallado2 dataSet_EnvioDetallado21;
-        private DataSet_EnvioDetallado2TableAdapters.envio_detalladoTableAdapter envio_detalladoTableAdapter;
         private DevExpress.XtraReports.UI.XRTable xrTable3;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow6;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell24;
@@ -838,5 +838,6 @@ namespace ortoxela.Pedido.EnvioDetallado
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
+        private DataSet_EnvioDetallado2TableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
     }
 }

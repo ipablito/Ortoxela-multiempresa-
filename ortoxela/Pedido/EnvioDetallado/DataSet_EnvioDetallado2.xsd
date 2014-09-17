@@ -55,6 +55,55 @@ FROM            header_doctos_inv INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ortoxelaConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetData_EnvioDetallado" GetMethodModifier="Public" GetMethodName="GetData_EnvioDetallado" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData_EnvioDetallado" UserSourceName="GetData_EnvioDetallado">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        clientes.nombre_cliente, clientes_1.nombre_cliente AS socio, tipo_pago.nombre_tipo_pago, CONCAT(tipos_documento.nombre_documento, '-', 
+                         series_documentos.serie_documento) AS TIPODOCS, header_doctos_inv.no_documento, header_doctos_inv.fecha, header_doctos_inv.monto, 
+                         header_doctos_inv.descuento, header_doctos_inv.monto_neto, header_doctos_inv.razon_ajuste, header_doctos_inv.descripcion, 
+                         clientes.nit, clientes.nombre_paciente, clientes.contacto, v_detalle_doctos.descripcion AS descripcion1, v_detalle_doctos.nombre_bodega, 
+                         v_detalle_doctos.cantidad_enviada, v_detalle_doctos.precio_unitario, v_detalle_doctos.precio_total, v_detalle_doctos.codigo_articulo, v_detalle_doctos.padre
+FROM            header_doctos_inv INNER JOIN
+                         series_documentos ON header_doctos_inv.codigo_serie = series_documentos.codigo_serie INNER JOIN
+                         v_detalle_doctos ON header_doctos_inv.id_documento = v_detalle_doctos.id_documento INNER JOIN
+                         tipos_documento ON series_documentos.codigo_tipo = tipos_documento.codigo_tipo INNER JOIN
+                         tipo_pago ON header_doctos_inv.tipo_pago = tipo_pago.tipo_pago INNER JOIN
+                         clientes ON header_doctos_inv.codigo_cliente = clientes.codigo_cliente INNER JOIN
+                         clientes clientes_1 ON header_doctos_inv.socio_comercial = clientes_1.codigo_cliente
+                         
+                         WHERE series_documentos.`codigo_tipo`=5</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nombre_cliente" DataSetColumn="nombre_cliente" />
+              <Mapping SourceColumn="socio" DataSetColumn="socio" />
+              <Mapping SourceColumn="nombre_tipo_pago" DataSetColumn="nombre_tipo_pago" />
+              <Mapping SourceColumn="TIPODOCS" DataSetColumn="TIPODOCS" />
+              <Mapping SourceColumn="no_documento" DataSetColumn="no_documento" />
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="monto" DataSetColumn="monto" />
+              <Mapping SourceColumn="descuento" DataSetColumn="descuento" />
+              <Mapping SourceColumn="monto_neto" DataSetColumn="monto_neto" />
+              <Mapping SourceColumn="razon_ajuste" DataSetColumn="razon_ajuste" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="nit" DataSetColumn="nit" />
+              <Mapping SourceColumn="nombre_paciente" DataSetColumn="nombre_paciente" />
+              <Mapping SourceColumn="contacto" DataSetColumn="contacto" />
+              <Mapping SourceColumn="descripcion1" DataSetColumn="descripcion1" />
+              <Mapping SourceColumn="nombre_bodega" DataSetColumn="nombre_bodega" />
+              <Mapping SourceColumn="cantidad_enviada" DataSetColumn="cantidad_enviada" />
+              <Mapping SourceColumn="precio_unitario" DataSetColumn="precio_unitario" />
+              <Mapping SourceColumn="precio_total" DataSetColumn="precio_total" />
+              <Mapping SourceColumn="codigo_articulo" DataSetColumn="codigo_articulo" />
+              <Mapping SourceColumn="padre" DataSetColumn="padre" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -63,7 +112,7 @@ FROM            header_doctos_inv INNER JOIN
   <xs:element name="DataSet_EnvioDetallado2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_EnvioDetallado2" msprop:Generator_UserDSName="DataSet_EnvioDetallado2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="envio_detallado" msprop:Generator_TableClassName="envio_detalladoDataTable" msprop:Generator_TableVarName="tableenvio_detallado" msprop:Generator_TablePropName="envio_detallado" msprop:Generator_RowDeletingName="envio_detalladoRowDeleting" msprop:Generator_UserTableName="envio_detallado" msprop:Generator_RowChangingName="envio_detalladoRowChanging" msprop:Generator_RowEvHandlerName="envio_detalladoRowChangeEventHandler" msprop:Generator_RowDeletedName="envio_detalladoRowDeleted" msprop:Generator_RowEvArgName="envio_detalladoRowChangeEvent" msprop:Generator_RowChangedName="envio_detalladoRowChanged" msprop:Generator_RowClassName="envio_detalladoRow">
+        <xs:element name="envio_detallado" msprop:Generator_TableClassName="envio_detalladoDataTable" msprop:Generator_TableVarName="tableenvio_detallado" msprop:Generator_RowChangedName="envio_detalladoRowChanged" msprop:Generator_TablePropName="envio_detallado" msprop:Generator_RowDeletingName="envio_detalladoRowDeleting" msprop:Generator_RowChangingName="envio_detalladoRowChanging" msprop:Generator_RowEvHandlerName="envio_detalladoRowChangeEventHandler" msprop:Generator_RowDeletedName="envio_detalladoRowDeleted" msprop:Generator_RowClassName="envio_detalladoRow" msprop:Generator_UserTableName="envio_detallado" msprop:Generator_RowEvArgName="envio_detalladoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombre_cliente" msprop:Generator_ColumnVarNameInTable="columnnombre_cliente" msprop:Generator_ColumnPropNameInRow="nombre_cliente" msprop:Generator_ColumnPropNameInTable="nombre_clienteColumn" msprop:Generator_UserColumnName="nombre_cliente" minOccurs="0">
@@ -169,11 +218,120 @@ FROM            header_doctos_inv INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre_cliente" msprop:Generator_ColumnVarNameInTable="columnnombre_cliente" msprop:Generator_ColumnPropNameInRow="nombre_cliente" msprop:Generator_ColumnPropNameInTable="nombre_clienteColumn" msprop:Generator_UserColumnName="nombre_cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="socio" msprop:Generator_ColumnVarNameInTable="columnsocio" msprop:Generator_ColumnPropNameInRow="socio" msprop:Generator_ColumnPropNameInTable="socioColumn" msprop:Generator_UserColumnName="socio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_tipo_pago" msprop:Generator_ColumnVarNameInTable="columnnombre_tipo_pago" msprop:Generator_ColumnPropNameInRow="nombre_tipo_pago" msprop:Generator_ColumnPropNameInTable="nombre_tipo_pagoColumn" msprop:Generator_UserColumnName="nombre_tipo_pago" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPODOCS" msprop:Generator_ColumnVarNameInTable="columnTIPODOCS" msprop:Generator_ColumnPropNameInRow="TIPODOCS" msprop:Generator_ColumnPropNameInTable="TIPODOCSColumn" msprop:Generator_UserColumnName="TIPODOCS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="151" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_documento" msprop:Generator_ColumnVarNameInTable="columnno_documento" msprop:Generator_ColumnPropNameInRow="no_documento" msprop:Generator_ColumnPropNameInTable="no_documentoColumn" msprop:Generator_UserColumnName="no_documento" type="xs:int" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="monto" msprop:Generator_ColumnVarNameInTable="columnmonto" msprop:Generator_ColumnPropNameInRow="monto" msprop:Generator_ColumnPropNameInTable="montoColumn" msprop:Generator_UserColumnName="monto" type="xs:decimal" />
+              <xs:element name="descuento" msprop:Generator_ColumnVarNameInTable="columndescuento" msprop:Generator_ColumnPropNameInRow="descuento" msprop:Generator_ColumnPropNameInTable="descuentoColumn" msprop:Generator_UserColumnName="descuento" type="xs:decimal" />
+              <xs:element name="monto_neto" msprop:Generator_ColumnVarNameInTable="columnmonto_neto" msprop:Generator_ColumnPropNameInRow="monto_neto" msprop:Generator_ColumnPropNameInTable="monto_netoColumn" msprop:Generator_UserColumnName="monto_neto" type="xs:decimal" />
+              <xs:element name="razon_ajuste" msprop:Generator_ColumnVarNameInTable="columnrazon_ajuste" msprop:Generator_ColumnPropNameInRow="razon_ajuste" msprop:Generator_ColumnPropNameInTable="razon_ajusteColumn" msprop:Generator_UserColumnName="razon_ajuste" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nit" msprop:Generator_ColumnVarNameInTable="columnnit" msprop:Generator_ColumnPropNameInRow="nit" msprop:Generator_ColumnPropNameInTable="nitColumn" msprop:Generator_UserColumnName="nit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_paciente" msprop:Generator_ColumnVarNameInTable="columnnombre_paciente" msprop:Generator_ColumnPropNameInRow="nombre_paciente" msprop:Generator_ColumnPropNameInTable="nombre_pacienteColumn" msprop:Generator_UserColumnName="nombre_paciente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contacto" msprop:Generator_ColumnVarNameInTable="columncontacto" msprop:Generator_ColumnPropNameInRow="contacto" msprop:Generator_ColumnPropNameInTable="contactoColumn" msprop:Generator_UserColumnName="contacto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion1" msprop:Generator_ColumnVarNameInTable="columndescripcion1" msprop:Generator_ColumnPropNameInRow="descripcion1" msprop:Generator_ColumnPropNameInTable="descripcion1Column" msprop:Generator_UserColumnName="descripcion1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_bodega" msprop:Generator_ColumnVarNameInTable="columnnombre_bodega" msprop:Generator_ColumnPropNameInRow="nombre_bodega" msprop:Generator_ColumnPropNameInTable="nombre_bodegaColumn" msprop:Generator_UserColumnName="nombre_bodega" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cantidad_enviada" msprop:Generator_ColumnVarNameInTable="columncantidad_enviada" msprop:Generator_ColumnPropNameInRow="cantidad_enviada" msprop:Generator_ColumnPropNameInTable="cantidad_enviadaColumn" msprop:Generator_UserColumnName="cantidad_enviada" type="xs:decimal" minOccurs="0" />
+              <xs:element name="precio_unitario" msprop:Generator_ColumnVarNameInTable="columnprecio_unitario" msprop:Generator_ColumnPropNameInRow="precio_unitario" msprop:Generator_ColumnPropNameInTable="precio_unitarioColumn" msprop:Generator_UserColumnName="precio_unitario" type="xs:decimal" minOccurs="0" />
+              <xs:element name="precio_total" msprop:Generator_ColumnVarNameInTable="columnprecio_total" msprop:Generator_ColumnPropNameInRow="precio_total" msprop:Generator_ColumnPropNameInTable="precio_totalColumn" msprop:Generator_UserColumnName="precio_total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="codigo_articulo" msprop:Generator_ColumnVarNameInTable="columncodigo_articulo" msprop:Generator_ColumnPropNameInRow="codigo_articulo" msprop:Generator_ColumnPropNameInTable="codigo_articuloColumn" msprop:Generator_UserColumnName="codigo_articulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="padre" msprop:Generator_ColumnVarNameInTable="columnpadre" msprop:Generator_ColumnPropNameInRow="padre" msprop:Generator_ColumnPropNameInTable="padreColumn" msprop:Generator_UserColumnName="padre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:envio_detallado" />
       <xs:field xpath="mstns:id_documento" />
+      <xs:field xpath="mstns:codigo_articulo" />
+    </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
       <xs:field xpath="mstns:codigo_articulo" />
     </xs:unique>
   </xs:element>
