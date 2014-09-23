@@ -2263,6 +2263,13 @@ namespace ortoxela.Principal
             this.Cursor = Cursors.Default;
         }
 
+        private void barButtonItem148_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form nf = new Reportes.Sets.f_reportesSets();
+            nf.MdiParent = this;
+            nf.Show();
+        }
+
         
 
 

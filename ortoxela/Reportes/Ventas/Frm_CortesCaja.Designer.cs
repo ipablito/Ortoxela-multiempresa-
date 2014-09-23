@@ -111,16 +111,16 @@
             // listBoxSeries
             // 
             this.listBoxSeries.FormattingEnabled = true;
-            this.listBoxSeries.Location = new System.Drawing.Point(193, 181);
+            this.listBoxSeries.Location = new System.Drawing.Point(275, 181);
             this.listBoxSeries.Name = "listBoxSeries";
             this.listBoxSeries.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxSeries.Size = new System.Drawing.Size(188, 82);
+            this.listBoxSeries.Size = new System.Drawing.Size(256, 225);
             this.listBoxSeries.TabIndex = 32;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(220, 155);
+            this.labelControl2.Location = new System.Drawing.Point(302, 155);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(123, 20);
             this.labelControl2.TabIndex = 31;
@@ -132,7 +132,7 @@
             this.listBoxBodegas.Location = new System.Drawing.Point(30, 181);
             this.listBoxBodegas.Name = "listBoxBodegas";
             this.listBoxBodegas.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxBodegas.Size = new System.Drawing.Size(120, 82);
+            this.listBoxBodegas.Size = new System.Drawing.Size(228, 225);
             this.listBoxBodegas.TabIndex = 30;
             this.listBoxBodegas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBoxBodegas_MouseUp);
             // 

@@ -160,7 +160,7 @@
     <value>154, 330</value>
   </data>
   <metadata name="applicationMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>177, 56</value>
+    <value>17, 56</value>
   </metadata>
   <data name="barButtonItem114.Caption" xml:space="preserve">
     <value>CERRAR SESION</value>
@@ -705,11 +705,14 @@
   <data name="barButtonItem147.Caption" xml:space="preserve">
     <value>RECONFIGURAR SET</value>
   </data>
+  <data name="barButtonItem148.Caption" xml:space="preserve">
+    <value>Reportes de Sets</value>
+  </data>
   <data name="ribbon.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <metadata name="ribbonMiniToolbar1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>677, 17</value>
   </metadata>
   <data name="FACTURACION.Color" type="System.Drawing.Color, System.Drawing">
     <value>Coral</value>
@@ -2717,6 +2720,12 @@
   <data name="&gt;&gt;splashScreenManager1.Type" xml:space="preserve">
     <value>DevExpress.XtraSplashScreen.SplashScreenManager, DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;barButtonItem148.Name" xml:space="preserve">
+    <value>barButtonItem148</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem148.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Principal</value>
   </data>
@@ -2736,6 +2745,6 @@
     <value>TEST</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>327, 56</value>
+    <value>167, 56</value>
   </metadata>
 </root>

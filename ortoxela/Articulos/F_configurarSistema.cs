@@ -48,8 +48,11 @@ namespace ortoxela.Articulos
             string temp_descripcion = "";
             int temp_cantidad = 1;
 
-            temp_codigo = gridView2.GetFocusedRowCellValue("codigo").ToString();
-            temp_descripcion = gridView2.GetFocusedRowCellValue("descripcion").ToString();
+            try { temp_codigo = gridView2.GetFocusedRowCellValue("codigo").ToString(); }
+            catch { }
+            try { temp_descripcion = gridView2.GetFocusedRowCellValue("descripcion").ToString(); }
+            catch { }
+
             temp_cantidad = 1;
 
             int filas = gridView1.RowCount;

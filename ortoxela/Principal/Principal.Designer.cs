@@ -309,6 +309,7 @@
             this.barSubItem30 = new DevExpress.XtraBars.BarSubItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ortoxela.WaitForm1), true, true);
+            this.barButtonItem148 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerDatos)).BeginInit();
             this.splitContainerDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -567,8 +568,9 @@
             this.barButtonItem144,
             this.barButtonItem145,
             this.barButtonItem146,
-            this.barButtonItem147});
-            this.ribbon.MaxItemId = 226;
+            this.barButtonItem147,
+            this.barButtonItem148});
+            this.ribbon.MaxItemId = 227;
             this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar1);
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -2292,6 +2294,7 @@
             // 
             this.ribbonPageGroup12.AllowTextClipping = false;
             this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem85);
+            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem148);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             resources.ApplyResources(this.ribbonPageGroup12, "ribbonPageGroup12");
             // 
@@ -2765,6 +2768,14 @@
             this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // barButtonItem148
+            // 
+            resources.ApplyResources(this.barButtonItem148, "barButtonItem148");
+            this.barButtonItem148.Id = 226;
+            this.barButtonItem148.LargeGlyph = global::ortoxela.Properties.Resources.proveedor;
+            this.barButtonItem148.Name = "barButtonItem148";
+            this.barButtonItem148.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem148_ItemClick);
+            // 
             // Principal
             // 
             resources.ApplyResources(this, "$this");
@@ -3068,6 +3079,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem148;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

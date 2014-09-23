@@ -36,8 +36,8 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.listBox_bodegas = new System.Windows.Forms.ListBox();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -45,7 +45,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.listBox_bodegas = new System.Windows.Forms.ListBox();
+            this.listBox_cate = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.VistaTimeProperties)).BeginInit();
@@ -140,10 +140,10 @@
             // 
             this.panelControl5.Appearance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panelControl5.Appearance.Options.UseBackColor = true;
+            this.panelControl5.Controls.Add(this.listBox_cate);
             this.panelControl5.Controls.Add(this.listBox_bodegas);
             this.panelControl5.Controls.Add(this.labelControl18);
             this.panelControl5.Controls.Add(this.dateEdit5);
-            this.panelControl5.Controls.Add(this.comboBoxCategorias);
             this.panelControl5.Controls.Add(this.dateEdit6);
             this.panelControl5.Controls.Add(this.labelControl17);
             this.panelControl5.Controls.Add(this.labelControl24);
@@ -154,6 +154,15 @@
             this.panelControl5.Size = new System.Drawing.Size(931, 170);
             this.panelControl5.TabIndex = 20;
             // 
+            // listBox_bodegas
+            // 
+            this.listBox_bodegas.FormattingEnabled = true;
+            this.listBox_bodegas.Location = new System.Drawing.Point(92, 11);
+            this.listBox_bodegas.Name = "listBox_bodegas";
+            this.listBox_bodegas.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_bodegas.Size = new System.Drawing.Size(169, 147);
+            this.listBox_bodegas.TabIndex = 20;
+            // 
             // labelControl18
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,14 +171,6 @@
             this.labelControl18.Size = new System.Drawing.Size(73, 20);
             this.labelControl18.TabIndex = 19;
             this.labelControl18.Text = "Categoría:";
-            // 
-            // comboBoxCategorias
-            // 
-            this.comboBoxCategorias.FormattingEnabled = true;
-            this.comboBoxCategorias.Location = new System.Drawing.Point(367, 8);
-            this.comboBoxCategorias.Name = "comboBoxCategorias";
-            this.comboBoxCategorias.Size = new System.Drawing.Size(125, 21);
-            this.comboBoxCategorias.TabIndex = 18;
             // 
             // labelControl17
             // 
@@ -244,14 +245,14 @@
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "Inventario Costos y Existencia Detallado";
             // 
-            // listBox_bodegas
+            // listBox_cate
             // 
-            this.listBox_bodegas.FormattingEnabled = true;
-            this.listBox_bodegas.Location = new System.Drawing.Point(92, 11);
-            this.listBox_bodegas.Name = "listBox_bodegas";
-            this.listBox_bodegas.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox_bodegas.Size = new System.Drawing.Size(169, 147);
-            this.listBox_bodegas.TabIndex = 20;
+            this.listBox_cate.FormattingEnabled = true;
+            this.listBox_cate.Location = new System.Drawing.Point(367, 11);
+            this.listBox_cate.Name = "listBox_cate";
+            this.listBox_cate.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_cate.Size = new System.Drawing.Size(180, 147);
+            this.listBox_cate.TabIndex = 21;
             // 
             // Frm_ReportesAdmin
             // 
@@ -263,7 +264,7 @@
             this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.panelControl6);
             this.Name = "Frm_ReportesAdmin";
-            this.Text = "Frm_ReportesAdmin";
+            this.Text = "Reportes de Administracion";
             this.Load += new System.EventHandler(this.Frm_ReportesAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
@@ -296,7 +297,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl18;
-        private System.Windows.Forms.ComboBox comboBoxCategorias;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
@@ -305,5 +305,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.ListBox listBox_bodegas;
+        private System.Windows.Forms.ListBox listBox_cate;
     }
 }

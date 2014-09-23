@@ -28,6 +28,7 @@ namespace ortoxela.Reportes.Admin
         
         string Bodega_origen_int = "0";
         string Bodega_origen_int_nombre = "";
+        
         void cargarbodegas()
         {
             Bodega_origen_int = "0";
@@ -44,16 +45,35 @@ namespace ortoxela.Reportes.Admin
             }
         }
 
+        string categoria_origen = "0";
+        void cargarcate()
+        {
+            categoria_origen = "0";
+            if (listBox_cate.SelectedItems.Count > 0)
+            {
+                for (int cnt = 0; cnt < listBox_cate.SelectedItems.Count; cnt++)
+                {
+                    DataRowView ctgs = listBox_cate.SelectedItems[cnt] as DataRowView;
+                    categoria_origen += "," + ctgs["codigo"].ToString();
+                }
+            }
+        }
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
 
-            Reportes.Inventario.XtraReport_InventarioResumen reporte = new Reportes.Inventario.XtraReport_InventarioResumen();
-            reporte.Parameters["Fecha_inicio"].Value = dateEdit6.EditValue;
-            reporte.Parameters["Fecha_fin"].Value = dateEdit5.EditValue;
-            reporte.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa; 
-            reporte.RequestParameters = false;
-            reporte.ShowPreview();
+            try
+            {
+                Reportes.Inventario.XtraReport_InventarioResumen reporte = new Reportes.Inventario.XtraReport_InventarioResumen();
+                reporte.Parameters["Fecha_inicio"].Value = dateEdit6.EditValue;
+                reporte.Parameters["Fecha_fin"].Value = dateEdit5.EditValue;
+                reporte.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa;
+                reporte.RequestParameters = false;
+                reporte.ShowPreview();
+            }
+            catch
+            { }
 
             this.Cursor = Cursors.Default;
         }
@@ -77,19 +97,32 @@ namespace ortoxela.Reportes.Admin
                 " JOIN `articulos` `a` ON(`b`.`codigo_articulo` = `a`.`codigo_articulo`) " +
                 " JOIN `sub_categorias` `s` ON (`a`.`codigo_categoria` = `s`.`codigo_subcat`) " +
                 " WHERE bh.codigo_bodega in (" + Bodega_origen_int + ") ";
-                if (comboBoxCategorias.SelectedValue.ToString() != "0")
+                
+                
+                
+                //if (comboBoxCategorias.SelectedValue.ToString() != "0")
+                //{
+                //    consulta = consulta + "  and a.codigo_categoria = " + comboBoxCategorias.SelectedValue;
+                //}
+
+                if (listBox_cate.SelectedItems.Count > 0)
                 {
-                    consulta = consulta + "  and a.codigo_categoria = " + comboBoxCategorias.SelectedValue;
+                    cargarcate();
+                    consulta = consulta + " and a.codigo_categoria in(" + categoria_origen + ") ";
                 }
+
+
+
                 consulta = consulta + " GROUP BY b.codigo_articulo ORDER BY a.descripcion";
                 // consulta = consulta + " and codigo_bodega =" + bodegas.SelectedValue.ToString();
                 
             }
             else
             {
-                if (comboBoxCategorias.SelectedValue.ToString() != "0")
+                if (listBox_cate.SelectedItems.Count > 0)
                 {
-                    consulta = consulta + "  and a.codigo_categoria = " + comboBoxCategorias.SelectedValue;
+                    cargarcate();
+                    consulta = consulta + " and a.codigo_categoria in(" + categoria_origen + ") ";
                 }
             };
             MySqlDataAdapter adaptadori = new MySqlDataAdapter(consulta, Properties.Settings.Default.ortoxelaConnectionString);
@@ -135,10 +168,15 @@ namespace ortoxela.Reportes.Admin
             /* Se llena Combo de Categoarias*/
             try
             {
-                string ssql = "(select 0 as codigo,'Todas' as categoria from dual) union all (select  codigo_subcat as codigo,nombre_subcategoria as categoria from sub_categorias where estadoid=1 order by nombre_subcategoria asc)";
-                comboBoxCategorias.DataSource = logicaxela.Tabla(ssql);
-                comboBoxCategorias.DisplayMember = "categoria";
-                comboBoxCategorias.ValueMember = "codigo";
+                //string ssql = "(select 0 as codigo,'Todas' as categoria from dual) union all (select  codigo_subcat as codigo,nombre_subcategoria as categoria from sub_categorias where estadoid=1 order by nombre_subcategoria asc)";
+                //comboBoxCategorias.DataSource = logicaxela.Tabla(ssql);
+                //comboBoxCategorias.DisplayMember = "categoria";
+                //comboBoxCategorias.ValueMember = "codigo";
+
+                string ssql = "select  codigo_subcat as codigo,nombre_subcategoria as categoria from sub_categorias where estadoid=1 order by nombre_subcategoria asc";
+                listBox_cate.DataSource = logicaxela.Tabla(ssql);
+                listBox_cate.DisplayMember = "categoria";
+                listBox_cate.ValueMember = "codigo";
 
             }
             catch

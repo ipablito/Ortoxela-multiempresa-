@@ -1099,6 +1099,39 @@
       <DependentUpon>R_req_aju.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\Sets\DataSet_Reportes.cs">
+      <DependentUpon>DataSet_Reportes.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Sets\DataSet_Reportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Reportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Sets\f_imp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Sets\f_imp.Designer.cs">
+      <DependentUpon>f_imp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Sets\f_reportesSets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Sets\f_reportesSets.Designer.cs">
+      <DependentUpon>f_reportesSets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Sets\r_EnPedidos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>r_EnPedidos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Sets\r_Reporte2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>r_Reporte2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\Form_dataGridView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1734,6 +1767,20 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>R_req_aju.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Sets\f_imp.resx">
+      <DependentUpon>f_imp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Sets\f_reportesSets.resx">
+      <DependentUpon>f_reportesSets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Sets\r_EnPedidos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>r_EnPedidos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Sets\r_Reporte2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>r_Reporte2.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\Form_dataGridView.resx">
       <DependentUpon>Form_dataGridView.cs</DependentUpon>
     </EmbeddedResource>
@@ -2260,6 +2307,17 @@
     </None>
     <None Include="Reportes\Requisiciones_Ajustes\DataSet_req_aju.xss">
       <DependentUpon>DataSet_req_aju.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Sets\DataSet_Reportes.xsc">
+      <DependentUpon>DataSet_Reportes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Sets\DataSet_Reportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Reportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\Sets\DataSet_Reportes.xss">
+      <DependentUpon>DataSet_Reportes.xsd</DependentUpon>
     </None>
     <None Include="Reportes\Ventas\DataSettest.xsc">
       <DependentUpon>DataSettest.xsd</DependentUpon>

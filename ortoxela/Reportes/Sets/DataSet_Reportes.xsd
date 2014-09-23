@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Reportes" targetNamespace="http://tempuri.org/DataSet_Reportes.xsd" xmlns:mstns="http://tempuri.org/DataSet_Reportes.xsd" xmlns="http://tempuri.org/DataSet_Reportes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ortoxelaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ortoxelaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ortoxela.Properties.Settings.GlobalReference.Default.ortoxelaConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteSetsEnPedidoTableAdapter" GeneratorDataComponentClassName="ReporteSetsEnPedidoTableAdapter" Name="ReporteSetsEnPedido" UserDataComponentName="ReporteSetsEnPedidoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ortoxelaConnectionString (Settings)" DbObjectName="``.`ortoxela`.`ReporteSetsEnPedido`" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>`ortoxela`.`ReporteSetsEnPedido`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Pedido" DataSetColumn="Pedido" />
+              <Mapping SourceColumn="Nombre de cliente" DataSetColumn="Nombre de cliente" />
+              <Mapping SourceColumn="Nombre del paciente" DataSetColumn="Nombre del paciente" />
+              <Mapping SourceColumn="Socio Comercial" DataSetColumn="Socio Comercial" />
+              <Mapping SourceColumn="Set en el envio" DataSetColumn="Set en el envio" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Reporte_2TableAdapter" GeneratorDataComponentClassName="Reporte_2TableAdapter" Name="Reporte_2" UserDataComponentName="Reporte_2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ortoxelaConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT
+  d.codigo_articulo  AS codigo_articulo,
+  a.descripcion      AS Articulo,
+  b.nombre_bodega    AS nombre_bodega,
+  h.`fecha` AS Fecha,
+   COALESCE(c.nombre_cliente,'N/A') AS Nombre_Cliente,
+  COALESCE(c.nombre_paciente,'N/A') AS nombre_paciente,
+  COALESCE(c2.nombre_cliente,'N/A') AS Socio_Comercial
+FROM ((((((((header_doctos_inv h
+          JOIN detalle_doctos_inv d
+            ON ((h.id_documento = d.id_documento)))
+         JOIN clientes c
+           ON ((h.codigo_cliente = c.codigo_cliente)))
+        LEFT JOIN clientes c2
+          ON ((h.socio_comercial = c2.codigo_cliente)))
+       JOIN tipo_cliente p
+         ON (((c.codigo_tipoc = p.codigo_tipoc)
+              AND (p.estadoid = 1))))
+      JOIN articulos a
+        ON ((d.codigo_articulo = a.codigo_articulo)))
+     JOIN bodegas_header b
+       ON ((d.codigo_bodega = b.codigo_bodega)))
+    JOIN v_tipos_documentos t
+      ON ((h.codigo_serie = t.codigo_serie)))
+   JOIN estado e
+     ON ((h.estadoid = e.estadoid)))
+WHERE h.codigo_serie = 6
+AND a.compuesto=1
+AND h.fecha BETWEEN @fi AND @ff</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="fi" ColumnName="fecha" DataSourceName="ortoxela.header_doctos_inv" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fi" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="ff" ColumnName="fecha" DataSourceName="ortoxela.header_doctos_inv" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@ff" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo_articulo" DataSetColumn="codigo_articulo" />
+              <Mapping SourceColumn="Articulo" DataSetColumn="Articulo" />
+              <Mapping SourceColumn="nombre_bodega" DataSetColumn="nombre_bodega" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Nombre_Cliente" DataSetColumn="Nombre_Cliente" />
+              <Mapping SourceColumn="nombre_paciente" DataSetColumn="nombre_paciente" />
+              <Mapping SourceColumn="Socio_Comercial" DataSetColumn="Socio_Comercial" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Reportes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Reportes" msprop:Generator_UserDSName="DataSet_Reportes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteSetsEnPedido" msprop:Generator_TableClassName="ReporteSetsEnPedidoDataTable" msprop:Generator_TableVarName="tableReporteSetsEnPedido" msprop:Generator_TablePropName="ReporteSetsEnPedido" msprop:Generator_RowDeletingName="ReporteSetsEnPedidoRowDeleting" msprop:Generator_RowChangingName="ReporteSetsEnPedidoRowChanging" msprop:Generator_RowEvHandlerName="ReporteSetsEnPedidoRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteSetsEnPedidoRowDeleted" msprop:Generator_UserTableName="ReporteSetsEnPedido" msprop:Generator_RowChangedName="ReporteSetsEnPedidoRowChanged" msprop:Generator_RowEvArgName="ReporteSetsEnPedidoRowChangeEvent" msprop:Generator_RowClassName="ReporteSetsEnPedidoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pedido" msprop:Generator_ColumnVarNameInTable="columnPedido" msprop:Generator_ColumnPropNameInRow="Pedido" msprop:Generator_ColumnPropNameInTable="PedidoColumn" msprop:Generator_UserColumnName="Pedido" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="167" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre_x0020_de_x0020_cliente" msprop:Generator_ColumnVarNameInTable="columnNombre_de_cliente" msprop:Generator_ColumnPropNameInRow="Nombre_de_cliente" msprop:Generator_ColumnPropNameInTable="Nombre_de_clienteColumn" msprop:Generator_UserColumnName="Nombre de cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre_x0020_del_x0020_paciente" msprop:Generator_ColumnVarNameInTable="columnNombre_del_paciente" msprop:Generator_ColumnPropNameInRow="Nombre_del_paciente" msprop:Generator_ColumnPropNameInTable="Nombre_del_pacienteColumn" msprop:Generator_UserColumnName="Nombre del paciente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Socio_x0020_Comercial" msprop:Generator_ColumnVarNameInTable="columnSocio_Comercial" msprop:Generator_ColumnPropNameInRow="Socio_Comercial" msprop:Generator_ColumnPropNameInTable="Socio_ComercialColumn" msprop:Generator_UserColumnName="Socio Comercial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Set_x0020_en_x0020_el_x0020_envio" msprop:Generator_ColumnVarNameInTable="columnSet_en_el_envio" msprop:Generator_ColumnPropNameInRow="Set_en_el_envio" msprop:Generator_ColumnPropNameInTable="Set_en_el_envioColumn" msprop:Generator_UserColumnName="Set en el envio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Reporte_2" msprop:Generator_TableClassName="Reporte_2DataTable" msprop:Generator_TableVarName="tableReporte_2" msprop:Generator_TablePropName="Reporte_2" msprop:Generator_RowDeletingName="Reporte_2RowDeleting" msprop:Generator_RowChangingName="Reporte_2RowChanging" msprop:Generator_RowEvHandlerName="Reporte_2RowChangeEventHandler" msprop:Generator_RowDeletedName="Reporte_2RowDeleted" msprop:Generator_UserTableName="Reporte_2" msprop:Generator_RowChangedName="Reporte_2RowChanged" msprop:Generator_RowEvArgName="Reporte_2RowChangeEvent" msprop:Generator_RowClassName="Reporte_2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo_articulo" msprop:Generator_ColumnVarNameInTable="columncodigo_articulo" msprop:Generator_ColumnPropNameInRow="codigo_articulo" msprop:Generator_ColumnPropNameInTable="codigo_articuloColumn" msprop:Generator_UserColumnName="codigo_articulo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Articulo" msprop:Generator_ColumnVarNameInTable="columnArticulo" msprop:Generator_ColumnPropNameInRow="Articulo" msprop:Generator_ColumnPropNameInTable="ArticuloColumn" msprop:Generator_UserColumnName="Articulo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_bodega" msprop:Generator_ColumnVarNameInTable="columnnombre_bodega" msprop:Generator_ColumnPropNameInRow="nombre_bodega" msprop:Generator_ColumnPropNameInTable="nombre_bodegaColumn" msprop:Generator_UserColumnName="nombre_bodega" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Nombre_Cliente" msprop:Generator_ColumnVarNameInTable="columnNombre_Cliente" msprop:Generator_ColumnPropNameInRow="Nombre_Cliente" msprop:Generator_ColumnPropNameInTable="Nombre_ClienteColumn" msprop:Generator_UserColumnName="Nombre_Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_paciente" msprop:Generator_ColumnVarNameInTable="columnnombre_paciente" msprop:Generator_ColumnPropNameInRow="nombre_paciente" msprop:Generator_ColumnPropNameInTable="nombre_pacienteColumn" msprop:Generator_UserColumnName="nombre_paciente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Socio_Comercial" msprop:Generator_ColumnVarNameInTable="columnSocio_Comercial" msprop:Generator_ColumnPropNameInRow="Socio_Comercial" msprop:Generator_ColumnPropNameInTable="Socio_ComercialColumn" msprop:Generator_UserColumnName="Socio_Comercial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
