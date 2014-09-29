@@ -1,4 +1,5 @@
-﻿namespace ortoxela.Pedido.EnvioDetallado {
+﻿namespace ortoxela.Pedido.EnvioDetallado
+{
     
     
     public partial class DataSetEnvioDetallado {

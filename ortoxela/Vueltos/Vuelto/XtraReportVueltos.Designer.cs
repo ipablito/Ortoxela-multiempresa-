@@ -28,7 +28,6 @@ namespace ortoxela.Vueltos.Vuelto
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraReportVueltos));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
@@ -64,11 +63,12 @@ namespace ortoxela.Vueltos.Vuelto
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.dataSetVuelto1 = new ortoxela.Vueltos.Vuelto.DataSetVuelto();
             this.vueltosTableAdapter = new ortoxela.Vueltos.Vuelto.DataSetVueltoTableAdapters.VueltosTableAdapter();
             this.id = new DevExpress.XtraReports.Parameters.Parameter();
+            this.nombreEmpresa = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVuelto1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -349,7 +349,7 @@ namespace ortoxela.Vueltos.Vuelto
             this.xrLabel7.SizeF = new System.Drawing.SizeF(517.7084F, 22.99999F);
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.Text = "por concepto de devolución del anticipo recibido, el cual se pagó con el Cheque N" +
-                "o.";
+    "o.";
             // 
             // xrLabel4
             // 
@@ -372,7 +372,7 @@ namespace ortoxela.Vueltos.Vuelto
             this.xrLabel3.SizeF = new System.Drawing.SizeF(547.9999F, 23F);
             this.xrLabel3.StylePriority.UseFont = false;
             this.xrLabel3.Text = "Por este medio se hace constar que ORTOXELA, S.A., hace entrega de la cantidad de" +
-                "";
+    "";
             // 
             // xrLabel10
             // 
@@ -425,9 +425,9 @@ namespace ortoxela.Vueltos.Vuelto
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel17,
             this.xrLabel6,
             this.xrLabel5,
-            this.xrPictureBox1,
             this.xrLabel1,
             this.xrLabel2});
             this.TopMargin.HeightF = 208.9584F;
@@ -455,14 +455,6 @@ namespace ortoxela.Vueltos.Vuelto
             this.xrLabel5.StylePriority.UseFont = false;
             this.xrLabel5.Text = "Fecha:";
             // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(110.4167F, 71.62501F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(363.5416F, 95.54171F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
-            // 
             // BottomMargin
             // 
             this.BottomMargin.Name = "BottomMargin";
@@ -484,6 +476,27 @@ namespace ortoxela.Vueltos.Vuelto
             this.id.Type = typeof(int);
             this.id.ValueInfo = "0";
             // 
+            // nombreEmpresa
+            // 
+            this.nombreEmpresa.Description = "nombreEmpresa";
+            this.nombreEmpresa.Name = "nombreEmpresa";
+            // 
+            // xrLabel17
+            // 
+            this.xrLabel17.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.nombreEmpresa, "Text", "")});
+            this.xrLabel17.Font = new System.Drawing.Font("Trebuchet MS", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel17.ForeColor = System.Drawing.Color.Navy;
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 49.95834F);
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(627.5F, 119.875F);
+            this.xrLabel17.StylePriority.UseFont = false;
+            this.xrLabel17.StylePriority.UseForeColor = false;
+            this.xrLabel17.StylePriority.UseTextAlignment = false;
+            this.xrLabel17.Text = "xrLabel17";
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
             // XtraReportVueltos
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -499,7 +512,8 @@ namespace ortoxela.Vueltos.Vuelto
             this.id,
             this.letras,
             this.banco,
-            this.no_vuelto});
+            this.no_vuelto,
+            this.nombreEmpresa});
             this.Version = "12.2";
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVuelto1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -517,7 +531,6 @@ namespace ortoxela.Vueltos.Vuelto
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
@@ -548,5 +561,7 @@ namespace ortoxela.Vueltos.Vuelto
         private DevExpress.XtraReports.UI.XRLabel xrLabel28;
         private DevExpress.XtraReports.UI.XRLabel xrLabel32;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel17;
+        private DevExpress.XtraReports.Parameters.Parameter nombreEmpresa;
     }
 }

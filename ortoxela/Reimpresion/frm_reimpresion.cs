@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
 using DevExpress.XtraReports.UI;
+using MySql.Data.MySqlClient;
 
 namespace ortoxela.Reimpresion
 {
@@ -156,9 +157,18 @@ namespace ortoxela.Reimpresion
                     {
                         if (Convert.ToInt32(gridLookSerieVale.EditValue) == 3)
                         {
+                            MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                            DataTable nt = new DataTable();
+                            ad.Fill(nt);
 
                             Pedido.Vale.XtraReportVale reporte = new Pedido.Vale.XtraReportVale();
                             reporte.Parameters["ID"].Value = gridView1.GetFocusedRowCellValue("id_documento");
+
+                            reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
+                            reporte.Parameters["Direccion"].Value = "Direccion: "+nt.Rows[0]["direccion"].ToString();
+                            reporte.Parameters["telefono1"].Value = "Telefono: "+nt.Rows[0]["telefono"].ToString();
+                            reporte.Parameters["telefono2"].Value = "Telefono auxiliar: "+nt.Rows[0]["telefono2"].ToString();
+                            reporte.Parameters["correo"].Value ="Correo: "+ nt.Rows[0]["correo"].ToString();
                             // reporte.Parameters["RECIBO"].Value = " ";
                             // reporte.Parameters["SOCIO"].Value = ortoxela.Tabla("SELECT c.nombre_cliente FROM header_doctos_inv h INNER JOIN clientes c ON h.socio_comercial=c.codigo_cliente WHERE h.id_documento=" + gridView1.GetFocusedRowCellValue("id_documento")).Rows[0][0]; ;
                             reporte.RequestParameters = false;
@@ -167,7 +177,13 @@ namespace ortoxela.Reimpresion
                         else
                             if (Convert.ToInt32(gridLookSerieVale.EditValue) == 5)
                             {
+                                MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                                DataTable nt = new DataTable();
+                                ad.Fill(nt);
+
                                 Pedido.EnvioDetallado.XtraReportEnvioDetallado reporte = new Pedido.EnvioDetallado.XtraReportEnvioDetallado();
+                                reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
+                                reporte.Parameters["telefonos"].Value = "Telefono: "+nt.Rows[0]["telefono"].ToString()+", Telefono auxiliar: "+nt.Rows[0]["telefono2"].ToString()+".";
                                 //reporte.Parameters["ID"].Value = gridView1.GetFocusedRowCellValue("id_documento");
                                 reporte.Parameters["ID"].Value = gridView1.GetFocusedRowCellValue("NO DOCUMENTO");
                                 reporte.RequestParameters = false;
@@ -184,7 +200,12 @@ namespace ortoxela.Reimpresion
                                 }
                                 else
                                 {
+                                    MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                                    DataTable nt = new DataTable();
+                                    ad.Fill(nt);
+
                                     Compra.PrintIngresoProd.XtraReportIngresoProd reporte = new Compra.PrintIngresoProd.XtraReportIngresoProd();
+                                    reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
                                     reporte.Parameters["ID"].Value = gridView1.GetFocusedRowCellValue("id_documento");
                                     reporte.RequestParameters = false;
                                     reporte.ShowPreviewDialog();

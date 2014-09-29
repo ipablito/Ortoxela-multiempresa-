@@ -37,6 +37,8 @@
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Empresa = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrPageInfo5 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo3 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -67,8 +69,6 @@
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Empresa = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetRequisicionesDetalle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -154,16 +154,37 @@
             this.xrLabel13,
             this.xrPageInfo5,
             this.xrPageInfo3});
-            this.TopMargin.HeightF = 62.5F;
+            this.TopMargin.HeightF = 121.875F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel13
+            // 
+            this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.Empresa, "Text", "")});
+            this.xrLabel13.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel13.ForeColor = System.Drawing.Color.Navy;
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(728F, 56.33334F);
+            this.xrLabel13.StylePriority.UseFont = false;
+            this.xrLabel13.StylePriority.UseForeColor = false;
+            this.xrLabel13.StylePriority.UseTextAlignment = false;
+            this.xrLabel13.Text = "xrLabel13";
+            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // Empresa
+            // 
+            this.Empresa.Description = "Parameter1";
+            this.Empresa.Name = "Empresa";
             // 
             // xrPageInfo5
             // 
             this.xrPageInfo5.Font = new System.Drawing.Font("Arial", 10F);
             this.xrPageInfo5.Format = "{0:d\' de \'MMMM\' de \'yyyy hh:mm tt}";
-            this.xrPageInfo5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 37.5F);
+            this.xrPageInfo5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 88.875F);
             this.xrPageInfo5.Name = "xrPageInfo5";
             this.xrPageInfo5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo5.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
@@ -176,7 +197,7 @@
             // 
             this.xrPageInfo3.Font = new System.Drawing.Font("Arial", 12F);
             this.xrPageInfo3.Format = "Pagina {0}";
-            this.xrPageInfo3.LocationFloat = new DevExpress.Utils.PointFloat(612.5F, 37.5F);
+            this.xrPageInfo3.LocationFloat = new DevExpress.Utils.PointFloat(612.5F, 88.875F);
             this.xrPageInfo3.Name = "xrPageInfo3";
             this.xrPageInfo3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo3.PageInfo = DevExpress.XtraPrinting.PageInfo.Number;
@@ -260,6 +281,7 @@
             // 
             this.Fecha_fin.Name = "Fecha_fin";
             this.Fecha_fin.Type = typeof(System.DateTime);
+            this.Fecha_fin.ValueInfo = "09/26/2014 13:24:44";
             this.Fecha_fin.Visible = false;
             // 
             // xrLabel20
@@ -280,6 +302,7 @@
             // 
             this.Fecha_inicio.Name = "Fecha_inicio";
             this.Fecha_inicio.Type = typeof(System.DateTime);
+            this.Fecha_inicio.ValueInfo = "09/26/2014 13:24:44";
             this.Fecha_inicio.Visible = false;
             // 
             // xrLabel19
@@ -495,22 +518,6 @@
             this.xrLabel9.Text = "xrLabel9";
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // Empresa
-            // 
-            this.Empresa.Description = "Parameter1";
-            this.Empresa.Name = "Empresa";
-            this.Empresa.Value = "";
-            // 
-            // xrLabel13
-            // 
-            this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.Empresa, "Text", "")});
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(312.5F, 29.49999F);
-            this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(132.2917F, 23F);
-            this.xrLabel13.Text = "xrLabel13";
-            // 
             // XtraReport_Requisiciones_Detalle
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -525,12 +532,12 @@
             this.DataMember = "v_doctos_detalle";
             this.DataSource = this.dataSetRequisicionesDetalle1;
             this.FilterString = "[fecha_compra] Between(?Fecha_inicio, ?Fecha_fin)";
-            this.Margins = new System.Drawing.Printing.Margins(50, 52, 62, 100);
+            this.Margins = new System.Drawing.Printing.Margins(50, 52, 122, 100);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.Fecha_inicio,
             this.Fecha_fin,
             this.Empresa});
-            this.Version = "12.1";
+            this.Version = "12.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetRequisicionesDetalle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

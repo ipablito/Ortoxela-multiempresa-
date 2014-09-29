@@ -25,7 +25,7 @@ namespace ortoxela.Reportes.Pedidos
                 xtr_vueltos vueltos = new xtr_vueltos();
                 vueltos.Parameters["Estado"].Value = 4;
                 vueltos.Parameters["Nombre"].Value = "Vueltos pendientes de dar";
-                //vueltos.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa;
+                vueltos.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa;
                 vueltos.RequestParameters = false;
                 
                 vueltos.ShowPreviewDialog();

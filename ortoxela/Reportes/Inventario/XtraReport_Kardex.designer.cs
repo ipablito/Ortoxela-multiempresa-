@@ -185,7 +185,7 @@ namespace ortoxela.Reportes.Inventario
             this.xrLabel17,
             this.xrPageInfo2,
             this.xrPageInfo1});
-            this.TopMargin.HeightF = 28F;
+            this.TopMargin.HeightF = 94.66667F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -194,15 +194,17 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.xrLabel17.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.nombreEmpresa, "Text", "")});
-            this.xrLabel17.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(284.375F, 0F);
+            this.xrLabel17.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel17.ForeColor = System.Drawing.Color.Navy;
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10.00001F);
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel17.SizeF = new System.Drawing.SizeF(280.2083F, 23F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(776.0418F, 51.66667F);
             this.xrLabel17.StylePriority.UseFont = false;
+            this.xrLabel17.StylePriority.UseForeColor = false;
             this.xrLabel17.StylePriority.UseTextAlignment = false;
             this.xrLabel17.Text = "xrLabel17";
-            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // nombreEmpresa
             // 
@@ -214,7 +216,7 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.xrPageInfo2.Font = new System.Drawing.Font("Arial Narrow", 10F);
             this.xrPageInfo2.Format = "{0:d\' de \'MMMM\' de \'yyyy hh:mm tt}";
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 61.66667F);
             this.xrPageInfo2.Name = "xrPageInfo2";
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo2.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
@@ -227,7 +229,7 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.xrPageInfo1.Font = new System.Drawing.Font("Arial Narrow", 10F);
             this.xrPageInfo1.Format = "Pagina {0} de {#}";
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(675F, 0F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(675F, 61.66667F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(100F, 23F);
@@ -639,7 +641,7 @@ namespace ortoxela.Reportes.Inventario
             this.DataAdapter = this.v_kardexTableAdapter;
             this.DataMember = "v_kardex";
             this.DataSource = this.dataSet_Kardex1;
-            this.Margins = new System.Drawing.Printing.Margins(39, 36, 28, 50);
+            this.Margins = new System.Drawing.Printing.Margins(39, 36, 95, 50);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.codigo_bodega,
             this.bodega,

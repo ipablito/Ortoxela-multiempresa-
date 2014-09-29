@@ -1,4 +1,5 @@
-﻿namespace ortoxela.Articulos {
+﻿namespace ortoxela.Articulos
+{
     
     
     public partial class DataSet_articulo {

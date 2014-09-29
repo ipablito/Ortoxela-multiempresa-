@@ -143,7 +143,11 @@ namespace ortoxela.Reportes.Compras
                 MySqlDataAdapter adaptadorx = new MySqlDataAdapter(QueryCompras, Properties.Settings.Default.ortoxelaConnectionString);
                 DataSet datasetx = new DataSet();
                 adaptadorx.Fill(datasetx, "v_compras_proveedor");
-                
+
+                MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                DataTable nt = new DataTable();
+                ad.Fill(nt);
+
 
 
                 ortoxela.Reportes.Proveedores.XtraReport_RepProveedores reporteP = new ortoxela.Reportes.Proveedores.XtraReport_RepProveedores();
@@ -151,7 +155,7 @@ namespace ortoxela.Reportes.Compras
                 reporteP.DataMember = datasetx.Tables["v_compras_proveedor"].TableName;
                 reporteP.Parameters["Fecha_inicio"].Value = dateEdit1.DateTime.ToString("yyyy-MM-dd") + " 00:00:00";
                 reporteP.Parameters["Fecha_fin"].Value = dateEdit2.DateTime.ToString("yyyy-MM-dd") + " 23:59:59";
-                
+                reporteP.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
                 reporteP.RequestParameters = false;
                 reporteP.ShowPreview();
             }
@@ -174,6 +178,11 @@ namespace ortoxela.Reportes.Compras
                 DataSet datasetx = new DataSet();
                 adaptadorx.Fill(datasetx, "v_compras_proveedor");
 
+
+                MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                DataTable nt = new DataTable();
+                ad.Fill(nt);
+
                 
 
                     ortoxela.Reportes.Proveedores.XtraReport_RepUnProveedor reporteP = new ortoxela.Reportes.Proveedores.XtraReport_RepUnProveedor();
@@ -182,6 +191,7 @@ namespace ortoxela.Reportes.Compras
                     reporteP.Parameters["Fecha_inicio"].Value = dateEdit1.DateTime.ToString("yyyy-MM-dd") + " 00:00:00";
                     reporteP.Parameters["Fecha_fin"].Value = dateEdit2.DateTime.ToString("yyyy-MM-dd") + " 23:59:59";
                     reporteP.Parameters["Codigo_proveedor"].Value = gridLookProveedor.EditValue;
+                    reporteP.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
 
                     reporteP.RequestParameters = false;
                     reporteP.ShowPreview();

@@ -1,4 +1,5 @@
-﻿namespace ortoxela.Pedido.Vale {
+﻿namespace ortoxela.Pedido.Vale
+{
     
     
     public partial class DataSetVale {

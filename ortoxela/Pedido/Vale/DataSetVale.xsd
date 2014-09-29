@@ -112,7 +112,7 @@ FROM            header_doctos_inv INNER JOIN
   <xs:element name="DataSetVale" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetVale" msprop:Generator_UserDSName="DataSetVale">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Encabezado" msprop:Generator_TableClassName="EncabezadoDataTable" msprop:Generator_TableVarName="tableEncabezado" msprop:Generator_TablePropName="Encabezado" msprop:Generator_RowDeletingName="EncabezadoRowDeleting" msprop:Generator_UserTableName="Encabezado" msprop:Generator_RowChangingName="EncabezadoRowChanging" msprop:Generator_RowEvHandlerName="EncabezadoRowChangeEventHandler" msprop:Generator_RowDeletedName="EncabezadoRowDeleted" msprop:Generator_RowEvArgName="EncabezadoRowChangeEvent" msprop:Generator_RowChangedName="EncabezadoRowChanged" msprop:Generator_RowClassName="EncabezadoRow">
+        <xs:element name="Encabezado" msprop:Generator_TableClassName="EncabezadoDataTable" msprop:Generator_TableVarName="tableEncabezado" msprop:Generator_TablePropName="Encabezado" msprop:Generator_RowDeletingName="EncabezadoRowDeleting" msprop:Generator_RowChangingName="EncabezadoRowChanging" msprop:Generator_RowEvHandlerName="EncabezadoRowChangeEventHandler" msprop:Generator_RowDeletedName="EncabezadoRowDeleted" msprop:Generator_UserTableName="Encabezado" msprop:Generator_RowChangedName="EncabezadoRowChanged" msprop:Generator_RowEvArgName="EncabezadoRowChangeEvent" msprop:Generator_RowClassName="EncabezadoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
@@ -155,7 +155,7 @@ FROM            header_doctos_inv INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="detalle_manual" msprop:Generator_TableClassName="detalle_manualDataTable" msprop:Generator_TableVarName="tabledetalle_manual" msprop:Generator_TablePropName="detalle_manual" msprop:Generator_RowDeletingName="detalle_manualRowDeleting" msprop:Generator_UserTableName="detalle_manual" msprop:Generator_RowChangingName="detalle_manualRowChanging" msprop:Generator_RowEvHandlerName="detalle_manualRowChangeEventHandler" msprop:Generator_RowDeletedName="detalle_manualRowDeleted" msprop:Generator_RowEvArgName="detalle_manualRowChangeEvent" msprop:Generator_RowChangedName="detalle_manualRowChanged" msprop:Generator_RowClassName="detalle_manualRow">
+        <xs:element name="detalle_manual" msprop:Generator_TableClassName="detalle_manualDataTable" msprop:Generator_TableVarName="tabledetalle_manual" msprop:Generator_TablePropName="detalle_manual" msprop:Generator_RowDeletingName="detalle_manualRowDeleting" msprop:Generator_RowChangingName="detalle_manualRowChanging" msprop:Generator_RowEvHandlerName="detalle_manualRowChangeEventHandler" msprop:Generator_RowDeletedName="detalle_manualRowDeleted" msprop:Generator_UserTableName="detalle_manual" msprop:Generator_RowChangedName="detalle_manualRowChanged" msprop:Generator_RowEvArgName="detalle_manualRowChangeEvent" msprop:Generator_RowClassName="detalle_manualRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_documento" msprop:Generator_ColumnVarNameInTable="columnid_documento" msprop:Generator_ColumnPropNameInRow="id_documento" msprop:Generator_ColumnPropNameInTable="id_documentoColumn" msprop:Generator_UserColumnName="id_documento" type="xs:int" />
@@ -182,7 +182,7 @@ FROM            header_doctos_inv INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Encabezado_detalle_manual" msdata:parent="Encabezado" msdata:child="detalle_manual" msdata:parentkey="id_documento" msdata:childkey="id_documento" msprop:Generator_UserChildTable="detalle_manual" msprop:Generator_ChildPropName="Getdetalle_manualRows" msprop:Generator_ParentPropName="EncabezadoRow" msprop:Generator_UserRelationName="Encabezado_detalle_manual" msprop:Generator_RelationVarName="relationEncabezado_detalle_manual" msprop:Generator_UserParentTable="Encabezado" />
+      <msdata:Relationship name="Encabezado_detalle_manual" msdata:parent="Encabezado" msdata:child="detalle_manual" msdata:parentkey="id_documento" msdata:childkey="id_documento" msprop:Generator_UserChildTable="detalle_manual" msprop:Generator_ChildPropName="Getdetalle_manualRows" msprop:Generator_UserRelationName="Encabezado_detalle_manual" msprop:Generator_ParentPropName="EncabezadoRow" msprop:Generator_RelationVarName="relationEncabezado_detalle_manual" msprop:Generator_UserParentTable="Encabezado" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

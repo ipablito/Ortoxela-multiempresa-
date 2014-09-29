@@ -25,6 +25,7 @@ namespace ortoxela.Reportes.Ventas
         public Form_dataGridView()
         {
             InitializeComponent();
+            this.Text = clases.ClassVariables.nombreEmpresa + "  -  Estadisticas por mes";
         }
 
         #region Variables para abrir un excel
@@ -338,7 +339,7 @@ namespace ortoxela.Reportes.Ventas
             {
                 //Document doc = new Document(PageSize.A4.Rotate(), 10, 10, 10, 10);
                 Document doc = new Document(PageSize.A0.Rotate(), 10, 10, 10, 10);
-                string filename = "Estadistica.pdf";
+                string filename = "PDF.pdf";
                 FileStream file = new FileStream(filename, FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.ReadWrite);
                 PdfWriter.GetInstance(doc, file);
                 doc.Open();
@@ -355,7 +356,7 @@ namespace ortoxela.Reportes.Ventas
         private void mostrarEnExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            string rutaExcel="\\OrtoXela.xlsx";
+            string rutaExcel="\\Excel.xlsx";
             deDGVaExcel(dataGridView_mostrar, rutaExcel);
             this.Cursor = Cursors.Default;
         }
@@ -366,7 +367,7 @@ namespace ortoxela.Reportes.Ventas
             //
             try
             {
-                File.Delete("Estadistica.pdf");
+                File.Delete("PDF.pdf");
             }
             catch { }
             DeGridA_PDF(dataGridView_mostrar);

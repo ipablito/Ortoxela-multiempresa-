@@ -89,7 +89,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_dataGridView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrtoXela";
+            this.Text = "Estadisticas por mes";
             this.Load += new System.EventHandler(this.Form_dataGridView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_mostrar)).EndInit();
             this.menuStrip1.ResumeLayout(false);

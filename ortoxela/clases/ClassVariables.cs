@@ -19,5 +19,7 @@ namespace ortoxela.clases
         public static bool sociocomercial;
         public static int op_reporte = 0;
         public static string nombreEmpresa;
+        public static int idEmpresa;
+        public static string ConexionMaster = "server=localhost;User Id=root;password=ipablito;Persist Security Info=True;database=master";
     }
 }

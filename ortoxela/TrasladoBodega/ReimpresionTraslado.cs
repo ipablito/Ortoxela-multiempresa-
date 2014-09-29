@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using DevExpress.XtraReports.UI;
+using MySql.Data.MySqlClient;
 
 namespace ortoxela.TrasladoBodega
 {
@@ -28,9 +29,13 @@ namespace ortoxela.TrasladoBodega
             this.Cursor = Cursors.WaitCursor;
             try
             {
-                
+                MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                DataTable nt = new DataTable();
+                ad.Fill(nt);
+
                 int fila = dataGridView_traslados.CurrentRow.Index;
                 PrintTraslado.XtraReportTraslado reporte = new PrintTraslado.XtraReportTraslado();
+                reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
                 reporte.Parameters["ID"].Value = Convert.ToInt16(dataGridView_traslados[0, fila].Value);
                 reporte.RequestParameters = false;
                 reporte.ShowPreviewDialog();

@@ -269,6 +269,11 @@ namespace ortoxela.Permisos
             Cursor.Current = Cursors.Default;
         }
 
+        private void barButtonItem114_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
         
 
         

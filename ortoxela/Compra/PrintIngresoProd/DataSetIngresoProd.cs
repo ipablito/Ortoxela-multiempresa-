@@ -1,4 +1,5 @@
-﻿namespace ortoxela.Compra.PrintIngresoProd {
+﻿namespace ortoxela.Compra.PrintIngresoProd
+{
     
     
     public partial class DataSetIngresoProd {

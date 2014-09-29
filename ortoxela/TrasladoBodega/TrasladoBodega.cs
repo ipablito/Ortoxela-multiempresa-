@@ -420,7 +420,12 @@ namespace ortoxela.TrasladoBodega
         {
             try
             {
+                MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                DataTable nt = new DataTable();
+                ad.Fill(nt);
+
                 PrintTraslado.XtraReportTraslado reporte = new PrintTraslado.XtraReportTraslado();
+                reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
                 reporte.Parameters["ID"].Value = id_nuevoIngreso;
                 reporte.RequestParameters = false;
                 reporte.ShowPreviewDialog();

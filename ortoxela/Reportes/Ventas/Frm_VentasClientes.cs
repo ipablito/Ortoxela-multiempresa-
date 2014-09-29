@@ -23,6 +23,7 @@ namespace ortoxela.Reportes.Ventas
             XtraReport_Ventas_por_Cliente reported = new XtraReport_Ventas_por_Cliente();
             reported.Parameters["Fecha_inicio"].Value = deFechaInicio.DateTime.ToString("yyyy-MM-dd") + " 00:00:00"; ;
             reported.Parameters["Fecha_fin"].Value = deFechaFin.DateTime.ToString("yyyy-MM-dd") + " 23:59:59"; ;
+            reported.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa;
             reported.RequestParameters = false;
             reported.ShowPreview();
         }

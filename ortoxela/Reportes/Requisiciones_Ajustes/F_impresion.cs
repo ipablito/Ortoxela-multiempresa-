@@ -33,6 +33,7 @@ namespace ortoxela.Reportes.Requisiciones_Ajustes
             R_req_aju reporte = new R_req_aju();
             res = lg.GetData_reqajuentrefechas(id_se, dfi, dff);
             reporte.SetDataSource(res);
+            reporte.SetParameterValue("nombreEmpresa", clases.ClassVariables.nombreEmpresa);
             crystalReportViewer1.ReportSource = reporte;
 
         }

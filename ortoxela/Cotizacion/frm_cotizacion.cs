@@ -509,12 +509,21 @@ namespace ortoxela.Cotizacion
             this.Cursor = Cursors.WaitCursor;
             try
             {
+
+                MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                DataTable nt = new DataTable();
+                ad.Fill(nt);
+
                 DataSet_CotizacionTableAdapters.DataTable3TableAdapter lg = new DataSet_CotizacionTableAdapters.DataTable3TableAdapter();
                 DataTable res = new DataTable();
                 res = lg.GetData_cot(Convert.ToInt16(id_nuevo_pedido));
 
                 XtraReport_Cotizacion reporte = new XtraReport_Cotizacion();
                 reporte.DataSource = res;
+                reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
+                reporte.Parameters["direccion"].Value ="Direccion: "+ nt.Rows[0]["direccion"].ToString();
+                reporte.Parameters["telefonos"].Value = "Telefono: "+nt.Rows[0]["telefono"].ToString()+", Telefono auxiliar: "+nt.Rows[0]["telefono2"].ToString();
+                reporte.Parameters["correo"].Value ="Correo: "+ nt.Rows[0]["correo"].ToString();
                 //reporte.Parameters["ID_Documento"].Value = id_nuevo_pedido;
                 reporte.RequestParameters = false;
                 reporte.ShowPreviewDialog();

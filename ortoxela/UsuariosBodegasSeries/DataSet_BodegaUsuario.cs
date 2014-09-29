@@ -1,4 +1,5 @@
-﻿namespace ortoxela.UsuariosBodegasSeries {
+﻿namespace ortoxela.UsuariosBodegasSeries
+{
     
     
     public partial class DataSet_BodegaUsuario {

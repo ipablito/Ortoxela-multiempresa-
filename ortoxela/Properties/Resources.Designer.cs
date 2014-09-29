@@ -753,6 +753,16 @@ namespace ortoxela.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap l2 {
+            get {
+                object obj = ResourceManager.GetObject("l2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap liberar_icono_7141_32 {
             get {
                 object obj = ResourceManager.GetObject("liberar-icono-7141-32", resourceCulture);
@@ -796,6 +806,16 @@ namespace ortoxela.Properties {
         internal static System.Drawing.Bitmap LogoFinal_hn {
             get {
                 object obj = ResourceManager.GetObject("LogoFinal hn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoMT {
+            get {
+                object obj = ResourceManager.GetObject("LogoMT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -20,6 +20,8 @@ namespace ortoxela.Principal
         public Principal()
         {
             InitializeComponent();
+            labelControl_NombreEmpresa.Text = clases.ClassVariables.nombreEmpresa;
+            this.Text ="facinvOX  -  "+ clases.ClassVariables.nombreEmpresa;          
         }
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
@@ -135,14 +137,20 @@ namespace ortoxela.Principal
 
 
             string tema = "";
-            StreamReader leer = new StreamReader("tema.txt");
 
-            while (!leer.EndOfStream)
+            try
             {
-                tema = leer.ReadLine().ToString();
+                StreamReader leer = new StreamReader("tema.txt");
+
+                while (!leer.EndOfStream)
+                {
+                    tema = leer.ReadLine().ToString();
+                }
+
+                leer.Close();
             }
-            
-            leer.Close();
+            catch
+            { tema = "McSkin"; }
 
 
 
@@ -2192,26 +2200,9 @@ namespace ortoxela.Principal
             }
         }
 
-        bool incrementar = true;
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (progressBarControl_PRINCIPAL.EditValue.ToString() == "100")
-            {
-                incrementar = false;
-            }
-            else if (progressBarControl_PRINCIPAL.EditValue.ToString() == "1")
-            {
-                incrementar = true;
-            }
-
-            if (incrementar == true)
-            {
-                progressBarControl_PRINCIPAL.Increment(1);
-            }
-            else
-            {
-                progressBarControl_PRINCIPAL.Decrement(1);
-            }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -2255,11 +2246,8 @@ namespace ortoxela.Principal
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            //progressBarControl_PRINCIPAL.Position=
-            timer1.Stop();
             actualizarDataGrid();
             actualizar_sistemasEnBodega();
-            timer1.Start();
             this.Cursor = Cursors.Default;
         }
 
@@ -2268,6 +2256,38 @@ namespace ortoxela.Principal
             Form nf = new Reportes.Sets.f_reportesSets();
             nf.MdiParent = this;
             nf.Show();
+        }
+
+        private void barButtonItem114_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.Name == "Login")
+                {
+                    form.Show();
+                    cerrarsesion = true;
+                }
+            }
+            this.Close();
+        }
+
+        private void barButtonItem149_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void barButtonItem150_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            try
+            {
+                Form nf = new f_logo();
+                nf.ShowDialog();
+            }
+            catch
+            { }
+            this.Cursor = Cursors.Default;
         }
 
         

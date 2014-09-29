@@ -53,6 +53,7 @@
             DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel3 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             this.splitContainerDatos = new DevExpress.XtraEditors.SplitContainerControl();
+            this.labelControl_NombreEmpresa = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -239,6 +240,9 @@
             this.barButtonItem145 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem146 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem147 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem148 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem149 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem150 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.FACTURACION = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -293,9 +297,7 @@
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemPopupContainerEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.progressBarControl_PRINCIPAL = new DevExpress.XtraEditors.ProgressBarControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -307,9 +309,7 @@
             this.ribbonPage11 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.defaultLookAndFeel2 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSubItem30 = new DevExpress.XtraBars.BarSubItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ortoxela.WaitForm1), true, true);
-            this.barButtonItem148 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerDatos)).BeginInit();
             this.splitContainerDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -322,7 +322,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl_PRINCIPAL.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -342,10 +341,15 @@
             // 
             resources.ApplyResources(this.splitContainerDatos, "splitContainerDatos");
             this.splitContainerDatos.Name = "splitContainerDatos";
+            this.splitContainerDatos.Panel1.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("splitContainerDatos.Panel1.Appearance.BackColor")));
+            this.splitContainerDatos.Panel1.Appearance.BackColor2 = ((System.Drawing.Color)(resources.GetObject("splitContainerDatos.Panel1.Appearance.BackColor2")));
+            this.splitContainerDatos.Panel1.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("splitContainerDatos.Panel1.Appearance.BorderColor")));
+            this.splitContainerDatos.Panel1.Appearance.Options.UseBackColor = true;
+            this.splitContainerDatos.Panel1.Appearance.Options.UseBorderColor = true;
+            this.splitContainerDatos.Panel1.Controls.Add(this.labelControl_NombreEmpresa);
             this.splitContainerDatos.Panel1.Controls.Add(this.labelControl1);
             this.splitContainerDatos.Panel1.Controls.Add(this.gridControl1);
             this.splitContainerDatos.Panel1.Controls.Add(this.simpleButton1);
-            this.splitContainerDatos.Panel1.Controls.Add(this.progressBarControl_PRINCIPAL);
             this.splitContainerDatos.Panel1.Controls.Add(this.labelControl2);
             this.splitContainerDatos.Panel1.Controls.Add(this.gridControl2);
             this.splitContainerDatos.Panel1.Controls.Add(this.label1);
@@ -355,6 +359,14 @@
             resources.ApplyResources(this.splitContainerDatos.Panel2, "splitContainerDatos.Panel2");
             this.splitContainerDatos.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1;
             this.splitContainerDatos.SplitterPosition = 1228;
+            // 
+            // labelControl_NombreEmpresa
+            // 
+            this.labelControl_NombreEmpresa.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.BackColor")));
+            this.labelControl_NombreEmpresa.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl_NombreEmpresa.Appearance.Font")));
+            this.labelControl_NombreEmpresa.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.ForeColor")));
+            resources.ApplyResources(this.labelControl_NombreEmpresa, "labelControl_NombreEmpresa");
+            this.labelControl_NombreEmpresa.Name = "labelControl_NombreEmpresa";
             // 
             // labelControl1
             // 
@@ -383,7 +395,7 @@
             // 
             this.ribbon.ApplicationButtonDropDownControl = this.applicationMenu1;
             resources.ApplyResources(this.ribbon, "ribbon");
-            this.ribbon.ApplicationIcon = global::ortoxela.Properties.Resources.ox;
+            this.ribbon.ApplicationIcon = global::ortoxela.Properties.Resources.LogoMT;
             this.ribbon.BackColor = System.Drawing.Color.White;
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -569,8 +581,10 @@
             this.barButtonItem145,
             this.barButtonItem146,
             this.barButtonItem147,
-            this.barButtonItem148});
-            this.ribbon.MaxItemId = 227;
+            this.barButtonItem148,
+            this.barButtonItem149,
+            this.barButtonItem150});
+            this.ribbon.MaxItemId = 229;
             this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar1);
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -590,7 +604,6 @@
             this.repositoryItemButtonEdit2,
             this.repositoryItemComboBox1,
             this.repositoryItemPopupContainerEdit1});
-            this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // applicationMenu1
@@ -606,6 +619,7 @@
             this.barButtonItem114.Glyph = global::ortoxela.Properties.Resources.permisos;
             this.barButtonItem114.Id = 160;
             this.barButtonItem114.Name = "barButtonItem114";
+            this.barButtonItem114.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem114_ItemClick);
             // 
             // barButtonItem115
             // 
@@ -2113,6 +2127,7 @@
             // barButtonItem137
             // 
             resources.ApplyResources(this.barButtonItem137, "barButtonItem137");
+            this.barButtonItem137.Enabled = false;
             this.barButtonItem137.Id = 208;
             this.barButtonItem137.LargeGlyph = global::ortoxela.Properties.Resources.ajustes_y_reqi;
             this.barButtonItem137.Name = "barButtonItem137";
@@ -2156,6 +2171,7 @@
             // barButtonItem141
             // 
             resources.ApplyResources(this.barButtonItem141, "barButtonItem141");
+            this.barButtonItem141.Enabled = false;
             this.barButtonItem141.Id = 217;
             this.barButtonItem141.LargeGlyph = global::ortoxela.Properties.Resources.trasladar48;
             this.barButtonItem141.Name = "barButtonItem141";
@@ -2226,6 +2242,32 @@
             this.barButtonItem147.Id = 225;
             this.barButtonItem147.Name = "barButtonItem147";
             this.barButtonItem147.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem147_ItemClick);
+            // 
+            // barButtonItem148
+            // 
+            resources.ApplyResources(this.barButtonItem148, "barButtonItem148");
+            this.barButtonItem148.Enabled = false;
+            this.barButtonItem148.Id = 226;
+            this.barButtonItem148.LargeGlyph = global::ortoxela.Properties.Resources.proveedor;
+            this.barButtonItem148.Name = "barButtonItem148";
+            this.barButtonItem148.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem148_ItemClick);
+            // 
+            // barButtonItem149
+            // 
+            resources.ApplyResources(this.barButtonItem149, "barButtonItem149");
+            this.barButtonItem149.Glyph = global::ortoxela.Properties.Resources.marca;
+            this.barButtonItem149.Id = 227;
+            this.barButtonItem149.Name = "barButtonItem149";
+            this.barButtonItem149.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem149_ItemClick);
+            // 
+            // barButtonItem150
+            // 
+            resources.ApplyResources(this.barButtonItem150, "barButtonItem150");
+            this.barButtonItem150.Enabled = false;
+            this.barButtonItem150.Id = 228;
+            this.barButtonItem150.LargeGlyph = global::ortoxela.Properties.Resources.marca;
+            this.barButtonItem150.Name = "barButtonItem150";
+            this.barButtonItem150.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem150_ItemClick);
             // 
             // FACTURACION
             // 
@@ -2373,6 +2415,7 @@
             // ribbonPageGroup15
             // 
             this.ribbonPageGroup15.ItemLinks.Add(this.ribbonGalleryBarItem2);
+            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem150);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             resources.ApplyResources(this.ribbonPageGroup15, "ribbonPageGroup15");
             // 
@@ -2636,24 +2679,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemPopupContainerEdit1.Buttons"))))});
             this.repositoryItemPopupContainerEdit1.Name = "repositoryItemPopupContainerEdit1";
             // 
-            // ribbonStatusBar
-            // 
-            resources.ApplyResources(this.ribbonStatusBar, "ribbonStatusBar");
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbon;
-            // 
             // simpleButton1
             // 
             this.simpleButton1.Image = global::ortoxela.Properties.Resources.find;
             resources.ApplyResources(this.simpleButton1, "simpleButton1");
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
-            // 
-            // progressBarControl_PRINCIPAL
-            // 
-            resources.ApplyResources(this.progressBarControl_PRINCIPAL, "progressBarControl_PRINCIPAL");
-            this.progressBarControl_PRINCIPAL.MenuManager = this.ribbon;
-            this.progressBarControl_PRINCIPAL.Name = "progressBarControl_PRINCIPAL";
             // 
             // labelControl2
             // 
@@ -2762,31 +2793,15 @@
             this.barSubItem30.Id = 200;
             this.barSubItem30.Name = "barSubItem30";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 30;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // barButtonItem148
-            // 
-            resources.ApplyResources(this.barButtonItem148, "barButtonItem148");
-            this.barButtonItem148.Id = 226;
-            this.barButtonItem148.LargeGlyph = global::ortoxela.Properties.Resources.proveedor;
-            this.barButtonItem148.Name = "barButtonItem148";
-            this.barButtonItem148.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem148_ItemClick);
-            // 
             // Principal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainerDatos);
-            this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
             this.Name = "Principal";
             this.Ribbon = this.ribbon;
-            this.StatusBar = this.ribbonStatusBar;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
@@ -2803,7 +2818,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl_PRINCIPAL.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -2826,7 +2840,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
@@ -3070,9 +3083,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem146;
         private DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit repositoryItemPopupContainerEdit1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem147;
-        private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.ProgressBarControl progressBarControl_PRINCIPAL;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
@@ -3080,6 +3091,9 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem148;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem149;
+        private DevExpress.XtraEditors.LabelControl labelControl_NombreEmpresa;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem150;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

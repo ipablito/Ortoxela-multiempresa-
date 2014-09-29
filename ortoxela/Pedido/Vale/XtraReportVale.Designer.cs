@@ -51,9 +51,7 @@ namespace ortoxela.Pedido.Vale
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.winControlContainer1 = new DevExpress.XtraReports.UI.WinControlContainer();
             this.label1 = new System.Windows.Forms.Label();
@@ -99,8 +97,17 @@ namespace ortoxela.Pedido.Vale
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.abrev = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
+            this.abrev = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Direccion = new DevExpress.XtraReports.Parameters.Parameter();
+            this.telefono1 = new DevExpress.XtraReports.Parameters.Parameter();
+            this.telefono2 = new DevExpress.XtraReports.Parameters.Parameter();
+            this.correo = new DevExpress.XtraReports.Parameters.Parameter();
+            this.nombreEmpresa = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_vales_detalle1)).BeginInit();
@@ -118,9 +125,9 @@ namespace ortoxela.Pedido.Vale
             // 
             // xrTable2
             // 
-            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0.9167452F, 0F);
             this.xrTable2.Name = "xrTable2";
@@ -183,9 +190,9 @@ namespace ortoxela.Pedido.Vale
             // 
             // xrTable1
             // 
-            this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0.0001192093F, 0F);
             this.xrTable1.Name = "xrTable1";
@@ -239,9 +246,9 @@ namespace ortoxela.Pedido.Vale
             // 
             // xrLabel26
             // 
-            this.xrLabel26.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel26.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel26.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "v_vales_detalle_manual.precio_total")});
             this.xrLabel26.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,9 +267,9 @@ namespace ortoxela.Pedido.Vale
             // 
             // xrLabel24
             // 
-            this.xrLabel24.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel24.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel24.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "v_vales_detalle_manual.cantidad")});
             this.xrLabel24.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,68 +301,58 @@ namespace ortoxela.Pedido.Vale
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel31,
+            this.xrLabel30,
+            this.xrLabel15,
+            this.xrLabel29,
             this.xrLine2,
             this.xrLabel17,
             this.xrLabel16,
-            this.xrLabel15,
-            this.xrLabel14,
-            this.xrPictureBox1});
-            this.TopMargin.HeightF = 155.7084F;
+            this.xrLabel14});
+            this.TopMargin.HeightF = 185.4167F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLine2
             // 
-            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 147F);
+            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 180.1251F);
             this.xrLine2.Name = "xrLine2";
             this.xrLine2.SizeF = new System.Drawing.SizeF(741.0834F, 5.291672F);
             // 
             // xrLabel17
             // 
             this.xrLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0F, 126.875F);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0F, 160.0001F);
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel17.SizeF = new System.Drawing.SizeF(742F, 12.79169F);
             this.xrLabel17.StylePriority.UseFont = false;
             this.xrLabel17.StylePriority.UseTextAlignment = false;
             this.xrLabel17.Text = "*Traumatología *Cadera *Nerocirugía * Mano *Columna *Maxilofacial *Ortopedia Blan" +
-                "da *Medicina Deportiva";
+    "da *Medicina Deportiva";
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel16
             // 
             this.xrLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 105F);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 138.125F);
             this.xrLabel16.Name = "xrLabel16";
             this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel16.SizeF = new System.Drawing.SizeF(742F, 12.79169F);
+            this.xrLabel16.SizeF = new System.Drawing.SizeF(742F, 21.875F);
             this.xrLabel16.StylePriority.UseFont = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
             this.xrLabel16.Text = "Somos una emperesa dedicada a la venta y distribución de implantes quirúrgicos y " +
-                "de ortopedia blanda";
+    "de ortopedia blanda";
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // xrLabel15
-            // 
-            this.xrLabel15.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(403.4583F, 58.33332F);
-            this.xrLabel15.Multiline = true;
-            this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(338.5417F, 36.45832F);
-            this.xrLabel15.StylePriority.UseBorders = false;
-            this.xrLabel15.StylePriority.UseFont = false;
-            this.xrLabel15.Text = "     4072-7585 Emergencia\r\n     7767-1774\t\tortoxela@gmail.com";
             // 
             // xrLabel14
             // 
-            this.xrLabel14.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel14.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel14.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.Direccion, "Text", "")});
             this.xrLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(403.4583F, 21.875F);
             this.xrLabel14.Multiline = true;
@@ -365,17 +362,7 @@ namespace ortoxela.Pedido.Vale
             this.xrLabel14.StylePriority.UseBorders = false;
             this.xrLabel14.StylePriority.UseFont = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
-            this.xrLabel14.Text = "1era. Calle 5-87 Zona 9, Quetzaltenango Edificio Oviedo\r\nApartamento C. (a la par" +
-                " del Hospital Materno Infantil)";
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 21.875F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(156.2499F, 72.91665F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // BottomMargin
             // 
@@ -424,9 +411,9 @@ namespace ortoxela.Pedido.Vale
             // 
             // xrLabel25
             // 
-            this.xrLabel25.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel25.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(0.9167512F, 14F);
             this.xrLabel25.Multiline = true;
@@ -437,15 +424,15 @@ namespace ortoxela.Pedido.Vale
             this.xrLabel25.StylePriority.UseFont = false;
             this.xrLabel25.StylePriority.UseTextAlignment = false;
             this.xrLabel25.Text = "Estimado paciente: Nuestra empresa determinará que material se utilizó en la oper" +
-                "ación, favor de pasar a recoger su factura a nuestras oficinas el dia viernes de" +
-                "spués que haya sido operado.";
+    "ación, favor de pasar a recoger su factura a nuestras oficinas el dia viernes de" +
+    "spués que haya sido operado.";
             this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify;
             // 
             // xrLabel27
             // 
-            this.xrLabel27.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel27.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(0.9167671F, 57.20844F);
             this.xrLabel27.Multiline = true;
@@ -456,7 +443,7 @@ namespace ortoxela.Pedido.Vale
             this.xrLabel27.StylePriority.UseFont = false;
             this.xrLabel27.StylePriority.UseTextAlignment = false;
             this.xrLabel27.Text = "Devoluciones: se hará retención del 5%, por gastos operativos, al suspender la op" +
-                "eración por cualquier motivo.";
+    "eración por cualquier motivo.";
             this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify;
             // 
             // xrLabel12
@@ -553,7 +540,7 @@ namespace ortoxela.Pedido.Vale
             this.xrLabel19.SizeF = new System.Drawing.SizeF(732F, 23F);
             this.xrLabel19.StylePriority.UseFont = false;
             this.xrLabel19.Text = "Nombre del paciente:_____________________________________________________________" +
-                "_____________________________________________________";
+    "_____________________________________________________";
             // 
             // xrLabel20
             // 
@@ -564,7 +551,7 @@ namespace ortoxela.Pedido.Vale
             this.xrLabel20.SizeF = new System.Drawing.SizeF(732F, 23F);
             this.xrLabel20.StylePriority.UseFont = false;
             this.xrLabel20.Text = "Hora de pedido: ______________________ Hora de despacho:_________________________" +
-                "__ Fecha: ____________________________________________________";
+    "__ Fecha: ____________________________________________________";
             // 
             // xrLabel22
             // 
@@ -575,7 +562,7 @@ namespace ortoxela.Pedido.Vale
             this.xrLabel22.SizeF = new System.Drawing.SizeF(732F, 23F);
             this.xrLabel22.StylePriority.UseFont = false;
             this.xrLabel22.Text = "Cel:                                                                             " +
-                "       NIT:____________________________________________";
+    "       NIT:____________________________________________";
             // 
             // xrLabel21
             // 
@@ -586,14 +573,14 @@ namespace ortoxela.Pedido.Vale
             this.xrLabel21.SizeF = new System.Drawing.SizeF(732F, 23F);
             this.xrLabel21.StylePriority.UseFont = false;
             this.xrLabel21.Text = "Factura a nombre de:_____________________________________________________________" +
-                "___________________";
+    "___________________";
             // 
             // ID
             // 
             this.ID.Description = "Parameter1";
             this.ID.Name = "ID";
             this.ID.Type = typeof(int);
-            this.ID.Value = 0;
+            this.ID.ValueInfo = "0";
             // 
             // documento
             // 
@@ -649,7 +636,6 @@ namespace ortoxela.Pedido.Vale
             // 
             this.PaisDeOrigen.Description = "País de Origen";
             this.PaisDeOrigen.Name = "PaisDeOrigen";
-            this.PaisDeOrigen.Value = "";
             // 
             // xrLabel7
             // 
@@ -667,7 +653,6 @@ namespace ortoxela.Pedido.Vale
             // 
             this.Nota.Description = "Nota";
             this.Nota.Name = "Nota";
-            this.Nota.Value = "";
             // 
             // xrLabel5
             // 
@@ -685,12 +670,11 @@ namespace ortoxela.Pedido.Vale
             // 
             this.Instrumentista.Description = "Nombre del Instrumentista";
             this.Instrumentista.Name = "Instrumentista";
-            this.Instrumentista.Value = "";
             // 
             // xrLabel2
             // 
-            this.xrLabel2.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel2.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(348.25F, 0F);
             this.xrLabel2.Name = "xrLabel2";
@@ -704,9 +688,9 @@ namespace ortoxela.Pedido.Vale
             // 
             // xrTable3
             // 
-            this.xrTable3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 139.5417F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -814,21 +798,97 @@ namespace ortoxela.Pedido.Vale
             this.PageHeader.HeightF = 167.7083F;
             this.PageHeader.Name = "PageHeader";
             // 
-            // abrev
-            // 
-            this.abrev.Description = "abrev";
-            this.abrev.Name = "abrev";
-            this.abrev.Value = "";
-            // 
             // xrLabel28
             // 
             this.xrLabel28.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.abrev, "Text", "")});
             this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(111.4582F, 4.999987F);
             this.xrLabel28.Name = "xrLabel28";
-            this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel28.SizeF = new System.Drawing.SizeF(57.29169F, 23F);
             this.xrLabel28.Text = "xrLabel28";
+            // 
+            // abrev
+            // 
+            this.abrev.Description = "abrev";
+            this.abrev.Name = "abrev";
+            // 
+            // Direccion
+            // 
+            this.Direccion.Description = "direccion";
+            this.Direccion.Name = "Direccion";
+            // 
+            // telefono1
+            // 
+            this.telefono1.Description = "telefono1";
+            this.telefono1.Name = "telefono1";
+            // 
+            // telefono2
+            // 
+            this.telefono2.Description = "telefono2";
+            this.telefono2.Name = "telefono2";
+            // 
+            // correo
+            // 
+            this.correo.Description = "correo";
+            this.correo.Name = "correo";
+            // 
+            // nombreEmpresa
+            // 
+            this.nombreEmpresa.Description = "nombreEmpresa";
+            this.nombreEmpresa.Name = "nombreEmpresa";
+            // 
+            // xrLabel29
+            // 
+            this.xrLabel29.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.nombreEmpresa, "Text", "")});
+            this.xrLabel29.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel29.ForeColor = System.Drawing.Color.Navy;
+            this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(0F, 21.875F);
+            this.xrLabel29.Name = "xrLabel29";
+            this.xrLabel29.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel29.SizeF = new System.Drawing.SizeF(388.5417F, 82.45832F);
+            this.xrLabel29.StylePriority.UseFont = false;
+            this.xrLabel29.StylePriority.UseForeColor = false;
+            this.xrLabel29.Text = "xrLabel29";
+            // 
+            // xrLabel15
+            // 
+            this.xrLabel15.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.telefono1, "Text", "")});
+            this.xrLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(403.4583F, 58.33333F);
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(298.6249F, 23F);
+            this.xrLabel15.StylePriority.UseFont = false;
+            this.xrLabel15.Text = "xrLabel15";
+            // 
+            // xrLabel30
+            // 
+            this.xrLabel30.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.telefono2, "Text", "")});
+            this.xrLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(403.4583F, 81.33332F);
+            this.xrLabel30.Name = "xrLabel30";
+            this.xrLabel30.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel30.SizeF = new System.Drawing.SizeF(298.625F, 23F);
+            this.xrLabel30.StylePriority.UseFont = false;
+            this.xrLabel30.Text = "xrLabel30";
+            // 
+            // xrLabel31
+            // 
+            this.xrLabel31.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.correo, "Text", "")});
+            this.xrLabel31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(435.9999F, 104.3333F);
+            this.xrLabel31.Name = "xrLabel31";
+            this.xrLabel31.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel31.SizeF = new System.Drawing.SizeF(305.0833F, 22.99999F);
+            this.xrLabel31.StylePriority.UseFont = false;
+            this.xrLabel31.StylePriority.UseTextAlignment = false;
+            this.xrLabel31.Text = "xrLabel31";
+            this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // XtraReportVale
             // 
@@ -847,14 +907,19 @@ namespace ortoxela.Pedido.Vale
             this.DataMember = "v_vales_detalle_manual";
             this.DataSource = this.dataSet_vales_detalle1;
             this.FilterString = "[id_documento] = ?ID";
-            this.Margins = new System.Drawing.Printing.Margins(57, 51, 156, 5);
+            this.Margins = new System.Drawing.Printing.Margins(57, 51, 185, 5);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.ID,
             this.Instrumentista,
             this.Nota,
             this.PaisDeOrigen,
-            this.abrev});
-            this.Version = "12.1";
+            this.abrev,
+            this.Direccion,
+            this.telefono1,
+            this.telefono2,
+            this.correo,
+            this.nombreEmpresa});
+            this.Version = "12.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_vales_detalle1)).EndInit();
@@ -876,9 +941,7 @@ namespace ortoxela.Pedido.Vale
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
@@ -935,5 +998,14 @@ namespace ortoxela.Pedido.Vale
         private DevExpress.XtraReports.UI.XRLabel xrLabel27;
         private DevExpress.XtraReports.UI.XRLabel xrLabel28;
         private DevExpress.XtraReports.Parameters.Parameter abrev;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel29;
+        private DevExpress.XtraReports.Parameters.Parameter nombreEmpresa;
+        private DevExpress.XtraReports.Parameters.Parameter Direccion;
+        private DevExpress.XtraReports.Parameters.Parameter telefono1;
+        private DevExpress.XtraReports.Parameters.Parameter telefono2;
+        private DevExpress.XtraReports.Parameters.Parameter correo;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel31;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel30;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel15;
     }
 }

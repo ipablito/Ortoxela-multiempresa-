@@ -18,16 +18,6 @@ namespace ortoxela.Reportes.Sets
 
         private void f_imp_Load(object sender, EventArgs e)
         {
-            /*
-             DateTime dfi =Convert.ToDateTime(f_i);
-            DateTime dff= Convert.ToDateTime(f_f);
-            DataTable res = new DataTable();
-            DataSet_req_ajuTableAdapters.datosTableAdapter lg = new DataSet_req_ajuTableAdapters.datosTableAdapter();
-            R_req_aju reporte = new R_req_aju();
-            res = lg.GetData_reqajuentrefechas(id_se, dfi, dff);
-            reporte.SetDataSource(res);
-            crystalReportViewer1.ReportSource = reporte;
-             */
         }
 
 
@@ -38,6 +28,7 @@ namespace ortoxela.Reportes.Sets
             r_EnPedidos reporte = new r_EnPedidos();
             res = lg.GetData();
             reporte.SetDataSource(res);
+            reporte.SetParameterValue("nombreEmpresa", clases.ClassVariables.nombreEmpresa);
             crystalReportViewer1.ReportSource = reporte;
         }
 
@@ -50,6 +41,7 @@ namespace ortoxela.Reportes.Sets
             r_Reporte2 reporte = new r_Reporte2();
             res = lg.GetData(v1, v2);
             reporte.SetDataSource(res);
+            reporte.SetParameterValue("nombreEmpresa", clases.ClassVariables.nombreEmpresa);
             crystalReportViewer1.ReportSource = reporte;
         }
     }

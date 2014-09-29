@@ -28,7 +28,6 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraReportTraslado));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
@@ -50,7 +49,6 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.dataSetTraslado1 = new ortoxela.TrasladoBodega.PrintTraslado.DataSetTraslado();
             this.encabezadoTableAdapter = new ortoxela.TrasladoBodega.PrintTraslado.DataSetTrasladoTableAdapters.EncabezadoTableAdapter();
@@ -66,6 +64,8 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             this.detalleTableAdapter1 = new ortoxela.TrasladoBodega.PrintTraslado.DataSetTrasladoTableAdapters.detalleTableAdapter();
             this.dataSetTraslado2 = new ortoxela.TrasladoBodega.PrintTraslado.DataSetTraslado();
             this.ID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.nombreEmpresa = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTraslado1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -93,9 +93,9 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             // 
             // xrLabel12
             // 
-            this.xrLabel12.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel12.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Encabezado.descripcion")});
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(335.4166F, 32.99999F);
@@ -215,9 +215,9 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             // 
             // xrTable1
             // 
-            this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 118F);
             this.xrTable1.Name = "xrTable1";
@@ -259,12 +259,12 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel15,
             this.xrLabel14,
             this.xrLabel13,
             this.xrLabel8,
-            this.xrLabel6,
-            this.xrPictureBox1});
-            this.TopMargin.HeightF = 64F;
+            this.xrLabel6});
+            this.TopMargin.HeightF = 94.20834F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -273,7 +273,7 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             // 
             this.xrLabel14.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Encabezado.fecha_creacion", "{0:M/d/yyyy}")});
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(382.2917F, 33.75001F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(382.2917F, 71.20834F);
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel14.SizeF = new System.Drawing.SizeF(108.3333F, 23F);
@@ -283,7 +283,7 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             // 
             this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Encabezado.no_traslado_bodega")});
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(598.9583F, 33.75001F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(598.9583F, 71.20834F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel13.SizeF = new System.Drawing.SizeF(100F, 23F);
@@ -292,7 +292,7 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             // xrLabel8
             // 
             this.xrLabel8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(490.625F, 33.75001F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(490.625F, 71.20834F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel8.SizeF = new System.Drawing.SizeF(108.3333F, 23F);
@@ -304,7 +304,7 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             // xrLabel6
             // 
             this.xrLabel6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(273.9584F, 33.75001F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(273.9584F, 71.20834F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(108.3333F, 23F);
@@ -312,14 +312,6 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             this.xrLabel6.StylePriority.UseTextAlignment = false;
             this.xrLabel6.Text = "FECHA:";
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(273.9584F, 56.75F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // BottomMargin
             // 
@@ -363,9 +355,9 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             // 
             // xrTable2
             // 
-            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable2.Font = new System.Drawing.Font("Times New Roman", 8F);
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable2.Name = "xrTable2";
@@ -423,7 +415,28 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             // 
             this.ID.Name = "ID";
             this.ID.Type = typeof(int);
-            this.ID.Value = 0;
+            this.ID.ValueInfo = "0";
+            // 
+            // nombreEmpresa
+            // 
+            this.nombreEmpresa.Description = "nombreEmpresa";
+            this.nombreEmpresa.Name = "nombreEmpresa";
+            // 
+            // xrLabel15
+            // 
+            this.xrLabel15.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.nombreEmpresa, "Text", "")});
+            this.xrLabel15.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel15.ForeColor = System.Drawing.Color.Navy;
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10.00001F);
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(752F, 50.08334F);
+            this.xrLabel15.StylePriority.UseFont = false;
+            this.xrLabel15.StylePriority.UseForeColor = false;
+            this.xrLabel15.StylePriority.UseTextAlignment = false;
+            this.xrLabel15.Text = "xrLabel15";
+            this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // XtraReportTraslado
             // 
@@ -436,10 +449,11 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
             this.DataMember = "Encabezado";
             this.DataSource = this.dataSetTraslado2;
             this.FilterString = "[no_traslado_bodega] = ?ID";
-            this.Margins = new System.Drawing.Printing.Margins(44, 54, 64, 100);
+            this.Margins = new System.Drawing.Printing.Margins(44, 54, 94, 100);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.ID});
-            this.Version = "12.1";
+            this.ID,
+            this.nombreEmpresa});
+            this.Version = "12.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTraslado1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
@@ -455,7 +469,6 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DataSetTraslado dataSetTraslado1;
         private DataSetTrasladoTableAdapters.EncabezadoTableAdapter encabezadoTableAdapter;
         private Compra.PrintIngresoProd.DataSetIngresoProdTableAdapters.DetalleTableAdapter detalleTableAdapter;
@@ -487,5 +500,7 @@ namespace ortoxela.TrasladoBodega.PrintTraslado
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DataSetTraslado dataSetTraslado2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel15;
+        private DevExpress.XtraReports.Parameters.Parameter nombreEmpresa;
     }
 }

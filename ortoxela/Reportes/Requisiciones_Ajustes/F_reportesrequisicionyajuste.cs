@@ -62,6 +62,7 @@ namespace ortoxela.Reportes.Requisiciones_Ajustes
 
                     Compra.PrintIngresoProd.XtraReportIngresoProd reporte = new Compra.PrintIngresoProd.XtraReportIngresoProd();
                     reporte.Parameters["ID"].Value = val;
+                    reporte.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa;
                     reporte.RequestParameters = false;
                     reporte.ShowPreviewDialog();
                 }

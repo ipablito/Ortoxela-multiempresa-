@@ -140,6 +140,7 @@
             this.ribbonPageGroup21 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem148 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory2 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage10 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup23 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -231,6 +232,7 @@
             this.barButtonItem141 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem142 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem143 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem150 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory3 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -1097,8 +1099,18 @@
             // 
             this.ribbonPageGroup12.AllowTextClipping = false;
             this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem85);
+            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem148);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "INVENTARIOS";
+            // 
+            // barButtonItem148
+            // 
+            this.barButtonItem148.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem148.Caption = "Reportes de Sets";
+            this.barButtonItem148.Id = 178;
+            this.barButtonItem148.LargeGlyph = global::ortoxela.Properties.Resources.proveedor;
+            this.barButtonItem148.Name = "barButtonItem148";
+            this.barButtonItem148.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
             // 
             // ribbonPageCategory2
             // 
@@ -1374,9 +1386,11 @@
             this.barButtonItem137,
             this.barButtonItem141,
             this.barButtonItem142,
-            this.barButtonItem143});
+            this.barButtonItem143,
+            this.barButtonItem150,
+            this.barButtonItem148});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 177;
+            this.ribbon.MaxItemId = 179;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory3,
@@ -2082,6 +2096,7 @@
             this.barButtonItem137.Id = 173;
             this.barButtonItem137.LargeGlyph = global::ortoxela.Properties.Resources.ajustes_y_reqi;
             this.barButtonItem137.Name = "barButtonItem137";
+            this.barButtonItem137.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
             // 
             // barButtonItem141
             // 
@@ -2090,6 +2105,7 @@
             this.barButtonItem141.Id = 174;
             this.barButtonItem141.LargeGlyph = global::ortoxela.Properties.Resources.trasladar48;
             this.barButtonItem141.Name = "barButtonItem141";
+            this.barButtonItem141.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
             // 
             // barButtonItem142
             // 
@@ -2108,6 +2124,15 @@
             this.barButtonItem143.LargeGlyph = global::ortoxela.Properties.Resources.archivo_icono_4678_48;
             this.barButtonItem143.Name = "barButtonItem143";
             this.barButtonItem143.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
+            // 
+            // barButtonItem150
+            // 
+            this.barButtonItem150.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem150.Caption = "Logotipo";
+            this.barButtonItem150.Id = 177;
+            this.barButtonItem150.LargeGlyph = global::ortoxela.Properties.Resources.marca;
+            this.barButtonItem150.Name = "barButtonItem150";
+            this.barButtonItem150.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
             // 
             // ribbonPageCategory3
             // 
@@ -2231,6 +2256,7 @@
             // ribbonPageGroup15
             // 
             this.ribbonPageGroup15.ItemLinks.Add(this.ribbonGalleryBarItem2);
+            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem150);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             this.ribbonPageGroup15.Text = "PERSONALIZAR";
             // 
@@ -2484,9 +2510,9 @@
             // 
             // chartControl1
             // 
-            this.chartControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartAnchorPoint1.X = 6;
             chartAnchorPoint1.Y = 43;
             textAnnotation1.AnchorPoint = chartAnchorPoint1;
@@ -2811,5 +2837,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem141;
         private DevExpress.XtraBars.BarButtonItem barButtonItem142;
         private DevExpress.XtraBars.BarButtonItem barButtonItem143;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem150;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem148;
     }
 }

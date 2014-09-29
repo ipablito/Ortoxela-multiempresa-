@@ -182,7 +182,7 @@ namespace ortoxela.Reportes.Inventario
             this.xrLabel6,
             this.xrPageInfo1,
             this.xrPageInfo5});
-            this.TopMargin.HeightF = 30F;
+            this.TopMargin.HeightF = 84.16667F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -191,28 +191,29 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.nombreEmpresa, "Text", "")});
-            this.xrLabel6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(258.2084F, 0F);
+            this.xrLabel6.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel6.ForeColor = System.Drawing.Color.Navy;
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(2.249877F, 0F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(332.2917F, 23F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(811.7501F, 52.16667F);
             this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.StylePriority.UseForeColor = false;
             this.xrLabel6.StylePriority.UseTextAlignment = false;
             this.xrLabel6.Text = "xrLabel6";
-            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // nombreEmpresa
             // 
             this.nombreEmpresa.Description = "nombreEmpresa";
             this.nombreEmpresa.Name = "nombreEmpresa";
-            this.nombreEmpresa.Value = "";
             this.nombreEmpresa.Visible = false;
             // 
             // xrPageInfo1
             // 
             this.xrPageInfo1.Font = new System.Drawing.Font("Arial Narrow", 10F);
             this.xrPageInfo1.Format = "Pagina {0} de {#}";
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(713.9999F, 0F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(713.9999F, 61.16667F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(100F, 23F);
@@ -224,7 +225,7 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.xrPageInfo5.Font = new System.Drawing.Font("Arial", 10F);
             this.xrPageInfo5.Format = "{0:d\' de \'MMMM\' de \'yyyy hh:mm tt}";
-            this.xrPageInfo5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrPageInfo5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 61.16667F);
             this.xrPageInfo5.Name = "xrPageInfo5";
             this.xrPageInfo5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo5.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
@@ -282,7 +283,6 @@ namespace ortoxela.Reportes.Inventario
             // bodega
             // 
             this.bodega.Name = "bodega";
-            this.bodega.Value = "";
             this.bodega.Visible = false;
             // 
             // xrLabel18
@@ -337,7 +337,6 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.Fecha_fin.Name = "Fecha_fin";
             this.Fecha_fin.Type = typeof(System.DateTime);
-            this.Fecha_fin.Value = new System.DateTime(((long)(0)));
             this.Fecha_fin.Visible = false;
             // 
             // xrLabel13
@@ -358,7 +357,6 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.Fecha_inicio.Name = "Fecha_inicio";
             this.Fecha_inicio.Type = typeof(System.DateTime);
-            this.Fecha_inicio.Value = new System.DateTime(((long)(0)));
             this.Fecha_inicio.Visible = false;
             // 
             // xrLabel12
@@ -525,21 +523,21 @@ namespace ortoxela.Reportes.Inventario
             // 
             this.existencia.Name = "existencia";
             this.existencia.Type = typeof(int);
-            this.existencia.Value = 0;
+            this.existencia.ValueInfo = "0";
             this.existencia.Visible = false;
             // 
             // codigo_bodega1
             // 
             this.codigo_bodega1.Name = "codigo_bodega1";
             this.codigo_bodega1.Type = typeof(int);
-            this.codigo_bodega1.Value = 0;
+            this.codigo_bodega1.ValueInfo = "0";
             this.codigo_bodega1.Visible = false;
             // 
             // codigo_bodega2
             // 
             this.codigo_bodega2.Name = "codigo_bodega2";
             this.codigo_bodega2.Type = typeof(int);
-            this.codigo_bodega2.Value = 0;
+            this.codigo_bodega2.ValueInfo = "0";
             this.codigo_bodega2.Visible = false;
             // 
             // Venta_Total
@@ -563,7 +561,7 @@ namespace ortoxela.Reportes.Inventario
             this.DataAdapter = this.v_inventarioTableAdapter;
             this.DataMember = "v_inventario";
             this.DataSource = this.dataSet_Inventario1;
-            this.Margins = new System.Drawing.Printing.Margins(17, 19, 30, 30);
+            this.Margins = new System.Drawing.Printing.Margins(17, 19, 84, 30);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.Fecha_inicio,
             this.Fecha_fin,
@@ -572,7 +570,7 @@ namespace ortoxela.Reportes.Inventario
             this.codigo_bodega2,
             this.bodega,
             this.nombreEmpresa});
-            this.Version = "12.1";
+            this.Version = "12.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Inventario1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

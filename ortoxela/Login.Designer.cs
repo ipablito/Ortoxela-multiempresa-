@@ -33,6 +33,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ortoxela.WaitForm1), true, true);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl_empresa = new DevExpress.XtraEditors.LabelControl();
+            this.gridLookUpEdit_empresa = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
@@ -47,6 +51,9 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_empresa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -58,39 +65,81 @@
             // panelControl1
             // 
             this.panelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.LightGreen;
+            this.panelControl1.Appearance.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.labelControl_empresa);
+            this.panelControl1.Controls.Add(this.gridLookUpEdit_empresa);
+            this.panelControl1.Controls.Add(this.checkEdit1);
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Controls.Add(this.simpleaceptar);
             this.panelControl1.Controls.Add(this.simplecancelar);
-            this.panelControl1.Location = new System.Drawing.Point(19, 23);
+            this.panelControl1.Location = new System.Drawing.Point(43, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(541, 220);
+            this.panelControl1.Size = new System.Drawing.Size(541, 289);
             this.panelControl1.TabIndex = 1;
+            // 
+            // labelControl_empresa
+            // 
+            this.labelControl_empresa.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl_empresa.Location = new System.Drawing.Point(15, 5);
+            this.labelControl_empresa.Name = "labelControl_empresa";
+            this.labelControl_empresa.Size = new System.Drawing.Size(102, 22);
+            this.labelControl_empresa.TabIndex = 14;
+            this.labelControl_empresa.Text = "Mastetech GT";
+            // 
+            // gridLookUpEdit_empresa
+            // 
+            this.gridLookUpEdit_empresa.EditValue = "Ortoxela";
+            this.gridLookUpEdit_empresa.Location = new System.Drawing.Point(192, 189);
+            this.gridLookUpEdit_empresa.Name = "gridLookUpEdit_empresa";
+            this.gridLookUpEdit_empresa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gridLookUpEdit_empresa.Properties.View = this.gridLookUpEdit1View;
+            this.gridLookUpEdit_empresa.Size = new System.Drawing.Size(312, 20);
+            this.gridLookUpEdit_empresa.TabIndex = 13;
+            this.gridLookUpEdit_empresa.Visible = false;
+            this.gridLookUpEdit_empresa.TextChanged += new System.EventHandler(this.gridLookUpEdit_empresa_TextChanged);
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // checkEdit1
+            // 
+            this.checkEdit1.Location = new System.Drawing.Point(58, 190);
+            this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Caption = "Cambiar de Empresa";
+            this.checkEdit1.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style16;
+            this.checkEdit1.Size = new System.Drawing.Size(128, 22);
+            this.checkEdit1.TabIndex = 12;
+            this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged_1);
             // 
             // groupControl1
             // 
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.LightGreen;
+            this.groupControl1.Appearance.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.pictureEdit1);
             this.groupControl1.Controls.Add(this.textEditcontraseña);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.textEditnombre);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(15, 17);
+            this.groupControl1.Location = new System.Drawing.Point(15, 32);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(502, 133);
+            this.groupControl1.Size = new System.Drawing.Size(502, 151);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Login";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl3.Location = new System.Drawing.Point(264, 109);
+            this.labelControl3.Location = new System.Drawing.Point(200, 120);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(0, 16);
             this.labelControl3.TabIndex = 6;
@@ -98,31 +147,32 @@
             // pictureEdit1
             // 
             this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureEdit1.EditValue = global::ortoxela.Properties.Resources.Logo_final1;
-            this.pictureEdit1.Location = new System.Drawing.Point(14, 36);
+            this.pictureEdit1.EditValue = global::ortoxela.Properties.Resources.LogoMT;
+            this.pictureEdit1.Location = new System.Drawing.Point(14, 24);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(157, 65);
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.pictureEdit1.Size = new System.Drawing.Size(157, 122);
             this.pictureEdit1.TabIndex = 5;
             this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
             // 
             // textEditcontraseña
             // 
-            this.textEditcontraseña.Location = new System.Drawing.Point(264, 81);
+            this.textEditcontraseña.Location = new System.Drawing.Point(303, 91);
             this.textEditcontraseña.Name = "textEditcontraseña";
-            this.textEditcontraseña.Properties.PasswordChar = '$';
-            this.textEditcontraseña.Size = new System.Drawing.Size(225, 20);
+            this.textEditcontraseña.Properties.PasswordChar = '●';
+            this.textEditcontraseña.Size = new System.Drawing.Size(173, 20);
             this.textEditcontraseña.TabIndex = 1;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "Ingrese su nombre de usuario";
+            conditionValidationRule1.ErrorText = "Ingrese su contraseña";
             this.dxValidationProvider1.SetValidationRule(this.textEditcontraseña, conditionValidationRule1);
+            this.textEditcontraseña.TextChanged += new System.EventHandler(this.textEditcontraseña_TextChanged);
             this.textEditcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEditcontraseña_KeyPress);
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(177, 80);
+            this.labelControl2.Location = new System.Drawing.Point(215, 94);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(82, 18);
             this.labelControl2.TabIndex = 3;
@@ -130,16 +180,17 @@
             // 
             // textEditnombre
             // 
-            this.textEditnombre.Location = new System.Drawing.Point(264, 38);
+            this.textEditnombre.Location = new System.Drawing.Point(303, 48);
             this.textEditnombre.Name = "textEditnombre";
-            this.textEditnombre.Size = new System.Drawing.Size(225, 20);
+            this.textEditnombre.Size = new System.Drawing.Size(173, 20);
             this.textEditnombre.TabIndex = 0;
             this.dxValidationProvider1.SetValidationRule(this.textEditnombre, conditionValidationRule1);
+            this.textEditnombre.TextChanged += new System.EventHandler(this.textEditnombre_TextChanged);
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(204, 37);
+            this.labelControl1.Location = new System.Drawing.Point(215, 47);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(54, 18);
             this.labelControl1.TabIndex = 1;
@@ -150,10 +201,10 @@
             this.simpleaceptar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleaceptar.Appearance.Options.UseFont = true;
             this.simpleaceptar.Image = global::ortoxela.Properties.Resources.entrar;
-            this.simpleaceptar.Location = new System.Drawing.Point(192, 156);
+            this.simpleaceptar.Location = new System.Drawing.Point(192, 242);
             this.simpleaceptar.Name = "simpleaceptar";
             this.simpleaceptar.Size = new System.Drawing.Size(142, 42);
-            this.simpleaceptar.TabIndex = 0;
+            this.simpleaceptar.TabIndex = 2;
             this.simpleaceptar.Text = "Entrar";
             this.simpleaceptar.Click += new System.EventHandler(this.simpleaceptar_Click);
             // 
@@ -162,29 +213,35 @@
             this.simplecancelar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simplecancelar.Appearance.Options.UseFont = true;
             this.simplecancelar.Image = global::ortoxela.Properties.Resources.salir;
-            this.simplecancelar.Location = new System.Drawing.Point(375, 156);
+            this.simplecancelar.Location = new System.Drawing.Point(362, 242);
             this.simplecancelar.Name = "simplecancelar";
             this.simplecancelar.Size = new System.Drawing.Size(142, 42);
-            this.simplecancelar.TabIndex = 1;
+            this.simplecancelar.TabIndex = 3;
             this.simplecancelar.Text = "Cancelar/Salir";
             this.simplecancelar.Click += new System.EventHandler(this.simplecancelar_Click);
             // 
             // Login
             // 
-            this.Appearance.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.Appearance.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 268);
+            this.ClientSize = new System.Drawing.Size(630, 313);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "facinvOX";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_empresa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -209,8 +266,12 @@
         private DevExpress.XtraBars.Alerter.AlertControl alertControl1;
         private DevExpress.XtraEditors.TextEdit textEditcontraseña;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit_empresa;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraEditors.CheckEdit checkEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl_empresa;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
 
     }

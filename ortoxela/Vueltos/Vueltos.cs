@@ -177,7 +177,12 @@ namespace ortoxela.Vueltos
         {
             try
             {
+                MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                DataTable nt = new DataTable();
+                ad.Fill(nt);
+
                 Vuelto.XtraReportVueltos reporte = new Vuelto.XtraReportVueltos();
+                reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
                 reporte.Parameters["id"].Value = id_vuelto;
                 reporte.Parameters["letras"].Value = logicaorto.enletras(monto)+" QUETZALES";
                 reporte.Parameters["banco"].Value = banco+".";

@@ -100,24 +100,26 @@ namespace ortoxela.Reportes.Inventario
         {
             this.Cursor = Cursors.WaitCursor;
 
-            Int32 bodega1 = 0;
-            Int32 bodega2 = 100;
-            string botittle = "Todas";
-            string consulta = "";
-
-            cargarbodegas();
-
-            //verificar si lo quiere detallado o no
-            if (checkBox_detallado1.Checked == true)
+            try
             {
-                consulta = "SELECT codigo_articulo, articulo, Ult_compra, Ult_venta, Ult_precio, CONCAT('En bodega: ', nombre_bodega) AS nombre_bodega, categoria, codigo_categoria, existencia_articulo, codigo_bodega  " +
-                                       " FROM v_inventario where codigo_bodega in(" + Bodega_origen_int + ")";
-            }
-            else
-            {
-                consulta = "SELECT codigo_articulo, articulo, Ult_compra, Ult_venta, Ult_precio, categoria, codigo_categoria, existencia_articulo, codigo_bodega  " +
-                                       " FROM v_inventario where codigo_bodega in(" + Bodega_origen_int + ") GROUP BY codigo_articulo ";
-            }
+                Int32 bodega1 = 0;
+                Int32 bodega2 = 100;
+                string botittle = "Todas";
+                string consulta = "";
+
+                cargarbodegas();
+
+                //verificar si lo quiere detallado o no
+                if (checkBox_detallado1.Checked == true)
+                {
+                    consulta = "SELECT codigo_articulo, articulo, Ult_compra, Ult_venta, Ult_precio, CONCAT('En bodega: ', nombre_bodega) AS nombre_bodega, categoria, codigo_categoria, existencia_articulo, codigo_bodega  " +
+                                           " FROM v_inventario where codigo_bodega in(" + Bodega_origen_int + ")";
+                }
+                else
+                {
+                    consulta = "SELECT codigo_articulo, articulo, Ult_compra, Ult_venta, Ult_precio, categoria, codigo_categoria, existencia_articulo, codigo_bodega  " +
+                                           " FROM v_inventario where codigo_bodega in(" + Bodega_origen_int + ") GROUP BY codigo_articulo ";
+                }
 
                 if (comboBoxCategorias.SelectedValue.ToString() != "0")
                 {
@@ -150,9 +152,9 @@ namespace ortoxela.Reportes.Inventario
                 MySqlDataAdapter adaptador1 = new MySqlDataAdapter(consulta, Properties.Settings.Default.ortoxelaConnectionString);
                 DataSet_Inventario dataset = new DataSet_Inventario();
                 adaptador1.Fill(dataset, "v_inventario");
-            
-            //comprobar que el dataset no este vacio para no devuelva basura
-                if (dataset.v_inventario.Rows.Count==0)
+
+                //comprobar que el dataset no este vacio para no devuelva basura
+                if (dataset.v_inventario.Rows.Count == 0)
                 {
                     MessageBox.Show("Este reporte no contiene informacion");
                 }
@@ -166,6 +168,10 @@ namespace ortoxela.Reportes.Inventario
                     reportee.RequestParameters = false;
                     reportee.ShowPreviewDialog();
                 }
+            }
+            catch
+            { }
+
             this.Cursor = Cursors.Default;
         }
 
@@ -329,57 +335,62 @@ namespace ortoxela.Reportes.Inventario
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            cargarbodegas();
-            string consulta = "SELECT        codigo_articulo, articulo, Ult_compra, Ult_venta, Ult_precio, nombre_bodega, categoria, codigo_categoria, existencia_articulo, codigo_bodega FROM v_inventario where codigo_bodega in (" + Bodega_origen_int + ")  ";
-
-
-            if (comboBoxCategorias.SelectedValue.ToString() == "0")
+            try
             {
-                if ((textEdit6.Text.Trim() != "") || (textEdit5.Text.Trim() != ""))
+                cargarbodegas();
+                string consulta = "SELECT        codigo_articulo, articulo, Ult_compra, Ult_venta, Ult_precio, nombre_bodega, categoria, codigo_categoria, existencia_articulo, codigo_bodega FROM v_inventario where codigo_bodega in (" + Bodega_origen_int + ")  ";
+
+
+                if (comboBoxCategorias.SelectedValue.ToString() == "0")
                 {
-                    if ((textEdit6.Text.Trim() != "") && (textEdit5.Text.Trim() == ""))
+                    if ((textEdit6.Text.Trim() != "") || (textEdit5.Text.Trim() != ""))
                     {
-                        consulta = consulta + " and  codigo_articulo like '%" + textEdit6.Text + "%'";
-                    }
-                    else
-                    {
-                        if ((textEdit6.Text.Trim() == "") && (textEdit5.Text.Trim() != ""))
+                        if ((textEdit6.Text.Trim() != "") && (textEdit5.Text.Trim() == ""))
                         {
-                            consulta = consulta + " and codigo_articulo like '%" + textEdit5.Text + "%'";
+                            consulta = consulta + " and  codigo_articulo like '%" + textEdit6.Text + "%'";
                         }
                         else
                         {
-                            consulta = consulta + " and codigo_articulo between '" + textEdit6.Text + "' and '" + textEdit5.Text + "' ";
+                            if ((textEdit6.Text.Trim() == "") && (textEdit5.Text.Trim() != ""))
+                            {
+                                consulta = consulta + " and codigo_articulo like '%" + textEdit5.Text + "%'";
+                            }
+                            else
+                            {
+                                consulta = consulta + " and codigo_articulo between '" + textEdit6.Text + "' and '" + textEdit5.Text + "' ";
+                            }
                         }
-                    }
 
+                    }
+                }
+                else
+                {
+                    consulta = consulta + " and codigo_categoria = " + comboBoxCategorias.SelectedValue;
+                }
+                consulta = consulta + " GROUP BY codigo_articulo";
+
+
+                MySqlDataAdapter adaptador1 = new MySqlDataAdapter(consulta, Properties.Settings.Default.ortoxelaConnectionString);
+                DataSet_Inventario dataset = new DataSet_Inventario();
+                adaptador1.Fill(dataset, "v_inventario");
+
+                //comprobar que el dataset no este vacio para no devuelva basura
+                if (dataset.v_inventario.Rows.Count == 0)
+                {
+                    MessageBox.Show("Este reporte no contiene informacion");
+                }
+                else
+                {
+                    XtraReport_TomaInventario reportet = new XtraReport_TomaInventario();
+                    reportet.DataSource = dataset;
+                    reportet.DataMember = dataset.Tables["v_inventario"].TableName;
+                    reportet.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa;
+                    reportet.RequestParameters = false;
+                    reportet.ShowPreviewDialog();
                 }
             }
-            else
-            {
-                consulta = consulta + " and codigo_categoria = " + comboBoxCategorias.SelectedValue;
-            }
-            consulta = consulta + " GROUP BY codigo_articulo";
-
-
-            MySqlDataAdapter adaptador1 = new MySqlDataAdapter(consulta, Properties.Settings.Default.ortoxelaConnectionString);
-            DataSet_Inventario dataset = new DataSet_Inventario();
-            adaptador1.Fill(dataset, "v_inventario");
-
-            //comprobar que el dataset no este vacio para no devuelva basura
-            if (dataset.v_inventario.Rows.Count == 0)
-            {
-                MessageBox.Show("Este reporte no contiene informacion");
-            }
-            else
-            {
-                XtraReport_TomaInventario reportet = new XtraReport_TomaInventario();
-                reportet.DataSource = dataset;
-                reportet.DataMember = dataset.Tables["v_inventario"].TableName;
-                reportet.Parameters["nombreEmpresa"].Value = clases.ClassVariables.nombreEmpresa;
-                reportet.RequestParameters = false;
-                reportet.ShowPreviewDialog();
-            }
+            catch
+            { }
             this.Cursor = Cursors.Default;
         }
 

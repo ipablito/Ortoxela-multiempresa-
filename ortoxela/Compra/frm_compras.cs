@@ -651,7 +651,12 @@ namespace ortoxela.Compra
             this.Cursor = Cursors.WaitCursor;
             try
             {
+                MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                DataTable nt = new DataTable();
+                ad.Fill(nt);
+
                 PrintIngresoProd.XtraReportIngresoProd reporte = new PrintIngresoProd.XtraReportIngresoProd();
+                reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
                 reporte.Parameters["ID"].Value=id_nuevoIngreso;
                 reporte.RequestParameters = false;
                 reporte.ShowPreviewDialog();
@@ -691,11 +696,17 @@ namespace ortoxela.Compra
             cns = dt.Rows[0][0].ToString();
             string formapago = "";
             if (cns == "6")
-            { 
+            {
+                string nitp = "0";
+                string nombrep = "Sin Proveedor";
+                    try
+                    {
                 cns ="SELECT nit,nombre_proveedor FROM proveedores WHERE codigo_proveedor="+gridLookProveedor.EditValue;
                 dt=logicaxela.Tabla(cns);
-                string nitp=dt.Rows[0][0].ToString();
-                string nombrep=dt.Rows[0][1].ToString();
+                nitp=dt.Rows[0][0].ToString();
+                nombrep=dt.Rows[0][1].ToString();
+                    }
+                catch{}
                 string fp ="";
                 int nodoc = Convert.ToInt32(textNoFacturaCompra.Text);
                 string sf = comboBox_seriesComprasINVEX.Text;
@@ -878,6 +889,11 @@ namespace ortoxela.Compra
                     comboBox_seriesComprasINVEX.Text = "";
                     comboBox_seriesComprasINVEX.Enabled = false;
                 }
+            }
+            else
+            {
+                comboBox_seriesComprasINVEX.Text = "";
+                comboBox_seriesComprasINVEX.Enabled = false;
             }
 
 

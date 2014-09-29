@@ -431,10 +431,20 @@ namespace ortoxela.Cotizacion
         private void simplePrinter_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+
             XtraReport_Solicitud_compra reporte = new XtraReport_Solicitud_compra();
             try
             {
+                MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                DataTable nt = new DataTable();
+                ad.Fill(nt);
+
                 reporte.Parameters["ID"].Value = id_nuevo_pedido;
+                reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
+                reporte.Parameters["direccion"].Value = "Direccion: " + nt.Rows[0]["direccion"].ToString();
+                reporte.Parameters["telefonos"].Value = "Telefono: " + nt.Rows[0]["telefono"].ToString() + ", Telefono auxiliar: " + nt.Rows[0]["telefono2"].ToString();
+                reporte.Parameters["correo"].Value = "Correo: " + nt.Rows[0]["correo"].ToString();
+
                 reporte.RequestParameters = false;
                 reporte.ShowPreviewDialog();
             }
@@ -442,7 +452,16 @@ namespace ortoxela.Cotizacion
             {
                 try
                 {
+                    MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                    DataTable nt = new DataTable();
+                    ad.Fill(nt);
+
                     reporte.Parameters["ID"].Value = id_nuevo_pedido;
+                    reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
+                    reporte.Parameters["direccion"].Value = "Direccion: " + nt.Rows[0]["direccion"].ToString();
+                    reporte.Parameters["telefonos"].Value = "Telefono: " + nt.Rows[0]["telefono"].ToString() + ", Telefono auxiliar: " + nt.Rows[0]["telefono2"].ToString();
+                    reporte.Parameters["correo"].Value = "Correo: " + nt.Rows[0]["correo"].ToString();
+
                     reporte.RequestParameters = false;
                     reporte.ShowPreviewDialog();
                 }
@@ -450,7 +469,16 @@ namespace ortoxela.Cotizacion
                 {
                     try
                     {
+                        MySqlDataAdapter ad = new MySqlDataAdapter("select * from empresa where idEmpresa=" + clases.ClassVariables.idEmpresa.ToString(), clases.ClassVariables.ConexionMaster);
+                        DataTable nt = new DataTable();
+                        ad.Fill(nt);
+
                         reporte.Parameters["ID"].Value = id_nuevo_pedido;
+                        reporte.Parameters["nombreEmpresa"].Value = nt.Rows[0]["nombre"].ToString();
+                        reporte.Parameters["direccion"].Value = "Direccion: " + nt.Rows[0]["direccion"].ToString();
+                        reporte.Parameters["telefonos"].Value = "Telefono: " + nt.Rows[0]["telefono"].ToString() + ", Telefono auxiliar: " + nt.Rows[0]["telefono2"].ToString();
+                        reporte.Parameters["correo"].Value = "Correo: " + nt.Rows[0]["correo"].ToString();
+
                         reporte.RequestParameters = false;
                         reporte.ShowPreviewDialog();
                     }

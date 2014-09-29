@@ -167,7 +167,7 @@ namespace ortoxela.Pedido
             gridView1.Columns["CODIGO"].OptionsColumn.ReadOnly = true;
             gridView1.Columns["DESCRIPCION"].OptionsColumn.ReadOnly = true;
             gridView1.Columns["CANTIDAD"].OptionsColumn.ReadOnly = true;
-            //gridView1.Columns["PRECIO UNITARIO"].OptionsColumn.ReadOnly = true;
+            gridView1.Columns["PRECIO UNITARIO"].OptionsColumn.ReadOnly = true;
             gridView1.Columns["SUB TOTAL"].OptionsColumn.ReadOnly = true;
             gridView1.UpdateCurrentRow();
         }
@@ -312,14 +312,16 @@ namespace ortoxela.Pedido
                         }
                         string tempoValor = textTotalDevuelta.Text.Replace(",", "");
 
-                        if (double.Parse(tempoValor.ToString(), NumberStyles.Currency) > 0)
-                        {
-                            cadena = "INSERT into vueltos(codigo_cliente, id_vale,id_recibo,id_pedido, monto_vuelto, fecha_creacion, estadoid) " +
-                                        "VALUES (" + id_cliente + ", " + id_vale + "," + id_recibo + "," + id_pedido + ", " + double.Parse(tempoValor.ToString(), NumberStyles.Currency) + ", '" + DateTime.Now.ToString("yyyy-MM-dd") + "',4)";
-                            comando = new MySqlCommand(cadena, conexion);
-                            comando.Transaction = transa;
-                            comando.ExecuteNonQuery();
-                        }
+                        //if (double.Parse(tempoValor.ToString(), NumberStyles.Currency) > 0)
+                        //{
+                        //    cadena = "INSERT into vueltos(codigo_cliente, id_vale,id_recibo,id_pedido, monto_vuelto, fecha_creacion, estadoid) " +
+                        //                "VALUES (" + id_cliente + ", " + id_vale + "," + id_recibo + "," + id_pedido + ", " + double.Parse(tempoValor.ToString(), NumberStyles.Currency) + ", '" + DateTime.Now.ToString("yyyy-MM-dd") + "',4)";
+                        //    comando = new MySqlCommand(cadena, conexion);
+                        //    comando.Transaction = transa;
+                        //    comando.ExecuteNonQuery();
+                        //}
+
+
                         cadena = "UPDATE header_doctos_inv SET header_doctos_inv.estadoid=5 WHERE header_doctos_inv.id_documento=" + id_pedido;
                         comando = new MySqlCommand(cadena, conexion);
                         comando.Transaction = transa;
@@ -412,7 +414,7 @@ namespace ortoxela.Pedido
             gridView4.Columns["CODIGO"].OptionsColumn.ReadOnly = true;
             gridView4.Columns["DESCRIPCION"].OptionsColumn.ReadOnly = true;
             gridView4.Columns["CANTIDAD"].OptionsColumn.ReadOnly = true;
-            gridView4.Columns["UNITARIO"].OptionsColumn.ReadOnly = true;
+            //gridView4.Columns["UNITARIO"].OptionsColumn.ReadOnly = true;
             gridView4.Columns["TOTAL"].OptionsColumn.ReadOnly = true;
             for (int x = 0; x < gridView1.DataRowCount;x++)
             {
@@ -553,9 +555,9 @@ namespace ortoxela.Pedido
                         conexion.Close();
                         conexion.Open();
                         transa = conexion.BeginTransaction();
-                        string tempoTotalFactura = textTotalFactura.Text.Replace(",", "");
+                        string tempoTotalDeFactura = textTotalDeFactura.Text.Replace(",", "");
                         cadena = "INSERT into header_doctos_inv(codigo_serie,tipo_pago,no_documento, codigo_cliente, fecha, monto,descuento , monto_neto, usuario_creador,socio_comercial, estadoid,contado_credito,refer_documento,vendedor) " +
-                                "VALUES (" + gridLookDocFactura.EditValue + "," + gridLookTipoPago.EditValue + ", '" + textNumeroDocFactura.Text + "', " + id_cliente + ", '" + dateEdit1.DateTime.ToString("yyyy-MM-dd HH:mm:ss") + "', " + double.Parse(tempoTotalFactura.ToString(), NumberStyles.Currency) + ",0," + double.Parse(tempoTotalFactura.ToString(), NumberStyles.Currency) + ", " + clases.ClassVariables.id_usuario + "," + id_socio_comercial + ",4," + radioGroup1.SelectedIndex + ",'" + textDeposito.Text + "'," + gridLookUpEdit1.EditValue + ");select last_insert_id();";
+                                "VALUES (" + gridLookDocFactura.EditValue + "," + gridLookTipoPago.EditValue + ", '" + textNumeroDocFactura.Text + "', " + id_cliente + ", '" + dateEdit1.DateTime.ToString("yyyy-MM-dd HH:mm:ss") + "', " + double.Parse(tempoTotalDeFactura.ToString(), NumberStyles.Currency) + ",0," + double.Parse(tempoTotalDeFactura.ToString(), NumberStyles.Currency) + ", " + clases.ClassVariables.id_usuario + "," + id_socio_comercial + ",4," + radioGroup1.SelectedIndex + ",'" + textDeposito.Text + "'," + gridLookUpEdit1.EditValue + ");select last_insert_id();";
 
                         
                         
@@ -570,6 +572,23 @@ namespace ortoxela.Pedido
                             comando.Transaction = transa;
                             comando.ExecuteNonQuery();
                         }
+
+
+                        string tempoValor = ""; //textTotalDevuelta.Text.Replace(",", "");
+                        decimal can1 = Convert.ToDecimal(textTotalPedido.Text.Replace(",", "").Replace("Q", ""));
+                        decimal can3=Convert.ToDecimal(textTotalDeFactura.Text.Replace(",", ""));
+                        decimal vvv = can1- can3;
+                        tempoValor = vvv.ToString();
+                        //vueltos
+                        if (double.Parse(tempoValor.ToString(), NumberStyles.Currency) > 0)
+                        {
+                            cadena = "INSERT into vueltos(codigo_cliente, id_vale,id_recibo,id_pedido, monto_vuelto, fecha_creacion, estadoid) " +
+                                        "VALUES (" + id_cliente + ", " + id_vale + "," + id_recibo + "," + id_pedido + ", " + double.Parse(tempoValor.ToString(), NumberStyles.Currency) + ", '" + DateTime.Now.ToString("yyyy-MM-dd") + "',4)";
+                            comando = new MySqlCommand(cadena, conexion);
+                            comando.Transaction = transa;
+                            comando.ExecuteNonQuery();
+                        }
+                        //
 
                         if (Class_integracion.logeado == true)
                         {
@@ -941,6 +960,67 @@ namespace ortoxela.Pedido
         private void gridLookUpEdit1_EditValueChanged(object sender, EventArgs e)
         {
             textEditVENDEDOR.Text = gridLookUpEdit1.Text;
+        }
+
+        private void gridView4_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            /*if (e.Column.Name == "colZonaacumulada")
+            {
+                decimal zo = 0;
+                decimal ex = 0;
+
+                    zo = Convert.ToDecimal(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Zona acumulada"));
+                    ex = Convert.ToDecimal(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Examen Final"));
+
+                decimal t = zo + ex;
+                if (t <= 100)
+                {
+                    gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Total", t);
+                }
+
+                else
+                {
+                    gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Zona acumulada", 0);
+                }
+            }
+             */
+
+            if (e.Column.Name == "colUNITARIO")
+            {
+                //calcular subtotal
+                decimal st = 0;
+                decimal u = 0;
+                decimal c = 0;
+
+                try
+                {
+                    u = Convert.ToDecimal(gridView4.GetRowCellValue(gridView4.FocusedRowHandle, "UNITARIO"));
+                    c = Convert.ToDecimal(gridView4.GetRowCellValue(gridView4.FocusedRowHandle, "CANTIDAD"));
+                }
+                catch
+                { }
+                st = u * c;
+                gridView4.SetRowCellValue(gridView4.FocusedRowHandle, "TOTAL", st);
+            }
+
+            else if (e.Column.Name == "colTOTAL")
+            { 
+                //calcular total
+                decimal total = 0;
+                try
+                {
+                    int a = gridView4.RowCount;
+
+                    for (int i = 0; i < a; i++)
+                    {
+                        decimal tt = Convert.ToDecimal(gridView4.GetRowCellValue(gridView4.FocusedRowHandle, "TOTAL"));
+                        total = tt;
+                    }
+                }
+                catch
+                { }
+                textTotalDeFactura.Text = total.ToString();
+            }
         }
     }
 }
