@@ -126,86 +126,199 @@
     <value>0, 144</value>
   </data>
   <data name="splitContainerDatos.Panel1.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>224, 224, 224</value>
+    <value>Transparent</value>
   </data>
   <data name="splitContainerDatos.Panel1.Appearance.BackColor2" type="System.Drawing.Color, System.Drawing">
-    <value>White</value>
+    <value>Transparent</value>
   </data>
   <data name="splitContainerDatos.Panel1.Appearance.BorderColor" type="System.Drawing.Color, System.Drawing">
     <value>Transparent</value>
   </data>
-  <data name="labelControl_NombreEmpresa.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>Silver</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 20.25pt, style=Bold, Underline</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
-    <value>Teal</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.LineColor" type="System.Drawing.Color, System.Drawing">
+  <data name="splitContainerDatos.Panel1.AppearanceCaption.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Transparent</value>
   </data>
-  <data name="labelControl_NombreEmpresa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 6</value>
+  <data name="splitContainerDatos.Panel1.AppearanceCaption.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
   </data>
-  <data name="labelControl_NombreEmpresa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 32</value>
+  <data name="splitContainerDatos.Panel1.AppearanceCaption.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="labelControl_NombreEmpresa.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+  <data name="gridControl_Pedidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 93</value>
   </data>
-  <data name="labelControl_NombreEmpresa.Text" xml:space="preserve">
-    <value>Mastertech</value>
+  <data name="gridView3.Appearance.ColumnFilterButton.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
   </data>
-  <data name="&gt;&gt;labelControl_NombreEmpresa.Name" xml:space="preserve">
-    <value>labelControl_NombreEmpresa</value>
+  <data name="gridView3.Appearance.ColumnFilterButton.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
   </data>
-  <data name="&gt;&gt;labelControl_NombreEmpresa.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridView3.Appearance.ColumnFilterButton.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
   </data>
-  <data name="&gt;&gt;labelControl_NombreEmpresa.Parent" xml:space="preserve">
-    <value>splitContainerDatos.Panel1</value>
+  <data name="gridView3.Appearance.ColumnFilterButtonActive.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
   </data>
-  <data name="&gt;&gt;labelControl_NombreEmpresa.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="gridView3.Appearance.ColumnFilterButtonActive.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
   </data>
-  <data name="labelControl1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 20.25pt, style=Bold</value>
+  <data name="gridView3.Appearance.ColumnFilterButtonActive.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
   </data>
-  <data name="labelControl1.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
-    <value>Red</value>
+  <data name="gridView3.Appearance.Empty.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
   </data>
-  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 320</value>
+  <data name="gridView3.Appearance.Empty.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
   </data>
-  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 37</value>
+  <data name="gridView3.Appearance.EvenRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 251, 255</value>
   </data>
-  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="gridView3.Appearance.EvenRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 251, 255</value>
   </data>
-  <data name="labelControl1.Text" xml:space="preserve">
-    <value>SETS NO DISPONIBLES</value>
+  <data name="gridView3.Appearance.EvenRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
   </data>
-  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
-    <value>labelControl1</value>
+  <data name="gridView3.Appearance.FilterCloseButton.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
   </data>
-  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridView3.Appearance.FilterCloseButton.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
   </data>
-  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
-    <value>splitContainerDatos.Panel1</value>
+  <data name="gridView3.Appearance.FilterCloseButton.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
   </data>
-  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="gridView3.Appearance.FilterPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
   </data>
-  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 363</value>
+  <data name="gridView3.Appearance.FilterPanel.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView3.Appearance.FilterPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView3.Appearance.FixedLine.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>59, 133, 195</value>
+  </data>
+  <data name="gridView3.Appearance.FocusedCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView3.Appearance.FocusedCell.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView3.Appearance.FocusedRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>38, 109, 189</value>
+  </data>
+  <data name="gridView3.Appearance.FocusedRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>59, 139, 206</value>
+  </data>
+  <data name="gridView3.Appearance.FocusedRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView3.Appearance.FooterPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView3.Appearance.FooterPanel.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView3.Appearance.FooterPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView3.Appearance.GroupButton.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView3.Appearance.GroupButton.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView3.Appearance.GroupFooter.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView3.Appearance.GroupFooter.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView3.Appearance.GroupFooter.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView3.Appearance.GroupPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView3.Appearance.GroupPanel.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView3.Appearance.GroupPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView3.Appearance.GroupRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView3.Appearance.GroupRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView3.Appearance.GroupRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView3.Appearance.HeaderPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>139, 201, 254</value>
+  </data>
+  <data name="gridView3.Appearance.HeaderPanel.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>139, 201, 254</value>
+  </data>
+  <data name="gridView3.Appearance.HeaderPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView3.Appearance.HideSelectionRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>105, 170, 225</value>
+  </data>
+  <data name="gridView3.Appearance.HideSelectionRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>83, 155, 215</value>
+  </data>
+  <data name="gridView3.Appearance.HideSelectionRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView3.Appearance.HorzLine.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView3.Appearance.OddRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView3.Appearance.OddRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView3.Appearance.OddRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView3.Appearance.Preview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 7.5pt</value>
+  </data>
+  <data name="gridView3.Appearance.Preview.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>83, 155, 215</value>
+  </data>
+  <data name="gridView3.Appearance.Row.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 251, 255</value>
+  </data>
+  <data name="gridView3.Appearance.Row.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView3.Appearance.RowSeparator.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView3.Appearance.RowSeparator.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView3.Appearance.SelectedRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>83, 155, 215</value>
+  </data>
+  <data name="gridView3.Appearance.SelectedRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView3.Appearance.TopNewRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView3.Appearance.VertLine.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
   </data>
   <metadata name="applicationMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>177, 56</value>
   </metadata>
   <data name="barButtonItem114.Caption" xml:space="preserve">
     <value>CERRAR SESION</value>
@@ -759,14 +872,20 @@
   <data name="barButtonItem150.Caption" xml:space="preserve">
     <value>Logotipo</value>
   </data>
+  <data name="barButtonItem151.Caption" xml:space="preserve">
+    <value>Envios Especiales</value>
+  </data>
   <data name="ribbon.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <metadata name="ribbonMiniToolbar1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>677, 17</value>
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="popupMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>551, 17</value>
   </metadata>
   <data name="FACTURACION.Color" type="System.Drawing.Color, System.Drawing">
-    <value>Coral</value>
+    <value>Cyan</value>
   </data>
   <data name="ribbonPageGroup6.Text" xml:space="preserve">
     <value>ADMINISTRACION</value>
@@ -804,6 +923,9 @@
   <data name="FACTURACION.Text" xml:space="preserve">
     <value>FACTURACION</value>
   </data>
+  <data name="ADMINISTRACION.Color" type="System.Drawing.Color, System.Drawing">
+    <value>Lime</value>
+  </data>
   <data name="ribbonPageGroup7.Text" xml:space="preserve">
     <value>BODEGAS</value>
   </data>
@@ -835,7 +957,7 @@
     <value>ADMINISTRACION</value>
   </data>
   <data name="COBRANZA.Color" type="System.Drawing.Color, System.Drawing">
-    <value>Blue</value>
+    <value>Magenta</value>
   </data>
   <data name="ribbonPageGroup2.Text" xml:space="preserve">
     <value>CLIENTES</value>
@@ -865,7 +987,7 @@
     <value>COBRANZA</value>
   </data>
   <data name="PROVEEDORES.Color" type="System.Drawing.Color, System.Drawing">
-    <value>Gold</value>
+    <value>Yellow</value>
   </data>
   <data name="ribbonPageGroup3.Text" xml:space="preserve">
     <value>PROVEEDORES</value>
@@ -889,7 +1011,7 @@
     <value>PROVEEDORES</value>
   </data>
   <data name="CONTABILIDAD.Color" type="System.Drawing.Color, System.Drawing">
-    <value>Green</value>
+    <value>255, 128, 0</value>
   </data>
   <data name="ribbonPageGroup21.Text" xml:space="preserve">
     <value>CONDICIONES</value>
@@ -918,6 +1040,7 @@
   <data name="CONTABILIDAD.Text" xml:space="preserve">
     <value>CONTABILIDAD</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="repositoryItemFontEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -961,6 +1084,267 @@
   <data name="&gt;&gt;ribbon.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="gridControl_Pedidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1234, 144</value>
+  </data>
+  <data name="gridControl_Pedidos.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;gridControl_Pedidos.Name" xml:space="preserve">
+    <value>gridControl_Pedidos</value>
+  </data>
+  <data name="&gt;&gt;gridControl_Pedidos.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridControl_Pedidos.Parent" xml:space="preserve">
+    <value>splitContainerDatos.Panel1</value>
+  </data>
+  <data name="&gt;&gt;gridControl_Pedidos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>192, 255, 255</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 20.25pt, style=Bold, Underline</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Teal</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.LineColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 9</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>421, 32</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Text" xml:space="preserve">
+    <value>Mastertech - MultiEmpresas</value>
+  </data>
+  <data name="&gt;&gt;labelControl_NombreEmpresa.Name" xml:space="preserve">
+    <value>labelControl_NombreEmpresa</value>
+  </data>
+  <data name="&gt;&gt;labelControl_NombreEmpresa.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl_NombreEmpresa.Parent" xml:space="preserve">
+    <value>splitContainerDatos.Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelControl_NombreEmpresa.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelControl1.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Silver</value>
+  </data>
+  <data name="labelControl1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 20.25pt, style=Bold</value>
+  </data>
+  <data name="labelControl1.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Red</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 323</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 37</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>SETS NO DISPONIBLES</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>splitContainerDatos.Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 363</value>
+  </data>
+  <data name="gridView1.Appearance.ColumnFilterButton.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView1.Appearance.ColumnFilterButton.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView1.Appearance.ColumnFilterButton.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.ColumnFilterButtonActive.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView1.Appearance.ColumnFilterButtonActive.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView1.Appearance.ColumnFilterButtonActive.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.Empty.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView1.Appearance.Empty.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.EvenRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 251, 255</value>
+  </data>
+  <data name="gridView1.Appearance.EvenRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 251, 255</value>
+  </data>
+  <data name="gridView1.Appearance.EvenRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.FilterCloseButton.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView1.Appearance.FilterCloseButton.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView1.Appearance.FilterCloseButton.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.FilterPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView1.Appearance.FilterPanel.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.FilterPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.FixedLine.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>59, 133, 195</value>
+  </data>
+  <data name="gridView1.Appearance.FocusedCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.FocusedCell.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.FocusedRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>38, 109, 189</value>
+  </data>
+  <data name="gridView1.Appearance.FocusedRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>59, 139, 206</value>
+  </data>
+  <data name="gridView1.Appearance.FocusedRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.FooterPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView1.Appearance.FooterPanel.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView1.Appearance.FooterPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.GroupButton.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView1.Appearance.GroupButton.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView1.Appearance.GroupFooter.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView1.Appearance.GroupFooter.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView1.Appearance.GroupFooter.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.GroupPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView1.Appearance.GroupPanel.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.GroupPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.GroupRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView1.Appearance.GroupRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView1.Appearance.GroupRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.HeaderPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>139, 201, 254</value>
+  </data>
+  <data name="gridView1.Appearance.HeaderPanel.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>139, 201, 254</value>
+  </data>
+  <data name="gridView1.Appearance.HeaderPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.HideSelectionRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>105, 170, 225</value>
+  </data>
+  <data name="gridView1.Appearance.HideSelectionRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>83, 155, 215</value>
+  </data>
+  <data name="gridView1.Appearance.HideSelectionRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView1.Appearance.HorzLine.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView1.Appearance.OddRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView1.Appearance.OddRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView1.Appearance.OddRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.Preview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 7.5pt</value>
+  </data>
+  <data name="gridView1.Appearance.Preview.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>83, 155, 215</value>
+  </data>
+  <data name="gridView1.Appearance.Row.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 251, 255</value>
+  </data>
+  <data name="gridView1.Appearance.Row.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView1.Appearance.RowSeparator.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView1.Appearance.RowSeparator.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.SelectedRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>83, 155, 215</value>
+  </data>
+  <data name="gridView1.Appearance.SelectedRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.TopNewRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView1.Appearance.VertLine.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>499, 184</value>
   </data>
@@ -977,7 +1361,7 @@
     <value>splitContainerDatos.Panel1</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>577, 247</value>
@@ -1001,7 +1385,10 @@
     <value>splitContainerDatos.Panel1</value>
   </data>
   <data name="&gt;&gt;simpleButton1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="labelControl2.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Silver</value>
   </data>
   <data name="labelControl2.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 20.25pt, style=Bold</value>
@@ -1010,7 +1397,7 @@
     <value>0, 192, 0</value>
   </data>
   <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>813, 320</value>
+    <value>945, 323</value>
   </data>
   <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
     <value>238, 37</value>
@@ -1031,10 +1418,181 @@
     <value>splitContainerDatos.Panel1</value>
   </data>
   <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="gridControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>712, 363</value>
+    <value>775, 363</value>
+  </data>
+  <data name="gridView2.Appearance.ColumnFilterButton.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView2.Appearance.ColumnFilterButton.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView2.Appearance.ColumnFilterButton.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.ColumnFilterButtonActive.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView2.Appearance.ColumnFilterButtonActive.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView2.Appearance.ColumnFilterButtonActive.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.Empty.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView2.Appearance.Empty.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.EvenRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 251, 255</value>
+  </data>
+  <data name="gridView2.Appearance.EvenRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 251, 255</value>
+  </data>
+  <data name="gridView2.Appearance.EvenRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.FilterCloseButton.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView2.Appearance.FilterCloseButton.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView2.Appearance.FilterCloseButton.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.FilterPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView2.Appearance.FilterPanel.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.FilterPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.FixedLine.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>59, 133, 195</value>
+  </data>
+  <data name="gridView2.Appearance.FocusedCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.FocusedCell.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.FocusedRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>38, 109, 189</value>
+  </data>
+  <data name="gridView2.Appearance.FocusedRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>59, 139, 206</value>
+  </data>
+  <data name="gridView2.Appearance.FocusedRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.FooterPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView2.Appearance.FooterPanel.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView2.Appearance.FooterPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.GroupButton.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView2.Appearance.GroupButton.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView2.Appearance.GroupFooter.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView2.Appearance.GroupFooter.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView2.Appearance.GroupFooter.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.GroupPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView2.Appearance.GroupPanel.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.GroupPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.GroupRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView2.Appearance.GroupRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>170, 216, 254</value>
+  </data>
+  <data name="gridView2.Appearance.GroupRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.HeaderPanel.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>139, 201, 254</value>
+  </data>
+  <data name="gridView2.Appearance.HeaderPanel.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>139, 201, 254</value>
+  </data>
+  <data name="gridView2.Appearance.HeaderPanel.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.HideSelectionRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>105, 170, 225</value>
+  </data>
+  <data name="gridView2.Appearance.HideSelectionRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>83, 155, 215</value>
+  </data>
+  <data name="gridView2.Appearance.HideSelectionRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView2.Appearance.HorzLine.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
+  </data>
+  <data name="gridView2.Appearance.OddRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView2.Appearance.OddRow.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView2.Appearance.OddRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.Preview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 7.5pt</value>
+  </data>
+  <data name="gridView2.Appearance.Preview.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>83, 155, 215</value>
+  </data>
+  <data name="gridView2.Appearance.Row.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>247, 251, 255</value>
+  </data>
+  <data name="gridView2.Appearance.Row.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="gridView2.Appearance.RowSeparator.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>236, 246, 255</value>
+  </data>
+  <data name="gridView2.Appearance.RowSeparator.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.SelectedRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>83, 155, 215</value>
+  </data>
+  <data name="gridView2.Appearance.SelectedRow.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.TopNewRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="gridView2.Appearance.VertLine.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>104, 184, 251</value>
   </data>
   <data name="gridControl2.Size" type="System.Drawing.Size, System.Drawing">
     <value>499, 184</value>
@@ -1052,7 +1610,7 @@
     <value>splitContainerDatos.Panel1</value>
   </data>
   <data name="&gt;&gt;gridControl2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1061,7 +1619,7 @@
     <value>Tahoma, 18pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 59</value>
+    <value>469, 61</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 29</value>
@@ -1082,27 +1640,6 @@
     <value>splitContainerDatos.Panel1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 91</value>
-  </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1171, 149</value>
-  </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>splitContainerDatos.Panel1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="splitContainerDatos.Panel1.Text" xml:space="preserve">
@@ -1885,10 +2422,13 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
-    <value>gridView1</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>facinvOX</value>
   </data>
-  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+  <data name="&gt;&gt;gridView3.Name" xml:space="preserve">
+    <value>gridView3</value>
+  </data>
+  <data name="&gt;&gt;gridView3.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;applicationMenu1.Name" xml:space="preserve">
@@ -3001,11 +3541,23 @@
   <data name="&gt;&gt;barButtonItem150.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;barButtonItem151.Name" xml:space="preserve">
+    <value>barButtonItem151</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem151.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;ribbonMiniToolbar1.Name" xml:space="preserve">
     <value>ribbonMiniToolbar1</value>
   </data>
   <data name="&gt;&gt;ribbonMiniToolbar1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonMiniToolbar, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;popupMenu1.Name" xml:space="preserve">
+    <value>popupMenu1</value>
+  </data>
+  <data name="&gt;&gt;popupMenu1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.PopupMenu, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;FACTURACION.Name" xml:space="preserve">
     <value>FACTURACION</value>
@@ -3325,6 +3877,12 @@
   <data name="&gt;&gt;repositoryItemPopupContainerEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit, DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;gridView2.Name" xml:space="preserve">
     <value>gridView2</value>
   </data>
@@ -3336,12 +3894,6 @@
   </data>
   <data name="&gt;&gt;xtraTabbedMdiManager1.Type" xml:space="preserve">
     <value>DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;popupMenu1.Name" xml:space="preserve">
-    <value>popupMenu1</value>
-  </data>
-  <data name="&gt;&gt;popupMenu1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.PopupMenu, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;ribbonPage11.Name" xml:space="preserve">
     <value>ribbonPage11</value>
@@ -3373,9 +3925,6 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonForm, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <metadata name="popupMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>551, 17</value>
-  </metadata>
   <data name="ribbonPage11.Text" xml:space="preserve">
     <value>ribbonPage11</value>
   </data>

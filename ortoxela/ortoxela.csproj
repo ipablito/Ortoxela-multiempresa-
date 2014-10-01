@@ -637,6 +637,12 @@
     <Compile Include="ModCobranza\TipoDocs\TipoDoc.Designer.cs">
       <DependentUpon>TipoDoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pedido\EnvioSinPedido\f_EnvioEspecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedido\EnvioSinPedido\f_EnvioEspecial.Designer.cs">
+      <DependentUpon>f_EnvioEspecial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pedido\Factura\R_NFacturaB.cs">
       <DependentUpon>R_NFacturaB.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -1603,6 +1609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModCobranza\TipoDocs\TipoDoc.resx">
       <DependentUpon>TipoDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedido\EnvioSinPedido\f_EnvioEspecial.resx">
+      <DependentUpon>f_EnvioEspecial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedido\Factura\R_NFacturaB.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

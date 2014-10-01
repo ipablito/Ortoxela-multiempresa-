@@ -576,7 +576,7 @@ namespace ortoxela.Pedido
 
                         string tempoValor = ""; //textTotalDevuelta.Text.Replace(",", "");
                         decimal can1 = Convert.ToDecimal(textTotalPedido.Text.Replace(",", "").Replace("Q", ""));
-                        decimal can3=Convert.ToDecimal(textTotalDeFactura.Text.Replace(",", ""));
+                        decimal can3=Convert.ToDecimal(textTotalDeFactura.Text.Replace(",", "").Replace("Q", ""));
                         decimal vvv = can1- can3;
                         tempoValor = vvv.ToString();
                         //vueltos

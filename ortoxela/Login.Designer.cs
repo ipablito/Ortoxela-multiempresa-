@@ -74,9 +74,9 @@
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Controls.Add(this.simpleaceptar);
             this.panelControl1.Controls.Add(this.simplecancelar);
-            this.panelControl1.Location = new System.Drawing.Point(43, 12);
+            this.panelControl1.Location = new System.Drawing.Point(6, 6);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(541, 289);
+            this.panelControl1.Size = new System.Drawing.Size(541, 262);
             this.panelControl1.TabIndex = 1;
             // 
             // labelControl_empresa
@@ -90,11 +90,12 @@
             // 
             // gridLookUpEdit_empresa
             // 
-            this.gridLookUpEdit_empresa.EditValue = "Ortoxela";
+            this.gridLookUpEdit_empresa.EditValue = "fsdafads";
             this.gridLookUpEdit_empresa.Location = new System.Drawing.Point(192, 189);
             this.gridLookUpEdit_empresa.Name = "gridLookUpEdit_empresa";
             this.gridLookUpEdit_empresa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gridLookUpEdit_empresa.Properties.CloseUpKey = new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F2);
             this.gridLookUpEdit_empresa.Properties.View = this.gridLookUpEdit1View;
             this.gridLookUpEdit_empresa.Size = new System.Drawing.Size(312, 20);
             this.gridLookUpEdit_empresa.TabIndex = 13;
@@ -201,7 +202,7 @@
             this.simpleaceptar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleaceptar.Appearance.Options.UseFont = true;
             this.simpleaceptar.Image = global::ortoxela.Properties.Resources.entrar;
-            this.simpleaceptar.Location = new System.Drawing.Point(192, 242);
+            this.simpleaceptar.Location = new System.Drawing.Point(192, 214);
             this.simpleaceptar.Name = "simpleaceptar";
             this.simpleaceptar.Size = new System.Drawing.Size(142, 42);
             this.simpleaceptar.TabIndex = 2;
@@ -213,7 +214,7 @@
             this.simplecancelar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simplecancelar.Appearance.Options.UseFont = true;
             this.simplecancelar.Image = global::ortoxela.Properties.Resources.salir;
-            this.simplecancelar.Location = new System.Drawing.Point(362, 242);
+            this.simplecancelar.Location = new System.Drawing.Point(362, 214);
             this.simplecancelar.Name = "simplecancelar";
             this.simplecancelar.Size = new System.Drawing.Size(142, 42);
             this.simplecancelar.TabIndex = 3;
@@ -222,11 +223,11 @@
             // 
             // Login
             // 
-            this.Appearance.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 313);
+            this.ClientSize = new System.Drawing.Size(553, 275);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

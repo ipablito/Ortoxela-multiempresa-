@@ -169,8 +169,6 @@ namespace ortoxela.Reimpresion
                             reporte.Parameters["telefono1"].Value = "Telefono: "+nt.Rows[0]["telefono"].ToString();
                             reporte.Parameters["telefono2"].Value = "Telefono auxiliar: "+nt.Rows[0]["telefono2"].ToString();
                             reporte.Parameters["correo"].Value ="Correo: "+ nt.Rows[0]["correo"].ToString();
-                            // reporte.Parameters["RECIBO"].Value = " ";
-                            // reporte.Parameters["SOCIO"].Value = ortoxela.Tabla("SELECT c.nombre_cliente FROM header_doctos_inv h INNER JOIN clientes c ON h.socio_comercial=c.codigo_cliente WHERE h.id_documento=" + gridView1.GetFocusedRowCellValue("id_documento")).Rows[0][0]; ;
                             reporte.RequestParameters = false;
                             reporte.ShowPreviewDialog();
                         }

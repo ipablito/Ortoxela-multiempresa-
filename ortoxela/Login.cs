@@ -53,7 +53,7 @@ namespace ortoxela
                     if (b!= "0")
                     {
 
-                        //if (clases.ClassVariables.nombreEmpresa == "Ortoxela")
+                        //conectarse a invex si es ORTOXELA 
                         if (clases.ClassVariables.nombreEmpresa == "Ortoxela,Pruebas")
                         {
                             #region integracion con INVEX, logeo de usuario
@@ -207,15 +207,10 @@ namespace ortoxela
                 DataTable t = new DataTable();
                 MySqlDataAdapter ad = new MySqlDataAdapter("SELECT idempresa as 'IdEmpresa',Nombre FROM Empresa WHERE activo=1;",clases.ClassVariables.ConexionMaster);
                 ad.Fill(t);
-
-
                 gridLookUpEdit_empresa.Properties.DataSource = t;
-                
                 gridLookUpEdit_empresa.Properties.DisplayMember = "Nombre";
                 gridLookUpEdit_empresa.Properties.ValueMember = "IdEmpresa";
                 
-
-
 
 
                 DataTable t2 = new DataTable();
@@ -228,6 +223,7 @@ namespace ortoxela
                 clases.ClassVariables.idEmpresa = Convert.ToInt16(t2.Rows[0]["idEmpresa"]);
                 clases.ClassVariables.nombreEmpresa = t2.Rows[0]["Nombre"].ToString();
 
+                gridLookUpEdit_empresa.EditValue = clases.ClassVariables.idEmpresa;
                 try
                 {
                     pictureEdit1.Image = CargarImagen();
@@ -310,7 +306,10 @@ namespace ortoxela
 
         private void gridLookUpEdit_empresa_TextChanged(object sender, EventArgs e)
         {
-            cambiardeBD();
+            if (gridLookUpEdit_empresa.Text != clases.ClassVariables.nombreEmpresa)
+            {
+                cambiardeBD();
+            }
         }
 
         private void textEditcontraseña_TextChanged(object sender, EventArgs e)

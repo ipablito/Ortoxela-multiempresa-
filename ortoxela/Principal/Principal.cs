@@ -10,6 +10,8 @@ using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Helpers;
 using DevExpress.XtraBars.Localization;
 
+using DevExpress.XtraEditors;
+
 
 using System.IO;
 
@@ -20,6 +22,11 @@ namespace ortoxela.Principal
         public Principal()
         {
             InitializeComponent();
+
+
+        
+
+
             labelControl_NombreEmpresa.Text = clases.ClassVariables.nombreEmpresa;
             this.Text ="facinvOX  -  "+ clases.ClassVariables.nombreEmpresa;          
         }
@@ -178,22 +185,24 @@ namespace ortoxela.Principal
             {
                 Reportes.Pedidos.ClassPedidos pedidos = new Reportes.Pedidos.ClassPedidos();
                 classortoxela orto = new classortoxela();
-                dataGridView1.DataSource = orto.Tabla("SELECT CAST(CONCAT(tipo_documento,' - ',no_documento)AS CHAR) AS Pedido, "+
-"Nombre_Cliente AS 'Nombre de cliente',"+
-"nombre_paciente AS 'Nombre del paciente',"+
-"Socio_Comercial AS 'Socio Comercial',"+
+                string cadena = "SELECT CAST(CONCAT(tipo_documento,' - ',no_documento)AS CHAR) AS Pedido, " +
+"Nombre_Cliente AS 'Nombre de cliente'," +
+"nombre_paciente AS 'Nombre del paciente'," +
+"Socio_Comercial AS 'Socio Comercial'," +
 "COALESCE((SELECT Articulo FROM v_pedidos e WHERE e.no_documento=p.no_documento AND e.sistema=1 AND e.cantidad_enviada!=0 LIMIT 1),'Sin set') AS 'Set en el envio'," +
-"fecha_compra AS 'Fecha'"+
+"fecha_compra AS 'Fecha'" +
 
 
-"FROM v_pedidos p "+
-"WHERE cantidad_enviada!=0 "+
+"FROM v_pedidos p " +
+"WHERE cantidad_enviada!=0 " +
 
-"GROUP BY tipo_documento,no_documento,Nombre_Cliente "+
+"GROUP BY tipo_documento,no_documento,Nombre_Cliente " +
 
-"ORDER BY fecha ASC");
+"ORDER BY fecha ASC";
+                
+                gridControl_Pedidos.DataSource = orto.Tabla(cadena);
 
-                dataGridView1.Refresh();
+                gridControl_Pedidos.Refresh();
             }
             catch
             { }
@@ -1196,15 +1205,16 @@ namespace ortoxela.Principal
         private void barButtonItem119_ItemClick(object sender, ItemClickEventArgs e)
         {
             
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.Name == "Login")
-                {
-                    form.Show();
-                    cerrarsesion = true;
-                }
-            }
-            this.Close();
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form.Name == "Login")
+            //    {
+            //        form.Show();
+            //        cerrarsesion = true;
+            //    }
+            //}
+            //this.Close();
+            Application.Restart();
         }
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
@@ -2261,15 +2271,16 @@ namespace ortoxela.Principal
         private void barButtonItem114_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.Name == "Login")
-                {
-                    form.Show();
-                    cerrarsesion = true;
-                }
-            }
-            this.Close();
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form.Name == "Login")
+            //    {
+            //        form.Show();
+            //        cerrarsesion = true;
+            //    }
+            //}
+            //this.Close();
+            Application.Restart();
         }
 
         private void barButtonItem149_ItemClick(object sender, ItemClickEventArgs e)
@@ -2284,6 +2295,20 @@ namespace ortoxela.Principal
             {
                 Form nf = new f_logo();
                 nf.ShowDialog();
+            }
+            catch
+            { }
+            this.Cursor = Cursors.Default;
+        }
+
+        private void barButtonItem151_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            try
+            {
+                Form nf = new Pedido.EnvioSinPedido.f_EnvioEspecial();
+                nf.MdiParent = this;
+                nf.Show();
             }
             catch
             { }

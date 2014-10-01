@@ -53,10 +53,8 @@
             DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel3 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             this.splitContainerDatos = new DevExpress.XtraEditors.SplitContainerControl();
-            this.labelControl_NombreEmpresa = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl_Pedidos = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.barButtonItem114 = new DevExpress.XtraBars.BarButtonItem();
@@ -243,7 +241,9 @@
             this.barButtonItem148 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem149 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem150 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem151 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.FACTURACION = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -297,34 +297,38 @@
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemPopupContainerEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
+            this.labelControl_NombreEmpresa = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.ribbonPage11 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.defaultLookAndFeel2 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSubItem30 = new DevExpress.XtraBars.BarSubItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ortoxela.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerDatos)).BeginInit();
             this.splitContainerDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Pedidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(textAnnotation1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -334,7 +338,6 @@
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerDatos
@@ -346,6 +349,12 @@
             this.splitContainerDatos.Panel1.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("splitContainerDatos.Panel1.Appearance.BorderColor")));
             this.splitContainerDatos.Panel1.Appearance.Options.UseBackColor = true;
             this.splitContainerDatos.Panel1.Appearance.Options.UseBorderColor = true;
+            this.splitContainerDatos.Panel1.AppearanceCaption.BackColor = ((System.Drawing.Color)(resources.GetObject("splitContainerDatos.Panel1.AppearanceCaption.BackColor")));
+            this.splitContainerDatos.Panel1.AppearanceCaption.BackColor2 = ((System.Drawing.Color)(resources.GetObject("splitContainerDatos.Panel1.AppearanceCaption.BackColor2")));
+            this.splitContainerDatos.Panel1.AppearanceCaption.BorderColor = ((System.Drawing.Color)(resources.GetObject("splitContainerDatos.Panel1.AppearanceCaption.BorderColor")));
+            this.splitContainerDatos.Panel1.AppearanceCaption.Options.UseBackColor = true;
+            this.splitContainerDatos.Panel1.AppearanceCaption.Options.UseBorderColor = true;
+            this.splitContainerDatos.Panel1.Controls.Add(this.gridControl_Pedidos);
             this.splitContainerDatos.Panel1.Controls.Add(this.labelControl_NombreEmpresa);
             this.splitContainerDatos.Panel1.Controls.Add(this.labelControl1);
             this.splitContainerDatos.Panel1.Controls.Add(this.gridControl1);
@@ -353,43 +362,139 @@
             this.splitContainerDatos.Panel1.Controls.Add(this.labelControl2);
             this.splitContainerDatos.Panel1.Controls.Add(this.gridControl2);
             this.splitContainerDatos.Panel1.Controls.Add(this.label1);
-            this.splitContainerDatos.Panel1.Controls.Add(this.dataGridView1);
             resources.ApplyResources(this.splitContainerDatos.Panel1, "splitContainerDatos.Panel1");
             this.splitContainerDatos.Panel2.Controls.Add(this.chartControl1);
             resources.ApplyResources(this.splitContainerDatos.Panel2, "splitContainerDatos.Panel2");
             this.splitContainerDatos.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1;
             this.splitContainerDatos.SplitterPosition = 1228;
             // 
-            // labelControl_NombreEmpresa
+            // gridControl_Pedidos
             // 
-            this.labelControl_NombreEmpresa.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.BackColor")));
-            this.labelControl_NombreEmpresa.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl_NombreEmpresa.Appearance.Font")));
-            this.labelControl_NombreEmpresa.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.ForeColor")));
-            resources.ApplyResources(this.labelControl_NombreEmpresa, "labelControl_NombreEmpresa");
-            this.labelControl_NombreEmpresa.Name = "labelControl_NombreEmpresa";
+            resources.ApplyResources(this.gridControl_Pedidos, "gridControl_Pedidos");
+            this.gridControl_Pedidos.MainView = this.gridView3;
+            this.gridControl_Pedidos.MenuManager = this.ribbon;
+            this.gridControl_Pedidos.Name = "gridControl_Pedidos";
+            this.gridControl_Pedidos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
             // 
-            // labelControl1
+            // gridView3
             // 
-            this.labelControl1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl1.Appearance.Font")));
-            this.labelControl1.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl1.Appearance.ForeColor")));
-            resources.ApplyResources(this.labelControl1, "labelControl1");
-            this.labelControl1.Name = "labelControl1";
-            // 
-            // gridControl1
-            // 
-            resources.ApplyResources(this.gridControl1, "gridControl1");
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.ribbon;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowAutoFilterRow = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView3.Appearance.ColumnFilterButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.ColumnFilterButton.BackColor")));
+            this.gridView3.Appearance.ColumnFilterButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.ColumnFilterButton.BorderColor")));
+            this.gridView3.Appearance.ColumnFilterButton.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.ColumnFilterButton.ForeColor")));
+            this.gridView3.Appearance.ColumnFilterButton.Options.UseBackColor = true;
+            this.gridView3.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
+            this.gridView3.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.gridView3.Appearance.ColumnFilterButtonActive.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.ColumnFilterButtonActive.BackColor")));
+            this.gridView3.Appearance.ColumnFilterButtonActive.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.ColumnFilterButtonActive.BorderColor")));
+            this.gridView3.Appearance.ColumnFilterButtonActive.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.ColumnFilterButtonActive.ForeColor")));
+            this.gridView3.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
+            this.gridView3.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
+            this.gridView3.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
+            this.gridView3.Appearance.Empty.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.Empty.BackColor")));
+            this.gridView3.Appearance.Empty.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.Empty.BackColor2")));
+            this.gridView3.Appearance.Empty.Options.UseBackColor = true;
+            this.gridView3.Appearance.EvenRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.EvenRow.BackColor")));
+            this.gridView3.Appearance.EvenRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.EvenRow.BorderColor")));
+            this.gridView3.Appearance.EvenRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.EvenRow.ForeColor")));
+            this.gridView3.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gridView3.Appearance.EvenRow.Options.UseBorderColor = true;
+            this.gridView3.Appearance.EvenRow.Options.UseForeColor = true;
+            this.gridView3.Appearance.FilterCloseButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FilterCloseButton.BackColor")));
+            this.gridView3.Appearance.FilterCloseButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FilterCloseButton.BorderColor")));
+            this.gridView3.Appearance.FilterCloseButton.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FilterCloseButton.ForeColor")));
+            this.gridView3.Appearance.FilterCloseButton.Options.UseBackColor = true;
+            this.gridView3.Appearance.FilterCloseButton.Options.UseBorderColor = true;
+            this.gridView3.Appearance.FilterCloseButton.Options.UseForeColor = true;
+            this.gridView3.Appearance.FilterPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FilterPanel.BackColor")));
+            this.gridView3.Appearance.FilterPanel.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FilterPanel.BackColor2")));
+            this.gridView3.Appearance.FilterPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FilterPanel.ForeColor")));
+            this.gridView3.Appearance.FilterPanel.Options.UseBackColor = true;
+            this.gridView3.Appearance.FilterPanel.Options.UseForeColor = true;
+            this.gridView3.Appearance.FixedLine.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FixedLine.BackColor")));
+            this.gridView3.Appearance.FixedLine.Options.UseBackColor = true;
+            this.gridView3.Appearance.FocusedCell.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FocusedCell.BackColor")));
+            this.gridView3.Appearance.FocusedCell.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FocusedCell.ForeColor")));
+            this.gridView3.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView3.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gridView3.Appearance.FocusedRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FocusedRow.BackColor")));
+            this.gridView3.Appearance.FocusedRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FocusedRow.BorderColor")));
+            this.gridView3.Appearance.FocusedRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FocusedRow.ForeColor")));
+            this.gridView3.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gridView3.Appearance.FocusedRow.Options.UseBorderColor = true;
+            this.gridView3.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gridView3.Appearance.FooterPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FooterPanel.BackColor")));
+            this.gridView3.Appearance.FooterPanel.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FooterPanel.BorderColor")));
+            this.gridView3.Appearance.FooterPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.FooterPanel.ForeColor")));
+            this.gridView3.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.gridView3.Appearance.FooterPanel.Options.UseBorderColor = true;
+            this.gridView3.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridView3.Appearance.GroupButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupButton.BackColor")));
+            this.gridView3.Appearance.GroupButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupButton.BorderColor")));
+            this.gridView3.Appearance.GroupButton.Options.UseBackColor = true;
+            this.gridView3.Appearance.GroupButton.Options.UseBorderColor = true;
+            this.gridView3.Appearance.GroupFooter.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupFooter.BackColor")));
+            this.gridView3.Appearance.GroupFooter.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupFooter.BorderColor")));
+            this.gridView3.Appearance.GroupFooter.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupFooter.ForeColor")));
+            this.gridView3.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gridView3.Appearance.GroupFooter.Options.UseBorderColor = true;
+            this.gridView3.Appearance.GroupFooter.Options.UseForeColor = true;
+            this.gridView3.Appearance.GroupPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupPanel.BackColor")));
+            this.gridView3.Appearance.GroupPanel.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupPanel.BackColor2")));
+            this.gridView3.Appearance.GroupPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupPanel.ForeColor")));
+            this.gridView3.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gridView3.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.gridView3.Appearance.GroupRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupRow.BackColor")));
+            this.gridView3.Appearance.GroupRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupRow.BorderColor")));
+            this.gridView3.Appearance.GroupRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.GroupRow.ForeColor")));
+            this.gridView3.Appearance.GroupRow.Options.UseBackColor = true;
+            this.gridView3.Appearance.GroupRow.Options.UseBorderColor = true;
+            this.gridView3.Appearance.GroupRow.Options.UseForeColor = true;
+            this.gridView3.Appearance.HeaderPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.HeaderPanel.BackColor")));
+            this.gridView3.Appearance.HeaderPanel.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.HeaderPanel.BorderColor")));
+            this.gridView3.Appearance.HeaderPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.HeaderPanel.ForeColor")));
+            this.gridView3.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.gridView3.Appearance.HeaderPanel.Options.UseBorderColor = true;
+            this.gridView3.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gridView3.Appearance.HideSelectionRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.HideSelectionRow.BackColor")));
+            this.gridView3.Appearance.HideSelectionRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.HideSelectionRow.BorderColor")));
+            this.gridView3.Appearance.HideSelectionRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.HideSelectionRow.ForeColor")));
+            this.gridView3.Appearance.HideSelectionRow.Options.UseBackColor = true;
+            this.gridView3.Appearance.HideSelectionRow.Options.UseBorderColor = true;
+            this.gridView3.Appearance.HideSelectionRow.Options.UseForeColor = true;
+            this.gridView3.Appearance.HorzLine.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.HorzLine.BackColor")));
+            this.gridView3.Appearance.HorzLine.Options.UseBackColor = true;
+            this.gridView3.Appearance.OddRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.OddRow.BackColor")));
+            this.gridView3.Appearance.OddRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.OddRow.BorderColor")));
+            this.gridView3.Appearance.OddRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.OddRow.ForeColor")));
+            this.gridView3.Appearance.OddRow.Options.UseBackColor = true;
+            this.gridView3.Appearance.OddRow.Options.UseBorderColor = true;
+            this.gridView3.Appearance.OddRow.Options.UseForeColor = true;
+            this.gridView3.Appearance.Preview.Font = ((System.Drawing.Font)(resources.GetObject("gridView3.Appearance.Preview.Font")));
+            this.gridView3.Appearance.Preview.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.Preview.ForeColor")));
+            this.gridView3.Appearance.Preview.Options.UseFont = true;
+            this.gridView3.Appearance.Preview.Options.UseForeColor = true;
+            this.gridView3.Appearance.Row.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.Row.BackColor")));
+            this.gridView3.Appearance.Row.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.Row.ForeColor")));
+            this.gridView3.Appearance.Row.Options.UseBackColor = true;
+            this.gridView3.Appearance.Row.Options.UseForeColor = true;
+            this.gridView3.Appearance.RowSeparator.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.RowSeparator.BackColor")));
+            this.gridView3.Appearance.RowSeparator.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.RowSeparator.BackColor2")));
+            this.gridView3.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gridView3.Appearance.SelectedRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.SelectedRow.BackColor")));
+            this.gridView3.Appearance.SelectedRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.SelectedRow.ForeColor")));
+            this.gridView3.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.gridView3.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gridView3.Appearance.TopNewRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.TopNewRow.BackColor")));
+            this.gridView3.Appearance.TopNewRow.Options.UseBackColor = true;
+            this.gridView3.Appearance.VertLine.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView3.Appearance.VertLine.BackColor")));
+            this.gridView3.Appearance.VertLine.Options.UseBackColor = true;
+            this.gridView3.GridControl = this.gridControl_Pedidos;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridView3.OptionsView.EnableAppearanceOddRow = true;
+            this.gridView3.OptionsView.ShowAutoFilterRow = true;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
             // ribbon
             // 
@@ -583,8 +688,9 @@
             this.barButtonItem147,
             this.barButtonItem148,
             this.barButtonItem149,
-            this.barButtonItem150});
-            this.ribbon.MaxItemId = 229;
+            this.barButtonItem150,
+            this.barButtonItem151});
+            this.ribbon.MaxItemId = 230;
             this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar1);
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -2269,6 +2375,25 @@
             this.barButtonItem150.Name = "barButtonItem150";
             this.barButtonItem150.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem150_ItemClick);
             // 
+            // barButtonItem151
+            // 
+            resources.ApplyResources(this.barButtonItem151, "barButtonItem151");
+            this.barButtonItem151.Enabled = false;
+            this.barButtonItem151.Id = 229;
+            this.barButtonItem151.LargeGlyph = global::ortoxela.Properties.Resources.MODULO;
+            this.barButtonItem151.Name = "barButtonItem151";
+            this.barButtonItem151.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem151_ItemClick);
+            // 
+            // ribbonMiniToolbar1
+            // 
+            this.ribbonMiniToolbar1.PopupMenu = this.popupMenu1;
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbon;
+            this.popupMenu1.RibbonToolbar = this.ribbonMiniToolbar1;
+            // 
             // FACTURACION
             // 
             resources.ApplyResources(this.FACTURACION, "FACTURACION");
@@ -2296,6 +2421,7 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem14);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem50);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem70);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem151);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem73);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem79);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem80);
@@ -2376,11 +2502,11 @@
             // 
             // ADMINISTRACION
             // 
+            resources.ApplyResources(this.ADMINISTRACION, "ADMINISTRACION");
             this.ADMINISTRACION.Name = "ADMINISTRACION";
             this.ADMINISTRACION.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage3});
-            resources.ApplyResources(this.ADMINISTRACION, "ADMINISTRACION");
             // 
             // ribbonPage1
             // 
@@ -2679,6 +2805,150 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemPopupContainerEdit1.Buttons"))))});
             this.repositoryItemPopupContainerEdit1.Name = "repositoryItemPopupContainerEdit1";
             // 
+            // labelControl_NombreEmpresa
+            // 
+            this.labelControl_NombreEmpresa.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.BackColor")));
+            this.labelControl_NombreEmpresa.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl_NombreEmpresa.Appearance.Font")));
+            this.labelControl_NombreEmpresa.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.ForeColor")));
+            resources.ApplyResources(this.labelControl_NombreEmpresa, "labelControl_NombreEmpresa");
+            this.labelControl_NombreEmpresa.Name = "labelControl_NombreEmpresa";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl1.Appearance.BackColor")));
+            this.labelControl1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl1.Appearance.Font")));
+            this.labelControl1.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl1.Appearance.ForeColor")));
+            resources.ApplyResources(this.labelControl1, "labelControl1");
+            this.labelControl1.Name = "labelControl1";
+            // 
+            // gridControl1
+            // 
+            resources.ApplyResources(this.gridControl1, "gridControl1");
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MenuManager = this.ribbon;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Appearance.ColumnFilterButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.ColumnFilterButton.BackColor")));
+            this.gridView1.Appearance.ColumnFilterButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.ColumnFilterButton.BorderColor")));
+            this.gridView1.Appearance.ColumnFilterButton.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.ColumnFilterButton.ForeColor")));
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseBackColor = true;
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.gridView1.Appearance.ColumnFilterButtonActive.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.ColumnFilterButtonActive.BackColor")));
+            this.gridView1.Appearance.ColumnFilterButtonActive.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.ColumnFilterButtonActive.BorderColor")));
+            this.gridView1.Appearance.ColumnFilterButtonActive.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.ColumnFilterButtonActive.ForeColor")));
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
+            this.gridView1.Appearance.Empty.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.Empty.BackColor")));
+            this.gridView1.Appearance.Empty.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.Empty.BackColor2")));
+            this.gridView1.Appearance.Empty.Options.UseBackColor = true;
+            this.gridView1.Appearance.EvenRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.EvenRow.BackColor")));
+            this.gridView1.Appearance.EvenRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.EvenRow.BorderColor")));
+            this.gridView1.Appearance.EvenRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.EvenRow.ForeColor")));
+            this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.EvenRow.Options.UseBorderColor = true;
+            this.gridView1.Appearance.EvenRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.FilterCloseButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FilterCloseButton.BackColor")));
+            this.gridView1.Appearance.FilterCloseButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FilterCloseButton.BorderColor")));
+            this.gridView1.Appearance.FilterCloseButton.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FilterCloseButton.ForeColor")));
+            this.gridView1.Appearance.FilterCloseButton.Options.UseBackColor = true;
+            this.gridView1.Appearance.FilterCloseButton.Options.UseBorderColor = true;
+            this.gridView1.Appearance.FilterCloseButton.Options.UseForeColor = true;
+            this.gridView1.Appearance.FilterPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FilterPanel.BackColor")));
+            this.gridView1.Appearance.FilterPanel.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FilterPanel.BackColor2")));
+            this.gridView1.Appearance.FilterPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FilterPanel.ForeColor")));
+            this.gridView1.Appearance.FilterPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.FilterPanel.Options.UseForeColor = true;
+            this.gridView1.Appearance.FixedLine.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FixedLine.BackColor")));
+            this.gridView1.Appearance.FixedLine.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedCell.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FocusedCell.BackColor")));
+            this.gridView1.Appearance.FocusedCell.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FocusedCell.ForeColor")));
+            this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gridView1.Appearance.FocusedRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FocusedRow.BackColor")));
+            this.gridView1.Appearance.FocusedRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FocusedRow.BorderColor")));
+            this.gridView1.Appearance.FocusedRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FocusedRow.ForeColor")));
+            this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedRow.Options.UseBorderColor = true;
+            this.gridView1.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.FooterPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FooterPanel.BackColor")));
+            this.gridView1.Appearance.FooterPanel.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FooterPanel.BorderColor")));
+            this.gridView1.Appearance.FooterPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.FooterPanel.ForeColor")));
+            this.gridView1.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.FooterPanel.Options.UseBorderColor = true;
+            this.gridView1.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridView1.Appearance.GroupButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupButton.BackColor")));
+            this.gridView1.Appearance.GroupButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupButton.BorderColor")));
+            this.gridView1.Appearance.GroupButton.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupButton.Options.UseBorderColor = true;
+            this.gridView1.Appearance.GroupFooter.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupFooter.BackColor")));
+            this.gridView1.Appearance.GroupFooter.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupFooter.BorderColor")));
+            this.gridView1.Appearance.GroupFooter.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupFooter.ForeColor")));
+            this.gridView1.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupFooter.Options.UseBorderColor = true;
+            this.gridView1.Appearance.GroupFooter.Options.UseForeColor = true;
+            this.gridView1.Appearance.GroupPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupPanel.BackColor")));
+            this.gridView1.Appearance.GroupPanel.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupPanel.BackColor2")));
+            this.gridView1.Appearance.GroupPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupPanel.ForeColor")));
+            this.gridView1.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.gridView1.Appearance.GroupRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupRow.BackColor")));
+            this.gridView1.Appearance.GroupRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupRow.BorderColor")));
+            this.gridView1.Appearance.GroupRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.GroupRow.ForeColor")));
+            this.gridView1.Appearance.GroupRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupRow.Options.UseBorderColor = true;
+            this.gridView1.Appearance.GroupRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.HeaderPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.HeaderPanel.BackColor")));
+            this.gridView1.Appearance.HeaderPanel.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.HeaderPanel.BorderColor")));
+            this.gridView1.Appearance.HeaderPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.HeaderPanel.ForeColor")));
+            this.gridView1.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseBorderColor = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gridView1.Appearance.HideSelectionRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.HideSelectionRow.BackColor")));
+            this.gridView1.Appearance.HideSelectionRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.HideSelectionRow.BorderColor")));
+            this.gridView1.Appearance.HideSelectionRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.HideSelectionRow.ForeColor")));
+            this.gridView1.Appearance.HideSelectionRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.HideSelectionRow.Options.UseBorderColor = true;
+            this.gridView1.Appearance.HideSelectionRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.HorzLine.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.HorzLine.BackColor")));
+            this.gridView1.Appearance.HorzLine.Options.UseBackColor = true;
+            this.gridView1.Appearance.OddRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.OddRow.BackColor")));
+            this.gridView1.Appearance.OddRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.OddRow.BorderColor")));
+            this.gridView1.Appearance.OddRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.OddRow.ForeColor")));
+            this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.OddRow.Options.UseBorderColor = true;
+            this.gridView1.Appearance.OddRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.Preview.Font = ((System.Drawing.Font)(resources.GetObject("gridView1.Appearance.Preview.Font")));
+            this.gridView1.Appearance.Preview.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.Preview.ForeColor")));
+            this.gridView1.Appearance.Preview.Options.UseFont = true;
+            this.gridView1.Appearance.Preview.Options.UseForeColor = true;
+            this.gridView1.Appearance.Row.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.Row.BackColor")));
+            this.gridView1.Appearance.Row.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.Row.ForeColor")));
+            this.gridView1.Appearance.Row.Options.UseBackColor = true;
+            this.gridView1.Appearance.Row.Options.UseForeColor = true;
+            this.gridView1.Appearance.RowSeparator.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.RowSeparator.BackColor")));
+            this.gridView1.Appearance.RowSeparator.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.RowSeparator.BackColor2")));
+            this.gridView1.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gridView1.Appearance.SelectedRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.SelectedRow.BackColor")));
+            this.gridView1.Appearance.SelectedRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.SelectedRow.ForeColor")));
+            this.gridView1.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.TopNewRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.TopNewRow.BackColor")));
+            this.gridView1.Appearance.TopNewRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.VertLine.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView1.Appearance.VertLine.BackColor")));
+            this.gridView1.Appearance.VertLine.Options.UseBackColor = true;
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridView1.OptionsView.EnableAppearanceOddRow = true;
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
             // simpleButton1
             // 
             this.simpleButton1.Image = global::ortoxela.Properties.Resources.find;
@@ -2688,6 +2958,7 @@
             // 
             // labelControl2
             // 
+            this.labelControl2.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl2.Appearance.BackColor")));
             this.labelControl2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl2.Appearance.Font")));
             this.labelControl2.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl2.Appearance.ForeColor")));
             resources.ApplyResources(this.labelControl2, "labelControl2");
@@ -2704,27 +2975,129 @@
             // 
             // gridView2
             // 
+            this.gridView2.Appearance.ColumnFilterButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.ColumnFilterButton.BackColor")));
+            this.gridView2.Appearance.ColumnFilterButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.ColumnFilterButton.BorderColor")));
+            this.gridView2.Appearance.ColumnFilterButton.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.ColumnFilterButton.ForeColor")));
+            this.gridView2.Appearance.ColumnFilterButton.Options.UseBackColor = true;
+            this.gridView2.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
+            this.gridView2.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.gridView2.Appearance.ColumnFilterButtonActive.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.ColumnFilterButtonActive.BackColor")));
+            this.gridView2.Appearance.ColumnFilterButtonActive.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.ColumnFilterButtonActive.BorderColor")));
+            this.gridView2.Appearance.ColumnFilterButtonActive.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.ColumnFilterButtonActive.ForeColor")));
+            this.gridView2.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
+            this.gridView2.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
+            this.gridView2.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
+            this.gridView2.Appearance.Empty.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.Empty.BackColor")));
+            this.gridView2.Appearance.Empty.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.Empty.BackColor2")));
+            this.gridView2.Appearance.Empty.Options.UseBackColor = true;
+            this.gridView2.Appearance.EvenRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.EvenRow.BackColor")));
+            this.gridView2.Appearance.EvenRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.EvenRow.BorderColor")));
+            this.gridView2.Appearance.EvenRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.EvenRow.ForeColor")));
+            this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gridView2.Appearance.EvenRow.Options.UseBorderColor = true;
+            this.gridView2.Appearance.EvenRow.Options.UseForeColor = true;
+            this.gridView2.Appearance.FilterCloseButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FilterCloseButton.BackColor")));
+            this.gridView2.Appearance.FilterCloseButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FilterCloseButton.BorderColor")));
+            this.gridView2.Appearance.FilterCloseButton.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FilterCloseButton.ForeColor")));
+            this.gridView2.Appearance.FilterCloseButton.Options.UseBackColor = true;
+            this.gridView2.Appearance.FilterCloseButton.Options.UseBorderColor = true;
+            this.gridView2.Appearance.FilterCloseButton.Options.UseForeColor = true;
+            this.gridView2.Appearance.FilterPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FilterPanel.BackColor")));
+            this.gridView2.Appearance.FilterPanel.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FilterPanel.BackColor2")));
+            this.gridView2.Appearance.FilterPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FilterPanel.ForeColor")));
+            this.gridView2.Appearance.FilterPanel.Options.UseBackColor = true;
+            this.gridView2.Appearance.FilterPanel.Options.UseForeColor = true;
+            this.gridView2.Appearance.FixedLine.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FixedLine.BackColor")));
+            this.gridView2.Appearance.FixedLine.Options.UseBackColor = true;
+            this.gridView2.Appearance.FocusedCell.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FocusedCell.BackColor")));
+            this.gridView2.Appearance.FocusedCell.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FocusedCell.ForeColor")));
+            this.gridView2.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView2.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gridView2.Appearance.FocusedRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FocusedRow.BackColor")));
+            this.gridView2.Appearance.FocusedRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FocusedRow.BorderColor")));
+            this.gridView2.Appearance.FocusedRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FocusedRow.ForeColor")));
+            this.gridView2.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gridView2.Appearance.FocusedRow.Options.UseBorderColor = true;
+            this.gridView2.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gridView2.Appearance.FooterPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FooterPanel.BackColor")));
+            this.gridView2.Appearance.FooterPanel.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FooterPanel.BorderColor")));
+            this.gridView2.Appearance.FooterPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.FooterPanel.ForeColor")));
+            this.gridView2.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.gridView2.Appearance.FooterPanel.Options.UseBorderColor = true;
+            this.gridView2.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridView2.Appearance.GroupButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupButton.BackColor")));
+            this.gridView2.Appearance.GroupButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupButton.BorderColor")));
+            this.gridView2.Appearance.GroupButton.Options.UseBackColor = true;
+            this.gridView2.Appearance.GroupButton.Options.UseBorderColor = true;
+            this.gridView2.Appearance.GroupFooter.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupFooter.BackColor")));
+            this.gridView2.Appearance.GroupFooter.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupFooter.BorderColor")));
+            this.gridView2.Appearance.GroupFooter.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupFooter.ForeColor")));
+            this.gridView2.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gridView2.Appearance.GroupFooter.Options.UseBorderColor = true;
+            this.gridView2.Appearance.GroupFooter.Options.UseForeColor = true;
+            this.gridView2.Appearance.GroupPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupPanel.BackColor")));
+            this.gridView2.Appearance.GroupPanel.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupPanel.BackColor2")));
+            this.gridView2.Appearance.GroupPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupPanel.ForeColor")));
+            this.gridView2.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gridView2.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.gridView2.Appearance.GroupRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupRow.BackColor")));
+            this.gridView2.Appearance.GroupRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupRow.BorderColor")));
+            this.gridView2.Appearance.GroupRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.GroupRow.ForeColor")));
+            this.gridView2.Appearance.GroupRow.Options.UseBackColor = true;
+            this.gridView2.Appearance.GroupRow.Options.UseBorderColor = true;
+            this.gridView2.Appearance.GroupRow.Options.UseForeColor = true;
+            this.gridView2.Appearance.HeaderPanel.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.HeaderPanel.BackColor")));
+            this.gridView2.Appearance.HeaderPanel.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.HeaderPanel.BorderColor")));
+            this.gridView2.Appearance.HeaderPanel.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.HeaderPanel.ForeColor")));
+            this.gridView2.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseBorderColor = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gridView2.Appearance.HideSelectionRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.HideSelectionRow.BackColor")));
+            this.gridView2.Appearance.HideSelectionRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.HideSelectionRow.BorderColor")));
+            this.gridView2.Appearance.HideSelectionRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.HideSelectionRow.ForeColor")));
+            this.gridView2.Appearance.HideSelectionRow.Options.UseBackColor = true;
+            this.gridView2.Appearance.HideSelectionRow.Options.UseBorderColor = true;
+            this.gridView2.Appearance.HideSelectionRow.Options.UseForeColor = true;
+            this.gridView2.Appearance.HorzLine.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.HorzLine.BackColor")));
+            this.gridView2.Appearance.HorzLine.Options.UseBackColor = true;
+            this.gridView2.Appearance.OddRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.OddRow.BackColor")));
+            this.gridView2.Appearance.OddRow.BorderColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.OddRow.BorderColor")));
+            this.gridView2.Appearance.OddRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.OddRow.ForeColor")));
+            this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
+            this.gridView2.Appearance.OddRow.Options.UseBorderColor = true;
+            this.gridView2.Appearance.OddRow.Options.UseForeColor = true;
+            this.gridView2.Appearance.Preview.Font = ((System.Drawing.Font)(resources.GetObject("gridView2.Appearance.Preview.Font")));
+            this.gridView2.Appearance.Preview.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.Preview.ForeColor")));
+            this.gridView2.Appearance.Preview.Options.UseFont = true;
+            this.gridView2.Appearance.Preview.Options.UseForeColor = true;
+            this.gridView2.Appearance.Row.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.Row.BackColor")));
+            this.gridView2.Appearance.Row.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.Row.ForeColor")));
+            this.gridView2.Appearance.Row.Options.UseBackColor = true;
+            this.gridView2.Appearance.Row.Options.UseForeColor = true;
+            this.gridView2.Appearance.RowSeparator.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.RowSeparator.BackColor")));
+            this.gridView2.Appearance.RowSeparator.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.RowSeparator.BackColor2")));
+            this.gridView2.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gridView2.Appearance.SelectedRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.SelectedRow.BackColor")));
+            this.gridView2.Appearance.SelectedRow.ForeColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.SelectedRow.ForeColor")));
+            this.gridView2.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.gridView2.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gridView2.Appearance.TopNewRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.TopNewRow.BackColor")));
+            this.gridView2.Appearance.TopNewRow.Options.UseBackColor = true;
+            this.gridView2.Appearance.VertLine.BackColor = ((System.Drawing.Color)(resources.GetObject("gridView2.Appearance.VertLine.BackColor")));
+            this.gridView2.Appearance.VertLine.Options.UseBackColor = true;
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridView2.OptionsView.EnableAppearanceOddRow = true;
             this.gridView2.OptionsView.ShowAutoFilterRow = true;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Silver;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Name = "label1";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
             // 
             // chartControl1
             // 
@@ -2777,11 +3150,6 @@
             this.xtraTabbedMdiManager1.PageAdded += new DevExpress.XtraTabbedMdi.MdiTabPageEventHandler(this.xtraTabbedMdiManager1_PageAdded);
             this.xtraTabbedMdiManager1.PageRemoved += new DevExpress.XtraTabbedMdi.MdiTabPageEventHandler(this.xtraTabbedMdiManager1_PageRemoved);
             // 
-            // popupMenu1
-            // 
-            this.popupMenu1.Name = "popupMenu1";
-            this.popupMenu1.Ribbon = this.ribbon;
-            // 
             // ribbonPage11
             // 
             this.ribbonPage11.Name = "ribbonPage11";
@@ -2808,19 +3176,21 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerDatos)).EndInit();
             this.splitContainerDatos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Pedidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(textAnnotation1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
@@ -2830,7 +3200,6 @@
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2998,7 +3367,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem102;
         private DevExpress.XtraBars.BarButtonItem barButtonItem103;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup19;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraCharts.ChartControl chartControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory FACTURACION;
@@ -3094,6 +3462,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem149;
         private DevExpress.XtraEditors.LabelControl labelControl_NombreEmpresa;
         private DevExpress.XtraBars.BarButtonItem barButtonItem150;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem151;
+        private DevExpress.XtraGrid.GridControl gridControl_Pedidos;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }
