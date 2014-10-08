@@ -543,7 +543,7 @@ namespace ortoxela.Pedido.EnvioSinPedido
 
         private void sbnuevo_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Desea cargar un nuevo documento?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult r = MessageBox.Show("Desea cargar un nuevo documento vacio?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (r == DialogResult.Yes)
             {
                 sbAceptar.Enabled = true;
@@ -557,6 +557,12 @@ namespace ortoxela.Pedido.EnvioSinPedido
                 dateFechaPedido.Text = "";
                 gridLookSerie.Text = "";
                 gridLookBodega.Text = "";
+
+                groupControl2.Enabled = true;
+                groupControl3.Enabled = true;
+                panelControl1.Enabled = true;
+                sbAceptar.Enabled = true;
+                simplePrinter.Enabled = false;
             }
         }
 

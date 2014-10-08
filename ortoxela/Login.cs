@@ -54,7 +54,8 @@ namespace ortoxela
                     {
 
                         //conectarse a invex si es ORTOXELA 
-                        if (clases.ClassVariables.nombreEmpresa == "Ortoxela,Pruebas")
+                        //if (clases.ClassVariables.nombreEmpresa == "Ortoxela,Pruebas")
+                        if (clases.ClassVariables.nombreEmpresa == "OrtoXela")
                         {
                             #region integracion con INVEX, logeo de usuario
                             try
@@ -219,7 +220,7 @@ namespace ortoxela
                 MySqlDataAdapter ad2 = new MySqlDataAdapter(cv, clases.ClassVariables.ConexionMaster);
                 ad2.Fill(t2);
 
-                labelControl_empresa.Text = "Usted esta conectado a: "+t2.Rows[0]["Nombre"].ToString();
+                labelControl_empresa.Text = "  Usted esta conectado a: "+t2.Rows[0]["Nombre"].ToString()+"  ";
                 clases.ClassVariables.idEmpresa = Convert.ToInt16(t2.Rows[0]["idEmpresa"]);
                 clases.ClassVariables.nombreEmpresa = t2.Rows[0]["Nombre"].ToString();
 
@@ -232,7 +233,9 @@ namespace ortoxela
                 { }
             }
             catch
-            { }
+            {
+                labelControl_empresa.Text = "Sin conexion al servidor, contacte a su proveedor";
+            }
 
             #endregion
 

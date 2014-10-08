@@ -38,6 +38,8 @@
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule7 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule8 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule9 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule10 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule11 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.comboBox_seriesComprasINVEX = new System.Windows.Forms.ComboBox();
             this.sb_solicitud_compra = new DevExpress.XtraEditors.SimpleButton();
@@ -101,6 +103,7 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.dxValidationEncabezado = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.alertControl1 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.dxValidationProvider3 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textNoFacturaCompra.Properties)).BeginInit();
@@ -135,12 +138,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.textTotalIva.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationEncabezado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.Controls.Add(this.comboBox_seriesComprasINVEX);
             this.groupControl1.Controls.Add(this.sb_solicitud_compra);
             this.groupControl1.Controls.Add(this.textNoFacturaCompra);
@@ -204,6 +208,9 @@
             this.textNoFacturaCompra.Properties.Mask.PlaceHolder = ' ';
             this.textNoFacturaCompra.Size = new System.Drawing.Size(104, 20);
             this.textNoFacturaCompra.TabIndex = 78;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Debe ingresar el numero de factura de su proveedor";
+            this.dxValidationProvider3.SetValidationRule(this.textNoFacturaCompra, conditionValidationRule1);
             // 
             // labelControl18
             // 
@@ -390,12 +397,12 @@
             this.gridLookTipoDocumento.Properties.View = this.gridView3;
             this.gridLookTipoDocumento.Size = new System.Drawing.Size(251, 20);
             this.gridLookTipoDocumento.TabIndex = 3;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "SELECCIONE EL TIPO DE DOCUMENTO";
-            this.dxValidationEncabezado.SetValidationRule(this.gridLookTipoDocumento, conditionValidationRule1);
             conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "SELECCIONE UN REGISTRO";
-            this.dxValidationProvider2.SetValidationRule(this.gridLookTipoDocumento, conditionValidationRule2);
+            conditionValidationRule2.ErrorText = "SELECCIONE EL TIPO DE DOCUMENTO";
+            this.dxValidationEncabezado.SetValidationRule(this.gridLookTipoDocumento, conditionValidationRule2);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "SELECCIONE UN REGISTRO";
+            this.dxValidationProvider2.SetValidationRule(this.gridLookTipoDocumento, conditionValidationRule3);
             this.gridLookTipoDocumento.EditValueChanged += new System.EventHandler(this.gridLookTipoDocumento_EditValueChanged);
             // 
             // gridView3
@@ -415,6 +422,9 @@
             this.gridLookProveedor.Properties.View = this.gridView2;
             this.gridLookProveedor.Size = new System.Drawing.Size(251, 20);
             this.gridLookProveedor.TabIndex = 1;
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "Debe seleccionar un proveedor";
+            this.dxValidationProvider3.SetValidationRule(this.gridLookProveedor, conditionValidationRule4);
             this.gridLookProveedor.EditValueChanged += new System.EventHandler(this.gridLookProveedor_EditValueChanged);
             // 
             // gridView2
@@ -438,9 +448,9 @@
             this.textNoDocumento.Name = "textNoDocumento";
             this.textNoDocumento.Size = new System.Drawing.Size(95, 20);
             this.textNoDocumento.TabIndex = 5;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "INGRESE NUMERO DOCUMENTO";
-            this.dxValidationProvider2.SetValidationRule(this.textNoDocumento, conditionValidationRule3);
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule5.ErrorText = "INGRESE NUMERO DOCUMENTO";
+            this.dxValidationProvider2.SetValidationRule(this.textNoDocumento, conditionValidationRule5);
             // 
             // labelControl2
             // 
@@ -520,9 +530,9 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.gridControl1);
             this.groupControl2.Location = new System.Drawing.Point(12, 177);
             this.groupControl2.Name = "groupControl2";
@@ -595,8 +605,8 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Controls.Add(this.labelControl10);
             this.panelControl1.Controls.Add(this.labelControl9);
@@ -651,9 +661,9 @@
             this.textCosto.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textCosto.Size = new System.Drawing.Size(76, 20);
             this.textCosto.TabIndex = 6;
-            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule4.ErrorText = "CAMPO OBLIGATORIO";
-            this.dxValidationProvider1.SetValidationRule(this.textCosto, conditionValidationRule4);
+            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule6.ErrorText = "CAMPO OBLIGATORIO";
+            this.dxValidationProvider1.SetValidationRule(this.textCosto, conditionValidationRule6);
             // 
             // textVenta
             // 
@@ -663,9 +673,9 @@
             this.textVenta.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textVenta.Size = new System.Drawing.Size(59, 20);
             this.textVenta.TabIndex = 7;
-            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule5.ErrorText = "CAMPO OBLIGATORIO";
-            this.dxValidationProvider1.SetValidationRule(this.textVenta, conditionValidationRule5);
+            conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule7.ErrorText = "CAMPO OBLIGATORIO";
+            this.dxValidationProvider1.SetValidationRule(this.textVenta, conditionValidationRule7);
             // 
             // sbAgregaArt
             // 
@@ -693,9 +703,9 @@
             this.textCantidadArt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textCantidadArt.Size = new System.Drawing.Size(74, 20);
             this.textCantidadArt.TabIndex = 5;
-            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule6.ErrorText = "CAMPO OBLIGATORIO";
-            this.dxValidationProvider1.SetValidationRule(this.textCantidadArt, conditionValidationRule6);
+            conditionValidationRule8.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule8.ErrorText = "CAMPO OBLIGATORIO";
+            this.dxValidationProvider1.SetValidationRule(this.textCantidadArt, conditionValidationRule8);
             // 
             // labelControl7
             // 
@@ -711,9 +721,9 @@
             this.textNombreArti.Name = "textNombreArti";
             this.textNombreArti.Size = new System.Drawing.Size(267, 20);
             this.textNombreArti.TabIndex = 3;
-            conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule7.ErrorText = "CAMPO OBLIGATORIO";
-            this.dxValidationProvider1.SetValidationRule(this.textNombreArti, conditionValidationRule7);
+            conditionValidationRule9.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule9.ErrorText = "CAMPO OBLIGATORIO";
+            this.dxValidationProvider1.SetValidationRule(this.textNombreArti, conditionValidationRule9);
             this.textNombreArti.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNombreArti_KeyPress);
             // 
             // labelControl6
@@ -730,9 +740,9 @@
             this.textCodigoArt.Name = "textCodigoArt";
             this.textCodigoArt.Size = new System.Drawing.Size(88, 20);
             this.textCodigoArt.TabIndex = 2;
-            conditionValidationRule8.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule8.ErrorText = "CAMPO OBLIGATORIO";
-            this.dxValidationProvider1.SetValidationRule(this.textCodigoArt, conditionValidationRule8);
+            conditionValidationRule10.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule10.ErrorText = "CAMPO OBLIGATORIO";
+            this.dxValidationProvider1.SetValidationRule(this.textCodigoArt, conditionValidationRule10);
             this.textCodigoArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdit1_KeyPress);
             // 
             // labelControl4
@@ -754,9 +764,9 @@
             this.gridLookBodega.Properties.View = this.gridLookUpEdit1View;
             this.gridLookBodega.Size = new System.Drawing.Size(153, 20);
             this.gridLookBodega.TabIndex = 0;
-            conditionValidationRule9.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule9.ErrorText = "SELECCIONE UN REGISTRO";
-            this.dxValidationProvider2.SetValidationRule(this.gridLookBodega, conditionValidationRule9);
+            conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule11.ErrorText = "SELECCIONE UN REGISTRO";
+            this.dxValidationProvider2.SetValidationRule(this.gridLookBodega, conditionValidationRule11);
             this.gridLookBodega.EditValueChanged += new System.EventHandler(this.gridLookBodega_EditValueChanged);
             // 
             // gridLookUpEdit1View
@@ -863,6 +873,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textTotalIva.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationEncabezado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -933,5 +944,6 @@
         private DevExpress.XtraBars.Alerter.AlertControl alertControl1;
         private DevExpress.XtraEditors.SimpleButton sb_solicitud_compra;
         private System.Windows.Forms.ComboBox comboBox_seriesComprasINVEX;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider3;
     }
 }

@@ -81,7 +81,9 @@
             // 
             // labelControl_empresa
             // 
+            this.labelControl_empresa.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelControl_empresa.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl_empresa.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl_empresa.Location = new System.Drawing.Point(15, 5);
             this.labelControl_empresa.Name = "labelControl_empresa";
             this.labelControl_empresa.Size = new System.Drawing.Size(102, 22);
@@ -105,6 +107,7 @@
             // gridLookUpEdit1View
             // 
             this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
