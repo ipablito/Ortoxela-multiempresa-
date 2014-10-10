@@ -29,7 +29,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>49</ApplicationRevision>
+    <ApplicationRevision>50</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -958,6 +958,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPrueba.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Importaciones\f_importacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Importaciones\f_importacion.Designer.cs">
+      <DependentUpon>f_importacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Inventario\DataSet_Inventario2H.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1736,6 +1742,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Compras\XtraReport_x_NoCompra.resx">
       <DependentUpon>XtraReport_x_NoCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Importaciones\f_importacion.resx">
+      <DependentUpon>f_importacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Inventario\Frm_RepInventarioAdmin.resx">
       <DependentUpon>Frm_RepInventarioAdmin.cs</DependentUpon>

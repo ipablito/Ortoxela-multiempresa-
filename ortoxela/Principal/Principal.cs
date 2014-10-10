@@ -2315,6 +2315,20 @@ namespace ortoxela.Principal
             this.Cursor = Cursors.Default;
         }
 
+        private void barButtonItem152_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            try
+            {
+                Form nf = new Reportes.Importaciones.f_importacion();
+                nf.MdiParent = this;
+                nf.Show();
+            }
+            catch
+            { }
+            this.Cursor = Cursors.Default;
+        }
+
         
 
 

@@ -242,6 +242,7 @@
             this.barButtonItem149 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem150 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem151 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem152 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.FACTURACION = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
@@ -689,8 +690,9 @@
             this.barButtonItem148,
             this.barButtonItem149,
             this.barButtonItem150,
-            this.barButtonItem151});
-            this.ribbon.MaxItemId = 230;
+            this.barButtonItem151,
+            this.barButtonItem152});
+            this.ribbon.MaxItemId = 231;
             this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar1);
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -2384,6 +2386,15 @@
             this.barButtonItem151.Name = "barButtonItem151";
             this.barButtonItem151.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem151_ItemClick);
             // 
+            // barButtonItem152
+            // 
+            resources.ApplyResources(this.barButtonItem152, "barButtonItem152");
+            this.barButtonItem152.Enabled = false;
+            this.barButtonItem152.Id = 230;
+            this.barButtonItem152.LargeGlyph = global::ortoxela.Properties.Resources.money_transportation;
+            this.barButtonItem152.Name = "barButtonItem152";
+            this.barButtonItem152.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem152_ItemClick);
+            // 
             // ribbonMiniToolbar1
             // 
             this.ribbonMiniToolbar1.PopupMenu = this.popupMenu1;
@@ -2455,6 +2466,7 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem78);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem152);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             resources.ApplyResources(this.ribbonPageGroup5, "ribbonPageGroup5");
             // 
@@ -3465,6 +3477,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem151;
         private DevExpress.XtraGrid.GridControl gridControl_Pedidos;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem152;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

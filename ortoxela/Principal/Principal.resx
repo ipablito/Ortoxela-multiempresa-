@@ -875,6 +875,9 @@
   <data name="barButtonItem151.Caption" xml:space="preserve">
     <value>Envios Especiales</value>
   </data>
+  <data name="barButtonItem152.Caption" xml:space="preserve">
+    <value>Importaciones</value>
+  </data>
   <data name="ribbon.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -3545,6 +3548,12 @@
     <value>barButtonItem151</value>
   </data>
   <data name="&gt;&gt;barButtonItem151.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem152.Name" xml:space="preserve">
+    <value>barButtonItem152</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem152.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;ribbonMiniToolbar1.Name" xml:space="preserve">
