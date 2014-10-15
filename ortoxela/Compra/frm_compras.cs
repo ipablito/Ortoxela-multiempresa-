@@ -100,7 +100,7 @@ namespace ortoxela.Compra
             temporal.Columns.Add("PRECIO");
             temporal.Columns.Add("SUBTOTAL");
             temporal.Columns.Add("DESCUENTO");            
-            temporal.Columns.Add("VENTA");
+            temporal.Columns.Add("Ultimo Costo");
             temporal.Columns.Add("ACTUALIZA_PRECIO");
             temporal.Columns.Add("INGRESO_EGRESO");
             temporal.Columns.Add("EXISTENCIA");
@@ -116,6 +116,7 @@ namespace ortoxela.Compra
             gridView1.Columns["DESCRIPCION"].OptionsColumn.ReadOnly = true;
             gridView1.Columns["SUBTOTAL"].OptionsColumn.ReadOnly = true;
             gridView1.Columns["DESCUENTO"].OptionsColumn.ReadOnly = true;
+            gridView1.Columns["Ultimo Costo"].OptionsColumn.ReadOnly = true;
             gridView1.Columns["PrecioPonderadoHistorico"].Visible = false;
         }   
         private void frm_compras_Load(object sender, EventArgs e)
@@ -244,7 +245,8 @@ namespace ortoxela.Compra
                                         gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "SUBTOTAL", (Convert.ToDouble(TempoPadre.Rows[x]["costo"]) - descuento) * (ExistenciaFija));
                                         gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "ACTUALIZA_PRECIO", bandera_actualiza_precio);
                                         gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "INGRESO_EGRESO", bandera_ingreso_egreso);
-                                        gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VENTA", TempoPadre.Rows[x]["precio_venta"]);
+                                        //gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Ultimo Costo", TempoPadre.Rows[x]["precio_venta"]);
+                                        gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Ultimo Costo", textVenta.Text);
                                         gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "EXISTENCIA", ExistenciaHijo);
                                         gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "PrecioPonderadoHistorico", PrecioPonderadoHistoria);
                                         TotalIngresoCosto = TotalIngresoCosto + (ExistenciaFija * (Convert.ToDouble(TempoPadre.Rows[x]["costo"]) - descuento));
@@ -294,7 +296,8 @@ namespace ortoxela.Compra
                                     gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "SUBTOTAL", (Convert.ToDouble(textCosto.Text) - descuento) * (Convert.ToDouble(textCantidadArt.Text)));
                                     gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "ACTUALIZA_PRECIO", bandera_actualiza_precio);
                                     gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "INGRESO_EGRESO", bandera_ingreso_egreso);
-                                    gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VENTA", textVenta.Text);
+                                    //gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Ultimo Costo", textVenta.Text);
+                                    gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Ultimo Costo", textVenta.Text);
                                     gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "EXISTENCIA", cant_existencia);
                                     gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "PrecioPonderadoHistorico", PrecioPonderadoHistoria);
                                     TotalIngresoCosto = TotalIngresoCosto + (Convert.ToDouble(textCantidadArt.Text) * (Convert.ToDouble(textCosto.Text) - descuento));
@@ -353,7 +356,8 @@ namespace ortoxela.Compra
                                     gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "SUBTOTAL", (Convert.ToDouble(TempoPadre.Rows[x]["costo"]) - descuento) * (ExistenciaFija));
                                     gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "ACTUALIZA_PRECIO", bandera_actualiza_precio);
                                     gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "INGRESO_EGRESO", bandera_ingreso_egreso);
-                                    gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VENTA", TempoPadre.Rows[x]["precio_venta"]);
+                                    //gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VENTA", TempoPadre.Rows[x]["precio_venta"]);
+                                    gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Ultimo Costo", textVenta.Text);
                                     TotalIngresoCosto = TotalIngresoCosto + (ExistenciaFija * (Convert.ToDouble(TempoPadre.Rows[x]["costo"]) - descuento));
                                     TotalIngresoVenta = TotalIngresoVenta + (ExistenciaFija * Convert.ToDouble(TempoPadre.Rows[x]["precio_venta"]));
                                     totalIva = totalIva + (((Convert.ToDouble(TempoPadre.Rows[x]["costo"]) - descuento) * (.12)) * ExistenciaFija);
@@ -376,7 +380,8 @@ namespace ortoxela.Compra
                             gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "SUBTOTAL",0);
                             gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "ACTUALIZA_PRECIO", bandera_actualiza_precio);
                             gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "INGRESO_EGRESO", bandera_ingreso_egreso);
-                            gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VENTA", 0);
+                            //gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VENTA", 0);
+                            gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Ultimo Costo", textVenta.Text);
                             gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "PrecioPonderadoHistorico", PrecioPonderadoHistoria);
                             gridView1.UpdateCurrentRow();                            
                             textCodigoArt.Text = textNombreArti.Text = textCantidadArt.Text = textVenta.Text = "";
@@ -412,7 +417,8 @@ namespace ortoxela.Compra
                                 gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "SUBTOTAL", (Convert.ToDouble(textCosto.Text) - descuento) * (Convert.ToDouble(textCantidadArt.Text)));
                                 gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "ACTUALIZA_PRECIO", bandera_actualiza_precio);
                                 gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "INGRESO_EGRESO", bandera_ingreso_egreso);
-                                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VENTA", textVenta.Text);
+                                //gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VENTA", textVenta.Text);
+                                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Ultimo Costo", textVenta.Text);
                                 gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "PrecioPonderadoHistorico", PrecioPonderadoHistoria);
                                 TotalIngresoCosto = TotalIngresoCosto + (Convert.ToDouble(textCantidadArt.Text) * (Convert.ToDouble(textCosto.Text) - descuento));
                                 TotalIngresoVenta = TotalIngresoVenta + (Convert.ToDouble(textCantidadArt.Text) * Convert.ToDouble(textVenta.Text));
@@ -463,9 +469,23 @@ namespace ortoxela.Compra
                         textNombreArti.Text = tempTabla.Rows[0]["NOMBRE ARTICULO"].ToString();
                         textCosto.Text = tempTabla.Rows[0]["costo"].ToString();
                         PrecioPonderadoHistoria = tempTabla.Rows[0]["costo"].ToString();
-                        textVenta.Text = tempTabla.Rows[0]["precio_venta"].ToString();
+                        //textVenta.Text = tempTabla.Rows[0]["precio_venta"].ToString();
                         if (bandera_ingreso_egreso == "2")
                             cant_existencia = Convert.ToInt32(tempTabla.Rows[0]["EXISTENCIA"]);
+
+
+                        #region ultimo precio al que se compro
+                        try
+                        {
+                            cadena = "SELECT d.precio_unitario FROM detalle_doctos_inv d JOIN header_doctos_inv h ON d.id_documento=h.id_documento WHERE d.codigo_articulo='" + id_articulo + "' AND h.codigo_serie in (7,39) ORDER BY h.id_documento DESC LIMIT 1";
+                            DataTable nt1t = new DataTable();
+                            nt1t = logicaxela.Tabla(cadena);
+                            textVenta.Text = nt1t.Rows[0]["precio_unitario"].ToString();
+                        }
+                        catch
+                        { }
+                        #endregion
+                        
                         textCantidadArt.Focus();
                     }
                 }
@@ -488,7 +508,7 @@ namespace ortoxela.Compra
                     
 
                     ssql = "INSERT into header_doctos_inv(codigo_serie,no_documento,codigo_proveedor, fecha, monto, descuento, monto_neto, usuario_creador, usuario_descuento, razon_ajuste, descripcion, estadoid,contado_credito,refer_documento) " +
-                        "VALUES ("+gridLookTipoDocumento.EditValue+", '"+textNoDocumento.Text+"', "+id_proveedor+", '"+dateEdit1.DateTime.ToString("yyyy-MM-dd")+"', "+TotalIngresoCosto+", "+TotalDescuento+", "+TotalIngresoVenta+", "+clases.ClassVariables.id_usuario+", "+id_usuario_descuento+", '"+memoRazonAjuste.Text+"', '"+memoDescripcion.Text+"', 4,"+radioGroup2.SelectedIndex+",'"+textNoFacturaCompra.Text+"');SELECT LAST_INSERT_ID();";
+                        "VALUES ("+gridLookTipoDocumento.EditValue+", '"+textNoDocumento.Text+"', "+id_proveedor+", '"+dateEdit1.DateTime.ToString("yyyy-MM-dd")+"', "+TotalIngresoCosto+", "+TotalDescuento+", "+TotalIngresoVenta+", "+clases.ClassVariables.id_usuario+", "+id_usuario_descuento+", '"+memoRazonAjuste.Text+"', '"+memoDescripcion.Text+"', 4,"+radioGroup2.SelectedIndex+",'"+comboBox_seriesComprasINVEX.Text+"-"+ textNoFacturaCompra.Text+"');SELECT LAST_INSERT_ID();";
                 
                 comando = new MySqlCommand(ssql, conexion);
                 comando.Transaction=transac;                
@@ -496,8 +516,21 @@ namespace ortoxela.Compra
 
                 for (int x = 0; x < gridView1.DataRowCount; x++)
                 {
+                    #region hayar el precio de venta
+                    string cn = "select precio_venta from articulos where codigo_articulo='" + gridView1.GetRowCellValue(x, "CODIGO") + "';";
+                    DataTable ntt = logicaxela.Tabla(cn);
+
+                    string pv = "0";
+                    try
+                    {
+                        pv = ntt.Rows[0]["precio_venta"].ToString();
+                    }
+                    catch
+                    { }
+                    #endregion
+
                     ssql = "INSERT into detalle_doctos_inv(id_documento, cantidad_enviada, precio_unitario, precio_total,codigo_articulo, codigo_bodega, precio_venta,precioPonderado_Historico) " +
-                               "VALUES (" + id_nuevoIngreso + ", " + gridView1.GetRowCellValue(x, "CANTIDAD") + ", " + gridView1.GetRowCellValue(x, "PRECIO") + ", " + gridView1.GetRowCellValue(x, "SUBTOTAL") + ",'" + gridView1.GetRowCellValue(x, "CODIGO") + "', " + gridView1.GetRowCellValue(x, "IDBODEGA") + ", " + gridView1.GetRowCellValue(x, "VENTA")+","+gridView1.GetRowCellValue(x,"PrecioPonderadoHistorico")+ ");";
+                               "VALUES (" + id_nuevoIngreso + ", " + gridView1.GetRowCellValue(x, "CANTIDAD") + ", " + gridView1.GetRowCellValue(x, "PRECIO") + ", " + gridView1.GetRowCellValue(x, "SUBTOTAL") + ",'" + gridView1.GetRowCellValue(x, "CODIGO") + "', " + gridView1.GetRowCellValue(x, "IDBODEGA") + ", " + pv+","+gridView1.GetRowCellValue(x,"PrecioPonderadoHistorico")+ ");";
                     comando = new MySqlCommand(ssql, conexion);
                     comando.Transaction = transac;
                     comando.ExecuteNonQuery();
@@ -594,7 +627,12 @@ namespace ortoxela.Compra
             if(dxValidationProvider2.Validate() & gridView1.DataRowCount>0)
             {
                 
-                cadena = "SELECT * FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE header_doctos_inv.no_documento="+textNoDocumento.Text+" AND series_documentos.codigo_serie="+gridLookTipoDocumento.EditValue;
+                //cadena = "SELECT * FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE header_doctos_inv.no_documento="+textNoDocumento.Text+" AND series_documentos.codigo_serie="+gridLookTipoDocumento.EditValue;
+                if(gridLookProveedor.EditValue!=null && (textNoFacturaCompra.Text!="" && textNoFacturaCompra.Text!="0"))
+                    cadena = "SELECT * FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE (header_doctos_inv.no_documento=" + textNoDocumento.Text + " AND series_documentos.codigo_serie=" + gridLookTipoDocumento.EditValue + ") OR (refer_documento='" + comboBox_seriesComprasINVEX.Text + "-" + textNoFacturaCompra.Text + "' AND codigo_proveedor="+gridLookProveedor.EditValue.ToString()+")";
+                else
+                    cadena = "SELECT * FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE header_doctos_inv.no_documento=" + textNoDocumento.Text + " AND series_documentos.codigo_serie=" + gridLookTipoDocumento.EditValue;
+
                 if (logicaxela.ExisteRegistro(cadena) == false)
                 {
                     if (gridLookProveedor.EditValue != null)

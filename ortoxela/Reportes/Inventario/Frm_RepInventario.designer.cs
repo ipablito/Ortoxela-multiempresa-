@@ -331,7 +331,7 @@
             this.labelControl12.Size = new System.Drawing.Size(219, 26);
             this.labelControl12.TabIndex = 12;
             this.labelControl12.Text = "Para ver todos los códigos que contengan \r\nun texto, ingresarlo solo en un campo." +
-                "";
+    "";
             // 
             // labelControl13
             // 
@@ -515,7 +515,7 @@
             this.listBox_bodegas.Location = new System.Drawing.Point(137, 175);
             this.listBox_bodegas.Name = "listBox_bodegas";
             this.listBox_bodegas.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox_bodegas.Size = new System.Drawing.Size(209, 160);
+            this.listBox_bodegas.Size = new System.Drawing.Size(209, 199);
             this.listBox_bodegas.TabIndex = 27;
             this.listBox_bodegas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_bodegas_MouseUp);
             // 

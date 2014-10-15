@@ -179,13 +179,13 @@
             // 
             // comboBox_seriesComprasINVEX
             // 
+            this.comboBox_seriesComprasINVEX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_seriesComprasINVEX.Enabled = false;
             this.comboBox_seriesComprasINVEX.FormattingEnabled = true;
             this.comboBox_seriesComprasINVEX.Location = new System.Drawing.Point(415, 93);
             this.comboBox_seriesComprasINVEX.Name = "comboBox_seriesComprasINVEX";
             this.comboBox_seriesComprasINVEX.Size = new System.Drawing.Size(121, 21);
             this.comboBox_seriesComprasINVEX.TabIndex = 81;
-            this.comboBox_seriesComprasINVEX.Text = "Default";
             // 
             // sb_solicitud_compra
             // 
@@ -641,9 +641,9 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(1138, 14);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(52, 13);
+            this.labelControl10.Size = new System.Drawing.Size(60, 13);
             this.labelControl10.TabIndex = 45;
-            this.labelControl10.Text = "PR VENTA:";
+            this.labelControl10.Text = "Ultimo Costo";
             // 
             // labelControl9
             // 
@@ -667,11 +667,16 @@
             // 
             // textVenta
             // 
-            this.textVenta.Location = new System.Drawing.Point(1192, 11);
+            this.textVenta.Enabled = false;
+            this.textVenta.Location = new System.Drawing.Point(1203, 9);
             this.textVenta.Name = "textVenta";
+            this.textVenta.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textVenta.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.textVenta.Properties.Appearance.Options.UseFont = true;
+            this.textVenta.Properties.Appearance.Options.UseForeColor = true;
             this.textVenta.Properties.Mask.EditMask = "c";
             this.textVenta.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textVenta.Size = new System.Drawing.Size(59, 20);
+            this.textVenta.Size = new System.Drawing.Size(59, 22);
             this.textVenta.TabIndex = 7;
             conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule7.ErrorText = "CAMPO OBLIGATORIO";

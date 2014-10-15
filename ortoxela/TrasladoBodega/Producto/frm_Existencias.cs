@@ -36,7 +36,7 @@ namespace ortoxela.Reportes.Producto
             {
                 if (dxValidationProvider1.Validate())
                 {
-                    ssql = "SELECT articulos.codigo_articulo AS CODIGO,articulos.descripcion AS 'ARTICULO', bodegas.existencia_articulo AS 'EXISTENCIA',articulos.costo as 'PRECIO COSTO', articulos.precio_venta AS 'PRECIO VENTA' FROM articulos INNER JOIN bodegas ON articulos.codigo_articulo=bodegas.codigo_articulo WHERE bodegas.codigo_bodega=" + gridLookBodega.EditValue;
+                    ssql = "SELECT articulos.codigo_articulo AS CODIGO,articulos.descripcion AS 'ARTICULO', bodegas.existencia_articulo AS 'EXISTENCIA'"+/*,articulos.costo as 'PRECIO COSTO'*/", articulos.precio_venta AS 'PRECIO VENTA' FROM articulos INNER JOIN bodegas ON articulos.codigo_articulo=bodegas.codigo_articulo WHERE bodegas.codigo_bodega=" + gridLookBodega.EditValue;
                     gridControl1.DataSource = logicaxela.Tabla(ssql);
                     gridView1.Columns["ARTICULO"].Width = 600;
                 }
