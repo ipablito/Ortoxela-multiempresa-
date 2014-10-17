@@ -143,8 +143,42 @@
   <data name="splitContainerDatos.Panel1.AppearanceCaption.BorderColor" type="System.Drawing.Color, System.Drawing">
     <value>Transparent</value>
   </data>
+  <data name="labelControl_NombreEmpresa.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>192, 255, 255</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Heiti Std R, 20.25pt, style=Bold, Underline</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Teal</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>683, 21</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 34</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelControl_NombreEmpresa.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="labelControl_NombreEmpresa.Text" xml:space="preserve">
+    <value>Sin conexion</value>
+  </data>
+  <data name="&gt;&gt;labelControl_NombreEmpresa.Name" xml:space="preserve">
+    <value>labelControl_NombreEmpresa</value>
+  </data>
+  <data name="&gt;&gt;labelControl_NombreEmpresa.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl_NombreEmpresa.Parent" xml:space="preserve">
+    <value>splitContainerDatos.Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelControl_NombreEmpresa.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="gridControl_Pedidos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 93</value>
+    <value>40, 151</value>
   </data>
   <data name="gridView3.Appearance.ColumnFilterButton.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>104, 184, 251</value>
@@ -484,6 +518,9 @@
   </data>
   <data name="barButtonItem42.Caption" xml:space="preserve">
     <value>ELIMINAR</value>
+  </data>
+  <data name="barButtonItem153.Caption" xml:space="preserve">
+    <value>UTILIDADES</value>
   </data>
   <data name="barSubItem13.Caption" xml:space="preserve">
     <value>CATEGORIAS</value>
@@ -1043,7 +1080,6 @@
   <data name="CONTABILIDAD.Text" xml:space="preserve">
     <value>CONTABILIDAD</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="repositoryItemFontEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1103,42 +1139,6 @@
     <value>splitContainerDatos.Panel1</value>
   </data>
   <data name="&gt;&gt;gridControl_Pedidos.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>192, 255, 255</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 20.25pt, style=Bold, Underline</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
-    <value>Teal</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.LineColor" type="System.Drawing.Color, System.Drawing">
-    <value>Transparent</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 9</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 32</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="labelControl_NombreEmpresa.Text" xml:space="preserve">
-    <value>Mastertech - MultiEmpresas</value>
-  </data>
-  <data name="&gt;&gt;labelControl_NombreEmpresa.Name" xml:space="preserve">
-    <value>labelControl_NombreEmpresa</value>
-  </data>
-  <data name="&gt;&gt;labelControl_NombreEmpresa.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;labelControl_NombreEmpresa.Parent" xml:space="preserve">
-    <value>splitContainerDatos.Panel1</value>
-  </data>
-  <data name="&gt;&gt;labelControl_NombreEmpresa.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="labelControl1.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
@@ -1367,7 +1367,7 @@
     <value>3</value>
   </data>
   <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>577, 247</value>
+    <value>560, 305</value>
   </data>
   <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 67</value>
@@ -1622,7 +1622,7 @@
     <value>Tahoma, 18pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 61</value>
+    <value>974, 119</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 29</value>
@@ -1644,6 +1644,27 @@
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="pictureEdit_logo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 0</value>
+  </data>
+  <data name="pictureEdit_logo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 142</value>
+  </data>
+  <data name="pictureEdit_logo.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit_logo.Name" xml:space="preserve">
+    <value>pictureEdit_logo</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit_logo.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit_logo.Parent" xml:space="preserve">
+    <value>splitContainerDatos.Panel1</value>
+  </data>
+  <data name="&gt;&gt;pictureEdit_logo.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="splitContainerDatos.Panel1.Text" xml:space="preserve">
     <value>Panel1</value>
@@ -2762,6 +2783,12 @@
     <value>barButtonItem42</value>
   </data>
   <data name="&gt;&gt;barButtonItem42.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem153.Name" xml:space="preserve">
+    <value>barButtonItem153</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem153.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barSubItem13.Name" xml:space="preserve">

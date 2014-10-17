@@ -691,6 +691,23 @@ namespace ortoxela.Compra
             groupControl1.Enabled = true;
             groupControl2.Enabled = true;
             panelControl1.Enabled = true;
+
+
+
+            #region nuevo correlativo
+
+            //gridLookTipoDocumento_EditValueChanged
+            try
+            {
+                cadena = "SELECT (header_doctos_inv.no_documento+1)AS 'NODOC' FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE  series_documentos.codigo_serie=" + gridLookTipoDocumento.EditValue + " ORDER BY header_doctos_inv.id_documento DESC LIMIT 1";
+                textNoDocumento.Text = logicaxela.Tabla(cadena).Rows[0][0].ToString();
+            }
+            catch
+            {
+                textNoDocumento.Text = "1";
+            }
+
+            #endregion
         }
         private void sbnuevo_Click(object sender, EventArgs e)
         {

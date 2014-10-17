@@ -53,6 +53,7 @@
             DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel3 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             this.splitContainerDatos = new DevExpress.XtraEditors.SplitContainerControl();
+            this.labelControl_NombreEmpresa = new DevExpress.XtraEditors.LabelControl();
             this.gridControl_Pedidos = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -111,6 +112,7 @@
             this.barSubItem12 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem41 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem42 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem153 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem13 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem43 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem44 = new DevExpress.XtraBars.BarButtonItem();
@@ -298,7 +300,6 @@
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemPopupContainerEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
-            this.labelControl_NombreEmpresa = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -307,6 +308,7 @@
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureEdit_logo = new DevExpress.XtraEditors.PictureEdit();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPage11 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -330,6 +332,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit_logo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(textAnnotation1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -355,19 +358,28 @@
             this.splitContainerDatos.Panel1.AppearanceCaption.BorderColor = ((System.Drawing.Color)(resources.GetObject("splitContainerDatos.Panel1.AppearanceCaption.BorderColor")));
             this.splitContainerDatos.Panel1.AppearanceCaption.Options.UseBackColor = true;
             this.splitContainerDatos.Panel1.AppearanceCaption.Options.UseBorderColor = true;
-            this.splitContainerDatos.Panel1.Controls.Add(this.gridControl_Pedidos);
             this.splitContainerDatos.Panel1.Controls.Add(this.labelControl_NombreEmpresa);
+            this.splitContainerDatos.Panel1.Controls.Add(this.gridControl_Pedidos);
             this.splitContainerDatos.Panel1.Controls.Add(this.labelControl1);
             this.splitContainerDatos.Panel1.Controls.Add(this.gridControl1);
             this.splitContainerDatos.Panel1.Controls.Add(this.simpleButton1);
             this.splitContainerDatos.Panel1.Controls.Add(this.labelControl2);
             this.splitContainerDatos.Panel1.Controls.Add(this.gridControl2);
             this.splitContainerDatos.Panel1.Controls.Add(this.label1);
+            this.splitContainerDatos.Panel1.Controls.Add(this.pictureEdit_logo);
             resources.ApplyResources(this.splitContainerDatos.Panel1, "splitContainerDatos.Panel1");
             this.splitContainerDatos.Panel2.Controls.Add(this.chartControl1);
             resources.ApplyResources(this.splitContainerDatos.Panel2, "splitContainerDatos.Panel2");
             this.splitContainerDatos.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1;
             this.splitContainerDatos.SplitterPosition = 1228;
+            // 
+            // labelControl_NombreEmpresa
+            // 
+            this.labelControl_NombreEmpresa.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.BackColor")));
+            this.labelControl_NombreEmpresa.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl_NombreEmpresa.Appearance.Font")));
+            this.labelControl_NombreEmpresa.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.ForeColor")));
+            resources.ApplyResources(this.labelControl_NombreEmpresa, "labelControl_NombreEmpresa");
+            this.labelControl_NombreEmpresa.Name = "labelControl_NombreEmpresa";
             // 
             // gridControl_Pedidos
             // 
@@ -691,8 +703,9 @@
             this.barButtonItem149,
             this.barButtonItem150,
             this.barButtonItem151,
-            this.barButtonItem152});
-            this.ribbon.MaxItemId = 231;
+            this.barButtonItem152,
+            this.barButtonItem153});
+            this.ribbon.MaxItemId = 232;
             this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar1);
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -1195,7 +1208,8 @@
             this.barSubItem12.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem41),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem42)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem42),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem153)});
             this.barSubItem12.Name = "barSubItem12";
             // 
             // barButtonItem41
@@ -1215,6 +1229,14 @@
             this.barButtonItem42.Id = 57;
             this.barButtonItem42.Name = "barButtonItem42";
             this.barButtonItem42.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem42_ItemClick);
+            // 
+            // barButtonItem153
+            // 
+            resources.ApplyResources(this.barButtonItem153, "barButtonItem153");
+            this.barButtonItem153.Glyph = global::ortoxela.Properties.Resources.icontexto_webdev_money_032x032;
+            this.barButtonItem153.Id = 231;
+            this.barButtonItem153.Name = "barButtonItem153";
+            this.barButtonItem153.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem153_ItemClick);
             // 
             // barSubItem13
             // 
@@ -2817,14 +2839,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemPopupContainerEdit1.Buttons"))))});
             this.repositoryItemPopupContainerEdit1.Name = "repositoryItemPopupContainerEdit1";
             // 
-            // labelControl_NombreEmpresa
-            // 
-            this.labelControl_NombreEmpresa.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.BackColor")));
-            this.labelControl_NombreEmpresa.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl_NombreEmpresa.Appearance.Font")));
-            this.labelControl_NombreEmpresa.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl_NombreEmpresa.Appearance.ForeColor")));
-            resources.ApplyResources(this.labelControl_NombreEmpresa, "labelControl_NombreEmpresa");
-            this.labelControl_NombreEmpresa.Name = "labelControl_NombreEmpresa";
-            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl1.Appearance.BackColor")));
@@ -3111,6 +3125,13 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Name = "label1";
             // 
+            // pictureEdit_logo
+            // 
+            resources.ApplyResources(this.pictureEdit_logo, "pictureEdit_logo");
+            this.pictureEdit_logo.MenuManager = this.ribbon;
+            this.pictureEdit_logo.Name = "pictureEdit_logo";
+            this.pictureEdit_logo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            // 
             // chartControl1
             // 
             resources.ApplyResources(this.chartControl1, "chartControl1");
@@ -3203,6 +3224,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit_logo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(textAnnotation1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
@@ -3472,12 +3494,14 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem148;
         private DevExpress.XtraBars.BarButtonItem barButtonItem149;
-        private DevExpress.XtraEditors.LabelControl labelControl_NombreEmpresa;
         private DevExpress.XtraBars.BarButtonItem barButtonItem150;
         private DevExpress.XtraBars.BarButtonItem barButtonItem151;
         private DevExpress.XtraGrid.GridControl gridControl_Pedidos;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem152;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem153;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit_logo;
+        private DevExpress.XtraEditors.LabelControl labelControl_NombreEmpresa;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

@@ -112,7 +112,7 @@ namespace ortoxela
                     textEditnombre.Text = "";
                     textEditnombre.Focus();
                     labelControl3.Text = "";
-                    Form nuevo = new Principal.Principal();
+                    Form nuevo = new Principal.Principal(pictureEdit1.Image);
                     alertControl1.Show(this, "Inicio Sesión", "Usted es " + clases.ClassVariables.NombreComple, Properties.Resources.sesion);
                     this.Hide();
                     splashScreenManager1.CloseWaitForm();
@@ -206,7 +206,7 @@ namespace ortoxela
             try
             {
                 DataTable t = new DataTable();
-                MySqlDataAdapter ad = new MySqlDataAdapter("SELECT idempresa as 'IdEmpresa',Nombre FROM Empresa WHERE activo=1;",clases.ClassVariables.ConexionMaster);
+                MySqlDataAdapter ad = new MySqlDataAdapter("SELECT idempresa as 'IdEmpresa',Nombre FROM Empresa WHERE activo=1 and local=1;",clases.ClassVariables.ConexionMaster);
                 ad.Fill(t);
                 gridLookUpEdit_empresa.Properties.DataSource = t;
                 gridLookUpEdit_empresa.Properties.DisplayMember = "Nombre";
@@ -309,7 +309,7 @@ namespace ortoxela
 
         private void gridLookUpEdit_empresa_TextChanged(object sender, EventArgs e)
         {
-            if (gridLookUpEdit_empresa.Text != clases.ClassVariables.nombreEmpresa)
+            if ((gridLookUpEdit_empresa.Text!="") && (gridLookUpEdit_empresa.Text != clases.ClassVariables.nombreEmpresa))
             {
                 cambiardeBD();
             }

@@ -19,15 +19,12 @@ namespace ortoxela.Principal
 {
     public partial class Principal : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public Principal()
+        public Principal(Image LOGO)
         {
             InitializeComponent();
 
-
-        
-
-
-            labelControl_NombreEmpresa.Text = clases.ClassVariables.nombreEmpresa;
+            pictureEdit_logo.Image = LOGO;
+            labelControl_NombreEmpresa.Text = " - "+clases.ClassVariables.nombreEmpresa+" - "; 
             this.Text ="facinvOX  -  "+ clases.ClassVariables.nombreEmpresa;          
         }
 
@@ -2321,6 +2318,20 @@ namespace ortoxela.Principal
             try
             {
                 Form nf = new Reportes.Importaciones.f_importacion();
+                nf.MdiParent = this;
+                nf.Show();
+            }
+            catch
+            { }
+            this.Cursor = Cursors.Default;
+        }
+
+        private void barButtonItem153_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            try
+            {
+                Form nf = new Articulos.f_utilidad();
                 nf.MdiParent = this;
                 nf.Show();
             }

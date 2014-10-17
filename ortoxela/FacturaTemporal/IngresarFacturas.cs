@@ -517,7 +517,16 @@ namespace ortoxela.FacturaTemporal
                 //        id_cliente = logicaorto.nuevoid(cadena);
                 //    }                       
                 //}
-                conexion.Open();
+
+                try
+                {
+                    conexion.Open();
+                }
+                catch
+                {
+                    conexion.Close();
+                    conexion.Open();
+                }
                 transac = conexion.BeginTransaction();   
 
                     int iddvendedor=Convert.ToInt16(gridLookUpEdit1.EditValue);
@@ -655,6 +664,20 @@ namespace ortoxela.FacturaTemporal
             panelControl1.Enabled = true;          
              textNitCliente.Text = textNombreCliente.Text = textSocioComercial.Text = textTelefonoCliente.Text = "";
             CargaDatos();
+
+            #region calculo de nuevo correlativo
+
+            try
+            {
+                cadena = "SELECT (header_doctos_inv.no_documento+1)AS 'NODOC' FROM header_doctos_inv INNER JOIN series_documentos ON header_doctos_inv.codigo_serie=series_documentos.codigo_serie WHERE series_documentos.codigo_serie=" + gridLookTipoDocumento.EditValue + " ORDER BY header_doctos_inv.no_documento DESC LIMIT 1";
+                textNoDocumento.Text = logicaorto.Tabla(cadena).Rows[0][0].ToString();
+            }
+            catch
+            {
+                textNoDocumento.Text = "1";
+            }
+
+            #endregion
         }
         private void sbnuevo_Click(object sender, EventArgs e)
         {

@@ -32,6 +32,10 @@ namespace ortoxela.Articulos
             checkEditCompu.Checked = true;
             BuscarSistema = true;
             ConfigurarSistema = true;
+
+            textEdit_utilidad.Visible = false;
+            textEdit_utilidad.Text = "0";
+            labelControl11.Visible = false;
         }
 
 
@@ -125,6 +129,10 @@ namespace ortoxela.Articulos
                         gridLookUpEstado.EditValue = fila[11].ToString();
                         checkEditCompu.Checked = false;
                         //gridLookupartpadre.EditValue = fila[13].ToString();
+
+
+                    //utilidad 
+                        textEdit_utilidad.Text = fila["utilidad"].ToString();
                     }
             }
             else
@@ -277,16 +285,16 @@ namespace ortoxela.Articulos
                                     {
 
                                         cadena = "INSERT into articulos " +
-                                                "(codigo_articulo, codigo_marca, codigo_categoria, descripcion, fecha_compra, costo, precio_venta, minimo, maximo, numero_serie, modelo, comentario, usuario_ingresa, estadoid,compuesto, codigo_padre) " +
+                                                "(codigo_articulo, codigo_marca, codigo_categoria, descripcion, fecha_compra, costo, precio_venta, minimo, maximo, numero_serie, modelo, comentario, usuario_ingresa, estadoid,compuesto, codigo_padre,utilidad) " +
                                                 "VALUES ('" + textEditcodigo.Text + "', " + codigo_marca + ", " + gridLooksubcategoria.EditValue + ", '" + memoEditdescripcion.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', " + texteditpcosto.Text + ", " + textEditpventa.Text + ", " +
-                                                "" + textEditpmin.Text + ", " + textEditpmax.Text + ", '" + textEditserie.Text + "', '" + texteditmodelo.Text + "', '" + memoEditcomentario.Text + "', " + clases.ClassVariables.id_usuario + "," + gridLookUpEstado.EditValue + "," + checkEditCompu.Checked + ", " + codigo_padre + ")";
+                                                "" + textEditpmin.Text + ", " + textEditpmax.Text + ", '" + textEditserie.Text + "', '" + texteditmodelo.Text + "', '" + memoEditcomentario.Text + "', " + clases.ClassVariables.id_usuario + "," + gridLookUpEstado.EditValue + "," + checkEditCompu.Checked + ", " + codigo_padre + ","+textEdit_utilidad.EditValue.ToString()+")";
                                     }
                                     else
                                     {
                                         cadena = "INSERT into articulos " +
-                                                "(codigo_articulo, codigo_marca, codigo_categoria,descripcion, fecha_compra, costo, precio_venta, minimo, maximo, numero_serie, modelo, comentario, usuario_ingresa, estadoid,compuesto, codigo_padre) " +
+                                                "(codigo_articulo, codigo_marca, codigo_categoria,descripcion, fecha_compra, costo, precio_venta, minimo, maximo, numero_serie, modelo, comentario, usuario_ingresa, estadoid,compuesto, codigo_padre,utilidad) " +
                                                 "VALUES ('" + textEditcodigo.Text + "', " + codigo_marca + ", " + gridLooksubcategoria.EditValue + ", '" + (memoEditdescripcion.Text + "[" + codigo_padredesc + "]") + "', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', " + texteditpcosto.Text + ", " + textEditpventa.Text + ", " +
-                                                "" + textEditpmin.Text + ", " + textEditpmax.Text + ", '" + textEditserie.Text + "', '" + texteditmodelo.Text + "', '" + memoEditcomentario.Text + "', " + clases.ClassVariables.id_usuario + "," + gridLookUpEstado.EditValue + "," + checkEditCompu.Checked + ", " + codigo_padre + ")";
+                                                "" + textEditpmin.Text + ", " + textEditpmax.Text + ", '" + textEditserie.Text + "', '" + texteditmodelo.Text + "', '" + memoEditcomentario.Text + "', " + clases.ClassVariables.id_usuario + "," + gridLookUpEstado.EditValue + "," + checkEditCompu.Checked + ", " + codigo_padre + "," + textEdit_utilidad.EditValue.ToString() + ")";
                                     }
                                     if (clases.ClassMensajes.INSERTO(this, cadena))
                                     {
@@ -346,6 +354,7 @@ namespace ortoxela.Articulos
                                                         "SET codigo_articulo='"+textEditcodigo.Text+"', codigo_marca = " + codigo_marca + ", codigo_categoria = " + gridLooksubcategoria.EditValue + ", descripcion = '" + memoEditdescripcion.Text + "', " +
                                                     "costo = " + texteditpcosto.Text + ", precio_venta = " + textEditpventa.Text + ", minimo = " + textEditpmin.Text + ", maximo = " + textEditpmax.Text + ", numero_serie = '" + textEditserie.Text + "', modelo = '" + texteditmodelo.Text + "', comentario = '" + memoEditcomentario.Text + "', " +
                                                     "usuario_modifica = " + clases.ClassVariables.id_usuario + ", estadoid = " + gridLookUpEstado.EditValue + ", compuesto = " + checkEditCompu.Checked + ",codigo_padre = " + codigo_padre + " " +
+                                                    " ,utilidad="+textEdit_utilidad.EditValue.ToString()+" "+
                                                     "WHERE articulos.codigo_articulo= '" + Codigo_Control + "'";
 
                                             if (clases.ClassMensajes.MODIFICAR(this, cadena))
@@ -563,6 +572,11 @@ namespace ortoxela.Articulos
         {
             textEditcodigo.Text = textEditcodigo.Text.Replace(" ", "");
             textEditcodigo.Text = textEditcodigo.Text.Trim();
+        }
+
+        private void textEdit_utilidad_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
        

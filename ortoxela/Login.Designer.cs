@@ -74,9 +74,9 @@
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Controls.Add(this.simpleaceptar);
             this.panelControl1.Controls.Add(this.simplecancelar);
-            this.panelControl1.Location = new System.Drawing.Point(6, 6);
+            this.panelControl1.Location = new System.Drawing.Point(7, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(541, 262);
+            this.panelControl1.Size = new System.Drawing.Size(526, 290);
             this.panelControl1.TabIndex = 1;
             // 
             // labelControl_empresa
@@ -84,7 +84,7 @@
             this.labelControl_empresa.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelControl_empresa.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl_empresa.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl_empresa.Location = new System.Drawing.Point(15, 5);
+            this.labelControl_empresa.Location = new System.Drawing.Point(15, 8);
             this.labelControl_empresa.Name = "labelControl_empresa";
             this.labelControl_empresa.Size = new System.Drawing.Size(102, 22);
             this.labelControl_empresa.TabIndex = 14;
@@ -93,13 +93,13 @@
             // gridLookUpEdit_empresa
             // 
             this.gridLookUpEdit_empresa.EditValue = "fsdafads";
-            this.gridLookUpEdit_empresa.Location = new System.Drawing.Point(192, 189);
+            this.gridLookUpEdit_empresa.Location = new System.Drawing.Point(205, 198);
             this.gridLookUpEdit_empresa.Name = "gridLookUpEdit_empresa";
             this.gridLookUpEdit_empresa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.gridLookUpEdit_empresa.Properties.CloseUpKey = new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F2);
             this.gridLookUpEdit_empresa.Properties.View = this.gridLookUpEdit1View;
-            this.gridLookUpEdit_empresa.Size = new System.Drawing.Size(312, 20);
+            this.gridLookUpEdit_empresa.Size = new System.Drawing.Size(281, 20);
             this.gridLookUpEdit_empresa.TabIndex = 13;
             this.gridLookUpEdit_empresa.Visible = false;
             this.gridLookUpEdit_empresa.TextChanged += new System.EventHandler(this.gridLookUpEdit_empresa_TextChanged);
@@ -114,7 +114,7 @@
             // 
             // checkEdit1
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(58, 190);
+            this.checkEdit1.Location = new System.Drawing.Point(71, 198);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "Cambiar de Empresa";
             this.checkEdit1.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style16;
@@ -133,9 +133,9 @@
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.textEditnombre);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(15, 32);
+            this.groupControl1.Location = new System.Drawing.Point(15, 36);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(502, 151);
+            this.groupControl1.Size = new System.Drawing.Size(471, 151);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Login";
             // 
@@ -162,7 +162,7 @@
             // 
             // textEditcontraseña
             // 
-            this.textEditcontraseña.Location = new System.Drawing.Point(303, 91);
+            this.textEditcontraseña.Location = new System.Drawing.Point(278, 91);
             this.textEditcontraseña.Name = "textEditcontraseña";
             this.textEditcontraseña.Properties.PasswordChar = '●';
             this.textEditcontraseña.Size = new System.Drawing.Size(173, 20);
@@ -176,15 +176,15 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(215, 94);
+            this.labelControl2.Location = new System.Drawing.Point(190, 94);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(82, 18);
+            this.labelControl2.Size = new System.Drawing.Size(81, 18);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "Contraseña";
             // 
             // textEditnombre
             // 
-            this.textEditnombre.Location = new System.Drawing.Point(303, 48);
+            this.textEditnombre.Location = new System.Drawing.Point(278, 48);
             this.textEditnombre.Name = "textEditnombre";
             this.textEditnombre.Size = new System.Drawing.Size(173, 20);
             this.textEditnombre.TabIndex = 0;
@@ -194,7 +194,7 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(215, 47);
+            this.labelControl1.Location = new System.Drawing.Point(190, 47);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(54, 18);
             this.labelControl1.TabIndex = 1;
@@ -205,7 +205,7 @@
             this.simpleaceptar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleaceptar.Appearance.Options.UseFont = true;
             this.simpleaceptar.Image = global::ortoxela.Properties.Resources.entrar;
-            this.simpleaceptar.Location = new System.Drawing.Point(192, 214);
+            this.simpleaceptar.Location = new System.Drawing.Point(183, 233);
             this.simpleaceptar.Name = "simpleaceptar";
             this.simpleaceptar.Size = new System.Drawing.Size(142, 42);
             this.simpleaceptar.TabIndex = 2;
@@ -217,7 +217,7 @@
             this.simplecancelar.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simplecancelar.Appearance.Options.UseFont = true;
             this.simplecancelar.Image = global::ortoxela.Properties.Resources.salir;
-            this.simplecancelar.Location = new System.Drawing.Point(362, 214);
+            this.simplecancelar.Location = new System.Drawing.Point(331, 233);
             this.simplecancelar.Name = "simplecancelar";
             this.simplecancelar.Size = new System.Drawing.Size(142, 42);
             this.simplecancelar.TabIndex = 3;
@@ -230,7 +230,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 275);
+            this.ClientSize = new System.Drawing.Size(541, 298);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

@@ -371,6 +371,7 @@ namespace ortoxela.Reportes.Inventario
 
 
                 MySqlDataAdapter adaptador1 = new MySqlDataAdapter(consulta, Properties.Settings.Default.ortoxelaConnectionString);
+                adaptador1.SelectCommand.CommandTimeout = 0;
                 DataSet_Inventario dataset = new DataSet_Inventario();
                 adaptador1.Fill(dataset, "v_inventario");
 
