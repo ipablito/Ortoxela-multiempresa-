@@ -53,8 +53,17 @@ namespace ortoxela.Principal
 
         static MySqlConnection GetNewConnection()
         {
-            var conn = new MySqlConnection(clases.ClassVariables.ConexionMaster);
-            conn.Open();
+            var conn = new MySqlConnection();
+            try
+            {
+                conn = new MySqlConnection(clases.ClassVariables.ConexionMaster);
+                conn.Open();
+            }
+            catch
+            {
+                conn = new MySqlConnection(clases.ClassVariables.ConexionMasterRemoto);
+                conn.Open();
+            }
             return conn;
         }
 

@@ -20,6 +20,8 @@ namespace ortoxela.clases
         public static int op_reporte = 0;
         public static string nombreEmpresa;
         public static int idEmpresa;
-        public static string ConexionMaster = "server=localhost;User Id=root;password=ipablito;Persist Security Info=True;database=master";
+        public static string ConexionMaster = "server=192.168.1.8;User Id=root;password=ortox3l4;Persist Security Info=True;database=master";
+        public static string ConexionMasterRemoto = "server=181.209.252.2;User Id=root;password=ortox3l4;Persist Security Info=True;database=master";
+        public static string LocalRemoto="1";//Local es 1... Remoto es 0
     }
 }

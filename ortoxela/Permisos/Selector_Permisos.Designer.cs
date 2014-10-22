@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.TextAnnotation textAnnotation4 = new DevExpress.XtraCharts.TextAnnotation();
-            DevExpress.XtraCharts.ChartAnchorPoint chartAnchorPoint4 = new DevExpress.XtraCharts.ChartAnchorPoint();
-            DevExpress.XtraCharts.FreePosition freePosition4 = new DevExpress.XtraCharts.FreePosition();
-            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series7 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel10 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SeriesPoint seriesPoint19 = new DevExpress.XtraCharts.SeriesPoint("uno", new object[] {
+            DevExpress.XtraCharts.TextAnnotation textAnnotation2 = new DevExpress.XtraCharts.TextAnnotation();
+            DevExpress.XtraCharts.ChartAnchorPoint chartAnchorPoint2 = new DevExpress.XtraCharts.ChartAnchorPoint();
+            DevExpress.XtraCharts.FreePosition freePosition2 = new DevExpress.XtraCharts.FreePosition();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel4 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SeriesPoint seriesPoint7 = new DevExpress.XtraCharts.SeriesPoint("uno", new object[] {
             ((object)(1D))});
-            DevExpress.XtraCharts.SeriesPoint seriesPoint20 = new DevExpress.XtraCharts.SeriesPoint("dos", new object[] {
+            DevExpress.XtraCharts.SeriesPoint seriesPoint8 = new DevExpress.XtraCharts.SeriesPoint("dos", new object[] {
             ((object)(2D))});
-            DevExpress.XtraCharts.SeriesPoint seriesPoint21 = new DevExpress.XtraCharts.SeriesPoint("tres", new object[] {
+            DevExpress.XtraCharts.SeriesPoint seriesPoint9 = new DevExpress.XtraCharts.SeriesPoint("tres", new object[] {
             ((object)(40D))});
-            DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel11 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SeriesPoint seriesPoint22 = new DevExpress.XtraCharts.SeriesPoint("suno", new object[] {
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel5 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SeriesPoint seriesPoint10 = new DevExpress.XtraCharts.SeriesPoint("suno", new object[] {
             ((object)(4D))});
-            DevExpress.XtraCharts.SeriesPoint seriesPoint23 = new DevExpress.XtraCharts.SeriesPoint("sdos", new object[] {
+            DevExpress.XtraCharts.SeriesPoint seriesPoint11 = new DevExpress.XtraCharts.SeriesPoint("sdos", new object[] {
             ((object)(6D))});
-            DevExpress.XtraCharts.SeriesPoint seriesPoint24 = new DevExpress.XtraCharts.SeriesPoint("stres", new object[] {
+            DevExpress.XtraCharts.SeriesPoint seriesPoint12 = new DevExpress.XtraCharts.SeriesPoint("stres", new object[] {
             ((object)(78D))});
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel12 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.ChartTitle chartTitle4 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel6 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
             this.barButtonItem81 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -195,6 +195,7 @@
             this.barSubItem12 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem41 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem42 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem153 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem13 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem43 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem44 = new DevExpress.XtraBars.BarButtonItem();
@@ -234,6 +235,7 @@
             this.barButtonItem143 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem150 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem151 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem152 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory3 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -279,7 +281,6 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.ribbonPageGroup28 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem152 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerDatos)).BeginInit();
             this.splitContainerDatos.SuspendLayout();
@@ -299,13 +300,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(textAnnotation4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(textAnnotation2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel6)).BeginInit();
             this.SuspendLayout();
             // 
             // barButtonItem81
@@ -1392,9 +1393,10 @@
             this.barButtonItem150,
             this.barButtonItem148,
             this.barButtonItem151,
-            this.barButtonItem152});
+            this.barButtonItem152,
+            this.barButtonItem153});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 181;
+            this.ribbon.MaxItemId = 182;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory3,
@@ -1762,7 +1764,8 @@
             this.barSubItem12.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem41),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem42)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem42),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem153)});
             this.barSubItem12.Name = "barSubItem12";
             // 
             // barButtonItem41
@@ -1782,6 +1785,15 @@
             this.barButtonItem42.Id = 57;
             this.barButtonItem42.Name = "barButtonItem42";
             this.barButtonItem42.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
+            // 
+            // barButtonItem153
+            // 
+            this.barButtonItem153.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem153.Caption = "UTILIDADES";
+            this.barButtonItem153.Glyph = global::ortoxela.Properties.Resources.icontexto_webdev_money_032x032;
+            this.barButtonItem153.Id = 181;
+            this.barButtonItem153.Name = "barButtonItem153";
+            this.barButtonItem153.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
             // 
             // barSubItem13
             // 
@@ -2146,6 +2158,15 @@
             this.barButtonItem151.LargeGlyph = global::ortoxela.Properties.Resources.MODULO;
             this.barButtonItem151.Name = "barButtonItem151";
             this.barButtonItem151.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
+            // 
+            // barButtonItem152
+            // 
+            this.barButtonItem152.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem152.Caption = "Importaciones";
+            this.barButtonItem152.Id = 180;
+            this.barButtonItem152.LargeGlyph = global::ortoxela.Properties.Resources.money_transportation;
+            this.barButtonItem152.Name = "barButtonItem152";
+            this.barButtonItem152.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
             // 
             // ribbonPageCategory3
             // 
@@ -2528,64 +2549,55 @@
             this.chartControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartAnchorPoint4.X = 6;
-            chartAnchorPoint4.Y = 43;
-            textAnnotation4.AnchorPoint = chartAnchorPoint4;
-            textAnnotation4.Name = "Anotación de Texto 1";
-            freePosition4.InnerIndents.Left = 0;
-            freePosition4.InnerIndents.Top = 0;
-            textAnnotation4.ShapePosition = freePosition4;
+            chartAnchorPoint2.X = 6;
+            chartAnchorPoint2.Y = 43;
+            textAnnotation2.AnchorPoint = chartAnchorPoint2;
+            textAnnotation2.Name = "Anotación de Texto 1";
+            freePosition2.InnerIndents.Left = 0;
+            freePosition2.InnerIndents.Top = 0;
+            textAnnotation2.ShapePosition = freePosition2;
             this.chartControl1.AnnotationRepository.AddRange(new DevExpress.XtraCharts.Annotation[] {
-            textAnnotation4});
+            textAnnotation2});
             this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            xyDiagram4.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram4.AxisX.Range.SideMarginsEnabled = true;
-            xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram4.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram4.AxisY.Range.SideMarginsEnabled = true;
-            xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram4;
+            xyDiagram2.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram2.AxisX.Range.SideMarginsEnabled = true;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram2.AxisY.Range.SideMarginsEnabled = true;
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram2;
             this.chartControl1.Location = new System.Drawing.Point(65, 24);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PaletteName = "Module";
-            sideBySideBarSeriesLabel10.LineVisible = true;
-            series7.Label = sideBySideBarSeriesLabel10;
-            series7.Name = "Series 1";
-            series7.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
-            seriesPoint19,
-            seriesPoint20,
-            seriesPoint21});
-            sideBySideBarSeriesLabel11.LineVisible = true;
-            series8.Label = sideBySideBarSeriesLabel11;
-            series8.Name = "Series 2";
-            series8.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
-            seriesPoint22,
-            seriesPoint23,
-            seriesPoint24});
+            sideBySideBarSeriesLabel4.LineVisible = true;
+            series3.Label = sideBySideBarSeriesLabel4;
+            series3.Name = "Series 1";
+            series3.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
+            seriesPoint7,
+            seriesPoint8,
+            seriesPoint9});
+            sideBySideBarSeriesLabel5.LineVisible = true;
+            series4.Label = sideBySideBarSeriesLabel5;
+            series4.Name = "Series 2";
+            series4.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
+            seriesPoint10,
+            seriesPoint11,
+            seriesPoint12});
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series7,
-        series8};
-            sideBySideBarSeriesLabel12.LineVisible = true;
-            this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel12;
+        series3,
+        series4};
+            sideBySideBarSeriesLabel6.LineVisible = true;
+            this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel6;
             this.chartControl1.Size = new System.Drawing.Size(87, 0);
             this.chartControl1.TabIndex = 5;
-            chartTitle4.Text = "GRAFICA DE PRUEBA";
+            chartTitle2.Text = "GRAFICA DE PRUEBA";
             this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle4});
+            chartTitle2});
             // 
             // ribbonPageGroup28
             // 
             this.ribbonPageGroup28.Name = "ribbonPageGroup28";
             this.ribbonPageGroup28.Text = "REQUISICIONES Y AJUSTES";
-            // 
-            // barButtonItem152
-            // 
-            this.barButtonItem152.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barButtonItem152.Caption = "Importaciones";
-            this.barButtonItem152.Id = 180;
-            this.barButtonItem152.LargeGlyph = global::ortoxela.Properties.Resources.money_transportation;
-            this.barButtonItem152.Name = "barButtonItem152";
-            this.barButtonItem152.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.controlboton);
             // 
             // Selector_Permisos
             // 
@@ -2621,13 +2633,13 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(textAnnotation4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(textAnnotation2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 
@@ -2865,5 +2877,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem148;
         private DevExpress.XtraBars.BarButtonItem barButtonItem151;
         private DevExpress.XtraBars.BarButtonItem barButtonItem152;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem153;
     }
 }

@@ -1233,6 +1233,7 @@
             // barButtonItem153
             // 
             resources.ApplyResources(this.barButtonItem153, "barButtonItem153");
+            this.barButtonItem153.Enabled = false;
             this.barButtonItem153.Glyph = global::ortoxela.Properties.Resources.icontexto_webdev_money_032x032;
             this.barButtonItem153.Id = 231;
             this.barButtonItem153.Name = "barButtonItem153";
@@ -3180,6 +3181,7 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            this.xtraTabbedMdiManager1.SetNextMdiChildMode = DevExpress.XtraTabbedMdi.SetNextMdiChildMode.Windows;
             this.xtraTabbedMdiManager1.PageAdded += new DevExpress.XtraTabbedMdi.MdiTabPageEventHandler(this.xtraTabbedMdiManager1_PageAdded);
             this.xtraTabbedMdiManager1.PageRemoved += new DevExpress.XtraTabbedMdi.MdiTabPageEventHandler(this.xtraTabbedMdiManager1_PageRemoved);
             // 

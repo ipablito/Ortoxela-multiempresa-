@@ -151,9 +151,23 @@ namespace ortoxela.Compra
                         textCodigoArt.Text = tempTabla.Rows[0]["CODIGO"].ToString();
                         textNombreArti.Text = tempTabla.Rows[0]["NOMBRE ARTICULO"].ToString();
                         textCosto.Text = tempTabla.Rows[0]["costo"].ToString();
-                        textVenta.Text = tempTabla.Rows[0]["precio_venta"].ToString();
+                        //textVenta.Text = tempTabla.Rows[0]["precio_venta"].ToString();
                         if (bandera_ingreso_egreso == "2")
                             cant_existencia = Convert.ToInt32(tempTabla.Rows[0]["EXISTENCIA"]);
+
+                        #region ultimo precio al que se compro
+                        try
+                        {
+                            cadena = "SELECT d.precio_unitario FROM detalle_doctos_inv d JOIN header_doctos_inv h ON d.id_documento=h.id_documento WHERE d.codigo_articulo='" + id_articulo + "' AND h.codigo_serie in (7,39) ORDER BY h.id_documento DESC LIMIT 1";
+                            DataTable nt1t = new DataTable();
+                            nt1t = logicaxela.Tabla(cadena);
+                            textVenta.Text = nt1t.Rows[0]["precio_unitario"].ToString();
+                        }
+                        catch
+                        { }
+                        #endregion
+
+
                         textCantidadArt.Focus();
                     }
                 }

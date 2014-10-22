@@ -165,6 +165,12 @@ namespace ortoxela.Reportes.Importaciones
                     DataSet datasetx = new DataSet();
                     adaptadorx.Fill(datasetx, "v_compras_detalle_proveedor_categoria");
 
+                    if (datasetx.Tables[0].Rows.Count < 1)
+                    {
+                        this.Cursor = Cursors.Default;
+                        MessageBox.Show("Reporte vacio");
+                        return;
+                    }
 
                     Reportes.Compras.XtraReport_Compras_por_Categoria reportecat = new Reportes.Compras.XtraReport_Compras_por_Categoria();
                     reportecat.DataSource = datasetx;
@@ -216,6 +222,14 @@ namespace ortoxela.Reportes.Importaciones
                     MySqlDataAdapter adaptadorx = new MySqlDataAdapter(QueryCompras, Properties.Settings.Default.ortoxelaConnectionString);
                     DataSet datasetx = new DataSet();
                     adaptadorx.Fill(datasetx, "v_compras");
+
+
+                    if (datasetx.Tables[0].Rows.Count < 1)
+                    {
+                        this.Cursor = Cursors.Default;
+                        MessageBox.Show("Reporte vacio");
+                        return;
+                    }
 
                     Reportes.Compras.XtraReport_x_NoCompra reportecat = new Compras.XtraReport_x_NoCompra();
                     reportecat.DataSource = datasetx;
@@ -270,6 +284,13 @@ namespace ortoxela.Reportes.Importaciones
                     DataSet datasetx = new DataSet();
                     adaptadorx.Fill(datasetx, "v_compras_general");
 
+
+                    if (datasetx.Tables[0].Rows.Count < 1)
+                    {
+                        this.Cursor = Cursors.Default;
+                        MessageBox.Show("Reporte vacio");
+                        return;
+                    }
 
                     Reportes.Compras.XtraReport_x_Compra_X_Arti reportecat = new Compras.XtraReport_x_Compra_X_Arti();
                     reportecat.DataSource = datasetx;
@@ -327,7 +348,12 @@ namespace ortoxela.Reportes.Importaciones
                     DataTable nt = new DataTable();
                     ad.Fill(nt);
 
-
+                    if (datasetx.Tables[0].Rows.Count < 1)
+                    {
+                        this.Cursor = Cursors.Default;
+                        MessageBox.Show("Reporte vacio");
+                        return;
+                    }
 
                     ortoxela.Reportes.Proveedores.XtraReport_RepProveedores reporteP = new ortoxela.Reportes.Proveedores.XtraReport_RepProveedores();
                     reporteP.DataSource = datasetx;
@@ -380,7 +406,12 @@ namespace ortoxela.Reportes.Importaciones
                     DataTable nt = new DataTable();
                     ad.Fill(nt);
 
-
+                    if (datasetx.Tables[0].Rows.Count < 1)
+                    {
+                        this.Cursor = Cursors.Default;
+                        MessageBox.Show("Reporte vacio");
+                        return;
+                    }
 
                     ortoxela.Reportes.Proveedores.XtraReport_RepUnProveedor reporteP = new ortoxela.Reportes.Proveedores.XtraReport_RepUnProveedor();
                     reporteP.DataSource = datasetx;

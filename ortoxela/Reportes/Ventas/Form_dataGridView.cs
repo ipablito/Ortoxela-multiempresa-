@@ -356,6 +356,8 @@ namespace ortoxela.Reportes.Ventas
         private void mostrarEnExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+
+
             string rutaExcel="\\Excel.xlsx";
             deDGVaExcel(dataGridView_mostrar, rutaExcel);
             this.Cursor = Cursors.Default;
